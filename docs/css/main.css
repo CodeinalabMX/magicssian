@@ -1,0 +1,75 @@
+/**
+ * CSS Stylesheet for: Magicssian
+ *
+ * Author: hEy @ codeinalab.com
+ *
+ * TOC:
+ * @todo List each section/element styled
+ * Global elements
+ * Header
+ * Logo
+ * Main navigation
+ * Home
+ * Footer
+ * Media queries
+ */
+:root {
+	--base-color: #0b162a;
+}
+/* Header */
+/* Logo */
+#magicssian {
+ display: block;
+ font-size: 20px;
+ position: relative;
+ width: 9em;
+ height: 6em;
+ margin: 50px auto;
+ border-left: 1em solid var(--base-color);
+ border-right: 1em solid var(--base-color);
+}
+#magicssian > div {
+ position: absolute;
+ top: 0;
+ display: block;
+ height: 6em;
+ width: 1em;
+ background: rgba(0, 0, 0, .5);
+ background: var(--base-color);
+}
+#magicssian div:nth-child(1) {
+ z-index: 1;
+ left: 1.05em;
+ top: -2.4em;
+ height: 10.8em;
+ width: 1.02em;
+ transform: rotate(-33deg);
+ background: rgba(0, 0, 0, .5);
+ background: var(--base-color);
+}
+#magicssian div:nth-child(1)::after, 
+#magicssian div:nth-child(1)::before {
+ content:'';
+ position: absolute;
+ left: .2em;
+ display: block;
+ width: .6em;
+ height: 1.3em;
+ background: #fff;
+}
+#magicssian div:nth-child(1)::before {
+    top: .2em;  
+}
+#magicssian div:nth-child(1)::after {
+  bottom: .2em;
+}
+#magicssian div:nth-child(2) {
+ transform: rotate(33deg);
+ height: 7.15em;
+ right: .87em;
+ top: -.85em;
+}
+.magicssian.heading {
+  letter-spacing: 2px;
+  margin: 10px;
+}
