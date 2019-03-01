@@ -1,0 +1,34 @@
+{
+  "name": "magicssian",
+  "version": "0.1.0",
+  "description": "A CSS Boilerplate",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "html5-boilerplate": "^7.0.1",
+    "html5-test-page": "^0.8.0",
+    "node-sass": "^4.11.0",
+    "uglifycss": "0.0.29"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeinalabMX/magicssian.git"
+  },
+  "keywords": [
+    "CSS",
+    "Biolerplate"
+  ],
+  "author": "hEy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CodeinalabMX/magicssian/issues"
+  },
+  "homepage": "https://github.com/CodeinalabMX/magicssian#readme"
+}
