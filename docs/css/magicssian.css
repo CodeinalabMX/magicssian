@@ -1,16 +1,26 @@
-/*
+/**
  * Magicssian
  * A CSS Boilerplate
  * Version: 0.1.0
  * http://codeinalabMX.github.io/magicssian
  * License: MIT
-*/
+ *
+ * Contents:
+ * Reset
+ * Base
+ * Components
+ */
 
 
 /**
- * Custom reset & normalization
+ * Reset
  *
- * normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css
+ * Custom reset & normalization
+ * 
+ * Old school references:
+ * html5doctor.com Reset Stylesheet v1.6.1 http://html5doctor.com/html-5-reset-stylesheet/
+ * Eric Meyer's Reset CSS v2.0 http://meyerweb.com/eric/tools/css/reset/
+ * Normalize github.com/necolas/normalize.css
  */
 * {
   /* Est. 2012; https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
@@ -22,8 +32,8 @@ html {
    */
   -webkit-text-size-adjust: 100%;
   /* Show scroll bar to avoid jumpy content alignment
-   * while navigate on pages with content exceeding the vertical viewport
-   * and those 
+   * when navigate between pages with less or more 
+   * and those overflowing the vertical viewport
    */
   overflow-y: scroll;
 }
@@ -99,85 +109,124 @@ template {
    */
   display: none;
 }
+
+
 /**
  * Base
- * 
- * Custom properties
- * Style normalization
- * Custom styling html elements
  *
- * Text The vertical rythm beauty
+ * Define css custom properties
+ * and style html elements globally
+ * only few classes included
+ *
+ * Contents:
+ * Custom properties
+ * Document
+ * Text
  * Links
  * Lists
  * Tables
  * Buttons
  * Form items
- * 
- * Fonts Make things look prettier
  */
 
  /**
   * Custom properties
+  *
+  * a.k.a variables
+  * Changing this will affect almost everything ahead
+  *
+  * Contents:
+  * Fonts
+  * Text size & Rhytm unit
+  * Color schemes
+  * * Base scheme
+  * * Notification scheme
+  * Extras
   */
  :root {
-  /*
-   * Text
+  /**
+   * Fonts
+   *
+   * Fonts Make things look prettier
+   * choose wisely
    */
-  --text-font: 'Inconsolata', monospace;
+  --text-font: 'Inconsolata', serif;
   --heading-font: 'Montserrat', sans-serif;
+  /**
+   * Font size & rhytm unit
+   *
+   * With this 
+   * but difficult to handle 
+   */
   --base-font-size: 16px;
   --rhytm-unit: 20px;
   /**
-   * Color
+   * Color schemes
+   */
+  /**
+   * Base scheme
    *
-   * We like to keep it simple, yet flexible, 
-   * using a split-complementary color scheme
-   * and a black that is not that black for text
-   *
+   * A split-complementary color scheme
+   * a black that is not that black for text
+   * 
+   * Reference & tools:
    * https://www.sessions.edu/color-calculator/
    * https://ianstormtaylor.com/design-tip-never-use-black/
-   *
    */
-  --neutral-color: #fcfcfc;
   --base-color: #0b162a;
   --complementary-color-1: #e35835;
   --complementary-color-2: #cde534;
-
-  --information-color: #bde5f8;
-  --warning-color: #feefb3;
-  --error-color: #ffbaba;
-  --success-color: #dff2bf;
+  --neutral-color: #fcfcfc;
   --heading-color: var(--base-color);
   --text-color: #1a1a1a;
-  /*
+  /**
+   * Notification scheme
+   */
+  --information-color: #caeaf9;
+  --information-text-color: #00529b;
+  --warning-color: #feefb3;
+  --warning-text-color: #9f6000;
+  --error-color: #ffc8c8;
+  --error-text-color: #d8000c;
+  --success-color: #e5f5cc;
+  --success-text-color: #4f8a10;
+  /**
    * Extras
    */
-  --box-width: 90%;       /* Max-width for a boxed container */
+  /* Max-width for a boxed container */
+  --box-width: 90%;
+  /* border-radius value
+   * will apply globally for buttons &
+   * .rounded helper class
+   */
   --rounded: 0;
  }
- /* Text; The vertical rhytm beauty
-  *
-  * Trying to grasp and work with the concepts of Vertical Rhythm and Modular Scale
-  * we tried to fit text elements (font-size, line-height and vertical margins) 
-  * within a repeated pattern
-  * 
-  *
-  * Reference:
-  * https://zellwk.com/blog/responsive-vertical-rhythm/
-  * https://iamsteve.me/blog/entry/a-guide-to-vertical-rhythm
-  * https://24ways.org/2006/compose-to-a-vertical-rhythm/
-  * https://www.smashingmagazine.com/2012/12/css-baseline-the-good-the-bad-and-the-ugly/
-  * http://typecast.com/blog/4-simple-steps-to-vertical-rhythm
-  * 
-  * Tools:
-  * https://drewish.com/tools/vertical-rhythm/
-  * https://www.gridlover.net/try
-  * https://nowodzinski.pl/syncope/
-  * 
-  */
-html, body {
-  font-family: var(--text-font);
-  font-size: var(--base-font-size);
-  line-height: var(--rhytm-unit);
-  color: var(--text-color);
-}
+
+/**
+ * Document
+ */
+
+/**
+ * Text
+ * 
+ */
+
+/**
+ * Links
+ */
+
+/**
+ * Lists
+ */
+
+/**
+ * Tables
+ */
+
+/**
+ * Buttons
+ */
+
+/**
+ * Form items
+ */
