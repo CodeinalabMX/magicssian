@@ -8,35 +8,96 @@
 
 
 /**
- * Reset
- * Opinionated reset
+ * Custom reset & normalization
  *
+ * normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css
  */
 * {
   /* Est. 2012; https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
-
+html {
+  /* From normalize:;
+   * Prevent adjustments of font size after orientation changes in iOS.
+   */
+  -webkit-text-size-adjust: 100%;
+  /* Show scroll bar to avoid jumpy content alignment
+   * while navigate on pages with content exceeding the vertical viewport
+   * and those 
+   */
+  overflow-y: scroll;
+}
 body, 
-fieldset, input, select, textarea, button, 
-dl, dd, ul, ol, 
-h1, h2, h3, h4, h5, h6, 
-p, a, blockquote, hr, legend, figure, iframe {
-	border: 0;
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ul, ol, dl, dd, 
+hr, 
+figure, figcaption, 
+iframe, 
+fieldset, legend, input, textarea, select {
 	margin: 0;
 	padding: 0;
-  outline: none;
-  border-radius: 0;
+}
+iframe {
+  border: 0;
+}
+/* Add support for html5 elements in older browsers */
+article, aside, details, 
+footer, header, menu, nav, section,
+hgroup,
+figcaption, figure,  {
+  display: block;
 }
 a {
   text-decoration: none;
   outline: 0;
+  /* From normalize:
+   * Remove the gray background on active links in IE 10.
+   */
+  background-color: transparent;
+}
+b, strong {
+  /* From normalize:
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+  font-weight: bolder;
 }
 img {
+  /* Fix white space below images */
   vertical-align: bottom;
+  /* From normalize:
+   * Remove the border on images inside links in IE 10.
+   */
+  border-style: none;
 }
 [disabled] {
   cursor: default;
+}
+abbr {
+  cursor:help;
+}
+button, select {
+  /* From normalize:
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   */
+  text-transform: none;
+}
+button, [type="button"], [type="reset"], [type="submit"] {
+  /* From normalize:
+  * Correct the inability to style clickable types in iOS and Safari.
+  */
+  -webkit-appearance: button;
+}
+template {
+  /* From normalize:;
+   * Add the correct display in IE 10+.
+   */
+  display: none;
+}
+[hidden] {
+  /* From normalize
+   * Add the correct display in IE 10.
+   */
+  display: none;
 }
 /**
  * Base
