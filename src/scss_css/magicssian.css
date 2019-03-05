@@ -1,0 +1,123 @@
+/*
+ * Magicssian
+ * A CSS Boilerplate
+ * Version: 0.1.0
+ * http://codeinalabMX.github.io/magicssian
+ * License: MIT
+*/
+
+
+/**
+ * Reset
+ * Opinionated reset
+ *
+ */
+html {
+  /* Est. 2012; https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+  box-sizing:border-box;
+  overflow-y: scroll;
+}
+body, 
+fieldset, input, select, textarea, button, 
+dl, dd, ul, ol, 
+h1, h2, h3, h4, h5, h6, 
+p, a, blockquote, hr, legend, figure, iframe {
+	border: 0;
+	margin: 0;
+	padding: 0;
+  outline: none;
+  border-radius: 0;
+}
+a {
+  text-decoration: none;
+  outline: 0;
+}
+img {
+  vertical-align: bottom;
+}
+[disabled] {
+  cursor: default;
+}
+/**
+ * Base
+ * 
+ * Custom properties
+ * Style normalization
+ * Custom styling html elements
+ *
+ * Text The vertical rythm beauty
+ * Links
+ * Lists
+ * Tables
+ * Buttons
+ * Form items
+ * 
+ * Fonts Make things look prettier
+ */
+
+ /**
+  * Custom properties
+  */
+ :root {
+  /*
+   * Text
+   */
+  --text-font: 'Inconsolata', monospace;
+  --heading-font: 'Montserrat', sans-serif;
+  --base-font-size: 16px;
+  --rhytm-unit: 20px;
+  /**
+   * Color
+   *
+   * We like to keep it simple, yet flexible, 
+   * using a split-complementary color scheme
+   * and a black that is not that black for text
+   *
+   * https://www.sessions.edu/color-calculator/
+   * https://ianstormtaylor.com/design-tip-never-use-black/
+   *
+   */
+  --neutral-color: #fcfcfc;
+  --base-color: #0b162a;
+  --complementary-color-1: #e35835;
+  --complementary-color-2: #cde534;
+
+  --information-color: #bde5f8;
+  --warning-color: #feefb3;
+  --error-color: #ffbaba;
+  --success-color: #dff2bf;
+  --heading-color: var(--base-color);
+  --text-color: #1a1a1a;
+  /*
+   * Extras
+   */
+  --box-width: 90%;       /* Max-width for a boxed container */
+  --rounded: 0;
+ }
+ /* Text; The vertical rhytm beauty
+  *
+  * Trying to grasp and work with the concepts of Vertical Rhythm and Modular Scale
+  * we tried to fit text elements (font-size, line-height and vertical margins) 
+  * within a repeated pattern
+  * 
+  *
+  * Reference:
+  * https://zellwk.com/blog/responsive-vertical-rhythm/
+  * https://iamsteve.me/blog/entry/a-guide-to-vertical-rhythm
+  * https://24ways.org/2006/compose-to-a-vertical-rhythm/
+  * https://www.smashingmagazine.com/2012/12/css-baseline-the-good-the-bad-and-the-ugly/
+  * http://typecast.com/blog/4-simple-steps-to-vertical-rhythm
+  * 
+  * Tools:
+  * https://drewish.com/tools/vertical-rhythm/
+  * https://www.gridlover.net/try
+  * https://nowodzinski.pl/syncope/
+  * 
+  */
+html, body {
+  font-family: var(--text-font);
+  font-size: var(--base-font-size);
+  line-height: var(--rhytm-unit);
+  color: var(--text-color);
+  background-color: #000;
+}

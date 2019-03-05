@@ -9,13 +9,21 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "clean-css-cli": "^4.2.1",
     "html5-boilerplate": "^7.0.1",
     "html5-test-page": "^0.8.0",
-    "node-sass": "^4.11.0",
-    "uglifycss": "0.0.29"
+    "nodemon": "^1.18.10",
+    "postcss-cli": "^6.1.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bsync": "browser-sync start -p localhost:80/Codeinalab/Magicssian/CssBoilerplate/Master/public_html/ -f *.html, css/*.css",
+    "postcss": "postcss src/scss_css/magicssian.css --no-map -o public_html/css/magicssian.css",
+    "cleancss": "cleancss --source-map -o public_html/css/magicssian.min.css public_html/css/magicssian.css",
+    "build": "npm run postcss && npm run cleancss",
+    "watch": "nodemon -e src/css -x npm run build",
+    "dev": "npm run bsync && npm run watch"
   },
   "repository": {
     "type": "git",
