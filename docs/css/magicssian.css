@@ -12,11 +12,11 @@
  * Opinionated reset
  *
  */
-html {
+* {
   /* Est. 2012; https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
   box-sizing:border-box;
-  overflow-y: scroll;
 }
+
 body, 
 fieldset, input, select, textarea, button, 
 dl, dd, ul, ol, 

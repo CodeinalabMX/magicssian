@@ -12,10 +12,9 @@
  * Opinionated reset
  *
  */
-html {
+* {
   /* Est. 2012; https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
   box-sizing:border-box;
-  overflow-y: scroll;
 }
 
 body, 
@@ -120,5 +119,4 @@ html, body {
   font-size: var(--base-font-size);
   line-height: var(--rhytm-unit);
   color: var(--text-color);
-  background-color: #000;
 }
