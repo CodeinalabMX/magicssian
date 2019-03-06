@@ -95,7 +95,7 @@ button, select {
    */
   text-transform: none;
 }
-button, [type="button"], [type="reset"], [type="submit"] {
+button, [type=button], [type=reset], [type=submit] {
   /* From normalize:
   * Correct the inability to style clickable types in iOS and Safari.
   */
@@ -183,6 +183,14 @@ template {
   --neutral-color: #fbfbfb;
   --heading-color: var(--base-color);
   --text-color: #1a1a1a;
+  /* Color variations are generated automatically
+   * using postCSS color function plugin
+   */
+  /*
+   * Review:
+   * Is this variable necesary? check implementation
+   */
+  --cs-variance: 20;
   /**
    * Notification scheme
    */
@@ -299,16 +307,16 @@ a {
 }
 /* Default color: complementary-color-1 */
 a:link, a:visited {
-    color: var(--complementary-color-1);;
+    color: var(--complementary-color-1);
 }
 a:hover, a:active, a.active {
   border-color: var(--complementary-color-1);
 }
-/* Review:;
+/* Review:
  * Consider change class name for a more descriptive, semantic
  */
 a.alt:link, a.alt:visited {
-    color: var(--complementary-color-2);
+  color: var(--complementary-color-2);
 }
 a.alt:hover, a.alt:active a.alt.active {
   border-color: var(--complementary-color-2);
@@ -324,7 +332,49 @@ a.alt:hover, a.alt:active a.alt.active {
 /**
  * Buttons
  */
+button, 
+.button,
+a.button,
+input[type=button], 
+input[type=submit], 
+input[type=reset] {
+    position: relative;
+    display: inline-block;
+    border: 2px solid var(--complementary-color-1);
+    /* Substract the element border
+     * to keep block height into rhytm unit
+     */
+    padding: calc(.5 * var(--rhytm-unit) - 2px) calc(1 * var(--rhytm-unit));
+    background: var(--complementary-color-1);
+    font-family: var(--text-font);
+    font-size: 1em;
+    line-height: var(--rhytm-unit);
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    transition: all .4s ease-out;
+    border-radius: var(--rounded);
+}
+button:hover, 
+.button:hover, 
+a.button:hover,
+input[type=button]:hover,
+input[type=submit]:hover, 
+input[type=reset]:hover {
+  --color: color(var(--complementary-color-1) lightness(-10));
+  background: var(--color);
+  border-color: var(--color);
+  color: #000;
+}
 
+input[type=submit]:disabled, 
+button:disabled {
+    background: transparent;
+    color: #aaa;
+    border-color: #aaa;
+}
 /**
  * Form items
  */
@@ -341,6 +391,29 @@ a.alt:hover, a.alt:active a.alt.active {
  * Grid
  * Notifications
  */
+/**
+ * Container
+ */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+.container.boxed {
+  max-width: var(--box-width);
+  margin: 0 auto;
+}
+/* Sticky footer */
+body.sticky-footer {
+  display: flex;
+  flex-direction: column;
+}
+body.sticky-footer section {
+  flex: 1 0 auto;
+}
+body.sticky-footer footer {
+  flex: 0 0 auto;
+}
 
 
 /**

@@ -95,7 +95,7 @@ button, select {
    */
   text-transform: none;
 }
-button, [type="button"], [type="reset"], [type="submit"] {
+button, [type=button], [type=reset], [type=submit] {
   /* From normalize:
   * Correct the inability to style clickable types in iOS and Safari.
   */
@@ -173,6 +173,13 @@ template {
    * https://www.sessions.edu/color-calculator/
    * https://ianstormtaylor.com/design-tip-never-use-black/
    */
+  /* Color variations are generated automatically
+   * using postCSS color function plugin
+   */
+  /*
+   * Review:
+   * Is this variable necesary? check implementation
+   */
   /**
    * Notification scheme
    */
@@ -243,43 +250,43 @@ dl {
 }
 h1 {
   font-size: 4.8750rem;      /* 78/16 */
-  line-height: calc(5*20px);
+  line-height: 100px;
 }
 .h1 {
   font-size: 4.8750rem;      /* 78/16 */
-  line-height: calc(5*20px);
+  line-height: 100px;
 }
 h2 {
   font-size: 2.8750rem;      /* 46/16 */
-  line-height: calc(3*20px);
+  line-height: 60px;
 }
 .h2 {
   font-size: 2.8750rem;      /* 46/16 */
-  line-height: calc(3*20px);
+  line-height: 60px;
 }
 h3 {
   font-size: 1.8750rem;      /* 30/16 */
-  line-height: calc(3*20px);
+  line-height: 60px;
 }
 .h3 {
   font-size: 1.8750rem;      /* 30/16 */
-  line-height: calc(3*20px);
+  line-height: 60px;
 }
 h4 {
   font-size: 1.3750rem;      /* 22/16 */
-  line-height: calc(2*20px);
+  line-height: 40px;
 }
 .h4 {
   font-size: 1.3750rem;      /* 22/16 */
-  line-height: calc(2*20px);
+  line-height: 40px;
 }
 h5 {
   font-size: 1.1250rem;      /* 18/16 */
-  line-height: calc(2*20px);
+  line-height: 40px;
 }
 .h5 {
   font-size: 1.1250rem;      /* 18/16 */
-  line-height: calc(2*20px);
+  line-height: 40px;
 }
 h6 {
   font-size: 0.8750rem;      /* 14/16 */
@@ -314,36 +321,36 @@ h6 {
   color: #0b162a;
 }
 h1 {
-  margin-top: calc(0.5*20px);
-  margin-bottom: calc(0.5*20px);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 h2 {
-  margin-top: calc(0.5*20px);
-  margin-bottom: calc(0.5*20px);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 h3 {
-  margin-top: calc(0.5*20px);
-  margin-bottom: calc(0.5*20px);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 h4 {
-  margin-top: calc(0.5*20px);
-  margin-bottom: calc(0.5*20px);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 h5 {
-  margin-top: calc(0.5*20px);
-  margin-bottom: calc(0.5*20px);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 h6 {
-  margin-top: calc(0.5*20px);
-  margin-bottom: calc(0.5*20px);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 p {
-  margin-top: calc(0.5*20px);
-  margin-bottom: calc(0.5*20px);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 cite {
-  margin-top: calc(0.5*20px);
-  margin-bottom: calc(0.5*20px);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 small {
   /* Review:
@@ -358,8 +365,8 @@ sub, sup {
   line-height: 0;
 }
 blockquote {
-  padding: calc(1.5*20px);
-  margin-left: calc(2*20px);
+  padding: 30px;
+  margin-left: 40px;
   border-left: 2px solid #e35835;
 }
 cite {
@@ -368,7 +375,7 @@ cite {
   text-align: right;
 }
 pre {
-  padding: calc(0.5*20px);
+  padding: 10px;
   background-color: #fbfbfb;
 }
 hr {
@@ -376,7 +383,7 @@ hr {
   /* Substract the element height
    * to keep block height into rhytm unit
    */
-  margin: calc(20px - 1px) 20px;
+  margin: 19px 20px;
   background-color: #e35835;
 }
 /**
@@ -389,10 +396,10 @@ a {
 }
 /* Default color: complementary-color-1 */
 a:link {
-    color: #e35835;;
+    color: #e35835;
 }
 a:visited {
-    color: #e35835;;
+    color: #e35835;
 }
 a:hover {
   border-color: #e35835;
@@ -403,14 +410,14 @@ a:active {
 a.active {
   border-color: #e35835;
 }
-/* Review:;
+/* Review:
  * Consider change class name for a more descriptive, semantic
  */
 a.alt:link {
-    color: #cde534;
+  color: #cde534;
 }
 a.alt:visited {
-    color: #cde534;
+  color: #cde534;
 }
 a.alt:hover {
   border-color: #cde534;
@@ -429,7 +436,211 @@ a.alt:active a.alt.active {
 /**
  * Buttons
  */
+button {
+    position: relative;
+    display: inline-block;
+    border: 2px solid #e35835;
+    /* Substract the element border
+     * to keep block height into rhytm unit
+     */
+    padding: 8px 20px;
+    background: #e35835;
+    font-family: 'Inconsolata', serif;
+    font-size: 1em;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    transition: all .4s ease-out;
+    border-radius: 0;
+}
+.button {
+    position: relative;
+    display: inline-block;
+    border: 2px solid #e35835;
+    /* Substract the element border
+     * to keep block height into rhytm unit
+     */
+    padding: 8px 20px;
+    background: #e35835;
+    font-family: 'Inconsolata', serif;
+    font-size: 1em;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    transition: all .4s ease-out;
+    border-radius: 0;
+}
+a.button {
+    position: relative;
+    display: inline-block;
+    border: 2px solid #e35835;
+    /* Substract the element border
+     * to keep block height into rhytm unit
+     */
+    padding: 8px 20px;
+    background: #e35835;
+    font-family: 'Inconsolata', serif;
+    font-size: 1em;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    transition: all .4s ease-out;
+    border-radius: 0;
+}
+input[type=button] {
+    position: relative;
+    display: inline-block;
+    border: 2px solid #e35835;
+    /* Substract the element border
+     * to keep block height into rhytm unit
+     */
+    padding: 8px 20px;
+    background: #e35835;
+    font-family: 'Inconsolata', serif;
+    font-size: 1em;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    transition: all .4s ease-out;
+    border-radius: 0;
+}
+input[type=submit] {
+    position: relative;
+    display: inline-block;
+    border: 2px solid #e35835;
+    /* Substract the element border
+     * to keep block height into rhytm unit
+     */
+    padding: 8px 20px;
+    background: #e35835;
+    font-family: 'Inconsolata', serif;
+    font-size: 1em;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    transition: all .4s ease-out;
+    border-radius: 0;
+}
+input[type=reset] {
+    position: relative;
+    display: inline-block;
+    border: 2px solid #e35835;
+    /* Substract the element border
+     * to keep block height into rhytm unit
+     */
+    padding: 8px 20px;
+    background: #e35835;
+    font-family: 'Inconsolata', serif;
+    font-size: 1em;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    transition: all .4s ease-out;
+    border-radius: 0;
+}
+button:hover {
+  background: undefined;
+  border-color: undefined;
+}
+button:hover:hover {
+  border-color: rgb(202, 62, 28);
+}
+button:hover:hover {
+  background: rgb(202, 62, 28);
+}
+.button:hover {
+  background: undefined;
+  border-color: undefined;
+}
+.button:hover:hover {
+  border-color: rgb(202, 62, 28);
+}
+.button:hover:hover {
+  border-color: rgb(202, 62, 28);
+}
+.button:hover:hover {
+  background: rgb(202, 62, 28);
+}
+.button:hover:hover {
+  background: rgb(202, 62, 28);
+}
+a.button:hover {
+  background: undefined;
+  border-color: undefined;
+}
+a.button:hover:hover {
+  border-color: rgb(202, 62, 28);
+}
+a.button:hover:hover {
+  border-color: rgb(202, 62, 28);
+}
+a.button:hover:hover {
+  border-color: rgb(202, 62, 28);
+}
+a.button:hover:hover {
+  background: rgb(202, 62, 28);
+}
+a.button:hover:hover {
+  background: rgb(202, 62, 28);
+}
+a.button:hover:hover {
+  background: rgb(202, 62, 28);
+}
+input[type=button]:hover {
+  background: undefined;
+  border-color: undefined;
+}
+input[type=button]:hover:hover {
+  border-color: rgb(202, 62, 28);
+}
+input[type=button]:hover:hover {
+  background: rgb(202, 62, 28);
+}
+input[type=submit]:hover {
+  background: undefined;
+  border-color: undefined;
+}
+input[type=submit]:hover:hover {
+  border-color: rgb(202, 62, 28);
+}
+input[type=submit]:hover:hover {
+  background: rgb(202, 62, 28);
+}
+input[type=reset]:hover {
+  background: undefined;
+  border-color: undefined;
+}
+input[type=reset]:hover:hover {
+  border-color: rgb(202, 62, 28);
+}
+input[type=reset]:hover:hover {
+  background: rgb(202, 62, 28);
+}
 
+input[type=submit]:disabled, 
+button:disabled {
+    background: transparent;
+    color: #aaa;
+    border-color: #aaa;
+}
 /**
  * Form items
  */
@@ -446,6 +657,29 @@ a.alt:active a.alt.active {
  * Grid
  * Notifications
  */
+/**
+ * Container
+ */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+.container.boxed {
+  max-width: 90%;
+  margin: 0 auto;
+}
+/* Sticky footer */
+body.sticky-footer {
+  display: flex;
+  flex-direction: column;
+}
+body.sticky-footer section {
+  flex: 1 0 auto;
+}
+body.sticky-footer footer {
+  flex: 0 0 auto;
+}
 
 
 /**
