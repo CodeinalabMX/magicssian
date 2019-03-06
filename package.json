@@ -15,13 +15,15 @@
     "html5-boilerplate": "^7.0.1",
     "html5-test-page": "^0.8.0",
     "nodemon": "^1.18.10",
+    "postcss-calc": "^7.0.1",
     "postcss-cli": "^6.1.2",
+    "postcss-css-variables": "^0.12.0",
     "watch": "^1.0.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "bsync": "browser-sync start -p localhost:80/Codeinalab/Magicssian/CssBoilerplate/Master/docs/ -f *.html, css/*.css",
-    "postcss": "postcss src/scss_css/magicssian_draft.css --no-map -o docs/css/magicssian.css",
+    "postcss": "postcss src/scss_css/magicssian_draft.css -u postcss-calc postcss-css-variables  --no-map -o docs/css/magicssian.css",
     "cleancss": "cleancss --source-map -o docs/css/magicssian.min.css docs/css/magicssian.css",
     "build": "npm run postcss && npm run cleancss",
     "watch": "watch \"npm run build\" src/scss_css",

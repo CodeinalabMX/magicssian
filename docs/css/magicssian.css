@@ -154,16 +154,12 @@ template {
    * Fonts Make things look prettier
    * choose wisely
    */
-  --text-font: 'Inconsolata', serif;
-  --heading-font: 'Montserrat', sans-serif;
   /**
    * Font size & rhytm unit
    *
    * With this 
    * but difficult to handle 
    */
-  --base-font-size: 16px;
-  --rhytm-unit: 20px;
   /**
    * Color schemes
    */
@@ -177,83 +173,177 @@ template {
    * https://www.sessions.edu/color-calculator/
    * https://ianstormtaylor.com/design-tip-never-use-black/
    */
-  --base-color: #0b162a;
-  --complementary-color-1: #e35835;
-  --complementary-color-2: #cde534;
-  --neutral-color: #fbfbfb;
-  --heading-color: var(--base-color);
-  --text-color: #1a1a1a;
   /**
    * Notification scheme
    */
-  --information-color: #caeaf9;
-  --information-text-color: #00529b;
-  --warning-color: #feefb3;
-  --warning-text-color: #9f6000;
-  --error-color: #ffc8c8;
-  --error-text-color: #d8000c;
-  --success-color: #e5f5cc;
-  --success-text-color: #4f8a10;
   /**
    * Extras
    */
   /* Max-width for a boxed container */
-  --box-width: 90%;
   /* border-radius value
    * will apply globally for buttons &
    * .rounded helper class
    */
-  --rounded: 0;
  }
 
 /**
  * Document
  */
-html, body {
-  font-family: var(--text-font);
-  font-size: var(--base-font-size);
-  line-height: var(--rhytm-unit);
-  color: var(--text-color);
+html {
+  font-family: 'Inconsolata', serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #1a1a1a;
+}
+body {
+  font-family: 'Inconsolata', serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #1a1a1a;
 }
 /**
  * Text
  * 
  */
-p, a, q, cite, pre, code, ul, ol, dl { 
+p { 
   font-size: 1rem;
-  line-height: var(--rhytm-unit);
+  line-height: 20px;
 }
-h1, .h1 {
+a { 
+  font-size: 1rem;
+  line-height: 20px;
+}
+q { 
+  font-size: 1rem;
+  line-height: 20px;
+}
+cite { 
+  font-size: 1rem;
+  line-height: 20px;
+}
+pre { 
+  font-size: 1rem;
+  line-height: 20px;
+}
+code { 
+  font-size: 1rem;
+  line-height: 20px;
+}
+ul { 
+  font-size: 1rem;
+  line-height: 20px;
+}
+ol { 
+  font-size: 1rem;
+  line-height: 20px;
+}
+dl { 
+  font-size: 1rem;
+  line-height: 20px;
+}
+h1 {
   font-size: 4.8750rem;      /* 78/16 */
-  line-height: calc(5 * var(--rhytm-unit));
+  line-height: calc(5*20px);
 }
-h2, .h2 {
+.h1 {
+  font-size: 4.8750rem;      /* 78/16 */
+  line-height: calc(5*20px);
+}
+h2 {
   font-size: 2.8750rem;      /* 46/16 */
-  line-height: calc(3 * var(--rhytm-unit));
+  line-height: calc(3*20px);
 }
-h3, .h3 {
+.h2 {
+  font-size: 2.8750rem;      /* 46/16 */
+  line-height: calc(3*20px);
+}
+h3 {
   font-size: 1.8750rem;      /* 30/16 */
-  line-height: calc(3 * var(--rhytm-unit));
+  line-height: calc(3*20px);
 }
-h4, .h4 {
+.h3 {
+  font-size: 1.8750rem;      /* 30/16 */
+  line-height: calc(3*20px);
+}
+h4 {
   font-size: 1.3750rem;      /* 22/16 */
-  line-height: calc(2 * var(--rhytm-unit));
+  line-height: calc(2*20px);
 }
-h5, .h5 {
+.h4 {
+  font-size: 1.3750rem;      /* 22/16 */
+  line-height: calc(2*20px);
+}
+h5 {
   font-size: 1.1250rem;      /* 18/16 */
-  line-height: calc(2 * var(--rhytm-unit));
+  line-height: calc(2*20px);
 }
-h6, .h6 {
+.h5 {
+  font-size: 1.1250rem;      /* 18/16 */
+  line-height: calc(2*20px);
+}
+h6 {
   font-size: 0.8750rem;      /* 14/16 */
-  line-height: var(--rhytm-unit);
+  line-height: 20px;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--heading-font);
-  color: var(--heading-color);
+.h6 {
+  font-size: 0.8750rem;      /* 14/16 */
+  line-height: 20px;
 }
-h1, h2, h3, h4, h5, h6, p, cite {
-  margin-top: calc(.5 * var(--rhytm-unit));
-  margin-bottom: calc(.5 * var(--rhytm-unit));
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0b162a;
+}
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0b162a;
+}
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0b162a;
+}
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0b162a;
+}
+h5 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0b162a;
+}
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0b162a;
+}
+h1 {
+  margin-top: calc(0.5*20px);
+  margin-bottom: calc(0.5*20px);
+}
+h2 {
+  margin-top: calc(0.5*20px);
+  margin-bottom: calc(0.5*20px);
+}
+h3 {
+  margin-top: calc(0.5*20px);
+  margin-bottom: calc(0.5*20px);
+}
+h4 {
+  margin-top: calc(0.5*20px);
+  margin-bottom: calc(0.5*20px);
+}
+h5 {
+  margin-top: calc(0.5*20px);
+  margin-bottom: calc(0.5*20px);
+}
+h6 {
+  margin-top: calc(0.5*20px);
+  margin-bottom: calc(0.5*20px);
+}
+p {
+  margin-top: calc(0.5*20px);
+  margin-bottom: calc(0.5*20px);
+}
+cite {
+  margin-top: calc(0.5*20px);
+  margin-bottom: calc(0.5*20px);
 }
 small {
   /* Review:
@@ -268,9 +358,9 @@ sub, sup {
   line-height: 0;
 }
 blockquote {
-  padding: calc(1.5 * var(--rhytm-unit));
-  margin-left: calc(2 * var(--rhytm-unit));
-  border-left: 2px solid var(--complementary-color-1);
+  padding: calc(1.5*20px);
+  margin-left: calc(2*20px);
+  border-left: 2px solid #e35835;
 }
 cite {
   display: inline-block;
@@ -278,16 +368,16 @@ cite {
   text-align: right;
 }
 pre {
-  padding: calc(.5 * var(--rhytm-unit));
-  background-color: var(--neutral-color);
+  padding: calc(0.5*20px);
+  background-color: #fbfbfb;
 }
 hr {
   height: 1px;
   /* Substract the element height
    * to keep block height into rhytm unit
    */
-  margin: calc(var(--rhytm-unit) - 1px) var(--rhytm-unit);
-  background-color: var(--complementary-color-1);
+  margin: calc(20px - 1px) 20px;
+  background-color: #e35835;
 }
 /**
  * Links
@@ -298,20 +388,35 @@ a {
   border-bottom: 1px solid transparent;
 }
 /* Default color: complementary-color-1 */
-a:link, a:visited {
-    color: var(--complementary-color-1);;
+a:link {
+    color: #e35835;;
 }
-a:hover, a:active, a.active {
-  border-color: var(--complementary-color-1);
+a:visited {
+    color: #e35835;;
+}
+a:hover {
+  border-color: #e35835;
+}
+a:active {
+  border-color: #e35835;
+}
+a.active {
+  border-color: #e35835;
 }
 /* Review:;
  * Consider change class name for a more descriptive, semantic
  */
-a.alt:link, a.alt:visited {
-    color: var(--complementary-color-2);
+a.alt:link {
+    color: #cde534;
 }
-a.alt:hover, a.alt:active a.alt.active {
-  border-color: var(--complementary-color-2);
+a.alt:visited {
+    color: #cde534;
+}
+a.alt:hover {
+  border-color: #cde534;
+}
+a.alt:active a.alt.active {
+  border-color: #cde534;
 }
 /**
  * Lists
