@@ -39,7 +39,7 @@ html {
 }
 body, 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-ul, ol, dl, dd, 
+dl, dd, 
 hr, 
 figure, figcaption, 
 iframe, 
@@ -47,7 +47,10 @@ fieldset, legend, input, textarea, select {
 	margin: 0;
 	padding: 0;
 }
-iframe {
+ul, ol {
+  margin: 0;
+}
+iframe, hr {
   border: 0;
 }
 /* Add support for html5 elements in older browsers */
@@ -83,7 +86,7 @@ img {
   cursor: default;
 }
 abbr {
-  cursor:help;
+  cursor: help;
 }
 button, select {
   /* From normalize:
@@ -176,7 +179,7 @@ template {
   --base-color: #0b162a;
   --complementary-color-1: #e35835;
   --complementary-color-2: #cde534;
-  --neutral-color: #fcfcfc;
+  --neutral-color: #fbfbfb;
   --heading-color: var(--base-color);
   --text-color: #1a1a1a;
   /**
@@ -205,16 +208,110 @@ template {
 /**
  * Document
  */
-
+html, body {
+  font-family: var(--text-font);
+  font-size: var(--base-font-size);
+  line-height: var(--rhytm-unit);
+  color: var(--text-color);
+}
 /**
  * Text
  * 
  */
-
+p, a, q, cite, pre, code, ul, ol, dl { 
+  font-size: 1rem;
+  line-height: var(--rhytm-unit);
+}
+h1, .h1 {
+  font-size: 4.8750rem;      /* 78/16 */
+  line-height: calc(5 * var(--rhytm-unit));
+}
+h2, .h2 {
+  font-size: 2.8750rem;      /* 46/16 */
+  line-height: calc(3 * var(--rhytm-unit));
+}
+h3, .h3 {
+  font-size: 1.8750rem;      /* 30/16 */
+  line-height: calc(3 * var(--rhytm-unit));
+}
+h4, .h4 {
+  font-size: 1.3750rem;      /* 22/16 */
+  line-height: calc(2 * var(--rhytm-unit));
+}
+h5, .h5 {
+  font-size: 1.1250rem;      /* 18/16 */
+  line-height: calc(2 * var(--rhytm-unit));
+}
+h6, .h6 {
+  font-size: 0.8750rem;      /* 14/16 */
+  line-height: var(--rhytm-unit);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+}
+h1, h2, h3, h4, h5, h6, p, cite {
+  margin-top: calc(.5 * var(--rhytm-unit));
+  margin-bottom: calc(.5 * var(--rhytm-unit));
+}
+small {
+  /* Review:
+   * Element height does not fit into rhytm unit
+   */
+  font-size: 0.7500rem;      /* 12/16 */
+}
+sub, sup {
+  /* Review: 
+   * Should prevent sub & sup affecting line height in all browsers
+   */
+  line-height: 0;
+}
+blockquote {
+  padding: calc(1.5 * var(--rhytm-unit));
+  margin-left: calc(2 * var(--rhytm-unit));
+  border-left: 2px solid var(--complementary-color-1);
+}
+cite {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+pre {
+  padding: calc(.5 * var(--rhytm-unit));
+  background-color: var(--neutral-color);
+}
+hr {
+  height: 1px;
+  /* Substract the element height
+   * to keep block height into rhytm unit
+   */
+  margin: calc(var(--rhytm-unit) - 1px) var(--rhytm-unit);
+  background-color: var(--complementary-color-1);
+}
 /**
  * Links
  */
-
+a {
+  transition: all .4s ease-out;
+  /* Transparent border is added to prevent jumpy transition on hover */
+  border-bottom: 1px solid transparent;
+}
+/* Default color: complementary-color-1 */
+a:link, a:visited {
+    color: var(--complementary-color-1);;
+}
+a:hover, a:active, a.active {
+  border-color: var(--complementary-color-1);
+}
+/* Review:;
+ * Consider change class name for a more descriptive, semantic
+ */
+a.alt:link, a.alt:visited {
+    color: var(--complementary-color-2);
+}
+a.alt:hover, a.alt:active a.alt.active {
+  border-color: var(--complementary-color-2);
+}
 /**
  * Lists
  */
