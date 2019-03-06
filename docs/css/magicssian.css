@@ -9,6 +9,7 @@
  * Reset
  * Base
  * Components
+ * Utilities
  */
 
 
@@ -327,3 +328,75 @@ a.alt:hover, a.alt:active a.alt.active {
 /**
  * Form items
  */
+
+
+/**
+ * Components
+ * 
+ * Layout & custom re-usable elements
+ *
+ * Contents:
+ * Container
+ * Sticky footer
+ * Grid
+ * Notifications
+ */
+
+
+/**
+ * Utilities
+ *
+ * 
+ *
+ */
+/* BEEP BEEP Richie! They ALL float down here. When you're down here with us, you'll float too! */
+.float-l {
+  float:left;
+}
+.float-r {
+  float:right;
+}
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+  content: ' '; /* 1 */
+  display: table; /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+/* Visually */
+.hidden {
+  display: none;
+}
+.invisible {
+  visibility: hidden;
+}
+/* Old school image replacement */
+.ir {
+  display:inline-block;
+  background-color:transparent;
+  border:0;
+  text-indent:100%;
+  white-space:nowrap;
+  overflow:hidden;
+}
+.ir:before {
+  display:block;
+  width:0;
+  height:100%;
+}
+/* Rounded corners */
+.rounded {
+  border-radius: 10px;
+}
+/* text alignemt */
+.align-l {
+  text-align:left;
+}
+.align-r {
+  text-align:right;
+}
+.align-c {
+  text-align:center;
+}
