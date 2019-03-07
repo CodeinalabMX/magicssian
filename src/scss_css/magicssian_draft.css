@@ -171,7 +171,7 @@ template {
    * A split-complementary color scheme
    * a black that is not that black for text
    * 
-   * Reference & tools:
+   * Tools & reference:
    * https://www.sessions.edu/color-calculator/
    * https://ianstormtaylor.com/design-tip-never-use-black/
    */
@@ -184,7 +184,8 @@ template {
   /* Color variations are automatically generated
    * using postCSS color function plugin
    * @todo Review class name for a more descriptive, semantic
-   * 
+   * Tools & reference:
+   * https://medium.com/@mihaeltomic/supercharge-your-colors-with-the-postcss-color-function-e4459ca9554e
    */
   --color-variant: -12;
   /**
