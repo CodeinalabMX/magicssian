@@ -10,6 +10,7 @@
  * Logo
  * Main navigation
  * Home
+ * * Flexbox grid
  * Footer
  * Media queries
  */
@@ -67,4 +68,20 @@
 .magicssian.heading {
 	text-align: center;
   letter-spacing: 2px;
+}
+/* Home */
+/* Flex box grid */
+.flex-grid-examples .flex-grid .column, .flex-grid-examples .flex-grid .column p {
+	text-align: center;
+}
+.flex-grid-examples .flex-grid .column:nth-child(even) {
+	background: #CCC;
+}
+.flex-grid-examples .flex-grid .column:nth-child(odd) {
+	background: #dedede;
+}
+/* Footer */
+footer {
+	height: 300px;
+	padding-top: 80px;
 }
