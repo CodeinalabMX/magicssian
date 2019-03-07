@@ -83,9 +83,6 @@ img {
    */
   border-style: none;
 }
-[disabled] {
-  cursor: default;
-}
 abbr {
   cursor: help;
 }
@@ -100,6 +97,7 @@ button, [type=button], [type=reset], [type=submit] {
   * Correct the inability to style clickable types in iOS and Safari.
   */
   -webkit-appearance: button;
+  outline: none;
 }
 template {
   /* From normalize:;
@@ -183,14 +181,12 @@ template {
   --neutral-color: #fbfbfb;
   --heading-color: var(--base-color);
   --text-color: #1a1a1a;
-  /* Color variations are generated automatically
+  /* Color variations are automatically generated
    * using postCSS color function plugin
+   * @todo Review class name for a more descriptive, semantic
+   * 
    */
-  /*
-   * Review:
-   * Is this variable necesary? check implementation
-   */
-  --cs-variance: 20;
+  --color-variant: -12;
   /**
    * Notification scheme
    */
@@ -212,6 +208,7 @@ template {
    * .rounded helper class
    */
   --rounded: 0;
+  --rounded-utility: 4px;
  }
 
 /**
@@ -264,15 +261,11 @@ h1, h2, h3, h4, h5, h6, p, cite {
   margin-bottom: calc(.5 * var(--rhytm-unit));
 }
 small {
-  /* Review:
-   * Element height does not fit into rhytm unit
-   */
+  /* @todo Fix element height as it does not fit into rhytm unit */
   font-size: 0.7500rem;      /* 12/16 */
 }
 sub, sup {
-  /* Review: 
-   * Should prevent sub & sup affecting line height in all browsers
-   */
+  /* @todo Test if this prevent sub & sup affecting line height in all browsers */
   line-height: 0;
 }
 blockquote {
@@ -312,13 +305,10 @@ a:link, a:visited {
 a:hover, a:active, a.active {
   border-color: var(--complementary-color-1);
 }
-/* Review:
- * Consider change class name for a more descriptive, semantic
- */
-a.alt:link, a.alt:visited {
+a.variant:link, a.variant:visited {
   color: var(--complementary-color-2);
 }
-a.alt:hover, a.alt:active a.alt.active {
+a.variant:hover, a.variant:active a.variant.active {
   border-color: var(--complementary-color-2);
 }
 /**
@@ -331,7 +321,14 @@ a.alt:hover, a.alt:active a.alt.active {
 
 /**
  * Buttons
+ *
+ * Contents:
+ * Default button
+ * Variant button
+ * Outlined button
+ * Disabled button
  */
+/* Default button */
 button, 
 .button,
 a.button,
@@ -363,17 +360,88 @@ a.button:hover,
 input[type=button]:hover,
 input[type=submit]:hover, 
 input[type=reset]:hover {
-  --color: color(var(--complementary-color-1) lightness(-10));
-  background: var(--color);
-  border-color: var(--color);
-  color: #000;
+  background: color(var(--complementary-color-1) lightness(var(--color-variant)));
+  border-color: color(var(--complementary-color-1) lightness(var(--color-variant)));
 }
-
+button:focus, 
+.button:focus, 
+a.button:focus,
+input[type=button]:focus,
+input[type=submit]:focus, 
+input[type=reset]:focus {
+    box-shadow: 0 0 6px var(--complementary-color-1);
+}
+/* Variant button */
+button.variant, 
+.button.variant, 
+a.button.variant,
+input[type=button].variant,
+input[type=submit].variant, 
+input[type=reset].variant {
+  background: var(--complementary-color-2);
+  border-color: var(--complementary-color-2);
+  color: white;
+}
+button.variant:hover, 
+.button.variant:hover, 
+a.button.variant:hover,
+input[type=button].variant:hover,
+input[type=submit].variant:hover, 
+input[type=reset].variant:hover {
+  background-color: color(var(--complementary-color-2) lightness(var(--color-variant)));
+  border-color: color(var(--complementary-color-2) lightness(var(--color-variant)));
+}
+button.variant:focus, 
+.button.variant:focus, 
+a.button.variant:focus,
+input[type=button].variant:focus,
+input[type=submit].variant:focus, 
+input[type=reset].variant:focus {
+    box-shadow: 0 0 6px var(--complementary-color-2);
+}
+/* Outlined button */
+button.outlined, 
+.button.outlined, 
+a.button.outlined,
+input[type=button].outlined,
+input[type=submit].outlined, 
+input[type=reset].outlined {
+  background: transparent;
+  color: var(--complementary-color-1);
+}
+button.variant.outlined, 
+.button.variant.outlined, 
+a.button.variant.outlined,
+input[type=button].variant.outlined,
+input[type=submit].variant.outlined, 
+input[type=reset].variant.outlined {
+  color: var(--complementary-color-2);
+}
+button.variant.outlined:hover, 
+.button.variant.outlined:hover, 
+a.button.variant.outlined:hover,
+input[type=button].variant.outlined:hover,
+input[type=submit].variant.outlined:hover, 
+input[type=reset].variant.outlined:hover {
+  background: color(var(--complementary-color-2) lightness(var(--color-variant)));
+  color: white;
+}
+button.outlined:hover, 
+.button.outlined:hover, 
+a.button.outlined:hover,
+input[type=button].outlined:hover,
+input[type=submit].outlined:hover, 
+input[type=reset].outlined:hover {
+  background: color(var(--complementary-color-1) lightness(var(--color-variant)));
+  color: white;
+}
+/* Disabled button */
 input[type=submit]:disabled, 
 button:disabled {
     background: transparent;
-    color: #aaa;
-    border-color: #aaa;
+    color: var(--neutral-color);
+    border-color: var(--neutral-color);
+    cursor: default;
 }
 /**
  * Form items
@@ -461,7 +529,7 @@ body.sticky-footer footer {
 }
 /* Rounded corners */
 .rounded {
-  border-radius: 10px;
+  border-radius: var(--rounded-utility)!important;
 }
 /* text alignemt */
 .align-l {
