@@ -257,9 +257,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
   color: var(--heading-color);
 }
-h1, h2, h3, h4, h5, h6, p, cite {
+h1, h2, h3, h4, h5, h6, p, cite, ul ul, ol ol {
   margin-top: calc(.5 * var(--rhytm-unit));
   margin-bottom: calc(.5 * var(--rhytm-unit));
+}
+ul, ol {
+  margin-top: var(--rhytm-unit);
+  margin-bottom: var(--rhytm-unit);
 }
 small {
   /* @todo Fix element height as it does not fit into rhytm unit */
@@ -315,7 +319,56 @@ a.variant:hover, a.variant:active a.variant.active {
 /**
  * Lists
  */
-
+ul, ol {
+  padding-left: calc(2 * var(--rhytm-unit));
+}
+li {
+  position: relative;
+}
+ul.custom, ol.custom, 
+ul.custom ul, ul.custom ol,
+ol.custom ul, ol.custom ol {
+  list-style: none;
+}
+ul.custom li:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: calc(.25 * var(--rhytm-unit));
+  height: calc(.25 * var(--rhytm-unit));
+  background-color: var(--complementary-color-1);
+  left: calc(-1 * var(--rhytm-unit));
+  top: calc(.375 * var(--rhytm-unit));
+  border-radius: 50%;
+}
+ul.custom.outlined li:before {
+  width: calc(.20 * var(--rhytm-unit));
+  height: calc(.20 * var(--rhytm-unit));
+  border: 1px solid var(--complementary-color-1);
+  background-color: transparent;
+}
+ul.custom.square > li:before, 
+ul.custom.diamond > li:before, 
+ul.custom.dash > li:before {
+  border-radius: 0;
+}
+ul.custom.diamond > li:before {
+  transform: rotate(45deg);
+}
+ul.custom.dash > li:before {
+  width: calc(.5 * var(--rhytm-unit));
+  height: calc(.125 * var(--rhytm-unit));
+  top: calc(.5 * var(--rhytm-unit));  
+}
+ul.custom.variant {
+  background: var(--complementary-color-2);
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  padding-left: calc(.5 * var(--rhytm-unit));
+}
 /**
  * Tables
  */
@@ -485,6 +538,7 @@ body.sticky-footer footer {
 }
 /**
  * (Flexbox) Grid
+ * @transition-duration: switch to CSS Grid layout
  */
 .grid, .grid.column {
   display: -ms-flexbox;
@@ -504,7 +558,7 @@ body.sticky-footer footer {
 .grid.valign-b {
   align-items: flex-end;
 }
-/* Columns */
+/* (Flexbox) Grid Columns */
 .grid .column {
   flex: 1;
 }
@@ -554,6 +608,7 @@ body.sticky-footer footer {
     width: 100%;
   }
 }
+
 
 /**
  * Utilities

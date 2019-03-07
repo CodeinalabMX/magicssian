@@ -349,6 +349,22 @@ cite {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+ul ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+ol ol {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+ol {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 small {
   /* @todo Fix element height as it does not fit into rhytm unit */
   font-size: 0.7500rem;      /* 12/16 */
@@ -418,7 +434,59 @@ a.variant:active a.variant.active {
 /**
  * Lists
  */
-
+ul {
+  padding-left: 40px;
+}
+ol {
+  padding-left: 40px;
+}
+li {
+  position: relative;
+}
+ul.custom, ol.custom, 
+ul.custom ul, ul.custom ol,
+ol.custom ul, ol.custom ol {
+  list-style: none;
+}
+ul.custom li:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: #e35835;
+  left: -20px;
+  top: 7.5px;
+  border-radius: 50%;
+}
+ul.custom.outlined li:before {
+  width: 4px;
+  height: 4px;
+  border: 1px solid #e35835;
+  background-color: transparent;
+}
+ul.custom.square > li:before, 
+ul.custom.diamond > li:before, 
+ul.custom.dash > li:before {
+  border-radius: 0;
+}
+ul.custom.diamond > li:before {
+  transform: rotate(45deg);
+}
+ul.custom.dash > li:before {
+  width: 10px;
+  height: 2.5px;
+  top: 10px;  
+}
+ul.custom.variant {
+  background: #cde534;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  padding-left: 10px;
+}
 /**
  * Tables
  */
@@ -813,6 +881,7 @@ body.sticky-footer footer {
 }
 /**
  * (Flexbox) Grid
+ * @transition-duration: switch to CSS Grid layout
  */
 .grid, .grid.column {
   display: -ms-flexbox;
@@ -832,7 +901,7 @@ body.sticky-footer footer {
 .grid.valign-b {
   align-items: flex-end;
 }
-/* Columns */
+/* (Flexbox) Grid Columns */
 .grid .column {
   flex: 1;
 }
@@ -882,6 +951,7 @@ body.sticky-footer footer {
     width: 100%;
   }
 }
+
 
 /**
  * Utilities

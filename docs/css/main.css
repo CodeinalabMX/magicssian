@@ -10,7 +10,7 @@
  * Logo
  * Main navigation
  * Home
- * * Flexbox grid
+ * * (Flexbox) Grid
  * Footer
  * Media queries
  */
@@ -70,7 +70,7 @@
   letter-spacing: 2px;
 }
 /* Home */
-/* Flex box grid */
+/* (Flexbox) Grid */
 .flex-grid-examples .grid .column, .flex-grid-examples .grid .column p {
 	text-align: center;
 }
