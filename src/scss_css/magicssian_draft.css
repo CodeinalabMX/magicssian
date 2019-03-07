@@ -86,17 +86,29 @@ img {
 abbr {
   cursor: help;
 }
-button, select {
+button, 
+select {
   /* From normalize:
    * Remove the inheritance of text transform in Edge, Firefox, and IE.
    */
   text-transform: none;
 }
-button, [type=button], [type=reset], [type=submit] {
+button, 
+[type=button], 
+[type=reset], 
+[type=submit] {
   /* From normalize:
   * Correct the inability to style clickable types in iOS and Safari.
   */
   -webkit-appearance: button;
+}
+button, 
+input, 
+select, 
+textarea {
+  /* Remove the default glow on focus state
+   * accessibility worry not, as it will be styled later 
+   */
   outline: none;
 }
 template {
@@ -127,8 +139,8 @@ template {
  * Links
  * Lists
  * Tables
+ * Form elements
  * Buttons
- * Form items
  */
 
  /**
@@ -181,24 +193,26 @@ template {
   --neutral-color: #eaeaea;
   --heading-color: var(--base-color);
   --text-color: #1a1a1a;
-  /* Color variations are automatically generated
+  /* Color variations are automatically generated 
    * using postCSS color function plugin
-   * @todo Review class name for a more descriptive, semantic
+   * and are used for:
+   * :hover efects on buttons, tables
    * Tools & reference:
    * https://medium.com/@mihaeltomic/supercharge-your-colors-with-the-postcss-color-function-e4459ca9554e
+   * @todo Review class name for a more descriptive, semantic
    */
   --color-variant: -12;
   /**
    * Notification scheme
    */
-  --information-color: #caeaf9;
-  --information-text-color: #00529b;
-  --warning-color: #feefb3;
-  --warning-text-color: #9f6000;
-  --error-color: #ffc8c8;
-  --error-text-color: #d8000c;
-  --success-color: #e5f5cc;
-  --success-text-color: #4f8a10;
+  --information-background-color: #caeaf9;
+  --information-color: #00529b;
+  --warning-background-color: #feefb3;
+  --warning-color: #9f6000;
+  --error-background-color: #ffc8c8;
+  --error-color: #d8000c;
+  --success-background-color: #e5f5cc;
+  --success-color: #4f8a10;
   /**
    * Extras
    */
@@ -223,7 +237,6 @@ html, body {
 }
 /**
  * Text
- * 
  */
 p, a, q, cite, pre, code, ul, ol, dl { 
   font-size: 1rem;
@@ -402,11 +415,15 @@ tfoot td {
   font-style: italic;
   padding: calc(.5 * var(--rhytm-unit) - 2px);
 }
-th, td, caption {
+th, td {
   text-align: left;
 }
 caption {
-  padding: 0 calc(.5 * var(--rhytm-unit));
+  margin-left: var(--rhytm-unit);
+  padding-left: calc(.5 * var(--rhytm-unit));
+  padding-right: calc(.5 * var(--rhytm-unit));
+  font-style: italic;
+  text-align: left;
 }
 table.striped tbody tr:nth-child(even) {
   background-color: color(var(--neutral-color) lightness(98));
@@ -414,6 +431,135 @@ table.striped tbody tr:nth-child(even) {
 tbody tr:hover, 
 table.striped tbody tr:hover {
   background-color: var(--neutral-color);
+}
+/**
+ * Form elements
+ */
+fieldset {
+    position: relative;
+    /*border: 0;*/
+    border: 1px solid var(--neutral-color);
+    padding-left: calc(.5 * var(--rhytm-unit));
+    padding-right: calc(.5 * var(--rhytm-unit));
+}
+fieldset.outlined {
+  border: 1px solid var(--neutral-color);
+}
+legend {
+  margin-left: var(--rhytm-unit);
+  padding-left: calc(.5 * var(--rhytm-unit));
+  padding-right: calc(.5 * var(--rhytm-unit));
+  font-style: italic;
+}
+label {
+  display: block;
+  font-weight: bold;
+}
+input[type=text], 
+input[type=password], 
+input[type=file], 
+textarea, select, 
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=range],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week] {
+    position: relative;
+    width: 100%;
+    margin-bottom: var(--rhytm-unit);
+    padding: calc(.5 * var(--rhytm-unit) - 1px);
+    border: 1px solid var(--neutral-color);
+    line-height: var(--rhytm-unit);
+    font-family: var(--text-font);
+    font-size: 1em;
+    background: #fafafa;
+    color: var(--text-color);
+    border-radius: var(--rounded);
+    transition: all .4s ease-out;
+}
+select {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTJweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMTIgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEyIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwb2x5Z29uIGZpbGw9IiMyMjIyMjIiIHBvaW50cz0iMiw5IDYsMyAxMCw5ICIvPg0KPHBvbHlnb24gZmlsbD0iIzIyMjIyMiIgcG9pbnRzPSIxMCwxMSA2LDE3IDIsMTEgIi8+DQo8L3N2Zz4NCg==');
+  background-position: 98% center;
+  background-repeat: no-repeat;
+}
+input[type=search] {
+  -webkit-appearance: none; /* reset searchfield appearance on Sarafi */
+}
+select::-ms-expand { 
+    display: none; /* hide the default arrow in ie10 and ie11 */
+}
+input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=file]:focus, 
+input[type=date]:focus,
+input[type=datetime]:focus,
+input[type=datetime-local]:focus,
+input[type=email]:focus,
+input[type=month]:focus,
+input[type=number]:focus,
+input[type=range]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=text]:focus,
+input[type=time]:focus,
+input[type=url]:focus,
+input[type=week]:focus, 
+textarea:focus, 
+select:focus, 
+input.is-valid:focus, 
+textarea.is-valid:focus, 
+select.is-valid:focus, 
+input.is-valid:focus {
+    border-color: var(--complementary-color-1);
+    box-shadow: 0 0 2px var(--complementary-color-1);
+}
+input[type=checkbox], 
+input[type=radio] {
+    margin: calc(.5 * var(--rhytm-unit)) var(--rhytm-unit);
+    transition: all .4s ease-out;
+}
+textarea {
+  resize:vertical;
+  vertical-align: bottom;
+}
+input.is-valid, 
+textarea.is-valid, 
+select.is-valid, 
+.is-valid {
+    border: 1px solid var(--success-color);
+}
+input[type=text].is-not-valid, 
+input[type=password].is-not-valid, 
+input[type=file].is-not-valid, 
+textarea.is-not-valid, select.is-not-valid, 
+input[type=date].is-not-valid,
+input[type=datetime].is-not-valid,
+input[type=datetime-local].is-not-valid,
+input[type=email].is-not-valid,
+input[type=month].is-not-valid,
+input[type=number].is-not-valid,
+input[type=range].is-not-valid,
+input[type=search].is-not-valid,
+input[type=tel].is-not-valid,
+input[type=text].is-not-valid,
+input[type=time].is-not-valid,
+input[type=url].is-not-valid,
+input[type=week].is-not-valid,
+textarea.is-not-valid, 
+select.is-not-valid,
+.is-not-valid {
+    border: 1px solid var(--error-color);
 }
 /**
  * Buttons
@@ -459,12 +605,8 @@ input[type=reset]:hover {
   background: color(var(--complementary-color-1) lightness(var(--color-variant)));
   border-color: color(var(--complementary-color-1) lightness(var(--color-variant)));
 }
-button:focus, 
-.button:focus, 
-a.button:focus,
-input[type=button]:focus,
-input[type=submit]:focus, 
-input[type=reset]:focus {
+button:focus,  
+a.button:focus {
     box-shadow: 0 0 6px var(--complementary-color-1);
 }
 /* Variant button */
@@ -539,9 +681,6 @@ button:disabled {
     border-color: var(--neutral-color);
     cursor: default;
 }
-/**
- * Form items
- */
 
 
 /**
