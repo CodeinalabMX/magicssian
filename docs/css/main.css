@@ -71,13 +71,13 @@
 }
 /* Home */
 /* Flex box grid */
-.flex-grid-examples .flex-grid .column, .flex-grid-examples .flex-grid .column p {
+.flex-grid-examples .grid .column, .flex-grid-examples .grid .column p {
 	text-align: center;
 }
-.flex-grid-examples .flex-grid .column:nth-child(even) {
+.flex-grid-examples .grid .column:nth-child(even) {
 	background: #CCC;
 }
-.flex-grid-examples .flex-grid .column:nth-child(odd) {
+.flex-grid-examples .grid .column:nth-child(odd) {
 	background: #dedede;
 }
 /* Footer */

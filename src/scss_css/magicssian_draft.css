@@ -457,7 +457,7 @@ button:disabled {
  * Contents:
  * Container
  * Sticky footer
- * Flex grid
+ * (Flexbox) Grid
  * Notifications
  */
 /**
@@ -484,28 +484,28 @@ body.sticky-footer footer {
   flex: 0 0 auto;
 }
 /**
- * Flex grid
+ * (Flexbox) Grid
  */
-.flex-grid, .flex-grid.column {
+.grid, .grid.column {
   display: -ms-flexbox;
   display: flex;
   flex-flow: row wrap;
   transition: all .4s ease-out;
 }
-.flex-grid.align-c {
+.grid.align-c {
   justify-content: center;
 }
-.flex-grid.align-l {
+.grid.align-l {
   justify-content: flex-end;
 }
-.flex-grid.valign-c {
+.grid.valign-c {
   align-items: center;
 }
-.flex-grid.valign-b {
+.grid.valign-b {
   align-items: flex-end;
 }
 /* Columns */
-.flex-grid .column {
+.grid .column {
   flex: 1;
 }
 .padded.column {
@@ -526,8 +526,7 @@ body.sticky-footer footer {
 .three-quarters.column {
   flex: 0 0 75%;
 }
-@media (max-width: 780px) {
-  .flex-grid, .flex-grid.column {
+@media (max-width: 780px) {.grid, .grid.column {
     flex-flow: column;
   }
   /** 
@@ -535,16 +534,16 @@ body.sticky-footer footer {
    * so we swap the the properties align-items & justify-content
    * for the alignment helpers 
    */
-  .flex-grid.align-c {
+  .grid.align-c {
     align-items: center;
   }
-  .flex-grid.align-l {
+  .grid.align-l {
     align-items: flex-end;
   }
-  .flex-grid.valign-c {
+  .grid.valign-c {
     justify-content: center;
   }
-  .flex-grid.valign-b {
+  .grid.valign-b {
     justify-content: flex-end;
   }
   .one-half.column,
