@@ -385,7 +385,7 @@ cite {
 }
 pre {
   padding: 10px;
-  background-color: #fbfbfb;
+  background-color: #eaeaea;
 }
 hr {
   height: 1px;
@@ -490,7 +490,51 @@ dd {
 /**
  * Tables
  */
-
+table {
+  /*
+   * Use separate borders to keep element height into vertical rhytm
+   */
+  border-collapse: separate;
+  width: 100%;
+  max-width: 100%;
+  border-spacing: 0;
+}
+tbody tr {
+  transition: all .4s ease-out;
+}
+tfoot {
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid transparent;
+}
+th {
+  padding: 8px;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid #eaeaea;
+}
+td {
+  padding: 9px 20px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid #eaeaea;
+}
+tfoot td {
+  font-style: italic;
+  padding: 8px;
+}
+th, td, caption {
+  text-align: left;
+}
+caption {
+  padding: 0 10px;
+}
+table.striped tbody tr:nth-child(even) {
+  background-color: rgb(250, 250, 250);
+}
+tbody tr:hover {
+  background-color: #eaeaea;
+}
+table.striped tbody tr:hover {
+  background-color: #eaeaea;
+}
 /**
  * Buttons
  *
@@ -830,14 +874,14 @@ input[type=reset].outlined:hover {
 /* Disabled button */
 input[type=submit]:disabled {
     background: transparent;
-    color: #fbfbfb;
-    border-color: #fbfbfb;
+    color: #eaeaea;
+    border-color: #eaeaea;
     cursor: default;
 }
 button:disabled {
     background: transparent;
-    color: #fbfbfb;
-    border-color: #fbfbfb;
+    color: #eaeaea;
+    border-color: #eaeaea;
     cursor: default;
 }
 /**

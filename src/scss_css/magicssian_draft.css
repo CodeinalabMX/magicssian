@@ -178,7 +178,7 @@ template {
   --base-color: #0b162a;
   --complementary-color-1: #e35835;
   --complementary-color-2: #cde534;
-  --neutral-color: #fbfbfb;
+  --neutral-color: #eaeaea;
   --heading-color: var(--base-color);
   --text-color: #1a1a1a;
   /* Color variations are automatically generated
@@ -372,7 +372,49 @@ dd {
 /**
  * Tables
  */
-
+table {
+  /*
+   * Use separate borders to keep element height into vertical rhytm
+   */
+  border-collapse: separate;
+  width: 100%;
+  max-width: 100%;
+  border-spacing: 0;
+}
+tbody tr {
+  transition: all .4s ease-out;
+}
+tfoot {
+  border-top: 1px solid var(--neutral-color);
+  border-bottom: 1px solid transparent;
+}
+th {
+  padding: calc(.5 * var(--rhytm-unit) - 2px);
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid var(--neutral-color);
+}
+td {
+  padding: calc(.5 * var(--rhytm-unit) - 1px) var(--rhytm-unit);
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid var(--neutral-color);
+}
+tfoot td {
+  font-style: italic;
+  padding: calc(.5 * var(--rhytm-unit) - 2px);
+}
+th, td, caption {
+  text-align: left;
+}
+caption {
+  padding: 0 calc(.5 * var(--rhytm-unit));
+}
+table.striped tbody tr:nth-child(even) {
+  background-color: color(var(--neutral-color) lightness(98));
+}
+tbody tr:hover, 
+table.striped tbody tr:hover {
+  background-color: var(--neutral-color);
+}
 /**
  * Buttons
  *
