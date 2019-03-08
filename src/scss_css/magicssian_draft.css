@@ -1,119 +1,17 @@
 /**
  * Magicssian
+ * 
  * A CSS Boilerplate
  * Version: 0.1.0
  * http://codeinalabMX.github.io/magicssian
  * License: MIT
  *
  * Contents:
- * Reset
- * Base
- * Components
- * Utilities
- */
-
-
-/**
- * Reset
- *
- * Custom reset & normalization
+ * * Base
+ * * Components
+ * * Utilities
  * 
- * Old school references:
- * html5doctor.com Reset Stylesheet v1.6.1 http://html5doctor.com/html-5-reset-stylesheet/
- * Eric Meyer's Reset CSS v2.0 http://meyerweb.com/eric/tools/css/reset/
- * Normalize github.com/necolas/normalize.css
  */
-* {
-  /* Est. 2012; https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-  box-sizing: border-box;
-}
-html {
-  /* From normalize:;
-   * Prevent adjustments of font size after orientation changes in iOS.
-   */
-  -webkit-text-size-adjust: 100%;
-  /* Show scroll bar to avoid jumpy content alignment
-   * when navigate between pages with less or more 
-   * and those overflowing the vertical viewport
-   */
-  overflow-y: scroll;
-}
-body, 
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-dl, dd, 
-hr, 
-figure, figcaption, 
-iframe, 
-fieldset, legend, input, textarea, select {
-	margin: 0;
-	padding: 0;
-}
-ul, ol {
-  margin: 0;
-}
-iframe, hr {
-  border: 0;
-}
-/* Add support for html5 elements in older browsers */
-article, aside, details, 
-footer, header, menu, nav, section,
-hgroup,
-figcaption, figure,  {
-  display: block;
-}
-a {
-  text-decoration: none;
-  outline: 0;
-  /* From normalize:
-   * Remove the gray background on active links in IE 10.
-   */
-  background-color: transparent;
-}
-b, strong {
-  /* From normalize:
-   * Add the correct font weight in Chrome, Edge, and Safari.
-   */
-  font-weight: bolder;
-}
-img {
-  /* Fix white space below images */
-  vertical-align: bottom;
-  /* From normalize:
-   * Remove the border on images inside links in IE 10.
-   */
-  border-style: none;
-}
-abbr {
-  cursor: help;
-}
-button, 
-select {
-  /* From normalize:
-   * Remove the inheritance of text transform in Edge, Firefox, and IE.
-   */
-  text-transform: none;
-}
-button, 
-[type=button], 
-[type=reset], 
-[type=submit] {
-  /* From normalize:
-  * Correct the inability to style clickable types in iOS and Safari.
-  */
-  -webkit-appearance: button;
-}
-template {
-  /* From normalize:;
-   * Add the correct display in IE 10+.
-   */
-  display: none;
-}
-[hidden] {
-  /* From normalize
-   * Add the correct display in IE 10.
-   */
-  display: none;
-}
 
 
 /**
@@ -124,14 +22,15 @@ template {
  * only few classes included
  *
  * Contents:
- * Custom properties
- * Document
- * Text
- * Links
- * Lists
- * Tables
- * Form elements
- * Buttons
+ * * Custom properties
+ * * Reset
+ * * Document
+ * * Text
+ * * Links
+ * * Lists
+ * * Tables
+ * * Form elements
+ * * Buttons
  */
 
  /**
@@ -141,12 +40,12 @@ template {
   * Changing this will affect almost everything ahead
   *
   * Contents:
-  * Fonts
-  * Text size & Rhytm unit
-  * Color schemes
-  * * Base scheme
-  * * Notification scheme
-  * Extras
+  * * Fonts
+  * * Text size & Rhytm unit
+  * * Color schemes
+  * * * Base scheme
+  * * * Notification scheme
+  * * Extras
   */
  :root {
   /**
@@ -160,8 +59,7 @@ template {
   /**
    * Font size & rhytm unit
    *
-   * With this 
-   * but difficult to handle 
+   * Vertical rhytm attempt
    */
   --base-font-size: 16px;
   --rhytm-unit: 20px;
@@ -190,8 +88,7 @@ template {
    * :hover efects on buttons, tables
    * Tools & reference:
    * https://medium.com/@mihaeltomic/supercharge-your-colors-with-the-postcss-color-function-e4459ca9554e
-   * @todo Review class name for a more descriptive, semantic
-   */
+   * @todo Review class name for a more descriptive, semantic */
   --color-variant: -12;
   /**
    * Notification scheme
@@ -211,11 +108,103 @@ template {
   --box-width: 80%;
   /* border-radius value
    * will apply globally for buttons &
-   * .rounded helper class
-   */
+   * .rounded helper class */
   --rounded: 0;
   --rounded-utility: 4px;
- }
+}
+
+/**
+ * Reset
+ *
+ * Custom reset & normalization
+ * 
+ * Old school references:
+ * html5doctor.com Reset Stylesheet v1.6.1 http://html5doctor.com/html-5-reset-stylesheet/
+ * Eric Meyer's Reset CSS v2.0 http://meyerweb.com/eric/tools/css/reset/
+ * Normalize github.com/necolas/normalize.css
+ */
+* {
+  /* Est. 2012; https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+  box-sizing: border-box;
+}
+html {
+  /* normalize:;
+   * Prevent adjustments of font size after orientation changes in iOS. */
+  -webkit-text-size-adjust: 100%;
+  /* Show scroll bar to avoid jumpy content alignment
+   * navigating between pages with with content exceding 
+   * the vertical view port and those that dont */
+  overflow-y: scroll;
+}
+body, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+dl, dd, 
+hr, 
+figure, figcaption, 
+iframe, 
+fieldset, legend, input, textarea, select {
+  margin: 0;
+  padding: 0;
+}
+ul, ol {
+  margin: 0;
+}
+iframe, hr {
+  border: 0;
+}
+/* Add support for html5 elements in older browsers */
+article, aside, details, 
+footer, header, menu, nav, section,
+hgroup,
+figcaption, figure,  {
+  display: block;
+}
+a {
+  text-decoration: none;
+  outline: 0;
+  /* normalize:
+   * Remove the gray background on active links in IE 10.*/
+  background-color: transparent;
+}
+b, strong {
+  /* normalize:
+   * Add the correct font weight in Chrome, Edge, and Safari. */
+  font-weight: bolder;
+}
+img {
+  /* Fix white space below images */
+  vertical-align: bottom;
+  /* normalize:
+   * Remove the border on images inside links in IE 10. */
+  border-style: none;
+}
+abbr {
+  cursor: help;
+}
+button, 
+select {
+  /* normalize:
+   * Remove the inheritance of text transform in Edge, Firefox, and IE. */
+  text-transform: none;
+}
+button, 
+[type=button], 
+[type=reset], 
+[type=submit] {
+  /* normalize:
+   * Correct the inability to style clickable types in iOS and Safari. */
+  -webkit-appearance: button;
+}
+template {
+  /* normalize:;
+   * Add the correct display in IE 10+. */
+  display: none;
+}
+[hidden] {
+  /* normalize
+   * Add the correct display in IE 10. */
+  display: none;
+}
 
 /**
  * Document
@@ -270,11 +259,12 @@ ul, ol {
   margin-bottom: var(--rhytm-unit);
 }
 small {
-  /* @todo Fix element height as it does not fit into rhytm unit */
+  /* @todo Fix element height, make it fit into rhytm unit */
   font-size: 0.7500rem;      /* 12/16 */
 }
 sub, sup {
-  /* @todo Test if this prevent sub & sup affecting line height in all browsers */
+  /* @todo Test on all browsers if this prevent sub & sup 
+   * affecting line height */
   line-height: 0;
 }
 blockquote {
@@ -293,9 +283,7 @@ pre {
 }
 hr {
   height: 1px;
-  /* Substract the element height
-   * to keep block height into rhytm unit
-   */
+  /* Substract the element height to keep block height into rhytm unit */
   margin: calc(var(--rhytm-unit) - 1px) var(--rhytm-unit);
   background-color: var(--complementary-color-1);
 }
@@ -377,9 +365,7 @@ dd {
  * Tables
  */
 table {
-  /*
-   * Use separate borders to keep element height into vertical rhytm
-   */
+  /* Use separate borders to keep element height into vertical rhytm */
   border-collapse: separate;
   width: 100%;
   max-width: 100%;
@@ -427,10 +413,10 @@ table.striped tbody tr:hover {
  * Form elements
  */
 fieldset {
-    position: relative;
-    border: 1px solid var(--neutral-color);
-    padding-left: calc(.5 * var(--rhytm-unit));
-    padding-right: calc(.5 * var(--rhytm-unit));
+  position: relative;
+  border: 1px solid var(--neutral-color);
+  padding-left: calc(.5 * var(--rhytm-unit));
+  padding-right: calc(.5 * var(--rhytm-unit));
 }
 fieldset.outlined {
   border: 1px solid var(--neutral-color);
@@ -456,8 +442,7 @@ textarea,
 [type=checkbox],
 [type=radio] {
   /* Remove the default glow on focus state
-   * concerning accessibility, this will be styled later 
-   */
+   * concerning accessibility, this will be styled later */
   outline: none;
 }
 select::-ms-expand {
@@ -481,18 +466,18 @@ input[type=text],
 input[type=time],
 input[type=url],
 input[type=week] {
-    position: relative;
-    width: 100%;
-    margin-bottom: var(--rhytm-unit);
-    padding: calc(.5 * var(--rhytm-unit) - 1px);
-    border: 1px solid var(--neutral-color);
-    line-height: var(--rhytm-unit);
-    font-family: var(--text-font);
-    font-size: 1em;
-    background: color(var(--neutral-color) lightness(98));
-    color: var(--text-color);
-    border-radius: var(--rounded);
-    transition: all .4s ease-out;
+  position: relative;
+  width: 100%;
+  margin-bottom: var(--rhytm-unit);
+  padding: calc(.5 * var(--rhytm-unit) - 1px);
+  border: 1px solid var(--neutral-color);
+  line-height: var(--rhytm-unit);
+  font-family: var(--text-font);
+  font-size: 1em;
+  background: color(var(--neutral-color) lightness(98));
+  color: var(--text-color);
+  border-radius: var(--rounded);
+  transition: all .4s ease-out;
 }
 select {
   position: relative;
@@ -505,8 +490,7 @@ select {
 select:-moz-focusring {
   /* Remove :focus dotted outline on Firefox 
    * transition properties are specific here
-   * to prevent animation from color to transparent
-   */
+   * to prevent animation from color to transparent */
   transition: border .4s ease-out;
   transition: box-shadow .4s ease-out;
   color: transparent;
@@ -542,17 +526,14 @@ input[type=radio] {
   margin: calc(.5 * var(--rhytm-unit)) var(--rhytm-unit);
   transition: all .4s ease-out;
 }
-input[type=checkbox]:focus, 
-input[type=radio]:focus {
   /* radio & checkbox may not be avaliable for tab selection
    * on mac:
-   * http://www.codecouch.com/2008/10/problems-tabbing-through-checkboxes-and-radios-in-macosx-safari/
-   *
-   * @todo remove Blue border on MacOs Firefox?
-   */
-  /* Add box-shadow spread to compensate 
-   * the missing border as the other form elements
-   */
+   * http://www.codecouch.com/2008/10/problems-tabbing-through-checkboxes-and-radios-in-macosx-safari */
+input[type=checkbox]:focus, 
+input[type=radio]:focus {
+  /* @todo Remove blue border in MacOs Firefox? */
+  /* box-shadow spread is added to compensate 
+   * the missing border as the other form elements */
   box-shadow: 0 0 2px 1px var(--complementary-color-1);
 }
 textarea {
@@ -563,7 +544,7 @@ input.is-valid,
 textarea.is-valid, 
 select.is-valid, 
 .is-valid {
-    border: 1px solid var(--success-color);
+  border: 1px solid var(--success-color);
 }
 input[type=text].is-not-valid, 
 input[type=password].is-not-valid, 
@@ -585,21 +566,19 @@ input[type=week].is-not-valid,
 textarea.is-not-valid, 
 select.is-not-valid,
 .is-not-valid {
-    border: 1px solid var(--error-color);
+  border: 1px solid var(--error-color);
 }
 /**
  * Buttons
  *
  * Contents:
- * Default button
- * Variant button
- * Outlined button
- * Disabled button
+ * * Default button
+ * * Variant button
+ * * Outlined button
+ * * Disabled button
  */
-
-
 ::-moz-focus-inner {
-  /* Remove :focus dotted outline on Firefox  */
+  /* Remove dotted outline on button:focus in Firefox */
   border: 0;
 }
 /* Default button */
@@ -609,24 +588,23 @@ a.button,
 input[type=button], 
 input[type=submit], 
 input[type=reset] {
-    position: relative;
-    display: inline-block;
-    border: 2px solid var(--complementary-color-1);
-    /* Substract the element border
-     * to keep block height into rhytm unit
-     */
-    padding: calc(.5 * var(--rhytm-unit) - 2px) calc(1 * var(--rhytm-unit));
-    background: var(--complementary-color-1);
-    font-family: var(--text-font);
-    font-size: 1em;
-    line-height: var(--rhytm-unit);
-    vertical-align: middle;
-    text-align: center;
-    text-transform: uppercase;
-    color: white;
-    cursor: pointer;
-    transition: all .4s ease-out;
-    border-radius: var(--rounded);
+  position: relative;
+  display: inline-block;
+  border: 2px solid var(--complementary-color-1);
+  /* Substract the element border
+   * to keep block height into rhytm unit */
+  padding: calc(.5 * var(--rhytm-unit) - 2px) calc(1 * var(--rhytm-unit));
+  background: var(--complementary-color-1);
+  font-family: var(--text-font);
+  font-size: 1em;
+  line-height: var(--rhytm-unit);
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  transition: all .4s ease-out;
+  border-radius: var(--rounded);
 }
 button:hover, 
 .button:hover, 
@@ -643,7 +621,7 @@ a.button:focus,
 input[type=button]:focus,
 input[type=submit]:focus, 
 input[type=reset]:focus {
-    box-shadow: 0 0 4px 1px var(--complementary-color-1);
+  box-shadow: 0 0 4px 1px var(--complementary-color-1);
 }
 /* Variant button */
 button.variant, 
@@ -671,7 +649,7 @@ a.button.variant:focus,
 input[type=button].variant:focus,
 input[type=submit].variant:focus, 
 input[type=reset].variant:focus {
-    box-shadow: 0 0 6px var(--complementary-color-2);
+  box-shadow: 0 0 6px var(--complementary-color-2);
 }
 /* Outlined button */
 button.outlined, 
@@ -755,7 +733,7 @@ body.sticky-footer footer {
 }
 /**
  * (Flexbox) Grid
- * @transition-duration: switch to CSS Grid layout
+ * @todo switch to CSS Grid layout
  */
 .grid, .grid.column {
   display: -ms-flexbox;
@@ -800,11 +778,9 @@ body.sticky-footer footer {
 @media (max-width: 780px) {.grid, .grid.column {
     flex-flow: column;
   }
-  /** 
-   * Changing the flex-flow will change the main axis to vertical
+  /* Changing the flex-flow will change the main axis to vertical
    * so we swap the the properties align-items & justify-content
-   * for the alignment helpers 
-   */
+   * on the alignment helpers */
   .grid.align-c {
     align-items: center;
   }
@@ -829,27 +805,24 @@ body.sticky-footer footer {
 
 /**
  * Utilities
- *
- * 
- *
  */
-/* BEEP BEEP Richie! They ALL float down here. When you're down here with us, you'll float too! */
+/* BEEP BEEP Richie! 
+ * They ALL float down here. 
+ * When you're down here with us, you'll float too! */
 .float-l {
-  float:left;
+  float: left;
 }
 .float-r {
-  float:right;
+  float: right;
 }
-/* Clearfix */
 .clearfix:before,
 .clearfix:after {
-  content: ' '; /* 1 */
-  display: table; /* 2 */
+  content: ' ';
+  display: table;
 }
 .clearfix:after {
   clear: both;
 }
-/* Visually */
 .hidden {
   display: none;
 }
@@ -858,17 +831,17 @@ body.sticky-footer footer {
 }
 /* Old school image replacement */
 .ir {
-  display:inline-block;
-  background-color:transparent;
-  border:0;
-  text-indent:100%;
-  white-space:nowrap;
-  overflow:hidden;
+  display: inline-block;
+  background-color: transparent;
+  border: 0;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .ir:before {
-  display:block;
-  width:0;
-  height:100%;
+  display: block;
+  width: 0;
+  height: 100%;
 }
 /* Rounded corners */
 .rounded {
@@ -876,11 +849,11 @@ body.sticky-footer footer {
 }
 /* text alignemt */
 .align-l {
-  text-align:left;
+  text-align: left;
 }
 .align-r {
-  text-align:right;
+  text-align: right;
 }
 .align-c {
-  text-align:center;
+  text-align: center;
 }
