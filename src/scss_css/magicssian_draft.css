@@ -102,15 +102,6 @@ button,
   */
   -webkit-appearance: button;
 }
-button, 
-input, 
-select, 
-textarea {
-  /* Remove the default glow on focus state
-   * accessibility worry not, as it will be styled later 
-   */
-  outline: none;
-}
 template {
   /* From normalize:;
    * Add the correct display in IE 10+.
@@ -320,7 +311,7 @@ a {
 a:link, a:visited {
     color: var(--complementary-color-1);
 }
-a:hover, a:active, a.active {
+a:hover, a:active, a:focus, a.active {
   border-color: var(--complementary-color-1);
 }
 a.variant:link, a.variant:visited {
@@ -458,6 +449,21 @@ input[type=search] {
   /* Reset searchfield appearance on Sarafi */
   -webkit-appearance: none;
 }
+button, 
+input, 
+select, 
+textarea, 
+[type=checkbox],
+[type=radio] {
+  /* Remove the default glow on focus state
+   * concerning accessibility, this will be styled later 
+   */
+  outline: none;
+}
+select::-ms-expand {
+  /* Hide the default arrow in ie10 and ie11 */
+  display: none;
+}
 input[type=text], 
 input[type=password], 
 input[type=file], 
@@ -483,19 +489,10 @@ input[type=week] {
     line-height: var(--rhytm-unit);
     font-family: var(--text-font);
     font-size: 1em;
-    background: #fafafa;
+    background: color(var(--neutral-color) lightness(98));
     color: var(--text-color);
     border-radius: var(--rounded);
     transition: all .4s ease-out;
-}
-select::-ms-expand {
-  /* Hide the default arrow in ie10 and ie11 */
-  display: none;
-}
-select:-moz-focusring {
-  /* Removes dotted outline on element focus */
-  color: transparent;
-  text-shadow: 0 0 0 #000;
 }
 select {
   position: relative;
@@ -504,6 +501,16 @@ select {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTJweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMTIgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEyIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwb2x5Z29uIGZpbGw9IiMyMjIyMjIiIHBvaW50cz0iMiw5IDYsMyAxMCw5ICIvPg0KPHBvbHlnb24gZmlsbD0iIzIyMjIyMiIgcG9pbnRzPSIxMCwxMSA2LDE3IDIsMTEgIi8+DQo8L3N2Zz4NCg==');
   background-position: 98% center;
   background-repeat: no-repeat;
+}
+select:-moz-focusring {
+  /* Remove :focus dotted outline on Firefox 
+   * transition properties are specific here
+   * to prevent animation from color to transparent
+   */
+  transition: border .4s ease-out;
+  transition: box-shadow .4s ease-out;
+  color: transparent;
+  text-shadow: 0 0 0 #000;
 }
 input[type=text]:focus, 
 input[type=password]:focus, 
@@ -532,8 +539,21 @@ input.is-valid:focus {
 }
 input[type=checkbox], 
 input[type=radio] {
-    margin: calc(.5 * var(--rhytm-unit)) var(--rhytm-unit);
-    transition: all .4s ease-out;
+  margin: calc(.5 * var(--rhytm-unit)) var(--rhytm-unit);
+  transition: all .4s ease-out;
+}
+input[type=checkbox]:focus, 
+input[type=radio]:focus {
+  /* radio & checkbox may not be avaliable for tab selection
+   * on mac:
+   * http://www.codecouch.com/2008/10/problems-tabbing-through-checkboxes-and-radios-in-macosx-safari/
+   *
+   * @todo remove Blue border on MacOs Firefox?
+   */
+  /* Add box-shadow spread to compensate 
+   * the missing border as the other form elements
+   */
+  box-shadow: 0 0 2px 1px var(--complementary-color-1);
 }
 textarea {
   resize:vertical;
