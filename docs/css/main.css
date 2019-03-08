@@ -71,6 +71,9 @@
 }
 /* Home */
 /* (Flexbox) Grid */
+section article {
+	margin-bottom: 50px;
+}
 .flex-grid-examples .grid .column, .flex-grid-examples .grid .column p {
 	text-align: center;
 }
