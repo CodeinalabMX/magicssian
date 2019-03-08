@@ -381,6 +381,10 @@ pre {
   padding: 10px;
   background-color: #eaeaea;
 }
+pre, pre code {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
 hr {
   height: 1px;
   /* Substract the element height to keep block height into rhytm unit */
@@ -1462,7 +1466,8 @@ body.sticky-footer footer {
 .three-quarters.column {
   flex: 0 0 75%;
 }
-@media (max-width: 780px) {.grid, .grid.column {
+@media (max-width: 780px) {
+  .grid, .grid.column {
     flex-flow: column;
   }
   /* Changing the flex-flow will change the main axis to vertical
@@ -1489,7 +1494,67 @@ body.sticky-footer footer {
   }
 }
 
-
+/**
+ * Notification
+ */
+.notification {
+  position: relative;
+  z-index: 1001;
+  display: none;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  cursor: pointer;
+  border: 1px solid #1a1a1a;
+  background-color: rgb(230, 230, 230);
+  transition: top .4s ease-out;
+  transition: left .4s ease-out;
+}
+.notification.slide {
+  position: absolute;
+  top: -25vh;
+}
+.notification.slide:not(:empty) {
+  top: 1vh;
+}
+.notification:not(:empty) {
+  display: block;
+}
+.notification label {
+  cursor: pointer;
+}
+#check-notification:checked + .notification.slide:not(:empty) {
+  display: block;
+  top: -300px;
+}
+.information {
+  color: #00529b;
+  border-color: #00529b;
+  background-color: rgb(204, 231, 255);
+}
+.success {
+  color: #4f8a10;
+  border-color: #4f8a10;
+  background-color: rgb(230, 250, 209);
+}
+.warning {
+  color: #9f6000;
+  border-color: #9f6000;
+  background-color: rgb(255, 235, 204);
+}
+.error {
+  color: #d8000c;
+  border-color: #d8000c;
+  background-color: rgb(255, 204, 207);
+}
+.notification:before,
+.notification:after {
+  content: ' ';
+  display: table;
+}
+.notification:after {
+  clear: both;
+}
 /**
  * Utilities
  */

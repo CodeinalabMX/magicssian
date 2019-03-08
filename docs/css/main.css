@@ -10,7 +10,8 @@
  * Logo
  * Main navigation
  * Home
- * * (Flexbox) Grid
+ * * (Flexbox) Grid examples
+ * * Notification examples
  * Footer
  * Media queries
  */
@@ -70,7 +71,7 @@
   letter-spacing: 2px;
 }
 /* Home */
-/* (Flexbox) Grid */
+/* (Flexbox) Grid examples */
 section article {
 	margin-bottom: 50px;
 }
@@ -82,6 +83,13 @@ section article {
 }
 .flex-grid-examples .grid .column:nth-child(odd) {
 	background: #dedede;
+}
+/* Notification examples */
+.notification-examples .notification:not(:empty) {
+	position: relative;
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
 }
 /* Footer */
 footer {

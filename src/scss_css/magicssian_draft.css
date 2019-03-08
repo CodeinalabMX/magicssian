@@ -777,7 +777,8 @@ body.sticky-footer footer {
 .three-quarters.column {
   flex: 0 0 75%;
 }
-@media (max-width: 780px) {.grid, .grid.column {
+@media (max-width: 780px) {
+  .grid, .grid.column {
     flex-flow: column;
   }
   /* Changing the flex-flow will change the main axis to vertical
@@ -804,7 +805,67 @@ body.sticky-footer footer {
   }
 }
 
-
+/**
+ * Notification
+ */
+.notification {
+  position: relative;
+  z-index: 1001;
+  display: none;
+  width: 100%;
+  height: auto;
+  padding: var(--rhytm-unit);
+  cursor: pointer;
+  border: 1px solid var(--text-color);
+  background-color: color(var(--text-color) lightness(90));
+  transition: top .4s ease-out;
+  transition: left .4s ease-out;
+}
+.notification.slide {
+  position: absolute;
+  top: -25vh;
+}
+.notification.slide:not(:empty) {
+  top: 1vh;
+}
+.notification:not(:empty) {
+  display: block;
+}
+.notification label {
+  cursor: pointer;
+}
+#check-notification:checked + .notification.slide:not(:empty) {
+  display: block;
+  top: -300px;
+}
+.information {
+  color: var(--information-color);
+  border-color: var(--information-color);
+  background-color: color(var(--information-color) lightness(90));
+}
+.success {
+  color: var(--success-color);
+  border-color: var(--success-color);
+  background-color: color(var(--success-color) lightness(90));
+}
+.warning {
+  color: var(--warning-color);
+  border-color: var(--warning-color);
+  background-color: color(var(--warning-color) lightness(90));
+}
+.error {
+  color: var(--error-color);
+  border-color: var(--error-color);
+  background-color: color(var(--error-color) lightness(90));
+}
+.notification:before,
+.notification:after {
+  content: ' ';
+  display: table;
+}
+.notification:after {
+  clear: both;
+}
 /**
  * Utilities
  */
