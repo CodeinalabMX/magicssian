@@ -523,7 +523,9 @@ input.is-valid:focus {
 }
 input[type=checkbox], 
 input[type=radio] {
-  margin: calc(.5 * var(--rhytm-unit)) var(--rhytm-unit);
+  width: 14px;
+  height: 14px;
+  margin: calc(.4 * var(--rhytm-unit)) var(--rhytm-unit);
   transition: all .4s ease-out;
 }
   /* radio & checkbox may not be avaliable for tab selection
