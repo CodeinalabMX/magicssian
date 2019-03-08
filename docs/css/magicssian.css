@@ -542,8 +542,7 @@ table.striped tbody tr:hover {
 fieldset {
   position: relative;
   border: 1px solid #eaeaea;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px;
 }
 fieldset.outlined {
   border: 1px solid #eaeaea;
@@ -1064,7 +1063,7 @@ button {
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   line-height: 20px;
-  vertical-align: middle;
+  vertical-align: bottom;
   text-align: center;
   text-transform: uppercase;
   color: white;
@@ -1083,7 +1082,7 @@ button {
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   line-height: 20px;
-  vertical-align: middle;
+  vertical-align: bottom;
   text-align: center;
   text-transform: uppercase;
   color: white;
@@ -1102,7 +1101,7 @@ a.button {
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   line-height: 20px;
-  vertical-align: middle;
+  vertical-align: bottom;
   text-align: center;
   text-transform: uppercase;
   color: white;
@@ -1121,7 +1120,7 @@ input[type=button] {
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   line-height: 20px;
-  vertical-align: middle;
+  vertical-align: bottom;
   text-align: center;
   text-transform: uppercase;
   color: white;
@@ -1140,7 +1139,7 @@ input[type=submit] {
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   line-height: 20px;
-  vertical-align: middle;
+  vertical-align: bottom;
   text-align: center;
   text-transform: uppercase;
   color: white;
@@ -1159,7 +1158,7 @@ input[type=reset] {
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   line-height: 20px;
-  vertical-align: middle;
+  vertical-align: bottom;
   text-align: center;
   text-transform: uppercase;
   color: white;
@@ -1435,6 +1434,9 @@ body.sticky-footer footer {
 .grid.align-c {
   justify-content: center;
 }
+.grid.padded .column {
+  padding: 10px;
+}
 .grid.align-l {
   justify-content: flex-end;
 }
@@ -1448,8 +1450,8 @@ body.sticky-footer footer {
 .grid .column {
   flex: 1;
 }
-.padded.column {
-  padding: 10px;
+.full-width.column {
+  flex: 0 0 100%;
 }
 .one-half.column {
   flex: 0 0 50%;
@@ -1599,6 +1601,7 @@ body.sticky-footer footer {
 .rounded {
   border-radius: 4px!important;
 }
+/* Padded container */
 /* text alignemt */
 .align-l {
   text-align: left;

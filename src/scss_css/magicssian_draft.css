@@ -419,8 +419,7 @@ table.striped tbody tr:hover {
 fieldset {
   position: relative;
   border: 1px solid var(--neutral-color);
-  padding-left: calc(.5 * var(--rhytm-unit));
-  padding-right: calc(.5 * var(--rhytm-unit));
+  padding: calc(.5 * var(--rhytm-unit));
 }
 fieldset.outlined {
   border: 1px solid var(--neutral-color);
@@ -604,7 +603,7 @@ input[type=reset] {
   font-family: var(--text-font);
   font-size: 1em;
   line-height: var(--rhytm-unit);
-  vertical-align: middle;
+  vertical-align: bottom;
   text-align: center;
   text-transform: uppercase;
   color: white;
@@ -750,6 +749,9 @@ body.sticky-footer footer {
 .grid.align-c {
   justify-content: center;
 }
+.grid.padded .column {
+  padding: calc(.5 * var(--rhytm-unit));
+}
 .grid.align-l {
   justify-content: flex-end;
 }
@@ -763,8 +765,8 @@ body.sticky-footer footer {
 .grid .column {
   flex: 1;
 }
-.padded.column {
-  padding: calc(.5 * var(--rhytm-unit));
+.full-width.column {
+  flex: 0 0 100%;
 }
 .one-half.column {
   flex: 0 0 50%;
@@ -914,6 +916,7 @@ body.sticky-footer footer {
 .rounded {
   border-radius: var(--rounded-utility)!important;
 }
+/* Padded container */
 /* text alignemt */
 .align-l {
   text-align: left;
