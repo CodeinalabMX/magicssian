@@ -596,6 +596,12 @@ select.is-not-valid,
  * Outlined button
  * Disabled button
  */
+
+
+::-moz-focus-inner {
+  /* Remove :focus dotted outline on Firefox  */
+  border: 0;
+}
 /* Default button */
 button, 
 .button,
@@ -631,9 +637,13 @@ input[type=reset]:hover {
   background: color(var(--complementary-color-1) lightness(var(--color-variant)));
   border-color: color(var(--complementary-color-1) lightness(var(--color-variant)));
 }
-button:focus,  
-a.button:focus {
-    box-shadow: 0 0 6px var(--complementary-color-1);
+button:focus, 
+.button:focus, 
+a.button:focus,
+input[type=button]:focus,
+input[type=submit]:focus, 
+input[type=reset]:focus {
+    box-shadow: 0 0 4px 1px var(--complementary-color-1);
 }
 /* Variant button */
 button.variant, 
