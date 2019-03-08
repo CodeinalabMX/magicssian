@@ -492,6 +492,11 @@ select::-ms-expand {
   /* Hide the default arrow in ie10 and ie11 */
   display: none;
 }
+select:-moz-focusring {
+  /* Removes dotted outline on element focus */
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
 select {
   position: relative;
   -webkit-appearance: none;
