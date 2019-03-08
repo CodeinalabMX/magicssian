@@ -281,6 +281,10 @@ pre {
   padding: calc(.5 * var(--rhytm-unit));
   background-color: var(--neutral-color);
 }
+pre {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
 hr {
   height: 1px;
   /* Substract the element height to keep block height into rhytm unit */

@@ -381,7 +381,7 @@ pre {
   padding: 10px;
   background-color: #eaeaea;
 }
-pre, pre code {
+pre {
   white-space: pre-wrap;
   word-break: break-all;
 }
