@@ -86,9 +86,6 @@ section article {
 }
 /* Notification examples */
 .notification-examples .notification:not(:empty) {
-	position: relative;
-	display: block;
-	width: 100%;
 	margin-bottom: 20px;
 }
 /* Footer */
