@@ -87,8 +87,9 @@
    */
   /* Max-width for a boxed container */
   /* border-radius value
-   * will apply globally for buttons &
-   * .rounded helper class */
+   * will apply globally for:
+   * pre, buttons, form elements, notifications and tabs
+   * accepts only one value eg. 4px */
 }
 
 /**
@@ -380,6 +381,7 @@ cite {
 pre {
   padding: 10px;
   background-color: #eaeaea;
+  border-radius: 6px;
 }
 pre {
   white-space: pre-wrap;
@@ -543,6 +545,7 @@ fieldset {
   position: relative;
   border: 1px solid #eaeaea;
   padding: 10px;
+  border-radius: 6px;
 }
 fieldset.outlined {
   border: 1px solid #eaeaea;
@@ -586,7 +589,7 @@ input[type=text] {
   font-size: 1em;
   background: rgb(250, 250, 250);
   color: #1a1a1a;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all .4s ease-out;
 }
 input[type=password] {
@@ -600,7 +603,7 @@ input[type=password] {
   font-size: 1em;
   background: rgb(250, 250, 250);
   color: #1a1a1a;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all .4s ease-out;
 }
 input[type=file] {
@@ -614,7 +617,7 @@ input[type=file] {
   font-size: 1em;
   background: rgb(250, 250, 250);
   color: #1a1a1a;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all .4s ease-out;
 }
 textarea {
@@ -628,7 +631,7 @@ textarea {
   font-size: 1em;
   background: rgb(250, 250, 250);
   color: #1a1a1a;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all .4s ease-out;
 }
 select {
@@ -642,7 +645,7 @@ select {
   font-size: 1em;
   background: rgb(250, 250, 250);
   color: #1a1a1a;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all .4s ease-out;
 }
 input[type=date] {
@@ -656,7 +659,7 @@ input[type=date] {
   font-size: 1em;
   background: rgb(250, 250, 250);
   color: #1a1a1a;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all .4s ease-out;
 }
 input[type=datetime] {
@@ -670,7 +673,7 @@ input[type=datetime] {
   font-size: 1em;
   background: rgb(250, 250, 250);
   color: #1a1a1a;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all .4s ease-out;
 }
 input[type=datetime-local] {
@@ -684,7 +687,7 @@ input[type=datetime-local] {
   font-size: 1em;
   background: rgb(250, 250, 250);
   color: #1a1a1a;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all .4s ease-out;
 }
 input[type=email] {
@@ -698,7 +701,7 @@ input[type=email] {
   font-size: 1em;
   background: rgb(250, 250, 250);
   color: #1a1a1a;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all .4s ease-out;
 }
 input[type=month] {
@@ -712,7 +715,7 @@ input[type=month] {
   font-size: 1em;
   background: rgb(250, 250, 250);
   color: #1a1a1a;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all .4s ease-out;
 }
 input[type=number] {
@@ -726,7 +729,7 @@ input[type=number] {
   font-size: 1em;
   background: rgb(250, 250, 250);
   color: #1a1a1a;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all .4s ease-out;
 }
 input[type=range] {
@@ -740,7 +743,7 @@ input[type=range] {
   font-size: 1em;
   background: rgb(250, 250, 250);
   color: #1a1a1a;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all .4s ease-out;
 }
 input[type=search] {
@@ -754,7 +757,7 @@ input[type=search] {
   font-size: 1em;
   background: rgb(250, 250, 250);
   color: #1a1a1a;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all .4s ease-out;
 }
 input[type=tel] {
@@ -768,7 +771,7 @@ input[type=tel] {
   font-size: 1em;
   background: rgb(250, 250, 250);
   color: #1a1a1a;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all .4s ease-out;
 }
 input[type=text] {
@@ -782,7 +785,7 @@ input[type=text] {
   font-size: 1em;
   background: rgb(250, 250, 250);
   color: #1a1a1a;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all .4s ease-out;
 }
 input[type=time] {
@@ -796,7 +799,7 @@ input[type=time] {
   font-size: 1em;
   background: rgb(250, 250, 250);
   color: #1a1a1a;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all .4s ease-out;
 }
 input[type=url] {
@@ -810,7 +813,7 @@ input[type=url] {
   font-size: 1em;
   background: rgb(250, 250, 250);
   color: #1a1a1a;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all .4s ease-out;
 }
 input[type=week] {
@@ -824,7 +827,7 @@ input[type=week] {
   font-size: 1em;
   background: rgb(250, 250, 250);
   color: #1a1a1a;
-  border-radius: 0;
+  border-radius: 6px;
   transition: all .4s ease-out;
 }
 select {
@@ -1069,7 +1072,7 @@ button {
   color: white;
   cursor: pointer;
   transition: all .4s ease-out;
-  border-radius: 0;
+  border-radius: 6px;
 }
 .button {
   position: relative;
@@ -1088,7 +1091,7 @@ button {
   color: white;
   cursor: pointer;
   transition: all .4s ease-out;
-  border-radius: 0;
+  border-radius: 6px;
 }
 a.button {
   position: relative;
@@ -1107,7 +1110,7 @@ a.button {
   color: white;
   cursor: pointer;
   transition: all .4s ease-out;
-  border-radius: 0;
+  border-radius: 6px;
 }
 input[type=button] {
   position: relative;
@@ -1126,7 +1129,7 @@ input[type=button] {
   color: white;
   cursor: pointer;
   transition: all .4s ease-out;
-  border-radius: 0;
+  border-radius: 6px;
 }
 input[type=submit] {
   position: relative;
@@ -1145,7 +1148,7 @@ input[type=submit] {
   color: white;
   cursor: pointer;
   transition: all .4s ease-out;
-  border-radius: 0;
+  border-radius: 6px;
 }
 input[type=reset] {
   position: relative;
@@ -1164,7 +1167,7 @@ input[type=reset] {
   color: white;
   cursor: pointer;
   transition: all .4s ease-out;
-  border-radius: 0;
+  border-radius: 6px;
 }
 button:hover {
   background: rgb(193, 60, 26);
@@ -1495,7 +1498,6 @@ body.sticky-footer footer {
     width: 100%;
   }
 }
-
 /**
  * Notification
  */
@@ -1509,6 +1511,7 @@ body.sticky-footer footer {
   /*cursor: pointer;*/
   border: 1px solid #1a1a1a;
   background-color: rgb(230, 230, 230);
+  border-radius: 6px;
 }
 .notification:not(:empty) {
   display: block;
@@ -1562,7 +1565,36 @@ body.sticky-footer footer {
   border-color: #d8000c;
   background-color: rgb(255, 204, 207);
 }
-
+/**
+ * Tabs
+ */
+.tabs .navigation a {
+  cursor: pointer;
+  border: 1px solid #eaeaea;
+  padding: 10px;
+}
+.tabs .navigation a.active {
+  font-weight: bold;
+  border-bottom-color: #fff;
+}
+.tabs .tab {
+  margin-top: -1px;
+  padding: 20px;
+  border: 1px solid #eaeaea;
+}
+.tabs > .tab ~ .tab {
+  display: none;
+}
+.tabs .tab {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.tabs .navigation a:first-child {
+  border-top-left-radius: 6px;
+}
+.tabs .navigation a:last-child {
+  border-top-right-radius: 6px;
+}
 /**
  * Utilities
  */

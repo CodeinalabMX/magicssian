@@ -810,7 +810,6 @@ body.sticky-footer footer {
     width: 100%;
   }
 }
-
 /**
  * Notification
  */
@@ -877,7 +876,26 @@ body.sticky-footer footer {
   border-color: var(--error-color);
   background-color: color(var(--error-color) lightness(90));
 }
-
+/**
+ * Tabs
+ */
+.tabs .navigation a {
+  cursor: pointer;
+  border: 1px solid var(--neutral-color);
+  padding: calc(.5 * var(--rhytm-unit));
+}
+.tabs .navigation a.active {
+  font-weight: bold;
+  border-bottom-color: #fff;
+}
+.tabs .tab {
+  margin-top: -1px;
+  padding: var(--rhytm-unit);
+  border: 1px solid var(--neutral-color);
+}
+.tabs > .tab ~ .tab {
+  display: none;
+}
 /**
  * Utilities
  */
