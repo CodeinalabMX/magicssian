@@ -1525,6 +1525,7 @@ body.sticky-footer footer {
   transition: all .4s ease-out;
 }
 .check-notification.slide:checked + .notification.slide {
+  /* Overrides default behavior display:none; */
   display: block;
   top: -25vw;
 }
@@ -1532,8 +1533,11 @@ body.sticky-footer footer {
   opacity: 1;
 }
 .check-notification.fade:checked + .notification.fade {
+  /* Overrides default behavior display:none; */
   display: block;
   opacity: 0;
+  /* Prevent element to responde to click events */
+  visibility: hidden;
 }
 .notification label {
   cursor: pointer;
