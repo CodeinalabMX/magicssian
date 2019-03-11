@@ -107,9 +107,10 @@
   /* Max-width for a boxed container */
   --box-width: 80%;
   /* border-radius value
-   * will apply globally for buttons &
-   * .rounded helper class */
-  --rounded: 0;
+   * will apply globally for:
+   * pre, buttons, form elements, notifications and tabs
+   * accepts only one value eg. 4px */
+  --rounded: 6px;
   --rounded-utility: 4px;
 }
 
@@ -280,6 +281,7 @@ cite {
 pre {
   padding: calc(.5 * var(--rhytm-unit));
   background-color: var(--neutral-color);
+  border-radius: var(--rounded);
 }
 pre {
   white-space: pre-wrap;
@@ -420,6 +422,7 @@ fieldset {
   position: relative;
   border: 1px solid var(--neutral-color);
   padding: calc(.5 * var(--rhytm-unit));
+  border-radius: var(--rounded);
 }
 fieldset.outlined {
   border: 1px solid var(--neutral-color);
@@ -823,6 +826,7 @@ body.sticky-footer footer {
   /*cursor: pointer;*/
   border: 1px solid var(--text-color);
   background-color: color(var(--text-color) lightness(90));
+  border-radius: var(--rounded);
 }
 .notification:not(:empty) {
   display: block;
@@ -895,6 +899,16 @@ body.sticky-footer footer {
 }
 .tabs > .tab ~ .tab {
   display: none;
+}
+.tabs .tab {
+  border-bottom-right-radius: var(--rounded);
+  border-bottom-left-radius: var(--rounded);
+}
+.tabs .navigation a:first-child {
+  border-top-left-radius: var(--rounded);
+}
+.tabs .navigation a:last-child {
+  border-top-right-radius: var(--rounded);
 }
 /**
  * Utilities
