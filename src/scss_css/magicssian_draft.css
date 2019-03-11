@@ -828,27 +828,27 @@ body.sticky-footer footer {
 .notification:not(:empty) {
   display: block;
 }
-.check-notification:checked + .notification:not(:empty) {
+.check-notification:checked + .notification {
   display: none;
 }
 .notification.slide, 
 .notification.fade {
   position: fixed;
   width: 98vw;
-  top: -100px;
+  top: 1vw;
   left: 1vw;
-  transition: all 3s ease-out;
+  transition: all .4s ease-out;
 }
-.notification.slide:not(:empty), 
-.check-notification.slide:checked + .notification.slide:not(:empty) {
-  top: 5vw;
+.check-notification.slide:checked + .notification.slide {
+  display: block;
+  top: -25vw;
 }
 .notification.fade {
-  transition: top 3s ease-out;
+  opacity: 1;
 }
-.notification.fade:not(:empty), 
-.check-notification.fade:checked + .notification.fade:not(:empty) {
-  display
+.check-notification.fade:checked + .notification.fade {
+  display: block;
+  opacity: 0;
 }
 .notification label {
   cursor: pointer;
