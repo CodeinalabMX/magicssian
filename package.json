@@ -25,7 +25,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "bsync": "browser-sync start -p localhost:80/Codeinalab/Magicssian/CssBoilerplate/Master/docs/ -f *.html, css/*.css",
     "postcss": "postcss src/scss_css/magicssian_draft.css -u postcss-css-variables postcss-calc postcss-color-function --no-map -o docs/css/magicssian.css",
-    "cleancss": "cleancss --source-map -o docs/css/magicssian.min.css docs/css/magicssian.css",
+    "cleancss": "cleancss -O2 --source-map -o docs/css/magicssian.min.css docs/css/magicssian.css",
     "build": "npm run postcss && npm run cleancss",
     "watch": "watch \"npm run build\" src/scss_css",
     "dev": "concurrently \"npm run bsync\" \"npm run watch\""
