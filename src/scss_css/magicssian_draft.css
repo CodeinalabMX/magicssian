@@ -36,7 +36,7 @@
  /**
   * Custom properties
   *
-  * a.k.a variables
+  * a.k.a css variables
   * Changing this will affect almost everything ahead
   *
   * Contents:
@@ -45,6 +45,7 @@
   * * Color schemes
   * * * Base scheme
   * * * Notification scheme
+  * * Color variations
   * * Extras
   */
  :root {
@@ -79,28 +80,40 @@
   --base-color: #0b162a;
   --complementary-color-1: #e35835;
   --complementary-color-2: #cde534;
-  --neutral-color: #eaeaea;
   --heading-color: var(--base-color);
   --text-color: #1a1a1a;
-  /* Color variations are automatically generated 
-   * using postCSS color function plugin
-   * and are used for:
-   * :hover efects on buttons, tables
-   * Tools & reference:
-   * https://medium.com/@mihaeltomic/supercharge-your-colors-with-the-postcss-color-function-e4459ca9554e
-   * @todo Review class name for a more descriptive, semantic */
-  --color-variant: -12;
+  --neutral-color: #eaeaea;
   /**
    * Notification scheme
    */
-  --information-background-color: #caeaf9;
   --information-color: #00529b;
-  --warning-background-color: #feefb3;
   --warning-color: #9f6000;
-  --error-background-color: #ffc8c8;
   --error-color: #d8000c;
-  --success-background-color: #e5f5cc;
   --success-color: #4f8a10;
+  /* Color variations are automatically generated 
+   * using postCSS color function plugin
+   * and the lightness color-adjuster
+   * https://github.com/postcss/postcss-color-function
+   * 
+   * Variations implemented on:
+   * :hover for buttons
+   * :hover for table rows
+   * table.striped utility class
+   * background-color notification
+   * Tools & reference:
+   * https://medium.com/@mihaeltomic/supercharge-your-colors-with-the-postcss-color-function-e4459ca9554e
+   *
+   * According to CSS specs
+   * https://drafts.csswg.org/css-color/#funcdef-hsl
+   * For lightness, 
+   * 50% represents the "normal" color, 
+   * while 100% is white and 0% is black.
+   * 
+   * @todo Fix implementation; a 50% value
+   * does not return the "normal" color as expected.
+   * Possibly 
+   */
+  --lightness-variation: 50%;
   /**
    * Extras
    */
@@ -110,7 +123,7 @@
    * will apply globally for:
    * pre, buttons, form elements, notifications and tabs
    * accepts only one value eg. 4px */
-  --rounded: 6px;
+  --rounded: 0;
   --rounded-utility: 4px;
 }
 
@@ -283,6 +296,10 @@ pre {
   background-color: var(--neutral-color);
   border-radius: var(--rounded);
 }
+pre.variant {
+  color: var(--neutral-color);
+  background-color: var(--text-color);
+}
 pre {
   white-space: pre-wrap;
   word-break: break-all;
@@ -409,11 +426,11 @@ caption {
   text-align: left;
 }
 table.striped tbody tr:nth-child(even) {
-  background-color: color(var(--neutral-color) lightness(98));
+  background-color: var(--neutral-color);
 }
 tbody tr:hover, 
 table.striped tbody tr:hover {
-  background-color: var(--neutral-color);
+  background-color: color(var(--neutral-color) lightness(var(--lightness-variation)));
 }
 /**
  * Form elements
@@ -480,7 +497,7 @@ input[type=week] {
   line-height: var(--rhytm-unit);
   font-family: var(--text-font);
   font-size: 1em;
-  background: color(var(--neutral-color) lightness(98));
+  background-color: var(--neutral-color);
   color: var(--text-color);
   border-radius: var(--rounded);
   transition: all .4s ease-out;
@@ -500,7 +517,7 @@ select:-moz-focusring {
   transition: border .4s ease-out;
   transition: box-shadow .4s ease-out;
   color: transparent;
-  text-shadow: 0 0 0 #000;
+  text-shadow: 0 0 0 var(--text-color);
 }
 input[type=text]:focus, 
 input[type=password]:focus, 
@@ -620,8 +637,8 @@ a.button:hover,
 input[type=button]:hover,
 input[type=submit]:hover, 
 input[type=reset]:hover {
-  background: color(var(--complementary-color-1) lightness(var(--color-variant)));
-  border-color: color(var(--complementary-color-1) lightness(var(--color-variant)));
+  background: color(var(--complementary-color-1) lightness(var(--lightness-variation)));
+  border-color: color(var(--complementary-color-1) lightness(var(--lightness-variation)));
 }
 button:focus, 
 .button:focus, 
@@ -648,8 +665,8 @@ a.button.variant:hover,
 input[type=button].variant:hover,
 input[type=submit].variant:hover, 
 input[type=reset].variant:hover {
-  background-color: color(var(--complementary-color-2) lightness(var(--color-variant)));
-  border-color: color(var(--complementary-color-2) lightness(var(--color-variant)));
+  background-color: color(var(--complementary-color-2) lightness(var(--lightness-variation)));
+  border-color: color(var(--complementary-color-2) lightness(var(--lightness-variation)));
 }
 button.variant:focus, 
 .button.variant:focus, 
@@ -683,7 +700,7 @@ a.button.variant.outlined:hover,
 input[type=button].variant.outlined:hover,
 input[type=submit].variant.outlined:hover, 
 input[type=reset].variant.outlined:hover {
-  background: color(var(--complementary-color-2) lightness(var(--color-variant)));
+  background-color: color(var(--complementary-color-2) lightness(var(--lightness-variation)));
   color: white;
 }
 button.outlined:hover, 
@@ -692,7 +709,7 @@ a.button.outlined:hover,
 input[type=button].outlined:hover,
 input[type=submit].outlined:hover, 
 input[type=reset].outlined:hover {
-  background: color(var(--complementary-color-1) lightness(var(--color-variant)));
+  background-color: color(var(--complementary-color-1) lightness(var(--lightness-variation)));
   color: white;
 }
 /* Disabled button */
@@ -825,7 +842,7 @@ body.sticky-footer footer {
   padding: var(--rhytm-unit);
   /*cursor: pointer;*/
   border: 1px solid var(--text-color);
-  background-color: color(var(--text-color) lightness(90));
+  background-color: color(var(--text-color) lightness(var(--lightness-variation)));
   border-radius: var(--rounded);
 }
 .notification:not(:empty) {
@@ -863,22 +880,22 @@ body.sticky-footer footer {
 .information {
   color: var(--information-color);
   border-color: var(--information-color);
-  background-color: color(var(--information-color) lightness(90));
+  background-color: color(var(--information-color) lightness(var(--lightness-variation)));
 }
 .success {
   color: var(--success-color);
   border-color: var(--success-color);
-  background-color: color(var(--success-color) lightness(90));
+  background-color: color(var(--success-color) lightness(var(--lightness-variation)));
 }
 .warning {
   color: var(--warning-color);
   border-color: var(--warning-color);
-  background-color: color(var(--warning-color) lightness(90));
+  background-color: color(var(--warning-color) lightness(var(--lightness-variation)));
 }
 .error {
   color: var(--error-color);
   border-color: var(--error-color);
-  background-color: color(var(--error-color) lightness(90));
+  background-color: color(var(--error-color) lightness(var(--lightness-variation)));
 }
 /**
  * Tabs
