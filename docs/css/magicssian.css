@@ -77,17 +77,17 @@
    * Notification scheme
    */
   /* Color variations are automatically generated 
-   * using postCSS color function plugin
-   * and the lightness color-adjuster
-   * https://github.com/postcss/postcss-color-function
+   * using PostCSS color-mod() Function
+   * and the lightness color adjuster
+   * https://github.com/jonathantneal/postcss-color-mod-function
    * 
-   * Variations implemented on:
-   * :hover for buttons
-   * :hover for table rows
+   * Variations are implememnted as follows:
+   * darken variation on:
+   * :hover for buttons & links
+   * :focus on inputs, buttons & links
+   * lighten variation on:;
    * table.striped utility class
-   * background-color notification
-   * Tools & reference:
-   * https://medium.com/@mihaeltomic/supercharge-your-colors-with-the-postcss-color-function-e4459ca9554e
+   * background-color on notification
    *
    * According to CSS specs
    * https://drafts.csswg.org/css-color/#funcdef-hsl
@@ -97,7 +97,7 @@
    * 
    * @todo Fix implementation; a 50% value
    * does not return the "normal" color as expected.
-   * Possibly 
+   * Possibly use of hsl color values are needed instead of hex
    */
   /**
    * Extras
@@ -430,16 +430,20 @@ a:visited {
     color: #e35835;
 }
 a:hover {
-  border-color: #e35835;
+  color: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
 }
 a:active {
-  border-color: #e35835;
+  color: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
 }
 a:focus {
-  border-color: #e35835;
+  color: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
 }
 a.active {
-  border-color: #e35835;
+  color: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
 }
 a.variant:link {
   color: #cde534;
@@ -448,10 +452,20 @@ a.variant:visited {
   color: #cde534;
 }
 a.variant:hover {
-  border-color: #cde534;
+  color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
 }
-a.variant:active a.variant.active {
-  border-color: #cde534;
+a.variant:active {
+  color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+}
+a.variant:focus {
+  color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+}
+a.variant.active {
+  color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
 }
 /**
  * Lists
@@ -554,10 +568,10 @@ table.striped tbody tr:nth-child(even) {
   background-color: #eaeaea;
 }
 tbody tr:hover {
-  background-color: rgb(128, 128, 128);
+  background-color: hsl(0, 0%, 85%);
 }
 table.striped tbody tr:hover {
-  background-color: rgb(128, 128, 128);
+  background-color: hsl(0, 0%, 85%);
 }
 /**
  * Form elements
@@ -869,92 +883,114 @@ select:-moz-focusring {
   text-shadow: 0 0 0 #1a1a1a;
 }
 input[type=text]:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=password]:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=file]:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=date]:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=datetime]:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=datetime-local]:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=email]:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=month]:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=number]:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=range]:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=search]:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=tel]:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=text]:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=time]:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=url]:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=week]:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 textarea:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 select:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input.is-valid:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 textarea.is-valid:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 select.is-valid:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input.is-valid:focus {
-    border-color: #e35835;
-    box-shadow: 0 0 2px #e35835;
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: hsl(0, 0%, 85%);
+  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=checkbox] {
   width: 14px;
@@ -975,13 +1011,13 @@ input[type=checkbox]:focus {
   /* @todo Remove blue border in MacOs Firefox? */
   /* box-shadow spread is added to compensate 
    * the missing border as the other form elements */
-  box-shadow: 0 0 2px 1px #e35835;
+  box-shadow: 0 0 2px 1px hsl(12.06896551724138, 75.652173913%, 40%);
 }
 input[type=radio]:focus {
   /* @todo Remove blue border in MacOs Firefox? */
   /* box-shadow spread is added to compensate 
    * the missing border as the other form elements */
-  box-shadow: 0 0 2px 1px #e35835;
+  box-shadow: 0 0 2px 1px hsl(12.06896551724138, 75.652173913%, 40%);
 }
 textarea {
   resize:vertical;
@@ -1191,144 +1227,228 @@ input[type=reset] {
   border-radius: 0;
 }
 button:hover {
-  background: rgb(224, 69, 31);
-  border-color: rgb(224, 69, 31);
+  background: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
 }
 .button:hover {
-  background: rgb(224, 69, 31);
-  border-color: rgb(224, 69, 31);
+  background: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
 }
 a.button:hover {
-  background: rgb(224, 69, 31);
-  border-color: rgb(224, 69, 31);
+  background: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
 }
 input[type=button]:hover {
-  background: rgb(224, 69, 31);
-  border-color: rgb(224, 69, 31);
+  background: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
 }
 input[type=submit]:hover {
-  background: rgb(224, 69, 31);
-  border-color: rgb(224, 69, 31);
+  background: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
 }
 input[type=reset]:hover {
-  background: rgb(224, 69, 31);
-  border-color: rgb(224, 69, 31);
+  background: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
 }
 button:focus {
-  box-shadow: 0 0 4px 1px #e35835;
+  background: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  /*box-shadow: 0 0 4px 1px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 .button:focus {
-  box-shadow: 0 0 4px 1px #e35835;
+  background: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  /*box-shadow: 0 0 4px 1px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 a.button:focus {
-  box-shadow: 0 0 4px 1px #e35835;
+  background: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  /*box-shadow: 0 0 4px 1px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=button]:focus {
-  box-shadow: 0 0 4px 1px #e35835;
+  background: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  /*box-shadow: 0 0 4px 1px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=submit]:focus {
-  box-shadow: 0 0 4px 1px #e35835;
+  background: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  /*box-shadow: 0 0 4px 1px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=reset]:focus {
-  box-shadow: 0 0 4px 1px #e35835;
+  background: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  /*box-shadow: 0 0 4px 1px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 /* Variant button */
 button.variant {
+  color: white;
   background: #cde534;
   border-color: #cde534;
-  color: white;
 }
 .button.variant {
+  color: white;
   background: #cde534;
   border-color: #cde534;
-  color: white;
 }
 a.button.variant {
+  color: white;
   background: #cde534;
   border-color: #cde534;
-  color: white;
 }
 input[type=button].variant {
+  color: white;
   background: #cde534;
   border-color: #cde534;
-  color: white;
 }
 input[type=submit].variant {
+  color: white;
   background: #cde534;
   border-color: #cde534;
-  color: white;
 }
 input[type=reset].variant {
+  color: white;
   background: #cde534;
   border-color: #cde534;
-  color: white;
 }
 button.variant:hover {
-  background-color: rgb(199, 226, 29);
-  border-color: rgb(199, 226, 29);
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
 }
 .button.variant:hover {
-  background-color: rgb(199, 226, 29);
-  border-color: rgb(199, 226, 29);
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
 }
 a.button.variant:hover {
-  background-color: rgb(199, 226, 29);
-  border-color: rgb(199, 226, 29);
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
 }
 input[type=button].variant:hover {
-  background-color: rgb(199, 226, 29);
-  border-color: rgb(199, 226, 29);
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
 }
 input[type=submit].variant:hover {
-  background-color: rgb(199, 226, 29);
-  border-color: rgb(199, 226, 29);
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
 }
 input[type=reset].variant:hover {
-  background-color: rgb(199, 226, 29);
-  border-color: rgb(199, 226, 29);
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
 }
 button.variant:focus {
-  box-shadow: 0 0 6px #cde534;
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 .button.variant:focus {
-  box-shadow: 0 0 6px #cde534;
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 a.button.variant:focus {
-  box-shadow: 0 0 6px #cde534;
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 input[type=button].variant:focus {
-  box-shadow: 0 0 6px #cde534;
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 input[type=submit].variant:focus {
-  box-shadow: 0 0 6px #cde534;
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 input[type=reset].variant:focus {
-  box-shadow: 0 0 6px #cde534;
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 /* Outlined button */
 button.outlined {
-  background: transparent;
+  background-color: transparent;
   color: #e35835;
 }
 .button.outlined {
-  background: transparent;
+  background-color: transparent;
   color: #e35835;
 }
 a.button.outlined {
-  background: transparent;
+  background-color: transparent;
   color: #e35835;
 }
 input[type=button].outlined {
-  background: transparent;
+  background-color: transparent;
   color: #e35835;
 }
 input[type=submit].outlined {
-  background: transparent;
+  background-color: transparent;
   color: #e35835;
 }
 input[type=reset].outlined {
-  background: transparent;
+  background-color: transparent;
   color: #e35835;
+}
+button.outlined:hover {
+  color: white;
+  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
+}
+.button.outlined:hover {
+  color: white;
+  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
+}
+a.button.outlined:hover {
+  color: white;
+  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
+}
+input[type=button].outlined:hover {
+  color: white;
+  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
+}
+input[type=submit].outlined:hover {
+  color: white;
+  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
+}
+input[type=reset].outlined:hover {
+  color: white;
+  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
+}
+button.outlined:focus {
+  color: white;
+  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  /*box-shadow: 0 0 6px var(--complementary-color-1);*/
+}
+.button.outlined:focus {
+  color: white;
+  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  /*box-shadow: 0 0 6px var(--complementary-color-1);*/
+}
+a.button.outlined:focus {
+  color: white;
+  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  /*box-shadow: 0 0 6px var(--complementary-color-1);*/
+}
+input[type=button].outlined:focus {
+  color: white;
+  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  /*box-shadow: 0 0 6px var(--complementary-color-1);*/
+}
+input[type=submit].outlined:focus {
+  color: white;
+  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  /*box-shadow: 0 0 6px var(--complementary-color-1);*/
+}
+input[type=reset].outlined:focus {
+  color: white;
+  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  /*box-shadow: 0 0 6px var(--complementary-color-1);*/
 }
 button.variant.outlined {
   color: #cde534;
@@ -1349,52 +1469,64 @@ input[type=reset].variant.outlined {
   color: #cde534;
 }
 button.variant.outlined:hover {
-  background-color: rgb(199, 226, 29);
   color: white;
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
 }
 .button.variant.outlined:hover {
-  background-color: rgb(199, 226, 29);
   color: white;
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
 }
 a.button.variant.outlined:hover {
-  background-color: rgb(199, 226, 29);
   color: white;
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
 }
 input[type=button].variant.outlined:hover {
-  background-color: rgb(199, 226, 29);
   color: white;
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
 }
 input[type=submit].variant.outlined:hover {
-  background-color: rgb(199, 226, 29);
   color: white;
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
 }
 input[type=reset].variant.outlined:hover {
-  background-color: rgb(199, 226, 29);
   color: white;
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
 }
-button.outlined:hover {
-  background-color: rgb(224, 69, 31);
+button.variant.outlined:focus {
   color: white;
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
-.button.outlined:hover {
-  background-color: rgb(224, 69, 31);
+.button.variant.outlined:focus {
   color: white;
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
-a.button.outlined:hover {
-  background-color: rgb(224, 69, 31);
+a.button.variant.outlined:focus {
   color: white;
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
-input[type=button].outlined:hover {
-  background-color: rgb(224, 69, 31);
+input[type=button].variant.outlined:focus {
   color: white;
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
-input[type=submit].outlined:hover {
-  background-color: rgb(224, 69, 31);
+input[type=submit].variant.outlined:focus {
   color: white;
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
-input[type=reset].outlined:hover {
-  background-color: rgb(224, 69, 31);
+input[type=reset].variant.outlined:focus {
   color: white;
+  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 /* Disabled button */
 input[type=submit]:disabled {
@@ -1531,7 +1663,7 @@ body.sticky-footer footer {
   padding: 20px;
   /*cursor: pointer;*/
   border: 1px solid #1a1a1a;
-  background-color: rgb(128, 128, 128);
+  background-color: hsl(0, 0%, 85%);
   border-radius: 0;
 }
 .notification:not(:empty) {
@@ -1569,22 +1701,22 @@ body.sticky-footer footer {
 .information {
   color: #00529b;
   border-color: #00529b;
-  background-color: rgb(0, 136, 255);
+  background-color: hsl(208.25806451612905, 100%, 85%);
 }
 .success {
   color: #4f8a10;
   border-color: #4f8a10;
-  background-color: rgb(131, 228, 27);
+  background-color: hsl(89.01639344262296, 79.2207792208%, 85%);
 }
 .warning {
   color: #9f6000;
   border-color: #9f6000;
-  background-color: rgb(255, 153, 0);
+  background-color: hsl(36.22641509433962, 100%, 85%);
 }
 .error {
   color: #d8000c;
   border-color: #d8000c;
-  background-color: rgb(255, 0, 13);
+  background-color: hsl(356.6666666666667, 100%, 85%);
 }
 /**
  * Tabs
