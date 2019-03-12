@@ -91,9 +91,9 @@
   --error-color: #d8000c;
   --success-color: #4f8a10;
   /* Color variations are automatically generated 
-   * using PostCSS color-mod() Function
+   * using postcss-color-function
    * and the lightness color adjuster
-   * https://github.com/jonathantneal/postcss-color-mod-function
+   * https://github.com/postcss/postcss-color-function
    * 
    * Variations are implememnted as follows:
    * darker variation on:
@@ -109,12 +109,12 @@
    * 50% represents the "normal" color, 
    * while 100% is white and 0% is black.
    * 
-   * @todo Fix implementation; a 50% value
-   * does not return the "normal" color as expected.
+   * @todo Review implementation: a 50% value
+   * should return the "normal" color?
    * Possibly use of hsl color values are needed instead of hex
    */
-  --lightness-variation: 85%;
-  --darkness-variation: 40%;
+  --lightness-variation: 85;
+  --darkness-variation: 40;
   /**
    * Extras
    */
@@ -324,15 +324,15 @@ a:link, a:visited {
     color: var(--complementary-color-1);
 }
 a:hover, a:active, a:focus, a.active {
-  color: color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));
-  border-color: color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  color: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  border-color: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
 }
 a.variant:link, a.variant:visited {
   color: var(--complementary-color-2);
 }
 a.variant:hover, a.variant:active, a.variant:focus, a.variant.active {
-  color: color-mod(var(--complementary-color-2) lightness(var(--darkness-variation)));
-  border-color: color-mod(var(--complementary-color-2) lightness(var(--darkness-variation)));
+  color: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
+  border-color: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
 }
 /**
  * Lists
@@ -433,7 +433,7 @@ table.striped tbody tr:nth-child(even) {
 }
 tbody tr:hover, 
 table.striped tbody tr:hover {
-  background-color: color-mod(var(--neutral-color) lightness(var(--lightness-variation)));
+  background-color: color(var(--neutral-color) lightness(var(--lightness-variation)));
 }
 /**
  * Form elements
@@ -500,7 +500,7 @@ input[type=week] {
   line-height: var(--rhytm-unit);
   font-family: var(--text-font);
   font-size: 1em;
-  background-color: var(--neutral-color);
+  background-color: color(var(--neutral-color) lightness(var(--lightness-variation)));
   color: var(--text-color);
   border-radius: var(--rounded);
   transition: all .4s ease-out;
@@ -544,9 +544,9 @@ input.is-valid:focus,
 textarea.is-valid:focus, 
 select.is-valid:focus, 
 input.is-valid:focus {
-  border-color: color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));
-  background-color: color-mod(var(--neutral-color) lightness(var(--lightness-variation)));
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  background-color: var(--neutral-color);
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=checkbox], 
 input[type=radio] {
@@ -563,7 +563,7 @@ input[type=radio]:focus {
   /* @todo Remove blue border in MacOs Firefox? */
   /* box-shadow spread is added to compensate 
    * the missing border as the other form elements */
-  box-shadow: 0 0 2px 1px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  box-shadow: 0 0 2px 1px color(var(--complementary-color-1) lightness(var(--darkness-variation)));
 }
 textarea {
   resize:vertical;
@@ -641,8 +641,8 @@ a.button:hover,
 input[type=button]:hover,
 input[type=submit]:hover, 
 input[type=reset]:hover {
-  background: color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));
-  border-color: color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  background: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  border-color: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
 }
 button:focus, 
 .button:focus, 
@@ -650,9 +650,9 @@ a.button:focus,
 input[type=button]:focus,
 input[type=submit]:focus, 
 input[type=reset]:focus {
-  background: color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));
-  border-color: color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));
-  /*box-shadow: 0 0 4px 1px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  background: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  border-color: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  /*box-shadow: 0 0 4px 1px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 /* Variant button */
 button.variant, 
@@ -671,8 +671,8 @@ a.button.variant:hover,
 input[type=button].variant:hover,
 input[type=submit].variant:hover, 
 input[type=reset].variant:hover {
-  background-color: color-mod(var(--complementary-color-2) lightness(var(--darkness-variation)));
-  border-color: color-mod(var(--complementary-color-2) lightness(var(--darkness-variation)));
+  background-color: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
+  border-color: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
 }
 button.variant:focus, 
 .button.variant:focus, 
@@ -680,8 +680,8 @@ a.button.variant:focus,
 input[type=button].variant:focus,
 input[type=submit].variant:focus, 
 input[type=reset].variant:focus {
-  background-color: color-mod(var(--complementary-color-2) lightness(var(--darkness-variation)));
-  border-color: color-mod(var(--complementary-color-2) lightness(var(--darkness-variation)));
+  background-color: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
+  border-color: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
   /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 /* Outlined button */
@@ -701,7 +701,7 @@ input[type=button].outlined:hover,
 input[type=submit].outlined:hover, 
 input[type=reset].outlined:hover {
   color: white;
-  background-color: color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  background-color: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
 }
 button.outlined:focus, 
 .button.outlined:focus, 
@@ -710,8 +710,8 @@ input[type=button].outlined:focus,
 input[type=submit].outlined:focus, 
 input[type=reset].outlined:focus {
   color: white;
-  background-color: color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));
-  border-color: color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  background-color: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  border-color: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
   /*box-shadow: 0 0 6px var(--complementary-color-1);*/
 }
 button.variant.outlined, 
@@ -729,7 +729,7 @@ input[type=button].variant.outlined:hover,
 input[type=submit].variant.outlined:hover, 
 input[type=reset].variant.outlined:hover {
   color: white;
-  background-color: color-mod(var(--complementary-color-2) lightness(var(--darkness-variation)));
+  background-color: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
 }
 button.variant.outlined:focus, 
 .button.variant.outlined:focus, 
@@ -738,8 +738,8 @@ input[type=button].variant.outlined:focus,
 input[type=submit].variant.outlined:focus, 
 input[type=reset].variant.outlined:focus {
   color: white;
-  background-color: color-mod(var(--complementary-color-2) lightness(var(--darkness-variation)));
-  border-color: color-mod(var(--complementary-color-2) lightness(var(--darkness-variation)));
+  background-color: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
+  border-color: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
   /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 /* Disabled button */
@@ -872,7 +872,7 @@ body.sticky-footer footer {
   padding: var(--rhytm-unit);
   /*cursor: pointer;*/
   border: 1px solid var(--text-color);
-  background-color: color-mod(var(--text-color) lightness(var(--lightness-variation)));
+  background-color: color(var(--text-color) lightness(var(--lightness-variation)));
   border-radius: var(--rounded);
 }
 .notification:not(:empty) {
@@ -910,22 +910,22 @@ body.sticky-footer footer {
 .information {
   color: var(--information-color);
   border-color: var(--information-color);
-  background-color: color-mod(var(--information-color) lightness(var(--lightness-variation)));
+  background-color: color(var(--information-color) lightness(var(--lightness-variation)));
 }
 .success {
   color: var(--success-color);
   border-color: var(--success-color);
-  background-color: color-mod(var(--success-color) lightness(var(--lightness-variation)));
+  background-color: color(var(--success-color) lightness(var(--lightness-variation)));
 }
 .warning {
   color: var(--warning-color);
   border-color: var(--warning-color);
-  background-color: color-mod(var(--warning-color) lightness(var(--lightness-variation)));
+  background-color: color(var(--warning-color) lightness(var(--lightness-variation)));
 }
 .error {
   color: var(--error-color);
   border-color: var(--error-color);
-  background-color: color-mod(var(--error-color) lightness(var(--lightness-variation)));
+  background-color: color(var(--error-color) lightness(var(--lightness-variation)));
 }
 /**
  * Tabs

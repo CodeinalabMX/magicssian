@@ -77,15 +77,15 @@
    * Notification scheme
    */
   /* Color variations are automatically generated 
-   * using PostCSS color-mod() Function
+   * using postcss-color-function
    * and the lightness color adjuster
-   * https://github.com/jonathantneal/postcss-color-mod-function
+   * https://github.com/postcss/postcss-color-function
    * 
    * Variations are implememnted as follows:
-   * darken variation on:
+   * darker variation on:
    * :hover for buttons & links
    * :focus on inputs, buttons & links
-   * lighten variation on:;
+   * lighter variation on:;
    * table.striped utility class
    * background-color on notification
    *
@@ -95,8 +95,8 @@
    * 50% represents the "normal" color, 
    * while 100% is white and 0% is black.
    * 
-   * @todo Fix implementation; a 50% value
-   * does not return the "normal" color as expected.
+   * @todo Review implementation: a 50% value
+   * should return the "normal" color?
    * Possibly use of hsl color values are needed instead of hex
    */
   /**
@@ -430,20 +430,20 @@ a:visited {
     color: #e35835;
 }
 a:hover {
-  color: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  color: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
 }
 a:active {
-  color: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  color: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
 }
 a:focus {
-  color: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  color: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
 }
 a.active {
-  color: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  color: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
 }
 a.variant:link {
   color: #cde534;
@@ -452,20 +452,20 @@ a.variant:visited {
   color: #cde534;
 }
 a.variant:hover {
-  color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
 }
 a.variant:active {
-  color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
 }
 a.variant:focus {
-  color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
 }
 a.variant.active {
-  color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
 }
 /**
  * Lists
@@ -568,10 +568,10 @@ table.striped tbody tr:nth-child(even) {
   background-color: #eaeaea;
 }
 tbody tr:hover {
-  background-color: hsl(0, 0%, 85%);
+  background-color: rgb(217, 217, 217);
 }
 table.striped tbody tr:hover {
-  background-color: hsl(0, 0%, 85%);
+  background-color: rgb(217, 217, 217);
 }
 /**
  * Form elements
@@ -622,7 +622,7 @@ input[type=text] {
   line-height: 20px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  background-color: #eaeaea;
+  background-color: rgb(217, 217, 217);
   color: #1a1a1a;
   border-radius: 0;
   transition: all .4s ease-out;
@@ -636,7 +636,7 @@ input[type=password] {
   line-height: 20px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  background-color: #eaeaea;
+  background-color: rgb(217, 217, 217);
   color: #1a1a1a;
   border-radius: 0;
   transition: all .4s ease-out;
@@ -650,7 +650,7 @@ input[type=file] {
   line-height: 20px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  background-color: #eaeaea;
+  background-color: rgb(217, 217, 217);
   color: #1a1a1a;
   border-radius: 0;
   transition: all .4s ease-out;
@@ -664,7 +664,7 @@ textarea {
   line-height: 20px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  background-color: #eaeaea;
+  background-color: rgb(217, 217, 217);
   color: #1a1a1a;
   border-radius: 0;
   transition: all .4s ease-out;
@@ -678,7 +678,7 @@ select {
   line-height: 20px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  background-color: #eaeaea;
+  background-color: rgb(217, 217, 217);
   color: #1a1a1a;
   border-radius: 0;
   transition: all .4s ease-out;
@@ -692,7 +692,7 @@ input[type=date] {
   line-height: 20px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  background-color: #eaeaea;
+  background-color: rgb(217, 217, 217);
   color: #1a1a1a;
   border-radius: 0;
   transition: all .4s ease-out;
@@ -706,7 +706,7 @@ input[type=datetime] {
   line-height: 20px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  background-color: #eaeaea;
+  background-color: rgb(217, 217, 217);
   color: #1a1a1a;
   border-radius: 0;
   transition: all .4s ease-out;
@@ -720,7 +720,7 @@ input[type=datetime-local] {
   line-height: 20px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  background-color: #eaeaea;
+  background-color: rgb(217, 217, 217);
   color: #1a1a1a;
   border-radius: 0;
   transition: all .4s ease-out;
@@ -734,7 +734,7 @@ input[type=email] {
   line-height: 20px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  background-color: #eaeaea;
+  background-color: rgb(217, 217, 217);
   color: #1a1a1a;
   border-radius: 0;
   transition: all .4s ease-out;
@@ -748,7 +748,7 @@ input[type=month] {
   line-height: 20px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  background-color: #eaeaea;
+  background-color: rgb(217, 217, 217);
   color: #1a1a1a;
   border-radius: 0;
   transition: all .4s ease-out;
@@ -762,7 +762,7 @@ input[type=number] {
   line-height: 20px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  background-color: #eaeaea;
+  background-color: rgb(217, 217, 217);
   color: #1a1a1a;
   border-radius: 0;
   transition: all .4s ease-out;
@@ -776,7 +776,7 @@ input[type=range] {
   line-height: 20px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  background-color: #eaeaea;
+  background-color: rgb(217, 217, 217);
   color: #1a1a1a;
   border-radius: 0;
   transition: all .4s ease-out;
@@ -790,7 +790,7 @@ input[type=search] {
   line-height: 20px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  background-color: #eaeaea;
+  background-color: rgb(217, 217, 217);
   color: #1a1a1a;
   border-radius: 0;
   transition: all .4s ease-out;
@@ -804,7 +804,7 @@ input[type=tel] {
   line-height: 20px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  background-color: #eaeaea;
+  background-color: rgb(217, 217, 217);
   color: #1a1a1a;
   border-radius: 0;
   transition: all .4s ease-out;
@@ -818,7 +818,7 @@ input[type=text] {
   line-height: 20px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  background-color: #eaeaea;
+  background-color: rgb(217, 217, 217);
   color: #1a1a1a;
   border-radius: 0;
   transition: all .4s ease-out;
@@ -832,7 +832,7 @@ input[type=time] {
   line-height: 20px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  background-color: #eaeaea;
+  background-color: rgb(217, 217, 217);
   color: #1a1a1a;
   border-radius: 0;
   transition: all .4s ease-out;
@@ -846,7 +846,7 @@ input[type=url] {
   line-height: 20px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  background-color: #eaeaea;
+  background-color: rgb(217, 217, 217);
   color: #1a1a1a;
   border-radius: 0;
   transition: all .4s ease-out;
@@ -860,7 +860,7 @@ input[type=week] {
   line-height: 20px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  background-color: #eaeaea;
+  background-color: rgb(217, 217, 217);
   color: #1a1a1a;
   border-radius: 0;
   transition: all .4s ease-out;
@@ -883,114 +883,114 @@ select:-moz-focusring {
   text-shadow: 0 0 0 #1a1a1a;
 }
 input[type=text]:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=password]:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=file]:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=date]:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=datetime]:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=datetime-local]:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=email]:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=month]:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=number]:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=range]:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=search]:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=tel]:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=text]:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=time]:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=url]:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=week]:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 textarea:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 select:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input.is-valid:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 textarea.is-valid:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 select.is-valid:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input.is-valid:focus {
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  background-color: hsl(0, 0%, 85%);
-  /*box-shadow: 0 0 2px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  border-color: rgb(180, 55, 24);
+  background-color: #eaeaea;
+  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=checkbox] {
   width: 14px;
@@ -1011,13 +1011,13 @@ input[type=checkbox]:focus {
   /* @todo Remove blue border in MacOs Firefox? */
   /* box-shadow spread is added to compensate 
    * the missing border as the other form elements */
-  box-shadow: 0 0 2px 1px hsl(12.06896551724138, 75.652173913%, 40%);
+  box-shadow: 0 0 2px 1px rgb(180, 55, 24);
 }
 input[type=radio]:focus {
   /* @todo Remove blue border in MacOs Firefox? */
   /* box-shadow spread is added to compensate 
    * the missing border as the other form elements */
-  box-shadow: 0 0 2px 1px hsl(12.06896551724138, 75.652173913%, 40%);
+  box-shadow: 0 0 2px 1px rgb(180, 55, 24);
 }
 textarea {
   resize:vertical;
@@ -1227,58 +1227,58 @@ input[type=reset] {
   border-radius: 0;
 }
 button:hover {
-  background: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
 }
 .button:hover {
-  background: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
 }
 a.button:hover {
-  background: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
 }
 input[type=button]:hover {
-  background: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
 }
 input[type=submit]:hover {
-  background: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
 }
 input[type=reset]:hover {
-  background: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
 }
 button:focus {
-  background: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  /*box-shadow: 0 0 4px 1px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  background: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
+  /*box-shadow: 0 0 4px 1px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 .button:focus {
-  background: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  /*box-shadow: 0 0 4px 1px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  background: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
+  /*box-shadow: 0 0 4px 1px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 a.button:focus {
-  background: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  /*box-shadow: 0 0 4px 1px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  background: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
+  /*box-shadow: 0 0 4px 1px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=button]:focus {
-  background: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  /*box-shadow: 0 0 4px 1px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  background: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
+  /*box-shadow: 0 0 4px 1px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=submit]:focus {
-  background: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  /*box-shadow: 0 0 4px 1px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  background: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
+  /*box-shadow: 0 0 4px 1px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 input[type=reset]:focus {
-  background: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  /*box-shadow: 0 0 4px 1px color-mod(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  background: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
+  /*box-shadow: 0 0 4px 1px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
 }
 /* Variant button */
 button.variant {
@@ -1312,57 +1312,57 @@ input[type=reset].variant {
   border-color: #cde534;
 }
 button.variant:hover {
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
 }
 .button.variant:hover {
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
 }
 a.button.variant:hover {
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
 }
 input[type=button].variant:hover {
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
 }
 input[type=submit].variant:hover {
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
 }
 input[type=reset].variant:hover {
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
 }
 button.variant:focus {
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
   /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 .button.variant:focus {
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
   /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 a.button.variant:focus {
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
   /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 input[type=button].variant:focus {
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
   /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 input[type=submit].variant:focus {
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
   /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 input[type=reset].variant:focus {
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
   /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 /* Outlined button */
@@ -1392,62 +1392,62 @@ input[type=reset].outlined {
 }
 button.outlined:hover {
   color: white;
-  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: rgb(180, 55, 24);
 }
 .button.outlined:hover {
   color: white;
-  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: rgb(180, 55, 24);
 }
 a.button.outlined:hover {
   color: white;
-  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: rgb(180, 55, 24);
 }
 input[type=button].outlined:hover {
   color: white;
-  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: rgb(180, 55, 24);
 }
 input[type=submit].outlined:hover {
   color: white;
-  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: rgb(180, 55, 24);
 }
 input[type=reset].outlined:hover {
   color: white;
-  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: rgb(180, 55, 24);
 }
 button.outlined:focus {
   color: white;
-  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
   /*box-shadow: 0 0 6px var(--complementary-color-1);*/
 }
 .button.outlined:focus {
   color: white;
-  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
   /*box-shadow: 0 0 6px var(--complementary-color-1);*/
 }
 a.button.outlined:focus {
   color: white;
-  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
   /*box-shadow: 0 0 6px var(--complementary-color-1);*/
 }
 input[type=button].outlined:focus {
   color: white;
-  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
   /*box-shadow: 0 0 6px var(--complementary-color-1);*/
 }
 input[type=submit].outlined:focus {
   color: white;
-  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
   /*box-shadow: 0 0 6px var(--complementary-color-1);*/
 }
 input[type=reset].outlined:focus {
   color: white;
-  background-color: hsl(12.06896551724138, 75.652173913%, 40%);
-  border-color: hsl(12.06896551724138, 75.652173913%, 40%);
+  background-color: rgb(180, 55, 24);
+  border-color: rgb(180, 55, 24);
   /*box-shadow: 0 0 6px var(--complementary-color-1);*/
 }
 button.variant.outlined {
@@ -1470,62 +1470,62 @@ input[type=reset].variant.outlined {
 }
 button.variant.outlined:hover {
   color: white;
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
 }
 .button.variant.outlined:hover {
   color: white;
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
 }
 a.button.variant.outlined:hover {
   color: white;
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
 }
 input[type=button].variant.outlined:hover {
   color: white;
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
 }
 input[type=submit].variant.outlined:hover {
   color: white;
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
 }
 input[type=reset].variant.outlined:hover {
   color: white;
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
 }
 button.variant.outlined:focus {
   color: white;
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
   /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 .button.variant.outlined:focus {
   color: white;
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
   /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 a.button.variant.outlined:focus {
   color: white;
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
   /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 input[type=button].variant.outlined:focus {
   color: white;
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
   /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 input[type=submit].variant.outlined:focus {
   color: white;
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
   /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 input[type=reset].variant.outlined:focus {
   color: white;
-  background-color: hsl(68.13559322033899, 77.2925764192%, 40%);
-  border-color: hsl(68.13559322033899, 77.2925764192%, 40%);
+  background-color: rgb(160, 181, 23);
+  border-color: rgb(160, 181, 23);
   /*box-shadow: 0 0 6px var(--complementary-color-2);*/
 }
 /* Disabled button */
@@ -1663,7 +1663,7 @@ body.sticky-footer footer {
   padding: 20px;
   /*cursor: pointer;*/
   border: 1px solid #1a1a1a;
-  background-color: hsl(0, 0%, 85%);
+  background-color: rgb(217, 217, 217);
   border-radius: 0;
 }
 .notification:not(:empty) {
@@ -1701,22 +1701,22 @@ body.sticky-footer footer {
 .information {
   color: #00529b;
   border-color: #00529b;
-  background-color: hsl(208.25806451612905, 100%, 85%);
+  background-color: rgb(179, 219, 255);
 }
 .success {
   color: #4f8a10;
   border-color: #4f8a10;
-  background-color: hsl(89.01639344262296, 79.2207792208%, 85%);
+  background-color: rgb(218, 247, 187);
 }
 .warning {
   color: #9f6000;
   border-color: #9f6000;
-  background-color: hsl(36.22641509433962, 100%, 85%);
+  background-color: rgb(255, 224, 179);
 }
 .error {
   color: #d8000c;
   border-color: #d8000c;
-  background-color: hsl(356.6666666666667, 100%, 85%);
+  background-color: rgb(255, 179, 182);
 }
 /**
  * Tabs
