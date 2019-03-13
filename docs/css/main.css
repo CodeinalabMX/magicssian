@@ -71,6 +71,12 @@
   letter-spacing: 2px;
 }
 /* Home */
+/* Menu */
+.menu label {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+}
 /* (Flexbox) Grid examples */
 section article {
 	margin-bottom: 50px;

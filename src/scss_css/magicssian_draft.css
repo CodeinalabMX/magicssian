@@ -1,3 +1,4 @@
+/*! Magicssian Version 0.1.0 http://codeinalabMX.github.io/magicssian License: MIT */
 /**
  * Magicssian
  * 
@@ -865,7 +866,7 @@ body.sticky-footer footer {
  */
 .notification {
   position: relative;
-  z-index: 1001;
+  z-index: 10001;
   display: none;
   width: 100%;
   height: auto;
@@ -928,6 +929,82 @@ body.sticky-footer footer {
   background-color: color(var(--error-color) lightness(var(--lightness-variation)));
 }
 /**
+ * Menu
+ */
+.menu .navigation {
+  transition: all .4s ease 0s;
+}
+.menu.slide-l .navigation {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  height: 100vh;
+  width: 80vw;
+  padding: var(--rhytm-unit);
+  padding-right: calc(2 * var(--rhytm-unit));
+  background: white;
+}
+.menu label {
+  position: relative;
+  z-index: 9999;
+  width: calc(2 * var(--rhytm-unit));
+  height: calc(2 * var(--rhytm-unit));
+  cursor: pointer;
+  display: none;
+}
+/* Pure css hamburger "everybody hates me" icon */
+.menu label div, 
+.menu label div:before,
+.menu label div:after {  
+  position: absolute;
+  display: block;
+  height: 6px;
+  width: 32px;
+  top: 12px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--complementary-color-1);
+  border-radius: calc(.5 * var(--rounded));
+  content: '';
+  transition: all .4s ease 0s;
+}
+.menu label div:before {
+  top: -12px;
+}
+.menu label div:after {
+  top: 12px; 
+}
+.menu label:hover div, 
+.menu label:hover div:before,
+.menu label:hover div:after {
+  background-color: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
+}
+/* menu toggle default */
+.menu [type=checkbox]:checked + label div:before,
+.menu [type=checkbox]:checked + label div:after {
+  opacity: 0;
+}
+.menu [type=checkbox]:checked + label + .navigation {
+  display: block;
+}
+.menu.slide-l [type=checkbox]:checked + label + .navigation {
+  left: 0;
+}
+@media (max-width: 780px) {
+  .menu label {
+    display: block;
+  }
+  .menu .navigation {
+    display: none;
+  }
+  .menu.slide-l .navigation {
+    display: block;
+    left: calc(0 - 80vw + calc(2 * var(--rhytm-unit)));
+  }
+}
+/**
  * Tabs
  */
 .tabs .navigation a {
@@ -957,6 +1034,8 @@ body.sticky-footer footer {
 .tabs .navigation a:last-child {
   border-top-right-radius: var(--rounded);
 }
+
+
 /**
  * Utilities
  */

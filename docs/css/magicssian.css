@@ -1,3 +1,4 @@
+/*! Magicssian Version 0.1.0 http://codeinalabMX.github.io/magicssian License: MIT */
 /**
  * Magicssian
  * 
@@ -1656,7 +1657,7 @@ body.sticky-footer footer {
  */
 .notification {
   position: relative;
-  z-index: 1001;
+  z-index: 10001;
   display: none;
   width: 100%;
   height: auto;
@@ -1719,6 +1720,114 @@ body.sticky-footer footer {
   background-color: rgb(255, 179, 182);
 }
 /**
+ * Menu
+ */
+.menu .navigation {
+  transition: all .4s ease 0s;
+}
+.menu.slide-l .navigation {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  height: 100vh;
+  width: 80vw;
+  padding: 20px;
+  padding-right: 40px;
+  background: white;
+}
+.menu label {
+  position: relative;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: none;
+}
+/* Pure css hamburger "everybody hates me" icon */
+.menu label div {  
+  position: absolute;
+  display: block;
+  height: 6px;
+  width: 32px;
+  top: 12px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e35835;
+  border-radius: 0;
+  content: '';
+  transition: all .4s ease 0s;
+}
+.menu label div:before {  
+  position: absolute;
+  display: block;
+  height: 6px;
+  width: 32px;
+  top: 12px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e35835;
+  border-radius: 0;
+  content: '';
+  transition: all .4s ease 0s;
+}
+.menu label div:after {  
+  position: absolute;
+  display: block;
+  height: 6px;
+  width: 32px;
+  top: 12px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e35835;
+  border-radius: 0;
+  content: '';
+  transition: all .4s ease 0s;
+}
+.menu label div:before {
+  top: -12px;
+}
+.menu label div:after {
+  top: 12px; 
+}
+.menu label:hover div {
+  background-color: rgb(180, 55, 24);
+}
+.menu label:hover div:before {
+  background-color: rgb(180, 55, 24);
+}
+.menu label:hover div:after {
+  background-color: rgb(180, 55, 24);
+}
+/* menu toggle default */
+.menu [type=checkbox]:checked + label div:before,
+.menu [type=checkbox]:checked + label div:after {
+  opacity: 0;
+}
+.menu [type=checkbox]:checked + label + .navigation {
+  display: block;
+}
+.menu.slide-l [type=checkbox]:checked + label + .navigation {
+  left: 0;
+}
+@media (max-width: 780px) {
+  .menu label {
+    display: block;
+  }
+  .menu .navigation {
+    display: none;
+  }
+  .menu.slide-l .navigation {
+    display: block;
+    left: calc(-80vw + 40px);
+  }
+}
+/**
  * Tabs
  */
 .tabs .navigation a {
@@ -1748,6 +1857,8 @@ body.sticky-footer footer {
 .tabs .navigation a:last-child {
   border-top-right-radius: 0;
 }
+
+
 /**
  * Utilities
  */
