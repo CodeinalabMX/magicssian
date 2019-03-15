@@ -516,12 +516,28 @@ input[type=week] {
   transition: all .4s ease-out;
 }
 select {
+  /* This will remove all browser-specific appearance for select element
+   * As the default arrow indicator dissapears
+   * we fix it by adding an inline svg background
+   * with a custom vector (double arrow) icon save as svg
+   * and then convert it to  
+   * Tools & reference:
+   * https://dataurl.sveinbjorn.org/#dataurlmaker
+   * https://svgontheweb.com/
+   */
   position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTJweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMTIgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEyIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwb2x5Z29uIGZpbGw9IiMyMjIyMjIiIHBvaW50cz0iMiw5IDYsMyAxMCw5ICIvPg0KPHBvbHlnb24gZmlsbD0iIzIyMjIyMiIgcG9pbnRzPSIxMCwxMSA2LDE3IDIsMTEgIi8+DQo8L3N2Zz4NCg==');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iOHB4IiBoZWlnaHQ9IjE0cHgiIHZpZXdCb3g9IjAgMCA4IDE0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDE0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwb2x5Z29uIGZpbGw9IiMxQTFBMUEiIHBvaW50cz0iNCwwIDAsNiA4LDYgIi8+DQo8cG9seWdvbiBmaWxsPSIjMUExQTFBIiBwb2ludHM9IjQsMTQgOCw4IDAsOCAiLz4NCjwvc3ZnPg0K');
   background-position: 98% center;
   background-repeat: no-repeat;
+}
+select:after {
+  display: block;
+  content: ' ';
+  border: solid black;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 select:-moz-focusring {
   /* Remove :focus dotted outline on Firefox 
