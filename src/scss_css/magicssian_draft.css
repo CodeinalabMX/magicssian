@@ -11,7 +11,7 @@
  * * Base
  * * Components
  * * Utilities
- * 
+ *
  */
 
 
@@ -32,6 +32,7 @@
  * * Tables
  * * Form elements
  * * Buttons
+ * 
  */
 
  /**
@@ -48,6 +49,7 @@
   * * * Notification scheme
   * * Color variations
   * * Extras
+  * 
   */
  :root {
   /**
@@ -55,28 +57,58 @@
    *
    * Fonts Make things look prettier
    * choose wisely
+   *
+   * Using google fonts you'll need to embed font files
+   * copying the standard link tag provided by google
+   * in the <head> of your html document
+   * or you can use your own fonts adding the appropiate @font-face rules
+   * Tools & reference:
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face
+   * https://developers.google.com/fonts/docs/getting_started
+   * https://www.fontsquirrel.com/tools/webfont-generator
+   * https://github.com/jonathantneal/postcss-font-magician
+   * 
    */
   --text-font: 'Inconsolata', serif;
   --heading-font: 'Montserrat', sans-serif;
   /**
    * Font size & rhytm unit
-   *
-   * Vertical rhytm attempt
+   * 
+   * Our interpretation and implementation of the Vertical rhytm concept
+   * Using a rhytm-unit, as a variable to mantain
+   * elements size and spacing into multiples of this value
+   * Tools & reference:
+   * https://zellwk.com/blog/why-vertical-rhythms/
+   * https://24ways.org/2006/compose-to-a-vertical-rhythm
+   * https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align
+   * https://drewish.com/tools/vertical-rhythm/
+   * 
    */
   --base-font-size: 16px;
-  --rhytm-unit: 20px;
+  /* If changed use even values eg. 22 or 18
+   * Increasing value will result in wider spacing and bigger elements */
+  --rhytm-unit: 22px;
   /**
    * Color schemes
+   * 
    */
   /**
    * Base scheme
    *
-   * A split-complementary color scheme
-   * a black that is not that black for text
+   * Starting with a split-complementary color scheme
+   * using the base color for headings,
+   * complementary 1 acts as accent color 
+   * in elements like buttons and borders
+   * and complementary 2 as a variant
+   * We use a black that is not that black for text
+   * and a light grey as neutral.
    * 
    * Tools & reference:
    * https://www.sessions.edu/color-calculator/
+   * https://color.adobe.com/create/color-wheel/?base=2&rule=Complementary
+   * https://refactoringui.com/previews/building-your-color-palette/
    * https://ianstormtaylor.com/design-tip-never-use-black/
+   * 
    */
   --base-color: #0b162a;
   --complementary-color-1: #e35835;
@@ -86,6 +118,7 @@
   --neutral-color: #eaeaea;
   /**
    * Notification scheme
+   * 
    */
   --information-color: #00529b;
   --warning-color: #9f6000;
@@ -116,27 +149,33 @@
   --lightness-variation: 85;
   /* A lower value will return a darker color */
   --darkness-variation: 40;
-
+  /**
+   * Color variations
+   * 
+   */
   --complementary-color-1-darker: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
   --complementary-color-2-darker: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
   --neutral-color-lighter: color(var(--neutral-color) lightness(var(--lightness-variation)));
   --information-color-lighter: color(var(--information-color) lightness(var(--lightness-variation)));
   --warning-color-lighter: color(var(--warning-color) lightness(var(--lightness-variation)));
   --error-color-lighter: color(var(--error-color) lightness(var(--lightness-variation)));
-  --success-color-lighter: color(var(--success-color) lightness(var(--lightness-variation)));
+  --success-color-lighter: color(var(--success-color) lightness(var(--lightness-variation)));  
 
   /**
    * Extras
+   * 
    */
-  /* Max-width for a boxed container */
+  /* Width/Max-width for a boxed container */
   --box-width: 80%;
   /* border-radius value
    * will apply globally for:
    * pre, buttons, form elements, notifications and tabs
    * accepts only one value eg. 4px */
   --rounded: 0;
+  /* This will define the border-radius for the .rounded utlility class */
   --rounded-utility: 4px;
 }
+
 
 /**
  * Reset
@@ -147,17 +186,18 @@
  * html5doctor.com Reset Stylesheet v1.6.1 http://html5doctor.com/html-5-reset-stylesheet/
  * Eric Meyer's Reset CSS v2.0 http://meyerweb.com/eric/tools/css/reset/
  * Normalize github.com/necolas/normalize.css
+ * 
  */
 * {
   /* Est. 2012; https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
   box-sizing: border-box;
 }
 html {
-  /* normalize:;
+  /* normalize
    * Prevent adjustments of font size after orientation changes in iOS. */
   -webkit-text-size-adjust: 100%;
   /* Show scroll bar to avoid jumpy content alignment
-   * navigating between pages with with content exceding 
+   * when navigating between pages with content exceding 
    * the vertical view port and those that dont */
   overflow-y: scroll;
 }
@@ -233,6 +273,7 @@ template {
 
 /**
  * Document
+ * 
  */
 html, body {
   font-family: var(--text-font);
@@ -240,8 +281,10 @@ html, body {
   line-height: var(--rhytm-unit);
   color: var(--text-color);
 }
+
 /**
  * Text
+ * 
  */
 p, a, q, cite, pre, code, ul, ol, dl { 
   font-size: 1rem;
@@ -321,15 +364,16 @@ hr {
   margin: calc(var(--rhytm-unit) - 1px) var(--rhytm-unit);
   background-color: var(--complementary-color-1);
 }
+
 /**
  * Links
+ * 
  */
 a {
   transition: all .4s ease-out;
-  /* Transparent border is added to prevent jumpy transition on hover */
+  /* Transparent border is added to avoid jumpy transition on :hover */
   border-bottom: 1px solid transparent;
 }
-/* Default color: complementary-color-1 */
 a:link, a:visited {
     color: var(--complementary-color-1);
 }
@@ -344,8 +388,10 @@ a.variant:hover, a.variant:active, a.variant:focus, a.variant.active {
   color: var(--complementary-color-2-darker);
   border-color: var(--complementary-color-2-darker);
 }
+
 /**
  * Lists
+ * 
  */
 ul, ol {
   padding-left: calc(2 * var(--rhytm-unit));
@@ -397,11 +443,13 @@ dt {
 dd {
   padding-left: calc(.5 * var(--rhytm-unit));
 }
+
 /**
  * Tables
+ * 
  */
 table {
-  /* Use separate borders to keep element height into vertical rhytm */
+  /* Use separate borders to keep rows height into vertical rhytm */
   border-collapse: separate;
   width: 100%;
   max-width: 100%;
@@ -445,8 +493,10 @@ tbody tr:hover,
 table.striped tbody tr:hover {
   background-color: var(--neutral-color-lighter);
 }
+
 /**
  * Form elements
+ * 
  */
 fieldset {
   position: relative;
@@ -478,7 +528,7 @@ textarea,
 [type=checkbox],
 [type=radio] {
   /* Remove the default glow on focus state
-   * concerning accessibility, this will be styled later */
+   * concerning accessibility, this will be re-styled a few linea ahead */
   outline: none;
 }
 select::-ms-expand {
@@ -523,8 +573,7 @@ select {
    * and then convert it to  
    * Tools & reference:
    * https://dataurl.sveinbjorn.org/#dataurlmaker
-   * https://svgontheweb.com/
-   */
+   * https://svgontheweb.com/ */
   position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -617,6 +666,7 @@ select.is-not-valid,
 .is-not-valid {
   border: 1px solid var(--error-color);
 }
+
 /**
  * Buttons
  *
@@ -625,12 +675,17 @@ select.is-not-valid,
  * * Variant button
  * * Outlined button
  * * Disabled button
+ * 
  */
 ::-moz-focus-inner {
   /* Remove dotted outline on button:focus in Firefox */
   border: 0;
 }
-/* Default button */
+
+/**
+ * Default button
+ * 
+ */
 button, 
 .button,
 a.button,
@@ -674,7 +729,11 @@ input[type=reset]:focus {
   border-color: var(--complementary-color-1-darker);
   /*box-shadow: 0 0 4px 1px var(--complementary-color-1-darker);*/
 }
-/* Variant button */
+
+/**
+ * Variant button
+ * 
+ */
 button.variant, 
 .button.variant, 
 a.button.variant,
@@ -704,7 +763,11 @@ input[type=reset].variant:focus {
   border-color: var(--complementary-color-2-darker);
   /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
-/* Outlined button */
+
+/**
+ * Outlined button
+ * 
+ */
 button.outlined, 
 .button.outlined, 
 a.button.outlined,
@@ -762,7 +825,10 @@ input[type=reset].variant.outlined:focus {
   border-color: var(--complementary-color-2-darker);
   /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
-/* Disabled button */
+
+/**
+ * Disabled button
+ */
 input[type=submit]:disabled, 
 button:disabled {
     background: transparent;
@@ -774,28 +840,23 @@ button:disabled {
 
 /**
  * Components
- * 
- * Layout & custom re-usable elements
+ *
+ * Custom constructed elements
  *
  * Contents:
- * Container
  * Sticky footer
  * (Flexbox) Grid
  * Notifications
+ * Menu
  */
+
 /**
- * Container
+ * Sticky footer 
+ *
+ * Tools & reference:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers
+ * 
  */
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-}
-.container.boxed {
-  max-width: var(--box-width);
-  margin: 0 auto;
-}
-/* Sticky footer */
 body.sticky-footer {
   display: flex;
   flex-direction: column;
@@ -806,9 +867,12 @@ body.sticky-footer section {
 body.sticky-footer footer {
   flex: 0 0 auto;
 }
+
 /**
  * (Flexbox) Grid
+ * 
  * @todo switch to CSS Grid layout
+ * 
  */
 .grid, .grid.column {
   display: -ms-flexbox;
@@ -831,7 +895,11 @@ body.sticky-footer footer {
 .grid.valign-b {
   align-items: flex-end;
 }
-/* (Flexbox) Grid Columns */
+
+/**
+ * (Flexbox) Grid Columns
+ * 
+ */
 .grid .column {
   flex: 1;
 }
@@ -880,8 +948,10 @@ body.sticky-footer footer {
     width: 100%;
   }
 }
+
 /**
  * Notification
+ * 
  */
 .notification {
   position: relative;
@@ -947,8 +1017,10 @@ body.sticky-footer footer {
   border-color: var(--error-color);
   background-color: var(--error-color-lighter);
 }
+
 /**
  * Menu
+ * 
  */
 .menu .navigation {
   transition: all .4s ease 0s;
@@ -1023,6 +1095,7 @@ body.sticky-footer footer {
     left: calc(0 - 80vw + calc(2 * var(--rhytm-unit)));
   }
 }
+
 /**
  * Tabs
  */
@@ -1057,10 +1130,22 @@ body.sticky-footer footer {
 
 /**
  * Utilities
+ * 
  */
-/* BEEP BEEP Richie! 
- * They ALL float down here. 
- * When you're down here with us, you'll float too! */
+/* Container */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+.container.boxed {
+  max-width: var(--box-width);
+  margin: 0 auto;
+}
+/* Float & clearfix
+ * BEEP BEEP Richie! 
+ * they ALL float down here. 
+ * when you're down here with us, you'll float too! */
 .float-l {
   float: left;
 }
@@ -1075,6 +1160,8 @@ body.sticky-footer footer {
 .clearfix:after {
   clear: both;
 }
+/* Display
+ * Tadaa! the most basic magic trick */
 .hidden {
   display: none;
 }
@@ -1099,8 +1186,7 @@ body.sticky-footer footer {
 .rounded {
   border-radius: var(--rounded-utility)!important;
 }
-/* Padded container */
-/* text alignemt */
+/* Text alignemt */
 .align-l {
   text-align: left;
 }

@@ -11,7 +11,7 @@
  * * Base
  * * Components
  * * Utilities
- * 
+ *
  */
 
 
@@ -32,6 +32,7 @@
  * * Tables
  * * Form elements
  * * Buttons
+ * 
  */
 
  /**
@@ -48,6 +49,7 @@
   * * * Notification scheme
   * * Color variations
   * * Extras
+  * 
   */
  :root {
   /**
@@ -55,27 +57,58 @@
    *
    * Fonts Make things look prettier
    * choose wisely
+   *
+   * Using google fonts you'll need to embed font files
+   * copying the standard link tag provided by google
+   * in the <head> of your html document
+   * or you can use your own fonts adding the appropiate @font-face rules
+   * Tools & reference:
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face
+   * https://developers.google.com/fonts/docs/getting_started
+   * https://www.fontsquirrel.com/tools/webfont-generator
+   * https://github.com/jonathantneal/postcss-font-magician
+   * 
    */
   /**
    * Font size & rhytm unit
-   *
-   * Vertical rhytm attempt
+   * 
+   * Our interpretation and implementation of the Vertical rhytm concept
+   * Using a rhytm-unit, as a variable to mantain
+   * elements size and spacing into multiples of this value
+   * Tools & reference:
+   * https://zellwk.com/blog/why-vertical-rhythms/
+   * https://24ways.org/2006/compose-to-a-vertical-rhythm
+   * https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align
+   * https://drewish.com/tools/vertical-rhythm/
+   * 
    */
+  /* If changed use even values eg. 22 or 18
+   * Increasing value will result in wider spacing and bigger elements */
   /**
    * Color schemes
+   * 
    */
   /**
    * Base scheme
    *
-   * A split-complementary color scheme
-   * a black that is not that black for text
+   * Starting with a split-complementary color scheme
+   * using the base color for headings,
+   * complementary 1 acts as accent color 
+   * in elements like buttons and borders
+   * and complementary 2 as a variant
+   * We use a black that is not that black for text
+   * and a light grey as neutral.
    * 
    * Tools & reference:
    * https://www.sessions.edu/color-calculator/
+   * https://color.adobe.com/create/color-wheel/?base=2&rule=Complementary
+   * https://refactoringui.com/previews/building-your-color-palette/
    * https://ianstormtaylor.com/design-tip-never-use-black/
+   * 
    */
   /**
    * Notification scheme
+   * 
    */
   /* Color variations are automatically generated 
    * using postcss-color-function
@@ -100,16 +133,23 @@
    * Possibly use of hsl color values are needed instead of hex */
   /* A higher value will result in a lighter color */
   /* A lower value will return a darker color */
+  /**
+   * Color variations
+   * 
+   */  
 
   /**
    * Extras
+   * 
    */
-  /* Max-width for a boxed container */
+  /* Width/Max-width for a boxed container */
   /* border-radius value
    * will apply globally for:
    * pre, buttons, form elements, notifications and tabs
    * accepts only one value eg. 4px */
+  /* This will define the border-radius for the .rounded utlility class */
 }
+
 
 /**
  * Reset
@@ -120,17 +160,18 @@
  * html5doctor.com Reset Stylesheet v1.6.1 http://html5doctor.com/html-5-reset-stylesheet/
  * Eric Meyer's Reset CSS v2.0 http://meyerweb.com/eric/tools/css/reset/
  * Normalize github.com/necolas/normalize.css
+ * 
  */
 * {
   /* Est. 2012; https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
   box-sizing: border-box;
 }
 html {
-  /* normalize:;
+  /* normalize
    * Prevent adjustments of font size after orientation changes in iOS. */
   -webkit-text-size-adjust: 100%;
   /* Show scroll bar to avoid jumpy content alignment
-   * navigating between pages with with content exceding 
+   * when navigating between pages with content exceding 
    * the vertical view port and those that dont */
   overflow-y: scroll;
 }
@@ -206,105 +247,108 @@ template {
 
 /**
  * Document
+ * 
  */
 html {
   font-family: 'Inconsolata', serif;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 22px;
   color: #1a1a1a;
 }
 body {
   font-family: 'Inconsolata', serif;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 22px;
   color: #1a1a1a;
 }
+
 /**
  * Text
+ * 
  */
 p { 
   font-size: 1rem;
-  line-height: 20px;
+  line-height: 22px;
 }
 a { 
   font-size: 1rem;
-  line-height: 20px;
+  line-height: 22px;
 }
 q { 
   font-size: 1rem;
-  line-height: 20px;
+  line-height: 22px;
 }
 cite { 
   font-size: 1rem;
-  line-height: 20px;
+  line-height: 22px;
 }
 pre { 
   font-size: 1rem;
-  line-height: 20px;
+  line-height: 22px;
 }
 code { 
   font-size: 1rem;
-  line-height: 20px;
+  line-height: 22px;
 }
 ul { 
   font-size: 1rem;
-  line-height: 20px;
+  line-height: 22px;
 }
 ol { 
   font-size: 1rem;
-  line-height: 20px;
+  line-height: 22px;
 }
 dl { 
   font-size: 1rem;
-  line-height: 20px;
+  line-height: 22px;
 }
 h1 {
   font-size: 4.8750rem;      /* 78/16 */
-  line-height: 100px;
+  line-height: 110px;
 }
 .h1 {
   font-size: 4.8750rem;      /* 78/16 */
-  line-height: 100px;
+  line-height: 110px;
 }
 h2 {
   font-size: 2.8750rem;      /* 46/16 */
-  line-height: 60px;
+  line-height: 66px;
 }
 .h2 {
   font-size: 2.8750rem;      /* 46/16 */
-  line-height: 60px;
+  line-height: 66px;
 }
 h3 {
   font-size: 1.8750rem;      /* 30/16 */
-  line-height: 60px;
+  line-height: 66px;
 }
 .h3 {
   font-size: 1.8750rem;      /* 30/16 */
-  line-height: 60px;
+  line-height: 66px;
 }
 h4 {
   font-size: 1.3750rem;      /* 22/16 */
-  line-height: 40px;
+  line-height: 44px;
 }
 .h4 {
   font-size: 1.3750rem;      /* 22/16 */
-  line-height: 40px;
+  line-height: 44px;
 }
 h5 {
   font-size: 1.1250rem;      /* 18/16 */
-  line-height: 40px;
+  line-height: 44px;
 }
 .h5 {
   font-size: 1.1250rem;      /* 18/16 */
-  line-height: 40px;
+  line-height: 44px;
 }
 h6 {
   font-size: 0.8750rem;      /* 14/16 */
-  line-height: 20px;
+  line-height: 22px;
 }
 .h6 {
   font-size: 0.8750rem;      /* 14/16 */
-  line-height: 20px;
+  line-height: 22px;
 }
 h1 {
   font-family: 'Montserrat', sans-serif;
@@ -331,52 +375,52 @@ h6 {
   color: #0b162a;
 }
 h1 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 h2 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 h3 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 h4 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 h5 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 p {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 cite {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 ul ul {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 ol ol {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 ul {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 22px;
+  margin-bottom: 22px;
 }
 ol {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 22px;
+  margin-bottom: 22px;
 }
 small {
   /* @todo Fix element height, make it fit into rhytm unit */
@@ -388,8 +432,8 @@ sub, sup {
   line-height: 0;
 }
 blockquote {
-  padding: 30px;
-  margin-left: 40px;
+  padding: 33px;
+  margin-left: 44px;
   border-left: 2px solid #e35835;
 }
 cite {
@@ -398,7 +442,7 @@ cite {
   text-align: right;
 }
 pre {
-  padding: 10px;
+  padding: 11px;
   background-color: #eaeaea;
   border-radius: 0;
 }
@@ -413,18 +457,19 @@ pre {
 hr {
   height: 1px;
   /* Substract the element height to keep block height into rhytm unit */
-  margin: 19px 20px;
+  margin: 21px 22px;
   background-color: #e35835;
 }
+
 /**
  * Links
+ * 
  */
 a {
   transition: all .4s ease-out;
-  /* Transparent border is added to prevent jumpy transition on hover */
+  /* Transparent border is added to avoid jumpy transition on :hover */
   border-bottom: 1px solid transparent;
 }
-/* Default color: complementary-color-1 */
 a:link {
     color: #e35835;
 }
@@ -469,14 +514,16 @@ a.variant.active {
   color: rgb(160, 181, 23);
   border-color: rgb(160, 181, 23);
 }
+
 /**
  * Lists
+ * 
  */
 ul {
-  padding-left: 40px;
+  padding-left: 44px;
 }
 ol {
-  padding-left: 40px;
+  padding-left: 44px;
 }
 li {
   position: relative;
@@ -490,16 +537,16 @@ ul.custom li:before {
   position: absolute;
   content: '';
   display: block;
-  width: 5px;
-  height: 5px;
+  width: 5.5px;
+  height: 5.5px;
   background-color: #e35835;
-  left: -20px;
-  top: 7.5px;
+  left: -22px;
+  top: 8.25px;
   border-radius: 50%;
 }
 ul.custom.outlined li:before {
-  width: 4px;
-  height: 4px;
+  width: 4.4px;
+  height: 4.4px;
   border: 1px solid #e35835;
   background-color: transparent;
 }
@@ -512,9 +559,9 @@ ul.custom.diamond > li:before {
   transform: rotate(45deg);
 }
 ul.custom.dash > li:before {
-  width: 10px;
-  height: 2.5px;
-  top: 10px;  
+  width: 11px;
+  height: 2.75px;
+  top: 11px;  
 }
 ul.custom.variant {
   background: #cde534;
@@ -523,13 +570,15 @@ dt {
   font-weight: bold;
 }
 dd {
-  padding-left: 10px;
+  padding-left: 11px;
 }
+
 /**
  * Tables
+ * 
  */
 table {
-  /* Use separate borders to keep element height into vertical rhytm */
+  /* Use separate borders to keep rows height into vertical rhytm */
   border-collapse: separate;
   width: 100%;
   max-width: 100%;
@@ -543,26 +592,26 @@ tfoot {
   border-bottom: 1px solid transparent;
 }
 th {
-  padding: 8px;
+  padding: 9px;
   border-top: 2px solid transparent;
   border-bottom: 2px solid #eaeaea;
 }
 td {
-  padding: 9px 20px;
+  padding: 10px 22px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid #eaeaea;
 }
 tfoot td {
   font-style: italic;
-  padding: 8px;
+  padding: 9px;
 }
 th, td {
   text-align: left;
 }
 caption {
-  margin-left: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-left: 22px;
+  padding-left: 11px;
+  padding-right: 11px;
   font-style: italic;
   text-align: left;
 }
@@ -575,22 +624,24 @@ tbody tr:hover {
 table.striped tbody tr:hover {
   background-color: rgb(217, 217, 217);
 }
+
 /**
  * Form elements
+ * 
  */
 fieldset {
   position: relative;
   border: 1px solid #eaeaea;
-  padding: 10px;
+  padding: 11px;
   border-radius: 0;
 }
 fieldset.outlined {
   border: 1px solid #eaeaea;
 }
 legend {
-  margin-left: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-left: 22px;
+  padding-left: 11px;
+  padding-right: 11px;
   font-style: italic;
 }
 label {
@@ -608,7 +659,7 @@ textarea,
 [type=checkbox],
 [type=radio] {
   /* Remove the default glow on focus state
-   * concerning accessibility, this will be styled later */
+   * concerning accessibility, this will be re-styled a few linea ahead */
   outline: none;
 }
 select::-ms-expand {
@@ -618,10 +669,10 @@ select::-ms-expand {
 input[type=text] {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 9px;
+  margin-bottom: 22px;
+  padding: 10px;
   border: 1px solid #eaeaea;
-  line-height: 20px;
+  line-height: 22px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   background-color: rgb(217, 217, 217);
@@ -632,10 +683,10 @@ input[type=text] {
 input[type=password] {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 9px;
+  margin-bottom: 22px;
+  padding: 10px;
   border: 1px solid #eaeaea;
-  line-height: 20px;
+  line-height: 22px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   background-color: rgb(217, 217, 217);
@@ -646,10 +697,10 @@ input[type=password] {
 input[type=file] {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 9px;
+  margin-bottom: 22px;
+  padding: 10px;
   border: 1px solid #eaeaea;
-  line-height: 20px;
+  line-height: 22px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   background-color: rgb(217, 217, 217);
@@ -660,10 +711,10 @@ input[type=file] {
 textarea {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 9px;
+  margin-bottom: 22px;
+  padding: 10px;
   border: 1px solid #eaeaea;
-  line-height: 20px;
+  line-height: 22px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   background-color: rgb(217, 217, 217);
@@ -674,10 +725,10 @@ textarea {
 select {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 9px;
+  margin-bottom: 22px;
+  padding: 10px;
   border: 1px solid #eaeaea;
-  line-height: 20px;
+  line-height: 22px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   background-color: rgb(217, 217, 217);
@@ -688,10 +739,10 @@ select {
 input[type=date] {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 9px;
+  margin-bottom: 22px;
+  padding: 10px;
   border: 1px solid #eaeaea;
-  line-height: 20px;
+  line-height: 22px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   background-color: rgb(217, 217, 217);
@@ -702,10 +753,10 @@ input[type=date] {
 input[type=datetime] {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 9px;
+  margin-bottom: 22px;
+  padding: 10px;
   border: 1px solid #eaeaea;
-  line-height: 20px;
+  line-height: 22px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   background-color: rgb(217, 217, 217);
@@ -716,10 +767,10 @@ input[type=datetime] {
 input[type=datetime-local] {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 9px;
+  margin-bottom: 22px;
+  padding: 10px;
   border: 1px solid #eaeaea;
-  line-height: 20px;
+  line-height: 22px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   background-color: rgb(217, 217, 217);
@@ -730,10 +781,10 @@ input[type=datetime-local] {
 input[type=email] {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 9px;
+  margin-bottom: 22px;
+  padding: 10px;
   border: 1px solid #eaeaea;
-  line-height: 20px;
+  line-height: 22px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   background-color: rgb(217, 217, 217);
@@ -744,10 +795,10 @@ input[type=email] {
 input[type=month] {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 9px;
+  margin-bottom: 22px;
+  padding: 10px;
   border: 1px solid #eaeaea;
-  line-height: 20px;
+  line-height: 22px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   background-color: rgb(217, 217, 217);
@@ -758,10 +809,10 @@ input[type=month] {
 input[type=number] {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 9px;
+  margin-bottom: 22px;
+  padding: 10px;
   border: 1px solid #eaeaea;
-  line-height: 20px;
+  line-height: 22px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   background-color: rgb(217, 217, 217);
@@ -772,10 +823,10 @@ input[type=number] {
 input[type=range] {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 9px;
+  margin-bottom: 22px;
+  padding: 10px;
   border: 1px solid #eaeaea;
-  line-height: 20px;
+  line-height: 22px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   background-color: rgb(217, 217, 217);
@@ -786,10 +837,10 @@ input[type=range] {
 input[type=search] {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 9px;
+  margin-bottom: 22px;
+  padding: 10px;
   border: 1px solid #eaeaea;
-  line-height: 20px;
+  line-height: 22px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   background-color: rgb(217, 217, 217);
@@ -800,10 +851,10 @@ input[type=search] {
 input[type=tel] {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 9px;
+  margin-bottom: 22px;
+  padding: 10px;
   border: 1px solid #eaeaea;
-  line-height: 20px;
+  line-height: 22px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   background-color: rgb(217, 217, 217);
@@ -814,10 +865,10 @@ input[type=tel] {
 input[type=text] {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 9px;
+  margin-bottom: 22px;
+  padding: 10px;
   border: 1px solid #eaeaea;
-  line-height: 20px;
+  line-height: 22px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   background-color: rgb(217, 217, 217);
@@ -828,10 +879,10 @@ input[type=text] {
 input[type=time] {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 9px;
+  margin-bottom: 22px;
+  padding: 10px;
   border: 1px solid #eaeaea;
-  line-height: 20px;
+  line-height: 22px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   background-color: rgb(217, 217, 217);
@@ -842,10 +893,10 @@ input[type=time] {
 input[type=url] {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 9px;
+  margin-bottom: 22px;
+  padding: 10px;
   border: 1px solid #eaeaea;
-  line-height: 20px;
+  line-height: 22px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   background-color: rgb(217, 217, 217);
@@ -856,10 +907,10 @@ input[type=url] {
 input[type=week] {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
-  padding: 9px;
+  margin-bottom: 22px;
+  padding: 10px;
   border: 1px solid #eaeaea;
-  line-height: 20px;
+  line-height: 22px;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
   background-color: rgb(217, 217, 217);
@@ -875,8 +926,7 @@ select {
    * and then convert it to  
    * Tools & reference:
    * https://dataurl.sveinbjorn.org/#dataurlmaker
-   * https://svgontheweb.com/
-   */
+   * https://svgontheweb.com/ */
   position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1006,13 +1056,13 @@ input.is-valid:focus {
 input[type=checkbox] {
   width: 14px;
   height: 14px;
-  margin: 8px 20px;
+  margin: 8.8px 22px;
   transition: all .4s ease-out;
 }
 input[type=radio] {
   width: 14px;
   height: 14px;
-  margin: 8px 20px;
+  margin: 8.8px 22px;
   transition: all .4s ease-out;
 }
   /* radio & checkbox may not be avaliable for tab selection
@@ -1111,6 +1161,7 @@ select.is-not-valid {
 .is-not-valid {
   border: 1px solid #d8000c;
 }
+
 /**
  * Buttons
  *
@@ -1119,23 +1170,28 @@ select.is-not-valid {
  * * Variant button
  * * Outlined button
  * * Disabled button
+ * 
  */
 ::-moz-focus-inner {
   /* Remove dotted outline on button:focus in Firefox */
   border: 0;
 }
-/* Default button */
+
+/**
+ * Default button
+ * 
+ */
 button {
   position: relative;
   display: inline-block;
   border: 2px solid #e35835;
   /* Substract the element border
    * to keep block height into rhytm unit */
-  padding: 8px 20px;
+  padding: 9px 22px;
   background: #e35835;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  line-height: 20px;
+  line-height: 22px;
   vertical-align: bottom;
   text-align: center;
   text-transform: uppercase;
@@ -1150,11 +1206,11 @@ button {
   border: 2px solid #e35835;
   /* Substract the element border
    * to keep block height into rhytm unit */
-  padding: 8px 20px;
+  padding: 9px 22px;
   background: #e35835;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  line-height: 20px;
+  line-height: 22px;
   vertical-align: bottom;
   text-align: center;
   text-transform: uppercase;
@@ -1169,11 +1225,11 @@ a.button {
   border: 2px solid #e35835;
   /* Substract the element border
    * to keep block height into rhytm unit */
-  padding: 8px 20px;
+  padding: 9px 22px;
   background: #e35835;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  line-height: 20px;
+  line-height: 22px;
   vertical-align: bottom;
   text-align: center;
   text-transform: uppercase;
@@ -1188,11 +1244,11 @@ input[type=button] {
   border: 2px solid #e35835;
   /* Substract the element border
    * to keep block height into rhytm unit */
-  padding: 8px 20px;
+  padding: 9px 22px;
   background: #e35835;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  line-height: 20px;
+  line-height: 22px;
   vertical-align: bottom;
   text-align: center;
   text-transform: uppercase;
@@ -1207,11 +1263,11 @@ input[type=submit] {
   border: 2px solid #e35835;
   /* Substract the element border
    * to keep block height into rhytm unit */
-  padding: 8px 20px;
+  padding: 9px 22px;
   background: #e35835;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  line-height: 20px;
+  line-height: 22px;
   vertical-align: bottom;
   text-align: center;
   text-transform: uppercase;
@@ -1226,11 +1282,11 @@ input[type=reset] {
   border: 2px solid #e35835;
   /* Substract the element border
    * to keep block height into rhytm unit */
-  padding: 8px 20px;
+  padding: 9px 22px;
   background: #e35835;
   font-family: 'Inconsolata', serif;
   font-size: 1em;
-  line-height: 20px;
+  line-height: 22px;
   vertical-align: bottom;
   text-align: center;
   text-transform: uppercase;
@@ -1293,7 +1349,11 @@ input[type=reset]:focus {
   border-color: rgb(180, 55, 24);
   /*box-shadow: 0 0 4px 1px var(--complementary-color-1-darker);*/
 }
-/* Variant button */
+
+/**
+ * Variant button
+ * 
+ */
 button.variant {
   color: white;
   background: #cde534;
@@ -1378,7 +1438,11 @@ input[type=reset].variant:focus {
   border-color: rgb(160, 181, 23);
   /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
-/* Outlined button */
+
+/**
+ * Outlined button
+ * 
+ */
 button.outlined {
   background-color: transparent;
   color: #e35835;
@@ -1541,7 +1605,10 @@ input[type=reset].variant.outlined:focus {
   border-color: rgb(160, 181, 23);
   /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
-/* Disabled button */
+
+/**
+ * Disabled button
+ */
 input[type=submit]:disabled {
     background: transparent;
     color: #eaeaea;
@@ -1558,28 +1625,23 @@ button:disabled {
 
 /**
  * Components
- * 
- * Layout & custom re-usable elements
+ *
+ * Custom constructed elements
  *
  * Contents:
- * Container
  * Sticky footer
  * (Flexbox) Grid
  * Notifications
+ * Menu
  */
+
 /**
- * Container
+ * Sticky footer 
+ *
+ * Tools & reference:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers
+ * 
  */
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-}
-.container.boxed {
-  max-width: 80%;
-  margin: 0 auto;
-}
-/* Sticky footer */
 body.sticky-footer {
   display: flex;
   flex-direction: column;
@@ -1590,9 +1652,12 @@ body.sticky-footer section {
 body.sticky-footer footer {
   flex: 0 0 auto;
 }
+
 /**
  * (Flexbox) Grid
+ * 
  * @todo switch to CSS Grid layout
+ * 
  */
 .grid, .grid.column {
   display: -ms-flexbox;
@@ -1604,7 +1669,7 @@ body.sticky-footer footer {
   justify-content: center;
 }
 .grid.padded .column {
-  padding: 10px;
+  padding: 11px;
 }
 .grid.align-l {
   justify-content: flex-end;
@@ -1615,7 +1680,11 @@ body.sticky-footer footer {
 .grid.valign-b {
   align-items: flex-end;
 }
-/* (Flexbox) Grid Columns */
+
+/**
+ * (Flexbox) Grid Columns
+ * 
+ */
 .grid .column {
   flex: 1;
 }
@@ -1664,8 +1733,10 @@ body.sticky-footer footer {
     width: 100%;
   }
 }
+
 /**
  * Notification
+ * 
  */
 .notification {
   position: relative;
@@ -1673,7 +1744,7 @@ body.sticky-footer footer {
   display: none;
   width: 100%;
   height: auto;
-  padding: 20px;
+  padding: 22px;
   /*cursor: pointer;*/
   border: 1px solid #1a1a1a;
   background-color: rgb(217, 217, 217);
@@ -1731,8 +1802,10 @@ body.sticky-footer footer {
   border-color: #d8000c;
   background-color: rgb(255, 179, 182);
 }
+
 /**
  * Menu
+ * 
  */
 .menu .navigation {
   transition: all .4s ease 0s;
@@ -1743,15 +1816,15 @@ body.sticky-footer footer {
   top: 0;
   height: 100vh;
   width: 80vw;
-  padding: 20px;
-  padding-right: 40px;
+  padding: 22px;
+  padding-right: 44px;
   background: white;
 }
 .menu label {
   position: relative;
   z-index: 9999;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   cursor: pointer;
   display: none;
 }
@@ -1836,16 +1909,17 @@ body.sticky-footer footer {
   }
   .menu.slide-l .navigation {
     display: block;
-    left: calc(-80vw + 40px);
+    left: calc(-80vw + 44px);
   }
 }
+
 /**
  * Tabs
  */
 .tabs .navigation a {
   cursor: pointer;
   border: 1px solid #eaeaea;
-  padding: 10px;
+  padding: 11px;
 }
 .tabs .navigation a.active {
   font-weight: bold;
@@ -1853,7 +1927,7 @@ body.sticky-footer footer {
 }
 .tabs .tab {
   margin-top: -1px;
-  padding: 20px;
+  padding: 22px;
   border: 1px solid #eaeaea;
 }
 .tabs > .tab ~ .tab {
@@ -1873,10 +1947,22 @@ body.sticky-footer footer {
 
 /**
  * Utilities
+ * 
  */
-/* BEEP BEEP Richie! 
- * They ALL float down here. 
- * When you're down here with us, you'll float too! */
+/* Container */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+.container.boxed {
+  max-width: 80%;
+  margin: 0 auto;
+}
+/* Float & clearfix
+ * BEEP BEEP Richie! 
+ * they ALL float down here. 
+ * when you're down here with us, you'll float too! */
 .float-l {
   float: left;
 }
@@ -1891,6 +1977,8 @@ body.sticky-footer footer {
 .clearfix:after {
   clear: both;
 }
+/* Display
+ * Tadaa! the most basic magic trick */
 .hidden {
   display: none;
 }
@@ -1915,8 +2003,7 @@ body.sticky-footer footer {
 .rounded {
   border-radius: 4px!important;
 }
-/* Padded container */
-/* text alignemt */
+/* Text alignemt */
 .align-l {
   text-align: left;
 }
