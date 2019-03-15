@@ -20,7 +20,7 @@
  *
  * Define css custom properties
  * and style html elements globally
- * only few classes included
+ * with a few utility classes included
  *
  * Contents:
  * * Custom properties
@@ -35,7 +35,7 @@
  */
 
  /**
-  * Custom properties
+  * CSS Custom properties
   *
   * a.k.a css variables
   * Changing this will affect almost everything ahead
@@ -95,7 +95,6 @@
    * using postcss-color-function
    * and the lightness color adjuster
    * https://github.com/postcss/postcss-color-function
-   * 
    * Variations are implememnted as follows:
    * darker variation on:
    * :hover for buttons & links
@@ -112,10 +111,20 @@
    * 
    * @todo Review implementation: a 50% value
    * should return the "normal" color?
-   * Possibly use of hsl color values are needed instead of hex
-   */
+   * Possibly use of hsl color values are needed instead of hex */
+  /* A higher value will result in a lighter color */
   --lightness-variation: 85;
+  /* A lower value will return a darker color */
   --darkness-variation: 40;
+
+  --complementary-color-1-darker: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  --complementary-color-2-darker: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
+  --neutral-color-lighter: color(var(--neutral-color) lightness(var(--lightness-variation)));
+  --information-color-lighter: color(var(--information-color) lightness(var(--lightness-variation)));
+  --warning-color-lighter: color(var(--warning-color) lightness(var(--lightness-variation)));
+  --error-color-lighter: color(var(--error-color) lightness(var(--lightness-variation)));
+  --success-color-lighter: color(var(--success-color) lightness(var(--lightness-variation)));
+
   /**
    * Extras
    */
@@ -325,15 +334,15 @@ a:link, a:visited {
     color: var(--complementary-color-1);
 }
 a:hover, a:active, a:focus, a.active {
-  color: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
-  border-color: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  color: var(--complementary-color-1-darker);
+  border-color: var(--complementary-color-1-darker);
 }
 a.variant:link, a.variant:visited {
   color: var(--complementary-color-2);
 }
 a.variant:hover, a.variant:active, a.variant:focus, a.variant.active {
-  color: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
-  border-color: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
+  color: var(--complementary-color-2-darker);
+  border-color: var(--complementary-color-2-darker);
 }
 /**
  * Lists
@@ -434,7 +443,7 @@ table.striped tbody tr:nth-child(even) {
 }
 tbody tr:hover, 
 table.striped tbody tr:hover {
-  background-color: color(var(--neutral-color) lightness(var(--lightness-variation)));
+  background-color: var(--neutral-color-lighter);
 }
 /**
  * Form elements
@@ -501,7 +510,7 @@ input[type=week] {
   line-height: var(--rhytm-unit);
   font-family: var(--text-font);
   font-size: 1em;
-  background-color: color(var(--neutral-color) lightness(var(--lightness-variation)));
+  background-color: var(--neutral-color-lighter);
   color: var(--text-color);
   border-radius: var(--rounded);
   transition: all .4s ease-out;
@@ -545,9 +554,9 @@ input.is-valid:focus,
 textarea.is-valid:focus, 
 select.is-valid:focus, 
 input.is-valid:focus {
-  border-color: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  border-color: var(--complementary-color-1-darker);
   background-color: var(--neutral-color);
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input[type=checkbox], 
 input[type=radio] {
@@ -564,7 +573,8 @@ input[type=radio]:focus {
   /* @todo Remove blue border in MacOs Firefox? */
   /* box-shadow spread is added to compensate 
    * the missing border as the other form elements */
-  box-shadow: 0 0 2px 1px color(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  box-shadow: 0 0 0 1px var(--complementary-color-1-darker);
+  /*box-shadow: 0 0 4px 1px var(--complementary-color-1-darker);*/
 }
 textarea {
   resize:vertical;
@@ -642,8 +652,8 @@ a.button:hover,
 input[type=button]:hover,
 input[type=submit]:hover, 
 input[type=reset]:hover {
-  background: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
-  border-color: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  background-color: var(--complementary-color-1-darker);
+  border-color: var(--complementary-color-1-darker);
 }
 button:focus, 
 .button:focus, 
@@ -651,9 +661,9 @@ a.button:focus,
 input[type=button]:focus,
 input[type=submit]:focus, 
 input[type=reset]:focus {
-  background: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
-  border-color: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
-  /*box-shadow: 0 0 4px 1px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  background-color: var(--complementary-color-1-darker);
+  border-color: var(--complementary-color-1-darker);
+  /*box-shadow: 0 0 4px 1px var(--complementary-color-1-darker);*/
 }
 /* Variant button */
 button.variant, 
@@ -672,8 +682,8 @@ a.button.variant:hover,
 input[type=button].variant:hover,
 input[type=submit].variant:hover, 
 input[type=reset].variant:hover {
-  background-color: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
-  border-color: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
+  background-color: var(--complementary-color-2-darker);
+  border-color: var(--complementary-color-2-darker);
 }
 button.variant:focus, 
 .button.variant:focus, 
@@ -681,9 +691,9 @@ a.button.variant:focus,
 input[type=button].variant:focus,
 input[type=submit].variant:focus, 
 input[type=reset].variant:focus {
-  background-color: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
-  border-color: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
-  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
+  background-color: var(--complementary-color-2-darker);
+  border-color: var(--complementary-color-2-darker);
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
 /* Outlined button */
 button.outlined, 
@@ -702,7 +712,7 @@ input[type=button].outlined:hover,
 input[type=submit].outlined:hover, 
 input[type=reset].outlined:hover {
   color: white;
-  background-color: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  background-color: var(--complementary-color-1-darker);
 }
 button.outlined:focus, 
 .button.outlined:focus, 
@@ -711,9 +721,9 @@ input[type=button].outlined:focus,
 input[type=submit].outlined:focus, 
 input[type=reset].outlined:focus {
   color: white;
-  background-color: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
-  border-color: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
-  /*box-shadow: 0 0 6px var(--complementary-color-1);*/
+  background-color: var(--complementary-color-1-darker);
+  border-color: var(--complementary-color-1-darker);
+  /*box-shadow: 0 0 6px var(--complementary-color-1-darker);*/
 }
 button.variant.outlined, 
 .button.variant.outlined, 
@@ -730,7 +740,7 @@ input[type=button].variant.outlined:hover,
 input[type=submit].variant.outlined:hover, 
 input[type=reset].variant.outlined:hover {
   color: white;
-  background-color: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
+  background-color: var(--complementary-color-2-darker);
 }
 button.variant.outlined:focus, 
 .button.variant.outlined:focus, 
@@ -739,9 +749,9 @@ input[type=button].variant.outlined:focus,
 input[type=submit].variant.outlined:focus, 
 input[type=reset].variant.outlined:focus {
   color: white;
-  background-color: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
-  border-color: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
-  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
+  background-color: var(--complementary-color-2-darker);
+  border-color: var(--complementary-color-2-darker);
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
 /* Disabled button */
 input[type=submit]:disabled, 
@@ -873,7 +883,7 @@ body.sticky-footer footer {
   padding: var(--rhytm-unit);
   /*cursor: pointer;*/
   border: 1px solid var(--text-color);
-  background-color: color(var(--text-color) lightness(var(--lightness-variation)));
+  background-color: var(--neutral-color-lighter);
   border-radius: var(--rounded);
 }
 .notification:not(:empty) {
@@ -911,22 +921,22 @@ body.sticky-footer footer {
 .information {
   color: var(--information-color);
   border-color: var(--information-color);
-  background-color: color(var(--information-color) lightness(var(--lightness-variation)));
+  background-color: var(--information-color-lighter);
 }
 .success {
   color: var(--success-color);
   border-color: var(--success-color);
-  background-color: color(var(--success-color) lightness(var(--lightness-variation)));
+  background-color: var(--success-color-lighter);
 }
 .warning {
   color: var(--warning-color);
   border-color: var(--warning-color);
-  background-color: color(var(--warning-color) lightness(var(--lightness-variation)));
+  background-color: var(--warning-color-lighter);
 }
 .error {
   color: var(--error-color);
   border-color: var(--error-color);
-  background-color: color(var(--error-color) lightness(var(--lightness-variation)));
+  background-color: var(--error-color-lighter);
 }
 /**
  * Menu
@@ -979,7 +989,7 @@ body.sticky-footer footer {
 .menu label:hover div, 
 .menu label:hover div:before,
 .menu label:hover div:after {
-  background-color: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  background-color: var(--complementary-color-1-darker);
 }
 /* menu toggle default */
 .menu [type=checkbox]:checked + label div:before,

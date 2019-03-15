@@ -20,7 +20,7 @@
  *
  * Define css custom properties
  * and style html elements globally
- * only few classes included
+ * with a few utility classes included
  *
  * Contents:
  * * Custom properties
@@ -35,7 +35,7 @@
  */
 
  /**
-  * Custom properties
+  * CSS Custom properties
   *
   * a.k.a css variables
   * Changing this will affect almost everything ahead
@@ -81,7 +81,6 @@
    * using postcss-color-function
    * and the lightness color adjuster
    * https://github.com/postcss/postcss-color-function
-   * 
    * Variations are implememnted as follows:
    * darker variation on:
    * :hover for buttons & links
@@ -98,8 +97,10 @@
    * 
    * @todo Review implementation: a 50% value
    * should return the "normal" color?
-   * Possibly use of hsl color values are needed instead of hex
-   */
+   * Possibly use of hsl color values are needed instead of hex */
+  /* A higher value will result in a lighter color */
+  /* A lower value will return a darker color */
+
   /**
    * Extras
    */
@@ -886,112 +887,112 @@ select:-moz-focusring {
 input[type=text]:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input[type=password]:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input[type=file]:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input[type=date]:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input[type=datetime]:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input[type=datetime-local]:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input[type=email]:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input[type=month]:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input[type=number]:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input[type=range]:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input[type=search]:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input[type=tel]:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input[type=text]:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input[type=time]:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input[type=url]:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input[type=week]:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 textarea:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 select:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input.is-valid:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 textarea.is-valid:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 select.is-valid:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input.is-valid:focus {
   border-color: rgb(180, 55, 24);
   background-color: #eaeaea;
-  /*box-shadow: 0 0 2px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
 }
 input[type=checkbox] {
   width: 14px;
@@ -1012,13 +1013,15 @@ input[type=checkbox]:focus {
   /* @todo Remove blue border in MacOs Firefox? */
   /* box-shadow spread is added to compensate 
    * the missing border as the other form elements */
-  box-shadow: 0 0 2px 1px rgb(180, 55, 24);
+  box-shadow: 0 0 0 1px rgb(180, 55, 24);
+  /*box-shadow: 0 0 4px 1px var(--complementary-color-1-darker);*/
 }
 input[type=radio]:focus {
   /* @todo Remove blue border in MacOs Firefox? */
   /* box-shadow spread is added to compensate 
    * the missing border as the other form elements */
-  box-shadow: 0 0 2px 1px rgb(180, 55, 24);
+  box-shadow: 0 0 0 1px rgb(180, 55, 24);
+  /*box-shadow: 0 0 4px 1px var(--complementary-color-1-darker);*/
 }
 textarea {
   resize:vertical;
@@ -1228,58 +1231,58 @@ input[type=reset] {
   border-radius: 0;
 }
 button:hover {
-  background: rgb(180, 55, 24);
+  background-color: rgb(180, 55, 24);
   border-color: rgb(180, 55, 24);
 }
 .button:hover {
-  background: rgb(180, 55, 24);
+  background-color: rgb(180, 55, 24);
   border-color: rgb(180, 55, 24);
 }
 a.button:hover {
-  background: rgb(180, 55, 24);
+  background-color: rgb(180, 55, 24);
   border-color: rgb(180, 55, 24);
 }
 input[type=button]:hover {
-  background: rgb(180, 55, 24);
+  background-color: rgb(180, 55, 24);
   border-color: rgb(180, 55, 24);
 }
 input[type=submit]:hover {
-  background: rgb(180, 55, 24);
+  background-color: rgb(180, 55, 24);
   border-color: rgb(180, 55, 24);
 }
 input[type=reset]:hover {
-  background: rgb(180, 55, 24);
+  background-color: rgb(180, 55, 24);
   border-color: rgb(180, 55, 24);
 }
 button:focus {
-  background: rgb(180, 55, 24);
+  background-color: rgb(180, 55, 24);
   border-color: rgb(180, 55, 24);
-  /*box-shadow: 0 0 4px 1px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 4px 1px var(--complementary-color-1-darker);*/
 }
 .button:focus {
-  background: rgb(180, 55, 24);
+  background-color: rgb(180, 55, 24);
   border-color: rgb(180, 55, 24);
-  /*box-shadow: 0 0 4px 1px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 4px 1px var(--complementary-color-1-darker);*/
 }
 a.button:focus {
-  background: rgb(180, 55, 24);
+  background-color: rgb(180, 55, 24);
   border-color: rgb(180, 55, 24);
-  /*box-shadow: 0 0 4px 1px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 4px 1px var(--complementary-color-1-darker);*/
 }
 input[type=button]:focus {
-  background: rgb(180, 55, 24);
+  background-color: rgb(180, 55, 24);
   border-color: rgb(180, 55, 24);
-  /*box-shadow: 0 0 4px 1px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 4px 1px var(--complementary-color-1-darker);*/
 }
 input[type=submit]:focus {
-  background: rgb(180, 55, 24);
+  background-color: rgb(180, 55, 24);
   border-color: rgb(180, 55, 24);
-  /*box-shadow: 0 0 4px 1px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 4px 1px var(--complementary-color-1-darker);*/
 }
 input[type=reset]:focus {
-  background: rgb(180, 55, 24);
+  background-color: rgb(180, 55, 24);
   border-color: rgb(180, 55, 24);
-  /*box-shadow: 0 0 4px 1px color(var(--complementary-color-1) lightness(var(--darkness-variation)));*/
+  /*box-shadow: 0 0 4px 1px var(--complementary-color-1-darker);*/
 }
 /* Variant button */
 button.variant {
@@ -1339,32 +1342,32 @@ input[type=reset].variant:hover {
 button.variant:focus {
   background-color: rgb(160, 181, 23);
   border-color: rgb(160, 181, 23);
-  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
 .button.variant:focus {
   background-color: rgb(160, 181, 23);
   border-color: rgb(160, 181, 23);
-  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
 a.button.variant:focus {
   background-color: rgb(160, 181, 23);
   border-color: rgb(160, 181, 23);
-  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
 input[type=button].variant:focus {
   background-color: rgb(160, 181, 23);
   border-color: rgb(160, 181, 23);
-  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
 input[type=submit].variant:focus {
   background-color: rgb(160, 181, 23);
   border-color: rgb(160, 181, 23);
-  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
 input[type=reset].variant:focus {
   background-color: rgb(160, 181, 23);
   border-color: rgb(160, 181, 23);
-  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
 /* Outlined button */
 button.outlined {
@@ -1419,37 +1422,37 @@ button.outlined:focus {
   color: white;
   background-color: rgb(180, 55, 24);
   border-color: rgb(180, 55, 24);
-  /*box-shadow: 0 0 6px var(--complementary-color-1);*/
+  /*box-shadow: 0 0 6px var(--complementary-color-1-darker);*/
 }
 .button.outlined:focus {
   color: white;
   background-color: rgb(180, 55, 24);
   border-color: rgb(180, 55, 24);
-  /*box-shadow: 0 0 6px var(--complementary-color-1);*/
+  /*box-shadow: 0 0 6px var(--complementary-color-1-darker);*/
 }
 a.button.outlined:focus {
   color: white;
   background-color: rgb(180, 55, 24);
   border-color: rgb(180, 55, 24);
-  /*box-shadow: 0 0 6px var(--complementary-color-1);*/
+  /*box-shadow: 0 0 6px var(--complementary-color-1-darker);*/
 }
 input[type=button].outlined:focus {
   color: white;
   background-color: rgb(180, 55, 24);
   border-color: rgb(180, 55, 24);
-  /*box-shadow: 0 0 6px var(--complementary-color-1);*/
+  /*box-shadow: 0 0 6px var(--complementary-color-1-darker);*/
 }
 input[type=submit].outlined:focus {
   color: white;
   background-color: rgb(180, 55, 24);
   border-color: rgb(180, 55, 24);
-  /*box-shadow: 0 0 6px var(--complementary-color-1);*/
+  /*box-shadow: 0 0 6px var(--complementary-color-1-darker);*/
 }
 input[type=reset].outlined:focus {
   color: white;
   background-color: rgb(180, 55, 24);
   border-color: rgb(180, 55, 24);
-  /*box-shadow: 0 0 6px var(--complementary-color-1);*/
+  /*box-shadow: 0 0 6px var(--complementary-color-1-darker);*/
 }
 button.variant.outlined {
   color: #cde534;
@@ -1497,37 +1500,37 @@ button.variant.outlined:focus {
   color: white;
   background-color: rgb(160, 181, 23);
   border-color: rgb(160, 181, 23);
-  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
 .button.variant.outlined:focus {
   color: white;
   background-color: rgb(160, 181, 23);
   border-color: rgb(160, 181, 23);
-  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
 a.button.variant.outlined:focus {
   color: white;
   background-color: rgb(160, 181, 23);
   border-color: rgb(160, 181, 23);
-  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
 input[type=button].variant.outlined:focus {
   color: white;
   background-color: rgb(160, 181, 23);
   border-color: rgb(160, 181, 23);
-  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
 input[type=submit].variant.outlined:focus {
   color: white;
   background-color: rgb(160, 181, 23);
   border-color: rgb(160, 181, 23);
-  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
 input[type=reset].variant.outlined:focus {
   color: white;
   background-color: rgb(160, 181, 23);
   border-color: rgb(160, 181, 23);
-  /*box-shadow: 0 0 6px var(--complementary-color-2);*/
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
 /* Disabled button */
 input[type=submit]:disabled {
