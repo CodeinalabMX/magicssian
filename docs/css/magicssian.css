@@ -884,13 +884,6 @@ select {
   background-position: 98% center;
   background-repeat: no-repeat;
 }
-select:after {
-  display: block;
-  content: ' ';
-  border: solid black;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
 select:-moz-focusring {
   /* Remove :focus dotted outline on Firefox 
    * transition properties are specific here
