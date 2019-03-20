@@ -1,9 +1,9 @@
-/*! Magicssian Version 0.1.0 http://codeinalabMX.github.io/magicssian License: MIT */
+/*! Magicssian Version 0.1.1 http://codeinalabMX.github.io/magicssian License: MIT */
 /**
  * Magicssian
  * 
  * A CSS Boilerplate
- * Version: 0.1.0
+ * Version: 0.1.1
  * http://codeinalabMX.github.io/magicssian
  * License: MIT
  *
@@ -47,7 +47,7 @@
   * * Color schemes
   * * * Base scheme
   * * * Notification scheme
-  * * Color variations
+  * * Color variants
   * * Extras
   * 
   */
@@ -87,7 +87,7 @@
   --base-font-size: 16px;
   /* If changed use even values eg. 22 or 18
    * Increasing value will result in wider spacing and bigger elements */
-  --rhytm-unit: 22px;
+  --rhytm-unit: 20px;
   /**
    * Color schemes
    * 
@@ -124,42 +124,67 @@
   --warning-color: #9f6000;
   --error-color: #d8000c;
   --success-color: #4f8a10;
-  /* Color variations are automatically generated 
-   * using postcss-color-function
-   * and the lightness color adjuster
-   * https://github.com/postcss/postcss-color-function
+  /**
+   * Color variations
+   * 
    * Variations are implememnted as follows:
-   * darker variation on:
+   * darker variant on:
    * :hover for buttons & links
    * :focus on inputs, buttons & links
-   * lighter variation on:;
+   * lighter variant on:;
    * table.striped utility class
    * background-color on notification
    *
+   */
+  
+  /* Hard-coded color variations: */
+  /**/
+  --complementary-color-1-darker: #b43718;
+  --complementary-color-2-darker: #a0b517;
+  --neutral-color-lighter: #d9d9d9;
+  --information-color-lighter: #b3dbff;
+  --warning-color-lighter: #ffe0b3;
+  --error-color-lighter: #ffb3b6;
+  --success-color-lighter: #daf7bb;
+  /**/
+
+  /* Color variations can be automatically generated 
+   * using postcss-color-function
+   * and the lightness color adjuster
+   * https://github.com/postcss/postcss-color-function
+   * 
+   * Combining the base color scheme values with an 
+   * additional variable:
+   * --lightness-variation: (int); A higher value will result in a lighter color
+   * --darkness-variation: (int); A lower value will return a darker color
+   * 
+   * To play with:
+   * Comment/Uncomment Hard-coded/Dynamic color variants
+   * postcss-color-function already in npm build script
+   * 
    * According to CSS specs
    * https://drafts.csswg.org/css-color/#funcdef-hsl
    * For lightness, 
    * 50% represents the "normal" color, 
    * while 100% is white and 0% is black.
    * 
-   * @todo Review implementation: a 50% value
-   * should return the "normal" color?
-   * Possibly use of hsl color values are needed instead of hex */
-  /* A higher value will result in a lighter color */
+   * @todo 
+   * Review implementation:
+   * A 50% value should return the "normal" color?
+   * Possibly need hsl color values instead of hex */
+
+  /* Dynamic color variations */
+  /*
   --lightness-variation: 85;
-  /* A lower value will return a darker color */
   --darkness-variation: 40;
-  /**
-   * Color variations
-   * 
-   */
   --complementary-color-1-darker: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
   --complementary-color-2-darker: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
   --neutral-color-lighter: color(var(--neutral-color) lightness(var(--lightness-variation)));
   --information-color-lighter: color(var(--information-color) lightness(var(--lightness-variation)));
   --warning-color-lighter: color(var(--warning-color) lightness(var(--lightness-variation)));
   --error-color-lighter: color(var(--error-color) lightness(var(--lightness-variation)));
-  --success-color-lighter: color(var(--success-color) lightness(var(--lightness-variation)));  
+  --success-color-lighter: color(var(--success-color) lightness(var(--lightness-variation)));
+  /**/ 
 
   /**
    * Extras
@@ -1142,6 +1167,10 @@ body.sticky-footer footer {
   max-width: var(--box-width);
   margin: 0 auto;
 }
+/* Padded container */
+.padded {
+  padding: calc(.5 * var(--rhytm-unit));
+}
 /* Float & clearfix
  * BEEP BEEP Richie! 
  * they ALL float down here. 
@@ -1162,6 +1191,9 @@ body.sticky-footer footer {
 }
 /* Display
  * Tadaa! the most basic magic trick */
+.show {
+  display: block;
+}
 .hidden {
   display: none;
 }

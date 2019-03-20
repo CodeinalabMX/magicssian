@@ -46,7 +46,7 @@
 }
 #magicssian div:nth-child(1)::after, 
 #magicssian div:nth-child(1)::before {
- content:'';
+ content: '';
  position: absolute;
  left: .2em;
  display: block;
@@ -71,7 +71,13 @@
   letter-spacing: 2px;
 }
 /* Home */
+header {
+	margin-bottom: 60px;
+}
 /* Menu */
+.main.menu a {
+	margin: 0 12px;
+}
 .menu label {
 	position: fixed;
 	top: 10px;
@@ -81,7 +87,8 @@
 section article {
 	margin-bottom: 50px;
 }
-.flex-grid-examples .grid .column, .flex-grid-examples .grid .column p {
+.flex-grid-examples .grid .column, 
+.flex-grid-examples .grid .column p {
 	text-align: center;
 }
 .flex-grid-examples .grid .column:nth-child(even) {
