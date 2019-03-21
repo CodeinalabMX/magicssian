@@ -1,29 +1,23 @@
-/*! Magicssian Version 0.1.1 http://codeinalabMX.github.io/magicssian License: MIT */
+/*! Magicssian v0.1.1 http://codeinalabmx.github.io/magicssian License: MIT */
+
 /**
- * Magicssian
+ * Magicssian v0.1.1
  * 
  * A CSS Boilerplate
- * Version: 0.1.1
  * http://codeinalabMX.github.io/magicssian
  * License: MIT
  *
  * Contents:
- * * Base
- * * Components
- * * Utilities
- *
- */
-
-
-/**
+ * 
  * Base
- *
- * Define css custom properties
- * and style html elements globally
- * with a few utility classes included
- *
- * Contents:
- * * Custom properties
+ * * CSS Custom Properties
+ * * * Fonts
+ * * * Font size & Rhytm unit
+ * * * Color schemes
+ * * * * Base scheme
+ * * * * Notification scheme
+ * * * * Color variants
+ * * * Extras
  * * Reset
  * * Document
  * * Text
@@ -32,84 +26,98 @@
  * * Tables
  * * Form elements
  * * Buttons
- * 
+ * * * Default button
+ * * * Variant button
+ * * * Outlined button
+ * * * Disabled button
+ * Components
+ * * Sticky footer
+ * * (Flexbox) Grid
+ * * * Columns
+ * * Notification
+ * * Menu
+ * * Tabs
+ * Utilities
+ *
  */
 
- /**
-  * CSS Custom properties
-  *
-  * a.k.a css variables
+
+/**
+ * Base
+ * 
+ */
+ /* Define css custom properties
+  * and style html elements globally
+  * with a few utility classes included */
+
+/**
+ * * CSS Custom Properties
+ *
+ */
+ /* a.k.a CSS Variables
   * Changing this will affect almost everything ahead
-  *
-  * Contents:
-  * * Fonts
-  * * Text size & Rhytm unit
-  * * Color schemes
-  * * * Base scheme
-  * * * Notification scheme
-  * * Color variants
-  * * Extras
   * 
-  */
- :root {
+  * Tools & reference:
+  * https://www.w3.org/TR/css-variables-1/
+  * https://caniuse.com/#search=custom%20properties */
+:root {
   /**
-   * Fonts
+   * * * Fonts
    *
-   * Fonts Make things look prettier
-   * choose wisely
-   *
-   * Using google fonts you'll need to embed font files
-   * copying the standard link tag provided by google
-   * in the <head> of your html document
-   * or you can use your own fonts adding the appropiate @font-face rules
-   * Tools & reference:
-   * https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face
-   * https://developers.google.com/fonts/docs/getting_started
-   * https://www.fontsquirrel.com/tools/webfont-generator
-   * https://github.com/jonathantneal/postcss-font-magician
-   * 
    */
+   /* Fonts Make things look prettier
+    * choose wisely
+    *
+    * Using google fonts you'll need to embed font files
+    * copying the standard link tag provided by google
+    * in the <head> of your html document
+    * or you can use your own fonts adding the appropiate @font-face rules
+    * 
+    * Tools & reference:
+    * https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face
+    * https://developers.google.com/fonts/docs/getting_started
+    * https://www.fontsquirrel.com/tools/webfont-generator
+    * https://github.com/jonathantneal/postcss-font-magician */
   --text-font: 'Inconsolata', serif;
   --heading-font: 'Montserrat', sans-serif;
   /**
-   * Font size & rhytm unit
-   * 
-   * Our interpretation and implementation of the Vertical rhytm concept
-   * Using a rhytm-unit, as a variable to mantain
-   * elements size and spacing into multiples of this value
-   * Tools & reference:
-   * https://zellwk.com/blog/why-vertical-rhythms/
-   * https://24ways.org/2006/compose-to-a-vertical-rhythm
-   * https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align
-   * https://drewish.com/tools/vertical-rhythm/
-   * 
+   * * * Font size & Rhytm unit
+   *
    */
+   /* Our interpretation and implementation of the Vertical rhytm concept
+    * Using a rhytm-unit, as a variable to mantain
+    * elements size and spacing into multiples of this value
+    * 
+    * Tools & reference:
+    * https://zellwk.com/blog/why-vertical-rhythms/
+    * https://24ways.org/2006/compose-to-a-vertical-rhythm
+    * https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align
+    * https://drewish.com/tools/vertical-rhythm/ */
   --base-font-size: 16px;
-  /* If changed use even values eg. 22 or 18
+  /* Use even values eg. 22 or 18
    * Increasing value will result in wider spacing and bigger elements */
   --rhytm-unit: 20px;
   /**
-   * Color schemes
+   * * * Color schemes
    * 
    */
   /**
-   * Base scheme
+   * * * * Base scheme
    *
-   * Starting with a split-complementary color scheme
-   * using the base color for headings,
-   * complementary 1 acts as accent color 
-   * in elements like buttons and borders
-   * and complementary 2 as a variant
-   * We use a black that is not that black for text
-   * and a light grey as neutral.
-   * 
-   * Tools & reference:
-   * https://www.sessions.edu/color-calculator/
-   * https://color.adobe.com/create/color-wheel/?base=2&rule=Complementary
-   * https://refactoringui.com/previews/building-your-color-palette/
-   * https://ianstormtaylor.com/design-tip-never-use-black/
-   * 
    */
+   /* Starting with a split-complementary color scheme
+    * using the base color for headings,
+    * complementary 1 acts as accent color 
+    * in elements like buttons and borders
+    * and complementary 2 as a variant
+    * We use a black that is not that black for text
+    * and a light grey as neutral.
+    * 
+    * Tools & reference:
+    * https://www.sessions.edu/color-calculator/
+    * https://color.adobe.com/create/color-wheel/?base=2&rule=Complementary
+    * https://refactoringui.com/previews/building-your-color-palette/
+    * https://ianstormtaylor.com/design-tip-never-use-black/ */
   --base-color: #0b162a;
   --complementary-color-1: #e35835;
   --complementary-color-2: #cde534;
@@ -117,7 +125,7 @@
   --text-color: #1a1a1a;
   --neutral-color: #eaeaea;
   /**
-   * Notification scheme
+   * * * * Notification scheme
    * 
    */
   --information-color: #00529b;
@@ -125,17 +133,16 @@
   --error-color: #d8000c;
   --success-color: #4f8a10;
   /**
-   * Color variations
-   * 
-   * Variations are implememnted as follows:
-   * darker variant on:
-   * :hover for buttons & links
-   * :focus on inputs, buttons & links
-   * lighter variant on:;
-   * table.striped utility class
-   * background-color on notification
+   * * * * Color variants
    *
    */
+   /* Variations are implememnted as follows:
+    * darker variant on:
+    * :hover for buttons & links
+    * :focus on inputs, buttons & links
+    * lighter variant on:;
+    * table.striped utility class
+    * background-color on notification */
   
   /* Hard-coded color variations: */
   /**/
@@ -187,7 +194,7 @@
   /**/ 
 
   /**
-   * Extras
+   * * * Extras
    * 
    */
   /* Width/Max-width for a boxed container */
@@ -203,16 +210,15 @@
 
 
 /**
- * Reset
+ * * Reset
  *
- * Custom reset & normalization
- * 
- * Old school references:
- * html5doctor.com Reset Stylesheet v1.6.1 http://html5doctor.com/html-5-reset-stylesheet/
- * Eric Meyer's Reset CSS v2.0 http://meyerweb.com/eric/tools/css/reset/
- * Normalize github.com/necolas/normalize.css
- * 
  */
+ /* Custom reset & normalization
+  * 
+  * Tools references:
+  * html5doctor.com Reset Stylesheet v1.6.1 http://html5doctor.com/html-5-reset-stylesheet/
+  * Eric Meyer's Reset CSS v2.0 http://meyerweb.com/eric/tools/css/reset/
+  * Normalize github.com/necolas/normalize.css */
 * {
   /* Est. 2012; https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
   box-sizing: border-box;
@@ -297,7 +303,7 @@ template {
 }
 
 /**
- * Document
+ * * Document
  * 
  */
 html, body {
@@ -308,7 +314,7 @@ html, body {
 }
 
 /**
- * Text
+ * * Text
  * 
  */
 p, a, q, cite, pre, code, ul, ol, dl { 
@@ -391,7 +397,7 @@ hr {
 }
 
 /**
- * Links
+ * * Links
  * 
  */
 a {
@@ -415,7 +421,7 @@ a.variant:hover, a.variant:active, a.variant:focus, a.variant.active {
 }
 
 /**
- * Lists
+ * * Lists
  * 
  */
 ul, ol {
@@ -470,7 +476,7 @@ dd {
 }
 
 /**
- * Tables
+ * * Tables
  * 
  */
 table {
@@ -520,7 +526,7 @@ table.striped tbody tr:hover {
 }
 
 /**
- * Form elements
+ * * Form elements
  * 
  */
 fieldset {
@@ -693,14 +699,8 @@ select.is-not-valid,
 }
 
 /**
- * Buttons
+ * * Buttons
  *
- * Contents:
- * * Default button
- * * Variant button
- * * Outlined button
- * * Disabled button
- * 
  */
 ::-moz-focus-inner {
   /* Remove dotted outline on button:focus in Firefox */
@@ -708,7 +708,7 @@ select.is-not-valid,
 }
 
 /**
- * Default button
+ * * * Default button
  * 
  */
 button, 
@@ -756,7 +756,7 @@ input[type=reset]:focus {
 }
 
 /**
- * Variant button
+ * * * Variant button
  * 
  */
 button.variant, 
@@ -790,7 +790,7 @@ input[type=reset].variant:focus {
 }
 
 /**
- * Outlined button
+ * * * Outlined button
  * 
  */
 button.outlined, 
@@ -852,7 +852,7 @@ input[type=reset].variant.outlined:focus {
 }
 
 /**
- * Disabled button
+ * * * Disabled button
  */
 input[type=submit]:disabled, 
 button:disabled {
@@ -866,22 +866,15 @@ button:disabled {
 /**
  * Components
  *
- * Custom constructed elements
- *
- * Contents:
- * Sticky footer
- * (Flexbox) Grid
- * Notifications
- * Menu
  */
+ /* Custom constructed elements */
 
 /**
- * Sticky footer 
+ * * Sticky footer 
  *
- * Tools & reference:
- * https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers
- * 
  */
+ /* Tools & reference:
+  * https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers */
 body.sticky-footer {
   display: flex;
   flex-direction: column;
@@ -894,11 +887,10 @@ body.sticky-footer footer {
 }
 
 /**
- * (Flexbox) Grid
- * 
- * @todo switch to CSS Grid layout
- * 
+ * * (Flexbox) Grid
+ *
  */
+ /* @todo switch to CSS Grid layout */
 .grid, .grid.column {
   display: -ms-flexbox;
   display: flex;
@@ -922,7 +914,7 @@ body.sticky-footer footer {
 }
 
 /**
- * (Flexbox) Grid Columns
+ * * * Columns
  * 
  */
 .grid .column {
@@ -975,7 +967,7 @@ body.sticky-footer footer {
 }
 
 /**
- * Notification
+ * * Notification
  * 
  */
 .notification {
@@ -1044,7 +1036,7 @@ body.sticky-footer footer {
 }
 
 /**
- * Menu
+ * * Menu
  * 
  */
 .menu .navigation {
@@ -1122,7 +1114,8 @@ body.sticky-footer footer {
 }
 
 /**
- * Tabs
+ * * Tabs
+ * 
  */
 .tabs .navigation a {
   cursor: pointer;
@@ -1157,6 +1150,7 @@ body.sticky-footer footer {
  * Utilities
  * 
  */
+
 /* Container */
 .container {
   position: relative;
@@ -1167,10 +1161,12 @@ body.sticky-footer footer {
   max-width: var(--box-width);
   margin: 0 auto;
 }
+
 /* Padded container */
 .padded {
   padding: calc(.5 * var(--rhytm-unit));
 }
+
 /* Float & clearfix
  * BEEP BEEP Richie! 
  * they ALL float down here. 
@@ -1189,6 +1185,7 @@ body.sticky-footer footer {
 .clearfix:after {
   clear: both;
 }
+
 /* Display
  * Tadaa! the most basic magic trick */
 .show {
@@ -1200,6 +1197,7 @@ body.sticky-footer footer {
 .invisible {
   visibility: hidden;
 }
+
 /* Old school image replacement */
 .ir {
   display: inline-block;
@@ -1214,10 +1212,12 @@ body.sticky-footer footer {
   width: 0;
   height: 100%;
 }
+
 /* Rounded corners */
 .rounded {
   border-radius: var(--rounded-utility)!important;
 }
+
 /* Text alignemt */
 .align-l {
   text-align: left;
