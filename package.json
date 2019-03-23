@@ -1,6 +1,6 @@
 {
   "name": "magicssian",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A CSS Boilerplate",
   "main": "index.js",
   "directories": {
@@ -9,12 +9,9 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.26.3",
     "clean-css-cli": "^4.2.1",
-    "concurrently": "^4.1.0",
     "html5-boilerplate": "^7.0.1",
     "html5-test-page": "^0.8.0",
-    "nodemon": "^1.18.10",
     "postcss-calc": "^7.0.1",
     "postcss-cli": "^6.1.2",
     "postcss-color-function": "^4.0.1",
@@ -23,15 +20,13 @@
     "watch": "^1.0.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "watch \"npm run build\" src/scss_css",
-    "bsync": "browser-sync start -p localhost:80/Codeinalab/Magicssian/CssBoilerplate/Master/docs/ -f *.html, css/*.css",
-    "dev": "concurrently \"npm run bsync\" \"npm run watch\"",
     "postcss": "postcss src/scss_css/magicssian_draft.css -u postcss-css-variables postcss-calc postcss-color-function --no-map -o docs/css/magicssian.css",
-    "buildcss": "cleancss -O2 --format keep-breaks -o docs/css/magicssian.css docs/css/magicssian.css",
+    "cleancss": "cleancss -O2 --format keep-breaks -o docs/css/magicssian.css docs/css/magicssian.css",
     "minifycss": "cleancss -O 2 --source-map -o docs/css/magicssian.min.css docs/css/magicssian.css",
-    "build": "npm run postcss && npm run buildcss && npm run minifycss",
-    "vbump": "bump package.json package-lock.json src/scss_css/magicssian_draft.css"
+    "build": "npm run postcss && npm run cleancss && npm run minifycss",
+    "watch": "watch \"npm run build\" src/scss_css",
+    "dist": "",
+    "vbump-patch": "bump patch package.json package-lock.json README.md src/scss_css/magicssian_draft.css"
   },
   "repository": {
     "type": "git",

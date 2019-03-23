@@ -1,7 +1,7 @@
-/*! Magicssian v0.1.1 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Magicssian v0.1.2 http://codeinalabmx.github.io/magicssian License: MIT */
 
 /**
- * Magicssian v0.1.1
+ * Magicssian v0.1.2
  * 
  * A CSS Boilerplate
  * http://codeinalabMX.github.io/magicssian
@@ -78,8 +78,8 @@
     * https://developers.google.com/fonts/docs/getting_started
     * https://www.fontsquirrel.com/tools/webfont-generator
     * https://github.com/jonathantneal/postcss-font-magician */
-  --text-font: 'Inconsolata', serif;
-  --heading-font: 'Montserrat', sans-serif;
+  --text-font: 'Montserrat', serif;
+  --heading-font: 'Merriweather', sans-serif;
   /**
    * * * Font size & Rhytm unit
    *
@@ -118,12 +118,12 @@
     * https://color.adobe.com/create/color-wheel/?base=2&rule=Complementary
     * https://refactoringui.com/previews/building-your-color-palette/
     * https://ianstormtaylor.com/design-tip-never-use-black/ */
-  --base-color: #0b162a;
-  --complementary-color-1: #e35835;
-  --complementary-color-2: #cde534;
-  --heading-color: var(--base-color);
-  --text-color: #1a1a1a;
-  --neutral-color: #eaeaea;
+  --base-color: #2b4733; /*#0b162a;*/
+  --complementary-color-1: #2a4633; /*#e35835;*/
+  --complementary-color-2: #905a2f; /*#cde534;*/
+  --heading-color: #3a3a3a; /*var(--base-color);*/
+  --text-color: #3a3a3a; /*#1a1a1a;*/
+  --neutral-color: #c1c1c1; /*#eaeaea;*/
   /**
    * * * * Notification scheme
    * 
@@ -146,9 +146,9 @@
   
   /* Hard-coded color variations: */
   /**/
-  --complementary-color-1-darker: #b43718;
-  --complementary-color-2-darker: #a0b517;
-  --neutral-color-lighter: #d9d9d9;
+  --complementary-color-1-darker: #1e3224;
+  --complementary-color-2-darker: #764a27;
+  --neutral-color-lighter: #f6f6f6;
   --information-color-lighter: #b3dbff;
   --warning-color-lighter: #ffe0b3;
   --error-color-lighter: #ffb3b6;
