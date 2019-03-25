@@ -903,7 +903,7 @@ body.sticky-footer footer {
 .grid.padded .column {
   padding: calc(.5 * var(--rhytm-unit));
 }
-.grid.align-l {
+.grid.align-r {
   justify-content: flex-end;
 }
 .grid.valign-c {
@@ -948,7 +948,7 @@ body.sticky-footer footer {
   .grid.align-c {
     align-items: center;
   }
-  .grid.align-l {
+  .grid.align-r {
     align-items: flex-end;
   }
   .grid.valign-c {

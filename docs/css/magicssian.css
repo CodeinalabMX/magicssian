@@ -88,7 +88,7 @@ body.sticky-footer footer{flex:0 0 auto}
 .grid,.grid.column{display:-ms-flexbox;display:flex;flex-flow:row wrap;transition:.4s ease-out}
 .grid.align-c{justify-content:center}
 .grid.padded .column{padding:10px}
-.grid.align-l{justify-content:flex-end}
+.grid.align-r{justify-content:flex-end}
 .grid.valign-c{align-items:center}
 .grid.valign-b{align-items:flex-end}
 .grid .column{flex:1}
@@ -101,7 +101,7 @@ body.sticky-footer footer{flex:0 0 auto}
 @media (max-width:780px){
 .grid,.grid.column{flex-flow:column}
 .grid.align-c{align-items:center}
-.grid.align-l{align-items:flex-end}
+.grid.align-r{align-items:flex-end}
 .grid.valign-c{justify-content:center}
 .grid.valign-b{justify-content:flex-end}
 .one-half.column,.one-quarter.coilumn,.one-third.column,.three-quarters.column,.two-thirds.column{width:100%}
