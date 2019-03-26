@@ -1,4 +1,4 @@
-/*! Magicssian v0.1.4 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Magicssian v0.1.5 http://codeinalabmx.github.io/magicssian License: MIT */
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;overflow-y:scroll}
 blockquote,body,dd,dl,fieldset,figcaption,figure,h1,h2,h3,h4,h5,h6,hr,iframe,input,legend,p,pre,select,textarea{margin:0;padding:0}
@@ -118,19 +118,19 @@ body.sticky-footer footer{flex:0 0 auto}
 .success{color:#4f8a10;border-color:#4f8a10;background-color:#daf7bb}
 .warning{color:#9f6000;border-color:#9f6000;background-color:#ffe0b3}
 .error{color:#d8000c;border-color:#d8000c;background-color:#ffb3b6}
-.menu .navigation{transition:.4s}
-.menu label{position:relative;z-index:9999;width:40px;height:40px;cursor:pointer;display:none}
-.menu label div,.menu label div:after,.menu label div:before{position:absolute;display:block;height:6px;width:32px;top:12px;left:0;right:0;margin-left:auto;margin-right:auto;background-color:#2a4633;border-radius:0;content:'';transition:.4s}
-.menu label div:before{top:-12px}
-.menu label div:after{top:12px}
-.menu label:hover div,.menu label:hover div:after,.menu label:hover div:before{background-color:#1e3224}
-.menu [type=checkbox]:checked+label div:after,.menu [type=checkbox]:checked+label div:before{opacity:0}
-.menu [type=checkbox]:checked+label+.navigation{display:block}
-.menu.slide-l [type=checkbox]:checked+label+.navigation{left:0}
+.navigation .menu{transition:.4s}
+.navigation label{position:relative;z-index:9999;width:40px;height:40px;cursor:pointer;display:none}
+.navigation label div,.navigation label div:after,.navigation label div:before{position:absolute;display:block;height:6px;width:32px;top:12px;left:0;right:0;margin-left:auto;margin-right:auto;background-color:#2a4633;border-radius:0;content:'';transition:.4s}
+.navigation label div:before{top:-12px}
+.navigation label div:after{top:12px}
+.navigation label:hover div,.navigation label:hover div:after,.navigation label:hover div:before{background-color:#1e3224}
+.navigation [type=checkbox]:checked+label div:after,.navigation [type=checkbox]:checked+label div:before{opacity:0}
+.navigation [type=checkbox]:checked+label+.menu{display:block}
+.navigation.slide-l [type=checkbox]:checked+label+.menu{left:0}
 @media (max-width:780px){
-.menu label{display:block}
-.menu .navigation{display:none}
-.menu.slide-l .navigation{display:block;position:fixed;z-index:9998;top:0;left:calc(-80vw + 40px);height:100vh;width:80vw;padding:20px 40px 20px 20px;background:#fff}
+.navigation label{display:block}
+.navigation .menu{display:none}
+.navigation.slide-l .menu{display:block;position:fixed;z-index:9998;top:0;left:calc(-80vw + 40px);height:100vh;width:80vw;padding:20px 40px 20px 20px;background:#fff}
 }
 .tabs .navigation a{cursor:pointer;border:1px solid #c1c1c1;padding:10px}
 .tabs .navigation a.active{font-weight:700;border-bottom-color:#fff}

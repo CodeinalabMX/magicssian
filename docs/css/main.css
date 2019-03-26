@@ -75,10 +75,10 @@ header {
 	margin-bottom: 60px;
 }
 /* Menu */
-.main.menu a {
+.navigation.main a {
 	margin: 0 12px;
 }
-.menu label {
+.navigation label {
 	position: fixed;
 	top: 10px;
 	left: 10px;

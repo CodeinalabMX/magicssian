@@ -1,7 +1,7 @@
-/*! Magicssian v0.1.4 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Magicssian v0.1.5 http://codeinalabmx.github.io/magicssian License: MIT */
 
 /**
- * Magicssian v0.1.4
+ * Magicssian v0.1.5
  * 
  * A CSS Boilerplate
  * http://codeinalabMX.github.io/magicssian
@@ -35,7 +35,7 @@
  * * (Flexbox) Grid
  * * * Columns
  * * Notification
- * * Menu
+ * * Navigation
  * * Tabs
  * Utilities
  *
@@ -1036,13 +1036,13 @@ body.sticky-footer footer {
 }
 
 /**
- * * Menu
+ * * Navigation
  * 
  */
-.menu .navigation {
+.navigation .menu {
   transition: all .4s ease 0s;
 }
-.menu label {
+.navigation label {
   position: relative;
   z-index: 9999;
   width: calc(2 * var(--rhytm-unit));
@@ -1051,9 +1051,9 @@ body.sticky-footer footer {
   display: none;
 }
 /* Pure css hamburger "everybody hates me" icon */
-.menu label div, 
-.menu label div:before,
-.menu label div:after {  
+.navigation label div, 
+.navigation label div:before,
+.navigation label div:after {  
   position: absolute;
   display: block;
   height: 6px;
@@ -1068,36 +1068,36 @@ body.sticky-footer footer {
   content: '';
   transition: all .4s ease 0s;
 }
-.menu label div:before {
+.navigation label div:before {
   top: -12px;
 }
-.menu label div:after {
+.navigation label div:after {
   top: 12px; 
 }
-.menu label:hover div, 
-.menu label:hover div:before,
-.menu label:hover div:after {
+.navigation label:hover div, 
+.navigation label:hover div:before,
+.navigation label:hover div:after {
   background-color: var(--complementary-color-1-darker);
 }
-/* menu toggle default */
-.menu [type=checkbox]:checked + label div:before,
-.menu [type=checkbox]:checked + label div:after {
+/* navigation toggle default */
+.navigation [type=checkbox]:checked + label div:before,
+.navigation [type=checkbox]:checked + label div:after {
   opacity: 0;
 }
-.menu [type=checkbox]:checked + label + .navigation {
+.navigation [type=checkbox]:checked + label + .menu {
   display: block;
 }
-.menu.slide-l [type=checkbox]:checked + label + .navigation {
+.navigation.slide-l [type=checkbox]:checked + label + .menu {
   left: 0;
 }
 @media (max-width: 780px) {
-  .menu label {
+  .navigation label {
     display: block;
   }
-  .menu .navigation {
+  .navigation .menu {
     display: none;
   }
-  .menu.slide-l .navigation {
+  .navigation.slide-l .menu {
     display: block;
     position: fixed;
     z-index: 9998;
@@ -1108,8 +1108,6 @@ body.sticky-footer footer {
     padding: var(--rhytm-unit);
     padding-right: calc(2 * var(--rhytm-unit));
     background: white;
-  }
-  .menu.slide-l .navigation {
   }
 }
 
