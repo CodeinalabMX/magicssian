@@ -1,7 +1,7 @@
-/*! Magicssian v0.1.3 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Magicssian v0.1.4 http://codeinalabmx.github.io/magicssian License: MIT */
 
 /**
- * Magicssian v0.1.3
+ * Magicssian v0.1.4
  * 
  * A CSS Boilerplate
  * http://codeinalabMX.github.io/magicssian
@@ -1042,16 +1042,6 @@ body.sticky-footer footer {
 .menu .navigation {
   transition: all .4s ease 0s;
 }
-.menu.slide-l .navigation {
-  position: fixed;
-  z-index: 9998;
-  top: 0;
-  height: 100vh;
-  width: 80vw;
-  padding: var(--rhytm-unit);
-  padding-right: calc(2 * var(--rhytm-unit));
-  background: white;
-}
 .menu label {
   position: relative;
   z-index: 9999;
@@ -1109,7 +1099,17 @@ body.sticky-footer footer {
   }
   .menu.slide-l .navigation {
     display: block;
+    position: fixed;
+    z-index: 9998;
+    top: 0;
     left: calc(0 - 80vw + calc(2 * var(--rhytm-unit)));
+    height: 100vh;
+    width: 80vw;
+    padding: var(--rhytm-unit);
+    padding-right: calc(2 * var(--rhytm-unit));
+    background: white;
+  }
+  .menu.slide-l .navigation {
   }
 }
 

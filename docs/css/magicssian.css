@@ -1,4 +1,4 @@
-/*! Magicssian v0.1.3 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Magicssian v0.1.4 http://codeinalabmx.github.io/magicssian License: MIT */
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;overflow-y:scroll}
 blockquote,body,dd,dl,fieldset,figcaption,figure,h1,h2,h3,h4,h5,h6,hr,iframe,input,legend,p,pre,select,textarea{margin:0;padding:0}
@@ -119,7 +119,6 @@ body.sticky-footer footer{flex:0 0 auto}
 .warning{color:#9f6000;border-color:#9f6000;background-color:#ffe0b3}
 .error{color:#d8000c;border-color:#d8000c;background-color:#ffb3b6}
 .menu .navigation{transition:.4s}
-.menu.slide-l .navigation{position:fixed;z-index:9998;top:0;height:100vh;width:80vw;padding:20px 40px 20px 20px;background:#fff}
 .menu label{position:relative;z-index:9999;width:40px;height:40px;cursor:pointer;display:none}
 .menu label div,.menu label div:after,.menu label div:before{position:absolute;display:block;height:6px;width:32px;top:12px;left:0;right:0;margin-left:auto;margin-right:auto;background-color:#2a4633;border-radius:0;content:'';transition:.4s}
 .menu label div:before{top:-12px}
@@ -131,7 +130,7 @@ body.sticky-footer footer{flex:0 0 auto}
 @media (max-width:780px){
 .menu label{display:block}
 .menu .navigation{display:none}
-.menu.slide-l .navigation{display:block;left:calc(-80vw + 40px)}
+.menu.slide-l .navigation{display:block;position:fixed;z-index:9998;top:0;left:calc(-80vw + 40px);height:100vh;width:80vw;padding:20px 40px 20px 20px;background:#fff}
 }
 .tabs .navigation a{cursor:pointer;border:1px solid #c1c1c1;padding:10px}
 .tabs .navigation a.active{font-weight:700;border-bottom-color:#fff}
