@@ -1,4 +1,4 @@
-/*! Magicssian v0.1.5 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Magicssian v0.1.6 http://codeinalabmx.github.io/magicssian License: MIT */
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;overflow-y:scroll}
 blockquote,body,dd,dl,fieldset,figcaption,figure,h1,h2,h3,h4,h5,h6,hr,iframe,input,legend,p,pre,select,textarea{margin:0;padding:0}
@@ -139,7 +139,7 @@ body.sticky-footer footer{flex:0 0 auto}
 .tabs .navigation a:first-child{border-top-left-radius:0}
 .tabs .navigation a:last-child{border-top-right-radius:0}
 .container{position:relative;width:100%;max-width:100%}
-.container.boxed{max-width:80%;margin:0 auto}
+.container.boxed{max-width:80%;margin-right:auto;margin-left:auto}
 .padded{padding:10px}
 .float-l{float:left}
 .float-r{float:right}

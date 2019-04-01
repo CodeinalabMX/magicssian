@@ -1,7 +1,7 @@
-/*! Magicssian v0.1.5 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Magicssian v0.1.6 http://codeinalabmx.github.io/magicssian License: MIT */
 
 /**
- * Magicssian v0.1.5
+ * Magicssian v0.1.6
  * 
  * A CSS Boilerplate
  * http://codeinalabMX.github.io/magicssian
@@ -1157,7 +1157,8 @@ body.sticky-footer footer {
 }
 .container.boxed {
   max-width: var(--box-width);
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* Padded container */
