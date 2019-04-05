@@ -1,6 +1,6 @@
 {
   "name": "magicssian",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A CSS Boilerplate",
   "main": "index.js",
   "directories": {
@@ -16,16 +16,17 @@
     "postcss-cli": "^6.1.2",
     "postcss-color-function": "^4.0.1",
     "postcss-css-variables": "^0.12.0",
+    "postcss-import": "^12.0.1",
     "version-bump-prompt": "^5.0.0",
     "watch": "^1.0.2"
   },
   "scripts": {
     "watch": "watch \"npm run build\" src/scss_css",
-    "postcss": "postcss src/scss_css/magicssian_draft.css -u postcss-css-variables postcss-calc postcss-color-function --no-map -o src/scss_css/magicssian.css",
+    "postcss": "postcss src/scss_css/magicssian_draft.css -u postcss-import postcss-css-variables postcss-calc postcss-color-function --no-map -o src/scss_css/magicssian.css",
     "cleancss": "cleancss -O1 --format keep-breaks -o docs/css/magicssian.css src/scss_css/magicssian.css",
     "minifycss": "cleancss -O1 specialComments:1 -02 --format breaks:afterComment=on --source-map -o docs/css/magicssian.min.css src/scss_css/magicssian.css",
     "build": "npm run postcss && npm run cleancss && npm run minifycss",
-    "vbump-patch": "bump patch package.json package-lock.json README.md src/scss_css/magicssian_draft.css",
+    "vbump-patch": "bump patch package.json package-lock.json README.md src/scss_css/magicssian_draft.css src/scss_css/magicssian_variables.css",
     "dist": ""
   },
   "repository": {

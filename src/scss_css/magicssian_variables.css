@@ -1,0 +1,195 @@
+ /* Magicssian v0.1.8 http://codeinalabmx.github.io/magicssian License: MIT */
+
+/**
+ * CSS Custom Properties stylesheet for: Magicssian
+ *
+ * TOC:
+ *
+ * Base
+ * * CSS Custom Properties (variables)
+ * * * Fonts
+ * * Font size & Rhytm unit
+ * * Color schemes
+ * * * Base scheme
+ * * * Notification scheme
+ * * * Color variants
+ */
+
+ /**
+ * Magicssian v0.1.8
+ * 
+ * A CSS Boilerplate
+ * http://codeinalabMX.github.io/magicssian
+ * License: MIT
+ *
+ * Contents:
+ * 
+ * Base
+ * * @import CSS Custom Properties
+ * * * Fonts
+ * * * Font size & Rhytm unit
+ * * * Color schemes
+ * * * * Base scheme
+ * * * * Notification scheme
+ * * * * Color variants
+ * * * Extras
+ * * Colors
+ * * Reset
+ * * Document
+ * * Text
+ * * Links
+ * * Lists
+ * * Tables
+ * * Form elements
+ * * Buttons
+ * * * Default button
+ * * * Variant button
+ * * * Outlined button
+ * * * Disabled button
+ * Components
+ * * Sticky footer
+ * * (Flexbox) Grid
+ * * * Columns
+ * * Notification
+ * * Navigation
+ * * Tabs
+ * Utilities
+ *
+ */
+
+ /* Define css custom properties
+  * this values will affect/style html elements globally */
+
+/* * CSS Custom Properties */
+ /* a.k.a CSS Variables
+  * Changing this will affect almost everything ahead
+  * 
+  * Tools & reference:
+  * https://www.w3.org/TR/css-variables-1/
+  * https://caniuse.com/#search=custom%20properties */
+:root {
+  /* * * Fonts */
+   /* Fonts Make things look prettier
+    * choose wisely
+    *
+    * Using google fonts you'll need to embed font files
+    * copying the standard link tag provided by google
+    * in the <head> of your html document
+    * or you can use your own fonts adding the appropiate @font-face rules
+    * 
+    * Tools & reference:
+    * https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face
+    * https://developers.google.com/fonts/docs/getting_started
+    * https://www.fontsquirrel.com/tools/webfont-generator
+    * https://github.com/jonathantneal/postcss-font-magician */
+  --text-font: 'Montserrat', serif;
+  --heading-font: 'Merriweather', sans-serif;
+  /* * * Font size & Rhytm unit */
+   /* Our interpretation and implementation of the Vertical rhytm concept
+    * Using a rhytm-unit, as a variable to mantain
+    * elements size and spacing into multiples of this value
+    * 
+    * Tools & reference:
+    * https://zellwk.com/blog/why-vertical-rhythms/
+    * https://24ways.org/2006/compose-to-a-vertical-rhythm
+    * https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align
+    * https://drewish.com/tools/vertical-rhythm/ */
+  --base-font-size: 16px;
+  /* Use even values eg. 22 or 18
+   * Increasing value will result in wider spacing and bigger elements */
+  --rhytm-unit: 20px;
+  /* * * Color schemes */
+  /* * * * Base scheme */
+   /* Starting with a split-complementary color scheme
+    * using the base color for headings,
+    * complementary 1 acts as accent color 
+    * in elements like buttons and borders
+    * and complementary 2 as a variant
+    * We use a black that is not that black for text
+    * and a light grey as neutral.
+    * 
+    * Tools & reference:
+    * https://www.sessions.edu/color-calculator/
+    * https://color.adobe.com/create/color-wheel/?base=2&rule=Complementary
+    * https://refactoringui.com/previews/building-your-color-palette/
+    * https://ianstormtaylor.com/design-tip-never-use-black/ */
+  --base-color: #2b4733; /*#0b162a;*/
+  --complementary-color-1: #2a4633; /*#e35835;*/
+  --complementary-color-2: #905a2f; /*#cde534;*/
+  --heading-color: #3a3a3a; /*var(--base-color);*/
+  --text-color: #3a3a3a; /*#1a1a1a;*/
+  --neutral-color: #c1c1c1; /*#eaeaea;*/
+  /* * * * Notification scheme */
+  --information-color: #00529b;
+  --warning-color: #9f6000;
+  --error-color: #d8000c;
+  --success-color: #4f8a10;
+  /* * * * Color variants */
+   /* Variations are implememnted as follows:
+    * darker variant on:
+    * :hover for buttons & links
+    * :focus on inputs, buttons & links
+    * lighter variant on:;
+    * table.striped utility class
+    * background-color on notification */
+  
+  /* Hard-coded color variations: */
+  /**/
+  --complementary-color-1-darker: #1e3224;
+  --complementary-color-2-darker: #764a27;
+  --neutral-color-lighter: #f6f6f6;
+  --information-color-lighter: #b3dbff;
+  --warning-color-lighter: #ffe0b3;
+  --error-color-lighter: #ffb3b6;
+  --success-color-lighter: #daf7bb;
+  /**/
+
+  /* Color variations can be automatically generated 
+   * using postcss-color-function
+   * and the lightness color adjuster
+   * https://github.com/postcss/postcss-color-function
+   * 
+   * Combining the base color scheme values with an 
+   * additional variable:
+   * --lightness-variation: (int); A higher value will result in a lighter color
+   * --darkness-variation: (int); A lower value will return a darker color
+   * 
+   * To play with:
+   * Comment/Uncomment Hard-coded/Dynamic color variants
+   * postcss-color-function already in npm build script
+   * 
+   * According to CSS specs
+   * https://drafts.csswg.org/css-color/#funcdef-hsl
+   * For lightness, 
+   * 50% represents the "normal" color, 
+   * while 100% is white and 0% is black.
+   * 
+   * @todo 
+   * Review implementation:
+   * A 50% value should return the "normal" color?
+   * Possibly need hsl color values instead of hex */
+
+  /* Dynamic color variations */
+  /*
+  --lightness-variation: 85;
+  --darkness-variation: 40;
+  --complementary-color-1-darker: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
+  --complementary-color-2-darker: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
+  --neutral-color-lighter: color(var(--neutral-color) lightness(var(--lightness-variation)));
+  --information-color-lighter: color(var(--information-color) lightness(var(--lightness-variation)));
+  --warning-color-lighter: color(var(--warning-color) lightness(var(--lightness-variation)));
+  --error-color-lighter: color(var(--error-color) lightness(var(--lightness-variation)));
+  --success-color-lighter: color(var(--success-color) lightness(var(--lightness-variation)));
+  /**/ 
+
+  /* * * Extras */
+  /* Width/Max-width for a boxed container */
+  --box-width: 80%;
+  /* border-radius value
+   * will apply globally for:
+   * pre, buttons, form elements, notifications and tabs
+   * accepts only one value eg. 4px */
+  --rounded: 0;
+  /* This will define the border-radius for the .rounded utlility class */
+  --rounded-utility: 4px;
+}
