@@ -1,7 +1,8 @@
-/*! Magicssian v0.1.6 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Magicssian v0.1.7 http://codeinalabmx.github.io/magicssian License: MIT */
+
 
 /**
- * Magicssian v0.1.6
+ * Magicssian v0.1.7
  * 
  * A CSS Boilerplate
  * http://codeinalabMX.github.io/magicssian
@@ -18,6 +19,7 @@
  * * * * Notification scheme
  * * * * Color variants
  * * * Extras
+ * * Colors
  * * Reset
  * * Document
  * * Text
@@ -42,18 +44,13 @@
  */
 
 
-/**
- * Base
- * 
- */
+/*! Base */
+
  /* Define css custom properties
   * and style html elements globally
   * with a few utility classes included */
 
-/**
- * * CSS Custom Properties
- *
- */
+/* * CSS Custom Properties */
  /* a.k.a CSS Variables
   * Changing this will affect almost everything ahead
   * 
@@ -61,10 +58,7 @@
   * https://www.w3.org/TR/css-variables-1/
   * https://caniuse.com/#search=custom%20properties */
 :root {
-  /**
-   * * * Fonts
-   *
-   */
+  /* * * Fonts */
    /* Fonts Make things look prettier
     * choose wisely
     *
@@ -80,10 +74,7 @@
     * https://github.com/jonathantneal/postcss-font-magician */
   --text-font: 'Montserrat', serif;
   --heading-font: 'Merriweather', sans-serif;
-  /**
-   * * * Font size & Rhytm unit
-   *
-   */
+  /* * * Font size & Rhytm unit */
    /* Our interpretation and implementation of the Vertical rhytm concept
     * Using a rhytm-unit, as a variable to mantain
     * elements size and spacing into multiples of this value
@@ -97,14 +88,8 @@
   /* Use even values eg. 22 or 18
    * Increasing value will result in wider spacing and bigger elements */
   --rhytm-unit: 20px;
-  /**
-   * * * Color schemes
-   * 
-   */
-  /**
-   * * * * Base scheme
-   *
-   */
+  /* * * Color schemes */
+  /* * * * Base scheme */
    /* Starting with a split-complementary color scheme
     * using the base color for headings,
     * complementary 1 acts as accent color 
@@ -124,18 +109,12 @@
   --heading-color: #3a3a3a; /*var(--base-color);*/
   --text-color: #3a3a3a; /*#1a1a1a;*/
   --neutral-color: #c1c1c1; /*#eaeaea;*/
-  /**
-   * * * * Notification scheme
-   * 
-   */
+  /* * * * Notification scheme */
   --information-color: #00529b;
   --warning-color: #9f6000;
   --error-color: #d8000c;
   --success-color: #4f8a10;
-  /**
-   * * * * Color variants
-   *
-   */
+  /* * * * Color variants */
    /* Variations are implememnted as follows:
     * darker variant on:
     * :hover for buttons & links
@@ -193,10 +172,7 @@
   --success-color-lighter: color(var(--success-color) lightness(var(--lightness-variation)));
   /**/ 
 
-  /**
-   * * * Extras
-   * 
-   */
+  /* * * Extras */
   /* Width/Max-width for a boxed container */
   --box-width: 80%;
   /* border-radius value
@@ -208,11 +184,63 @@
   --rounded-utility: 4px;
 }
 
+/*! * Colors */
+/*! * * Base scheme */
+.base-color { 
+  color: var(--base-color);
+}
+.complementary-color { 
+  color: var(--complementary-color-1);
+}
+.complementary-color { 
+  color: var(--complementary-color-2);
+}
+.heading-color { 
+  color: var(--heading-color);
+}
+.text-color { 
+  color: var(--text-color);
+}
+.neutral-color { 
+  color: var(--neutral-color);
+}
+/*! * * Notification scheme */
+.information-color { 
+  color: var(--information-color); 
+}
+.warning-color { 
+  color: var(--warning-color); 
+}
+.error-color { 
+  color: var(--error-color); 
+}
+.success-color { 
+  color: var(--success-color); 
+}
+/*! * * Color variants */
+.complementary-color-1-darker { 
+  color: var(--complementary-color-1-darker);
+}
+.complementary-color-2-darker { 
+  color: var(--complementary-color-2-darker);
+}
+.neutral-color-lighter { 
+  color: var(--neutral-color-lighter);
+}
+.information-color-lighter { 
+  color: var(--information-color-lighter);
+}
+.warning-color-lighter { 
+  color: var(--warning-color-lighter);
+}
+.error-color-lighter { 
+  color: var(--error-color-lighter);
+}
+.success-color-lighter { 
+  color: var(--success-color-lighter);
+}
 
-/**
- * * Reset
- *
- */
+/*! * Reset */
  /* Custom reset & normalization
   * 
   * Tools references:
@@ -302,10 +330,7 @@ template {
   display: none;
 }
 
-/**
- * * Document
- * 
- */
+/*! * Document */
 html, body {
   font-family: var(--text-font);
   font-size: var(--base-font-size);
@@ -313,10 +338,7 @@ html, body {
   color: var(--text-color);
 }
 
-/**
- * * Text
- * 
- */
+/*! * Text */
 p, a, q, cite, pre, code, ul, ol, dl { 
   font-size: 1rem;
   line-height: var(--rhytm-unit);
@@ -396,10 +418,7 @@ hr {
   background-color: var(--complementary-color-1);
 }
 
-/**
- * * Links
- * 
- */
+/*! * Links */
 a {
   transition: all .4s ease-out;
   /* Transparent border is added to avoid jumpy transition on :hover */
@@ -420,10 +439,7 @@ a.variant:hover, a.variant:active, a.variant:focus, a.variant.active {
   border-color: var(--complementary-color-2-darker);
 }
 
-/**
- * * Lists
- * 
- */
+/*! * Lists */
 ul, ol {
   padding-left: calc(2 * var(--rhytm-unit));
 }
@@ -475,10 +491,7 @@ dd {
   padding-left: calc(.5 * var(--rhytm-unit));
 }
 
-/**
- * * Tables
- * 
- */
+/*! * Tables */
 table {
   /* Use separate borders to keep rows height into vertical rhytm */
   border-collapse: separate;
@@ -525,10 +538,7 @@ table.striped tbody tr:hover {
   background-color: var(--neutral-color-lighter);
 }
 
-/**
- * * Form elements
- * 
- */
+/*! * Form elements */
 fieldset {
   position: relative;
   border: 1px solid var(--neutral-color);
@@ -698,19 +708,13 @@ select.is-not-valid,
   border: 1px solid var(--error-color);
 }
 
-/**
- * * Buttons
- *
- */
+/*! * Buttons */
 ::-moz-focus-inner {
   /* Remove dotted outline on button:focus in Firefox */
   border: 0;
 }
 
-/**
- * * * Default button
- * 
- */
+/*! * * Default button */
 button, 
 .button,
 a.button,
@@ -755,10 +759,7 @@ input[type=reset]:focus {
   /*box-shadow: 0 0 4px 1px var(--complementary-color-1-darker);*/
 }
 
-/**
- * * * Variant button
- * 
- */
+/*! * * Variant button */
 button.variant, 
 .button.variant, 
 a.button.variant,
@@ -789,10 +790,7 @@ input[type=reset].variant:focus {
   /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
 
-/**
- * * * Outlined button
- * 
- */
+/*! * * Outlined button */
 button.outlined, 
 .button.outlined, 
 a.button.outlined,
@@ -851,9 +849,7 @@ input[type=reset].variant.outlined:focus {
   /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
 
-/**
- * * * Disabled button
- */
+/*! * * Disabled button */
 input[type=submit]:disabled, 
 button:disabled {
     background: transparent;
@@ -863,16 +859,10 @@ button:disabled {
 }
 
 
-/**
- * Components
- *
- */
+/*! Components */
  /* Custom constructed elements */
 
-/**
- * * Sticky footer 
- *
- */
+/*! * Sticky footer */
  /* Tools & reference:
   * https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers */
 body.sticky-footer {
@@ -886,10 +876,7 @@ body.sticky-footer footer {
   flex: 0 0 auto;
 }
 
-/**
- * * (Flexbox) Grid
- *
- */
+/*! * (Flexbox) Grid */
  /* @todo switch to CSS Grid layout */
 .grid, .grid.column {
   display: -ms-flexbox;
@@ -913,10 +900,7 @@ body.sticky-footer footer {
   align-items: flex-end;
 }
 
-/**
- * * * Columns
- * 
- */
+/*! * * Columns */
 .grid .column {
   flex: 1;
 }
@@ -966,10 +950,7 @@ body.sticky-footer footer {
   }
 }
 
-/**
- * * Notification
- * 
- */
+/*! * Notification */
 .notification {
   position: relative;
   z-index: 10001;
@@ -1035,10 +1016,7 @@ body.sticky-footer footer {
   background-color: var(--error-color-lighter);
 }
 
-/**
- * * Navigation
- * 
- */
+/*! * Navigation */
 .navigation .menu {
   transition: all .4s ease 0s;
 }
@@ -1111,10 +1089,7 @@ body.sticky-footer footer {
   }
 }
 
-/**
- * * Tabs
- * 
- */
+/*! * Tabs */
 .tabs .navigation a {
   cursor: pointer;
   border: 1px solid var(--neutral-color);
@@ -1144,10 +1119,7 @@ body.sticky-footer footer {
 }
 
 
-/**
- * Utilities
- * 
- */
+/*! Utilities */
 
 /* Container */
 .container {
