@@ -113,12 +113,12 @@
     * https://color.adobe.com/create/color-wheel/?base=2&rule=Complementary
     * https://refactoringui.com/previews/building-your-color-palette/
     * https://ianstormtaylor.com/design-tip-never-use-black/ */
-  --base-color: #2b4733; /*#0b162a;*/
-  --complementary-color-1: #2a4633; /*#e35835;*/
-  --complementary-color-2: #905a2f; /*#cde534;*/
-  --heading-color: #3a3a3a; /*var(--base-color);*/
-  --text-color: #3a3a3a; /*#1a1a1a;*/
-  --neutral-color: #c1c1c1; /*#eaeaea;*/
+  --base-color: #0b162a;
+  --complementary-color-1: #e35835;
+  --complementary-color-2: #cde534;
+  --heading-color: var(--base-color);
+  --text-color: #1a1a1a;
+  --neutral-color: #eaeaea;
   /* * * * Notification scheme */
   --information-color: #00529b;
   --warning-color: #9f6000;
@@ -135,9 +135,9 @@
   
   /* Hard-coded color variations: */
   /**/
-  --complementary-color-1-darker: #1e3224;
-  --complementary-color-2-darker: #764a27;
-  --neutral-color-lighter: #f6f6f6;
+  --complementary-color-1-darker: #c93f1c;
+  --complementary-color-2-darker: #b4cc1a;
+  --neutral-color-lighter: #fbfbfb;
   --information-color-lighter: #b3dbff;
   --warning-color-lighter: #ffe0b3;
   --error-color-lighter: #ffb3b6;

@@ -21,10 +21,10 @@
     "watch": "^1.0.2"
   },
   "scripts": {
-    "watch": "watch \"npm run build\" src/scss_css",
-    "postcss": "postcss src/scss_css/magicssian_draft.css -u postcss-import postcss-css-variables postcss-calc postcss-color-function --no-map -o src/scss_css/magicssian.css",
-    "cleancss": "cleancss -O1 --format keep-breaks -o docs/css/magicssian.css src/scss_css/magicssian.css",
-    "minifycss": "cleancss -O1 specialComments:1 -02 --format breaks:afterComment=on --source-map -o docs/css/magicssian.min.css src/scss_css/magicssian.css",
+    "watch": "watch 'npm run build' ./src/scss_css",
+    "postcss": "postcss src/scss_css/magicssian_draft.css -u postcss-import postcss-css-variables postcss-calc postcss-color-function --no-map -o docs/css/magicssian.css",
+    "cleancss": "cleancss -O1 --format keep-breaks -o docs/css/magicssian.css docs/css/magicssian.css",
+    "minifycss": "cleancss -O1 specialComments:1 -02 --format breaks:afterComment=on --source-map -o docs/css/magicssian.min.css docs/css/magicssian.css",
     "build": "npm run postcss && npm run cleancss && npm run minifycss",
     "vbump-patch": "bump patch package.json package-lock.json README.md src/scss_css/magicssian_draft.css src/scss_css/magicssian_variables.css",
     "dist": ""
