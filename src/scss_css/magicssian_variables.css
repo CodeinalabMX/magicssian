@@ -134,7 +134,7 @@
     * background-color on notification */
   
   /* Hard-coded color variations: */
-  /**/
+  /*
   --complementary-color-1-darker: #c93f1c;
   --complementary-color-2-darker: #b4cc1a;
   --neutral-color-lighter: #fbfbfb;
@@ -145,8 +145,8 @@
   /**/
 
   /* Color variations can be automatically generated 
-   * using postcss-color-function
-   * and the lightness color adjuster
+   * using the equivalent postcss-color-function
+   * for lighten and darken Sass methods 
    * https://github.com/postcss/postcss-color-function
    * 
    * Combining the base color scheme values with an 
@@ -154,28 +154,17 @@
    * --lightness-variation: (int); A higher value will result in a lighter color
    * --darkness-variation: (int); A lower value will return a darker color
    * 
-   * To play with:
-   * Comment/Uncomment Hard-coded/Dynamic color variants
-   * postcss-color-function already in npm build script
-   * 
-   * According to CSS specs
-   * https://drafts.csswg.org/css-color/#funcdef-hsl
-   * For lightness, 
-   * 50% represents the "normal" color, 
-   * while 100% is white and 0% is black.
-   * 
    * @todo 
-   * Review implementation:
-   * A 50% value should return the "normal" color?
-   * Possibly need hsl color values instead of hex */
+   * Test implementation */
 
   /* Dynamic color variations */
-  /*
-  --lightness-variation: 85;
-  --darkness-variation: 40;
-  --complementary-color-1-darker: color(var(--complementary-color-1) lightness(var(--darkness-variation)));
-  --complementary-color-2-darker: color(var(--complementary-color-2) lightness(var(--darkness-variation)));
-  --neutral-color-lighter: color(var(--neutral-color) lightness(var(--lightness-variation)));
+  /**/
+  --lightness-variation: 80;
+  --darkness-variation: 20;
+  --complementary-color-1-darker: color(var(--complementary-color-1) shade(var(--darkness-variation)));
+  --complementary-color-2-darker: color(var(--complementary-color-2) shade(var(--darkness-variation)));
+  --neutral-color-darker: color(var(--neutral-color) shade(var(--darkness-variation)));
+  --neutral-color-lighter: color(var(--neutral-color) tint(var(--lightness-variation)));
   --information-color-lighter: color(var(--information-color) lightness(var(--lightness-variation)));
   --warning-color-lighter: color(var(--warning-color) lightness(var(--lightness-variation)));
   --error-color-lighter: color(var(--error-color) lightness(var(--lightness-variation)));
