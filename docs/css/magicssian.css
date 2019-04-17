@@ -2,9 +2,9 @@
 /*! Base */
 /*! * Colors */
 /*! * * Base scheme */
-.base-color{color:#0b162a}
+.base-color{color:green}
 .complementary-color{color:#cde534}
-.heading-color{color:#0b162a}
+.heading-color{color:green}
 .text-color{color:#1a1a1a}
 .neutral-color{color:#eaeaea}
 /*! * * Notification scheme */
@@ -15,6 +15,7 @@
 /*! * * Color variants */
 .complementary-color-1-darker{color:#b6462a}
 .complementary-color-2-darker{color:#a4b72a}
+.neutral-color-darker{color:#bbb}
 .neutral-color-lighter{color:#fbfbfb}
 .information-color-lighter{color:#99cfff}
 .warning-color-lighter{color:#ffd699}
@@ -43,7 +44,7 @@ a,cite,code,dl,ol,p,pre,q,ul{font-size:1rem;line-height:20px}
 .h4,h4{font-size:1.375rem;line-height:40px}
 .h5,h5{font-size:1.125rem;line-height:40px}
 .h6,h6{font-size:.875rem;line-height:20px}
-h1,h2,h3,h4,h5,h6{font-family:Merriweather,sans-serif;color:#0b162a}
+h1,h2,h3,h4,h5,h6{font-family:Merriweather,sans-serif;color:green}
 cite,h1,h2,h3,h4,h5,h6,ol ol,p,ul ul{margin-top:10px;margin-bottom:10px}
 small{font-size:.75rem}
 sub,sup{line-height:0}

@@ -15,48 +15,6 @@
  * * * Color variants
  */
 
- /**
- * Magicssian v0.1.8
- * 
- * A CSS Boilerplate
- * http://codeinalabMX.github.io/magicssian
- * License: MIT
- *
- * Contents:
- * 
- * Base
- * * @import CSS Custom Properties
- * * * Fonts
- * * * Font size & Rhytm unit
- * * * Color schemes
- * * * * Base scheme
- * * * * Notification scheme
- * * * * Color variants
- * * * Extras
- * * Colors
- * * Reset
- * * Document
- * * Text
- * * Links
- * * Lists
- * * Tables
- * * Form elements
- * * Buttons
- * * * Default button
- * * * Variant button
- * * * Outlined button
- * * * Disabled button
- * Components
- * * Sticky footer
- * * (Flexbox) Grid
- * * * Columns
- * * Notification
- * * Navigation
- * * Tabs
- * Utilities
- *
- */
-
  /* Define css custom properties
   * this values will affect/style html elements globally */
 
@@ -113,7 +71,7 @@
     * https://color.adobe.com/create/color-wheel/?base=2&rule=Complementary
     * https://refactoringui.com/previews/building-your-color-palette/
     * https://ianstormtaylor.com/design-tip-never-use-black/ */
-  --base-color: #0b162a;
+  --base-color: green;
   --complementary-color-1: #e35835;
   --complementary-color-2: #cde534;
   --heading-color: var(--base-color);
@@ -137,6 +95,7 @@
   /*
   --complementary-color-1-darker: #c93f1c;
   --complementary-color-2-darker: #b4cc1a;
+  --neutral-color-darker: #fbfbfb;
   --neutral-color-lighter: #fbfbfb;
   --information-color-lighter: #b3dbff;
   --warning-color-lighter: #ffe0b3;
