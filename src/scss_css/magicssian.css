@@ -158,6 +158,8 @@
   /* This will define the border-radius for .rounded */
 }
 
+/*@import 'todo_en_playeras_variables.css';*/
+
 /*! * Colors */
 
 /*! * * Base scheme */
@@ -237,8 +239,6 @@
 .success-color-lighter { 
   color: rgb(205, 244, 164);
 }
-
-/*@import 'todo_en_playeras_variables.css';*/
 
 /*! * Reset */
 

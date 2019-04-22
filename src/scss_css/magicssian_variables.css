@@ -1,4 +1,4 @@
-/*! Custom build: Magicssian v0.2.0 */ 
+/*! Custom build: Magicssian v0.2.1 */ 
 /*! Base */
 /**
  * CSS Custom Properties stylesheet for: Magicssian
@@ -140,62 +140,4 @@
   --rounded: 0;
   /* This will define the border-radius for .rounded */
   --rounded-utility: 4px;
-}
-/*! * Colors */
-/*! * * Base scheme */
-.base-color { 
-  color: var(--base-color);
-}
-.complementary-color { 
-  color: var(--complementary-color-1);
-}
-.complementary-color { 
-  color: var(--complementary-color-2);
-}
-.heading-color { 
-  color: var(--heading-color);
-}
-.text-color { 
-  color: var(--text-color);
-}
-.neutral-color { 
-  color: var(--neutral-color);
-}
-/*! * * Notification scheme */
-.information-color { 
-  color: var(--information-color); 
-}
-.warning-color { 
-  color: var(--warning-color); 
-}
-.error-color { 
-  color: var(--error-color); 
-}
-.success-color { 
-  color: var(--success-color); 
-}
-/*! * * Color variants */
-.complementary-color-1-darker { 
-  color: var(--complementary-color-1-darker);
-}
-.complementary-color-2-darker { 
-  color: var(--complementary-color-2-darker);
-}
-.neutral-color-darker {
-  color: var(--neutral-color-darker);
-}
-.neutral-color-lighter { 
-  color: var(--neutral-color-lighter);
-}
-.information-color-lighter { 
-  color: var(--information-color-lighter);
-}
-.warning-color-lighter { 
-  color: var(--warning-color-lighter);
-}
-.error-color-lighter { 
-  color: var(--error-color-lighter);
-}
-.success-color-lighter { 
-  color: var(--success-color-lighter);
 }
