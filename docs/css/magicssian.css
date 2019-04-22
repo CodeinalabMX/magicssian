@@ -1,10 +1,11 @@
-/*! Magicssian v0.1.8 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Magicssian v0.2.0 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Custom build: Magicssian v0.2.0 */
 /*! Base */
 /*! * Colors */
 /*! * * Base scheme */
-.base-color{color:green}
+.base-color{color:#0b162a}
 .complementary-color{color:#cde534}
-.heading-color{color:green}
+.heading-color{color:#0b162a}
 .text-color{color:#1a1a1a}
 .neutral-color{color:#eaeaea}
 /*! * * Notification scheme */
@@ -44,7 +45,7 @@ a,cite,code,dl,ol,p,pre,q,ul{font-size:1rem;line-height:20px}
 .h4,h4{font-size:1.375rem;line-height:40px}
 .h5,h5{font-size:1.125rem;line-height:40px}
 .h6,h6{font-size:.875rem;line-height:20px}
-h1,h2,h3,h4,h5,h6{font-family:Merriweather,sans-serif;color:green}
+h1,h2,h3,h4,h5,h6{font-family:Merriweather,sans-serif;color:#0b162a}
 cite,h1,h2,h3,h4,h5,h6,ol ol,p,ul ul{margin-top:10px;margin-bottom:10px}
 small{font-size:.75rem}
 sub,sup{line-height:0}
@@ -59,6 +60,7 @@ a:link,a:visited{color:#e35835}
 a.active,a:active,a:focus,a:hover{color:#b6462a;border-color:#b6462a}
 a.variant:link,a.variant:visited{color:#cde534}
 a.variant.active,a.variant:active,a.variant:focus,a.variant:hover{color:#a4b72a;border-color:#a4b72a}
+a.no-decoration.active,a.no-decoration:active,a.no-decoration:focus,a.no-decoration:hover{border-color:transparent}
 /*! * Lists */
 li{position:relative}
 ol.custom,ol.custom ol,ol.custom ul,ul.custom,ul.custom ol,ul.custom ul{list-style:none}

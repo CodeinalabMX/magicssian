@@ -1,7 +1,7 @@
-/*! Magicssian v0.1.8 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Magicssian v0.2.0 http://codeinalabmx.github.io/magicssian License: MIT */
 
 /**
- * Magicssian v0.1.8
+ * Magicssian v0.2.0
  * 
  * A CSS Boilerplate
  * http://codeinalabMX.github.io/magicssian
@@ -35,69 +35,9 @@
  *
  */
 
-
-/*! Base */
-
+/* Import specific project stylesheet for custom builds */
 @import 'magicssian_variables.css';
-
-/*! * Colors */
-/*! * * Base scheme */
-.base-color { 
-  color: var(--base-color);
-}
-.complementary-color { 
-  color: var(--complementary-color-1);
-}
-.complementary-color { 
-  color: var(--complementary-color-2);
-}
-.heading-color { 
-  color: var(--heading-color);
-}
-.text-color { 
-  color: var(--text-color);
-}
-.neutral-color { 
-  color: var(--neutral-color);
-}
-/*! * * Notification scheme */
-.information-color { 
-  color: var(--information-color); 
-}
-.warning-color { 
-  color: var(--warning-color); 
-}
-.error-color { 
-  color: var(--error-color); 
-}
-.success-color { 
-  color: var(--success-color); 
-}
-/*! * * Color variants */
-.complementary-color-1-darker { 
-  color: var(--complementary-color-1-darker);
-}
-.complementary-color-2-darker { 
-  color: var(--complementary-color-2-darker);
-}
-.neutral-color-darker {
-  color: var(--neutral-color-darker);
-}
-.neutral-color-lighter { 
-  color: var(--neutral-color-lighter);
-}
-.information-color-lighter { 
-  color: var(--information-color-lighter);
-}
-.warning-color-lighter { 
-  color: var(--warning-color-lighter);
-}
-.error-color-lighter { 
-  color: var(--error-color-lighter);
-}
-.success-color-lighter { 
-  color: var(--success-color-lighter);
-}
+/*@import 'todo_en_playeras_variables.css';*/
 
 /*! * Reset */
  /* Custom reset & normalization
@@ -298,6 +238,9 @@ a.variant:hover, a.variant:active, a.variant:focus, a.variant.active {
   border-color: var(--complementary-color-2-darker);
 }
 
+a.no-decoration:hover, a.no-decoration:active, a.no-decoration:focus, a.no-decoration.active {
+  border-color: transparent;
+}
 /*! * Lists */
 ul, ol {
   padding-left: calc(2 * var(--rhytm-unit));
@@ -987,7 +930,7 @@ body.sticky-footer footer {
   max-width: 100%;
 }
 .container.boxed {
-  max-width: var(--box-width);
+  max-width: var(--container-boxed-width);
   margin-right: auto;
   margin-left: auto;
 }
