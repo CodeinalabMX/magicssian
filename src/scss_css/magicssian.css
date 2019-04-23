@@ -1,7 +1,7 @@
-/*! Magicssian v0.2.0 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Magicssian v0.2.1 http://codeinalabmx.github.io/magicssian License: MIT */
 
 /**
- * Magicssian v0.2.0
+ * Magicssian v0.2.1
  * 
  * A CSS Boilerplate
  * http://codeinalabMX.github.io/magicssian
@@ -37,7 +37,7 @@
 
 /* Import specific project stylesheet for custom builds */
 
-/*! Custom build: Magicssian v0.2.0 */
+/*! Custom build: Magicssian v0.2.1 */
 
 /*! Base */
 
@@ -2218,6 +2218,10 @@ body.sticky-footer footer {
   left: 0;
 }
 
+.navigation.slide-r [type=checkbox]:checked + label + .menu {
+  right: 0;
+}
+
 @media (max-width: 780px) {
   .navigation label {
     display: block;
@@ -2225,17 +2229,34 @@ body.sticky-footer footer {
   .navigation .menu {
     display: none;
   }
+  /* Slide left/right navigation */
   .navigation.slide-l .menu {
     display: block;
     position: fixed;
     z-index: 9998;
     top: 0;
-    left: calc(-80vw + 40px);
     height: 100vh;
     width: 80vw;
     padding: 20px;
-    padding-right: 40px;
     background: white;
+  }
+  .navigation.slide-r .menu {
+    display: block;
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    height: 100vh;
+    width: 80vw;
+    padding: 20px;
+    background: white;
+  }
+  .navigation.slide-l .menu {
+    left: -80vw;
+    padding-right: 40px;
+  }
+  .navigation.slide-r .menu {
+    right: -80vw;
+    padding-left: 40px;
   }
 }
 
