@@ -1,7 +1,7 @@
-/*! Magicssian v0.3.0 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Magicssian v0.3.1 http://codeinalabmx.github.io/magicssian License: MIT */
 
 /**
- * Magicssian v0.3.0
+ * Magicssian v0.3.1
  * 
  * A CSS Boilerplate
  * http://codeinalabMX.github.io/magicssian
@@ -37,7 +37,7 @@
 
 /* Import specific project stylesheet for custom builds */
 
-/*! Custom build: Magicssian v0.3.0 */
+/*! Custom build: Magicssian v0.3.1 */
 
 /*! Base */
 
@@ -2252,11 +2252,11 @@ body.sticky-footer footer {
   }
   .navigation.slide-l .menu {
     left: -80vw;
-    padding-right: 40px;
+    padding-left: 40px;
   }
   .navigation.slide-r .menu {
     right: -80vw;
-    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
