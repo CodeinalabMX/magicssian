@@ -45,10 +45,10 @@
 .base-color { 
   color: var(--base-color);
 }
-.complementary-color { 
+.complementary-color-1 { 
   color: var(--complementary-color-1);
 }
-.complementary-color { 
+.complementary-color-2 { 
   color: var(--complementary-color-2);
 }
 .heading-color { 
@@ -297,10 +297,10 @@ a.variant:hover, a.variant:active, a.variant:focus, a.variant.active {
   color: var(--complementary-color-2-darker);
   border-color: var(--complementary-color-2-darker);
 }
-
 a.no-decoration:hover, a.no-decoration:active, a.no-decoration:focus, a.no-decoration.active {
   border-color: transparent;
 }
+
 /*! * Lists */
 ul, ol {
   padding-left: calc(2 * var(--rhytm-unit));
