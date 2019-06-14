@@ -36,8 +36,9 @@
  */
 
 /* Import specific project stylesheet for custom builds */
-@import 'magicssian_variables.css';
+/*@import 'magicssian_variables.css';*/
 /*@import 'todo_en_playeras_variables.css';*/
+/**/@import 'pintramex_variables.css';
 
 /*! * Colors */
 /*! * * Base scheme */
