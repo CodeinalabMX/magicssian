@@ -24,11 +24,11 @@
     "watch": "^1.0.2"
   },
   "scripts": {
-    "watch": "onchange 'src/css/*.css' --exclude 'src/css/magicssian.css' -- npm run build",
-    "postcss": "postcss src/css/magicssian_draft.css --use postcss-import postcss-css-variables postcss-calc postcss-color-function --no-map --output src/css/magicssian.css",
-    "cleancss": "cleancss -O2 --format keep-breaks --output docs/css/magicssian.css src/css/magicssian.css",
-    "minifycss": "cleancss -O1 specialComments:2 -02 --format breaks:afterComment=on --source-map --output docs/css/magicssian.min.css src/css/magicssian.css",
-    "build": "npm run postcss && npm run cleancss && npm run minifycss",
+    "watch": "onchange 'src/css/*.css' -- npm run build",
+    "cleancss": "cleancss -O2 --format keep-breaks --source-map --output docs/css/magicssian.css src/css/magicssian_draft.css",
+    "postcss": "postcss docs/css/magicssian.css --use postcss-css-variables postcss-calc postcss-color-function --map '.' --output docs/css/magicssian.css",
+    "minifycss": "cleancss -O1 specialComments:2 -02 --format breaks:afterComment=on --source-map --output docs/css/magicssian.min.css docs/css/magicssian.css",
+    "build": "npm run cleancss && npm run postcss && npm run minifycss",
     "vbump": "bump package.json package-lock.json README.md src/css/magicssian_draft.css src/css/magicssian_variables.css",
     "dist": ""
   },
