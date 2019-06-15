@@ -323,7 +323,7 @@ ul.custom li:before {
   width: calc(.25 * var(--rhytm-unit));
   height: calc(.25 * var(--rhytm-unit));
   background-color: var(--complementary-color-1);
-  left: calc(-1 * var(--rhytm-unit));
+  left: calc(-1.125 * var(--rhytm-unit));
   top: calc(.375 * var(--rhytm-unit));
   border-radius: 50%;
 }
@@ -343,7 +343,7 @@ ul.custom.diamond > li:before {
 }
 ul.custom.dash > li:before {
   width: calc(.5 * var(--rhytm-unit));
-  height: calc(.125 * var(--rhytm-unit));
+  height: calc(.075 * var(--rhytm-unit));
   top: calc(.5 * var(--rhytm-unit));  
 }
 ul.custom.variant {
