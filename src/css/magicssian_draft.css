@@ -249,7 +249,9 @@ sub, sup {
   line-height: 0;
 }
 blockquote {
-  padding: calc(1.5 * var(--rhytm-unit));
+  padding: calc(2 * var(--rhytm-unit));
+  margin-top: calc(2 * var(--rhytm-unit));
+  margin-bottom: calc(2 * var(--rhytm-unit));
   margin-left: calc(2 * var(--rhytm-unit));
   border-left: 2px solid var(--complementary-color-1);
 }
