@@ -24,6 +24,7 @@
  * * * Variant button
  * * * Outlined button
  * * * Disabled button
+ * * * Button link
  * Components
  * * Sticky footer
  * * (Flexbox) Grid
@@ -291,17 +292,17 @@ a:link, a:visited {
 }
 a:hover, a:active, a:focus, a.active {
   color: var(--complementary-color-1-darker);
-  border-color: var(--complementary-color-1-darker);
+  border-bottom-color: var(--complementary-color-1-darker);
 }
 a.variant:link, a.variant:visited {
   color: var(--complementary-color-2);
 }
 a.variant:hover, a.variant:active, a.variant:focus, a.variant.active {
   color: var(--complementary-color-2-darker);
-  border-color: var(--complementary-color-2-darker);
+  border-bottom-color: var(--complementary-color-2-darker);
 }
-a.no-decoration:hover, a.no-decoration:active, a.no-decoration:focus, a.no-decoration.active {
-  border-color: transparent;
+a.no-decoration, a.no-decoration:hover, a.no-decoration:active, a.no-decoration:focus, a.no-decoration:active {
+  border-bottom-color: transparent;
 }
 
 /*! * Lists */
@@ -723,6 +724,27 @@ button:disabled {
     cursor: default;
 }
 
+/*! * * Button link */
+button.link {
+  -webkit-appearance: none;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  color: var(--complementary-color-1);
+}
+button.link:hover, button.link:active, button.link:focus {
+  color: var(--complementary-color-1-darker);
+  border-bottom-color: var(--complementary-color-1-darker);
+}
+button.link.variant {
+  background-color: transparent;
+  color: var(--complementary-color-2);
+}
+button.link.variant:hover, button.link.variant:active, button.link.variant:focus {
+  color: var(--complementary-color-2-darker);
+  border-bottom-color: var(--complementary-color-2-darker);
+}
 
 /*! Components */
  /* Custom constructed elements */
