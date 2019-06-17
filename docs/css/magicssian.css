@@ -1,5 +1,5 @@
-/*! Magicssian v0.4.0 http://codeinalabmx.github.io/magicssian License: MIT */
-/*! Custom build: Magicssian v0.4.1 */
+/*! Magicssian v0.4.4 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Custom build: Magicssian v0.4.4 */
 /*! Base */
 /*! * Colors */
 /*! * * Base scheme */
@@ -350,6 +350,11 @@ body.sticky-footer footer{flex:0 0 auto}
 .navigation.slide-l .menu{left:-80vw;padding-left:40px}
 .navigation.slide-r .menu{right:-80vw;padding-right:40px}
 }
+/*! * Collections */
+.collection{min-height:280px;margin:10px;border:1px solid #eaeaea;padding-bottom:20px;border-radius:0}
+.collection .heading{margin:0 0 20px 0;padding:10px;background:#eaeaea;line-height:40px}
+.collection .item{margin:10px 20px}
+.collection .item::after{content:"\A";white-space:pre}
 /*! * Tabs */
 .tabs .navigation a{cursor:pointer;border:1px solid #eaeaea;padding:10px}
 .tabs .navigation a.active{font-weight:700;border-bottom-color:#fff}
