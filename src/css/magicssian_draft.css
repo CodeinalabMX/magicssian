@@ -734,6 +734,7 @@ button.link {
   border-bottom: 1px solid transparent;
   color: var(--complementary-color-1);
   text-transform: none;
+  line-height: calc(var(--rhytm-unit) - 2px);
 }
 button.link:hover, button.link:active, button.link:focus {
   color: var(--complementary-color-1-darker);
@@ -746,6 +747,9 @@ button.link.variant {
 button.link.variant:hover, button.link.variant:active, button.link.variant:focus {
   color: var(--complementary-color-2-darker);
   border-bottom-color: var(--complementary-color-2-darker);
+}
+button.link.no-decoration {
+  border-bottom-color: transparent;
 }
 
 /*! Components */
