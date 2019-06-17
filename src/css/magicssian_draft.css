@@ -1,7 +1,7 @@
-/*! Magicssian v0.4.1 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Magicssian v0.4.0 http://codeinalabmx.github.io/magicssian License: MIT */
 
 /**
- * Magicssian v0.4.1
+ * Magicssian v0.4.0
  * 
  * A CSS Boilerplate
  * http://codeinalabMX.github.io/magicssian
@@ -732,6 +732,7 @@ button.link {
   border: 0;
   border-bottom: 1px solid transparent;
   color: var(--complementary-color-1);
+  text-transform: none;
 }
 button.link:hover, button.link:active, button.link:focus {
   color: var(--complementary-color-1-darker);

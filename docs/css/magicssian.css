@@ -1,5 +1,5 @@
 /*! Magicssian v0.4.0 http://codeinalabmx.github.io/magicssian License: MIT */
-/*! Custom build: Magicssian v0.4.0 */
+/*! Custom build: Magicssian v0.4.1 */
 /*! Base */
 /*! * Colors */
 /*! * * Base scheme */
@@ -278,7 +278,7 @@ input[type=submit].variant.outlined:focus{color:#fff;background-color:rgb(164, 1
 button:disabled{background:0 0;color:#eaeaea;border-color:#eaeaea;cursor:default}
 input[type=submit]:disabled{background:0 0;color:#eaeaea;border-color:#eaeaea;cursor:default}
 /*! * * Button link */
-button.link{-webkit-appearance:none;padding:0;background-color:transparent;border:0;border-bottom:1px solid transparent;color:#e35835}
+button.link{-webkit-appearance:none;padding:0;background-color:transparent;border:0;border-bottom:1px solid transparent;color:#e35835;text-transform:none}
 button.link:active{color:rgb(182, 70, 42);border-bottom-color:rgb(182, 70, 42)}
 button.link:focus{color:rgb(182, 70, 42);border-bottom-color:rgb(182, 70, 42)}
 button.link:hover{color:rgb(182, 70, 42);border-bottom-color:rgb(182, 70, 42)}
