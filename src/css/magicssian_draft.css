@@ -1,7 +1,7 @@
-/*! Magicssian v0.4.0 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Magicssian v0.4.3 http://codeinalabmx.github.io/magicssian License: MIT */
 
 /**
- * Magicssian v0.4.0
+ * Magicssian v0.4.3
  * 
  * A CSS Boilerplate
  * http://codeinalabMX.github.io/magicssian
@@ -31,6 +31,7 @@
  * * * Columns
  * * Notification
  * * Navigation
+ * * Collections
  * * Tabs
  * Utilities
  *
@@ -986,6 +987,28 @@ body.sticky-footer footer {
     right: calc(0 - 80vw );
     padding-right: calc(2 * var(--rhytm-unit));
   }
+}
+
+/*! * Collections */
+.collection {
+  min-height: 280px;
+  margin: calc(.5 * var(--rhytm-unit));
+  border: 1px solid var(--neutral-color);
+  padding-bottom: var(--rhytm-unit);
+  border-radius: var(--rounded);
+}
+.collection .heading {
+  margin: 0 0 var(--rhytm-unit) 0;
+  padding: calc(.5 * var(--rhytm-unit));
+  background: var(--neutral-color);
+  line-height: calc(2 * var(--rhytm-unit));
+}
+.collection .item {
+  margin: calc(.5 * var(--rhytm-unit)) var(--rhytm-unit);
+}
+.collection .item::after {
+  content: "\A";
+  white-space: pre;
 }
 
 /*! * Tabs */
