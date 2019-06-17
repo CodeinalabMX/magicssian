@@ -278,7 +278,7 @@ input[type=submit].variant.outlined:focus{color:#fff;background-color:rgb(164, 1
 button:disabled{background:0 0;color:#eaeaea;border-color:#eaeaea;cursor:default}
 input[type=submit]:disabled{background:0 0;color:#eaeaea;border-color:#eaeaea;cursor:default}
 /*! * * Button link */
-button.link{-webkit-appearance:none;padding:0;background-color:transparent;border:0;border-bottom:1px solid transparent;color:#e35835;text-transform:none}
+button.link{-webkit-appearance:none;padding:0;background-color:transparent;border:0;border-bottom:1px solid transparent;color:#e35835;text-transform:none;line-height:18px}
 button.link:active{color:rgb(182, 70, 42);border-bottom-color:rgb(182, 70, 42)}
 button.link:focus{color:rgb(182, 70, 42);border-bottom-color:rgb(182, 70, 42)}
 button.link:hover{color:rgb(182, 70, 42);border-bottom-color:rgb(182, 70, 42)}
@@ -286,6 +286,7 @@ button.link.variant{background-color:transparent;color:#cde534}
 button.link.variant:active{color:rgb(164, 183, 42);border-bottom-color:rgb(164, 183, 42)}
 button.link.variant:focus{color:rgb(164, 183, 42);border-bottom-color:rgb(164, 183, 42)}
 button.link.variant:hover{color:rgb(164, 183, 42);border-bottom-color:rgb(164, 183, 42)}
+button.link.no-decoration{border-bottom-color:transparent}
 /*! Components */
 /*! * Sticky footer */
 body.sticky-footer{display:flex;flex-direction:column}
