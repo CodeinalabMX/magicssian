@@ -1,6 +1,6 @@
 {
   "name": "magicssian",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "A CSS Boilerplate",
   "main": "index.js",
   "directories": {
@@ -29,7 +29,7 @@
     "postcss": "postcss docs/css/magicssian.css --use postcss-css-variables postcss-calc postcss-color-function --map '.' --output docs/css/magicssian.css",
     "minifycss": "cleancss -O1 specialComments:2 -02 --format breaks:afterComment=on --source-map --output docs/css/magicssian.min.css docs/css/magicssian.css",
     "build": "npm run cleancss && npm run postcss && npm run minifycss",
-    "vbump": "bump package.json package-lock.json README.md src/css/magicssian_draft.css src/css/magicssian_variables.css",
+    "vbump": "bump package.json package-lock.json README.md src/css/magicssian_draft.css src/css/magicssian_variables.css --tag",
     "dist": ""
   },
   "repository": {
