@@ -762,7 +762,7 @@ button.link.no-decoration {
  /* Tools & reference:
   * https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers */
 body.sticky-footer {
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -988,11 +988,11 @@ body.sticky-footer footer {
     background: white;
   }
   .navigation.slide-l .menu {
-    left: calc(0 - 80vw );
+    left: calc(0 - 80vw);
     padding-left: calc(2 * var(--rhytm-unit));
   }
   .navigation.slide-r .menu {
-    right: calc(0 - 80vw );
+    right: 80vw;
     padding-right: calc(2 * var(--rhytm-unit));
   }
 }
