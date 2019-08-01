@@ -1139,3 +1139,15 @@ body.sticky-footer footer {
 .align-c {
   text-align: center;
 }
+
+/* Images */
+img.responsive {
+  width: 100%;
+  height: auto;
+}
+img.fit {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
