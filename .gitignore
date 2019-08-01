@@ -3,3 +3,4 @@
 vendor
 node_modules
 src/css/_*
+!src/css/_project_variables.css
