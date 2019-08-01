@@ -141,12 +141,11 @@
 </pre>
           <h3>Lists</h3>
           <p>
-            <!--Add a description-->              
+            By default lists are basically untouched, beside font-size and line-height, everything else remains the same.               
           </p>
           <div class="container grid">
 
-            <div class="column">
-              <ul>
+              <ul class="column">
                 <li>Unordered
                   <ul>
                     <li>Nested</li>
@@ -155,38 +154,71 @@
                 <li>list</li>
                 <li>item</li>
               </ul>
-              <ol>
-                <li>Ordered</li>
+              <ol class="column">
+                <li>Ordered
+                  <ol>
+                    <li>Nested</li>
+                  </ol>
+                </li>
                 <li>list</li>
                 <li>item 3</li>
               </ol>
-            </div>
 
-            <div class="column">
-              <ul class="custom">
-                <li>Custom (Default)
+          </div>
+          <p>
+            However, you can customize lists using combinations of the following classes:
+          </p>
+          <pre><code>.custom [.outlined, .square, .diamond, .dash, .arrow, .no-decoration, .no-indent]</code></pre>
+          <div class="container grid">
+
+              <ul class="column custom">
+                <li>.custom (Default)
                   <ul class="custom outlined">
-                    <li>Outlined</li>
+                    <li>.outlined</li>
+                  </ul>
+                </li>
+                <li>list</li>
+                <li>item</li>
+              </ul>            
+              <ul class="column custom square">
+                <li>.custom .square
+                  <ul class="custom square outlined">
+                    <li>.outlined</li>
                   </ul>
                 </li>
                 <li>list</li>
                 <li>item</li>
               </ul>
-            </div>
-            <div class="column">
-              <ul class="custom square">
-                <li>Square</li>
-                <li>bullet</li>
+              <ul class="column custom diamond">
+                <li>.custom .diamond
+                <ul class="custom diamond outlined">
+                    <li>.outlined</li>
+                  </ul>
+                </li>
+                <li>list</li>
+                <li>item</li>
               </ul>
-              <ul class="custom diamond">
-                <li>Diamond</li>
-                <li>bullet</li>
+              <ul class="column custom dash">
+                <li>.custom .dash</li>
+                <li>list</li>
+                <li>item</li>
               </ul>
-              <ul class="custom dash">
-                <li>Dash</li>
-                <li>bullet</li>
+              <ul class="column custom arrow">
+                <li>.custom .arrow</li>
+                <li>list</li>
+                <li>item</li>
               </ul>
-            </div>
+              <ul class="column custom no-decoration">
+                <li>.custom .no-decoration</li>
+                <li>list</li>
+                <li>item</li>
+              </ul>
+              <ul class="column custom no-decoration no-indent">
+                <li>.custom .no-decoration .no-indent</li>
+                <li>list</li>
+                <li>item</li>
+              </ul>
+
           </div>
 
           <h3>Tables</h3>
