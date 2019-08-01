@@ -334,7 +334,8 @@ ul.custom.outlined li:before {
 }
 ul.custom.square > li:before, 
 ul.custom.diamond > li:before, 
-ul.custom.dash > li:before {
+ul.custom.dash > li:before, 
+ul.custom.arrow > li:before {
   border-radius: 0;
 }
 ul.custom.diamond > li:before {
@@ -344,6 +345,20 @@ ul.custom.dash > li:before {
   width: calc(.5 * var(--rhytm-unit));
   height: calc(.075 * var(--rhytm-unit));
   top: calc(.5 * var(--rhytm-unit));  
+}
+ul.custom.arrow > li:before {
+    display: inline-block;
+    height: 0;
+    background: transparent;
+    border-top: calc(.20 * var(--rhytm-unit)) solid transparent;
+    border-bottom: calc(.20 * var(--rhytm-unit)) solid transparent;
+    border-left: calc(.20 * var(--rhytm-unit)) solid var(--complementary-color-1); 
+}
+ul.custom.no-decoration > li:before {
+  display: none;
+}
+ul.custom.no-indent {
+  padding-left: 0;
 }
 ul.custom.variant {
   background: var(--complementary-color-2);
