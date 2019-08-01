@@ -360,6 +360,13 @@ ul.custom.no-decoration > li:before {
 ul.custom.no-indent {
   padding-left: 0;
 }
+ul.custom.circle, 
+ul.custom.square.no-indent, 
+ul.custom.diamond.no-indent, 
+ul.custom.dash.no-indent, 
+ul.custom.arrow.no-indent {
+  padding-left: calc(1.125 * var(--rhytm-unit));
+}
 ul.custom.variant {
   background: var(--complementary-color-2);
 }
