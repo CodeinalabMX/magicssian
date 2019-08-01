@@ -1002,7 +1002,7 @@ body.sticky-footer footer {
     padding-left: calc(2 * var(--rhytm-unit));
   }
   .navigation.slide-r .menu {
-    right: 80vw;
+    right: -80vw;
     padding-right: calc(2 * var(--rhytm-unit));
   }
 }
