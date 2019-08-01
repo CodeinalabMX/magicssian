@@ -383,4 +383,6 @@ body.sticky-footer footer{flex:0 0 auto}
 .align-l{text-align:left}
 .align-r{text-align:right}
 .align-c{text-align:center}
+img.responsive{width:100%;height:auto}
+img.fit{width:100%;height:100%;object-fit:cover;object-position:center center}
 /*# sourceMappingURL=magicssian.css.map */
