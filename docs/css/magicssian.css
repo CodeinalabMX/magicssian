@@ -1,5 +1,5 @@
-/*! Magicssian v0.5.0 http://codeinalabmx.github.io/magicssian License: MIT */
-/*! Custom build: Magicssian v0.5.0 */
+/*! Magicssian v0.5.1 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Custom build: Magicssian v0.5.1 */
 /*! Base */
 /*! * Colors */
 /*! * * Base scheme */
@@ -111,6 +111,11 @@ ul.custom.dash>li:before{width:10px;height:1.5px;top:10px}
 ul.custom.arrow>li:before{display:inline-block;height:0;background:0 0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:4px solid #e35835}
 ul.custom.no-decoration>li:before{display:none}
 ul.custom.no-indent{padding-left:0}
+ul.custom.arrow.no-indent{padding-left:22.5px}
+ul.custom.circle{padding-left:22.5px}
+ul.custom.dash.no-indent{padding-left:22.5px}
+ul.custom.diamond.no-indent{padding-left:22.5px}
+ul.custom.square.no-indent{padding-left:22.5px}
 ul.custom.variant{background:#cde534}
 dt{font-weight:700}
 dd{padding-left:10px}
