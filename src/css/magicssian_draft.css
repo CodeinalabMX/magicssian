@@ -1005,7 +1005,7 @@ body.sticky-footer footer {
     background: white;
   }
   .navigation.slide-l .menu {
-    left: calc(0 - 80vw);
+    left: -80vw;
     padding-left: calc(2 * var(--rhytm-unit));
   }
   .navigation.slide-r .menu {
