@@ -991,6 +991,7 @@ body.sticky-footer footer {
   }
   .navigation .menu {
     display: none;
+    background: #fff;
   }
   /* Slide left/right navigation */
   .navigation.slide-l .menu, 
@@ -1002,7 +1003,6 @@ body.sticky-footer footer {
     height: 100vh;
     width: 80vw;
     padding: var(--rhytm-unit);
-    background: white;
   }
   .navigation.slide-l .menu {
     left: -80vw;
