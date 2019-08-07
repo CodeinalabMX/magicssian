@@ -31,6 +31,8 @@
  * * * Columns
  * * Notification
  * * Navigation
+ * * Dropdown navigation
+ * * Horizontal scrollpane
  * * Collections
  * * Tabs
  * Utilities
@@ -1013,6 +1015,20 @@ body.sticky-footer footer {
     padding-right: calc(2 * var(--rhytm-unit));
   }
 }
+
+
+/*! * Dropdown navigation */
+.dropdown {
+}
+.dropdown li {
+}
+.dropdown ul {
+  display: none;
+}
+.dropdown li:hover > ul {
+  display: inherit;
+}
+
 
 /*! * Collections */
 .collection {
