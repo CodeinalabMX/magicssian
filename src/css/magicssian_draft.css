@@ -1042,7 +1042,7 @@ body.sticky-footer footer {
 }
 .scrollpane-h .content {
   max-width: calc(100% - var(--rhytm-unit));
-  padding-bottom: calc(.5 * var(--rhytm-unit));
+  padding-bottom: var(--rhytm-unit);
   overflow-y: hidden;
   overflow-x: scroll;
   white-space: nowrap;
