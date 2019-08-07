@@ -502,11 +502,13 @@ select {
    * and then convert it to  
    * Tools & reference:
    * https://dataurl.sveinbjorn.org/#dataurlmaker
-   * https://svgontheweb.com/ */
+   * https://svgontheweb.com/ 
+   * http://petercollingridge.appspot.com/svg-optimiser
+   * https://yoksel.github.io/url-encoder/ */
   position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iOHB4IiBoZWlnaHQ9IjE0cHgiIHZpZXdCb3g9IjAgMCA4IDE0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDE0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwb2x5Z29uIGZpbGw9IiMxQTFBMUEiIHBvaW50cz0iNCwwIDAsNiA4LDYgIi8+DQo8cG9seWdvbiBmaWxsPSIjMUExQTFBIiBwb2ludHM9IjQsMTQgOCw4IDAsOCAiLz4NCjwvc3ZnPg0K');
+  background-image: url('data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='14' viewBox='0 0 8 14'%3E%3Cstyle%3E.a%7Bfill:%231A1A1A;%7D%3C/style%3E%3Cpolygon points='4 0 0 6 8 6 ' class='a'/%3E%3Cpolygon points='4 14 8 8 0 8 ' class='a'/%3E%3C/svg%3E');
   background-position: 98% center;
   background-repeat: no-repeat;
 }
