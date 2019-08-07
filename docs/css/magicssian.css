@@ -1,5 +1,5 @@
-/*! Magicssian v0.5.1 http://codeinalabmx.github.io/magicssian License: MIT */
-/*! Custom build: Magicssian v0.5.1 */
+/*! Magicssian v0.5.3 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Custom build: Magicssian v0.5.3 */
 /*! Base */
 /*! * Colors */
 /*! * * Base scheme */
@@ -308,7 +308,7 @@ body.sticky-footer footer{flex:0 0 auto}
 .grid.valign-c{align-items:center}
 .grid.valign-b{align-items:flex-end}
 /*! * * Columns */
-.grid .column{flex:1}
+.grid .column{flex:1;overflow:hidden}
 .full-width.column{flex:0 0 100%}
 .one-half.column{flex:0 0 50%}
 .one-third.column{flex:0 0 33.33%}
@@ -353,12 +353,19 @@ body.sticky-footer footer{flex:0 0 auto}
 .navigation.slide-r [type=checkbox]:checked+label+.menu{right:0}
 @media (max-width:780px){
 .navigation label{display:block}
-.navigation .menu{display:none}
-.navigation.slide-l .menu{display:block;position:fixed;z-index:9998;top:0;height:100vh;width:80vw;padding:20px;background:#fff}
-.navigation.slide-r .menu{display:block;position:fixed;z-index:9998;top:0;height:100vh;width:80vw;padding:20px;background:#fff}
+.navigation .menu{display:none;background:#fff}
+.navigation.slide-l .menu{display:block;position:fixed;z-index:9998;top:0;height:100vh;width:80vw;padding:20px}
+.navigation.slide-r .menu{display:block;position:fixed;z-index:9998;top:0;height:100vh;width:80vw;padding:20px}
 .navigation.slide-l .menu{left:-80vw;padding-left:40px}
 .navigation.slide-r .menu{right:-80vw;padding-right:40px}
 }
+/*! * Dropdown navigation */
+.dropdown ul{display:none}
+.dropdown li:hover>ul{display:inherit}
+/*! * Horizontal scrollpane */
+.scrollpane-h~.column{overflow:hidden}
+.scrollpane-h{max-width:100%;overflow:hidden;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20' viewBox='0 -3 10 20'%3E%3Cpolygon points='8 7 2 3 2 11 ' fill='%231A1A1A'/%3E%3C/svg%3E");background-position:right top;background-repeat:no-repeat}
+.scrollpane-h .content{max-width:calc(100% - 20px);padding-bottom:20px;overflow-y:hidden;overflow-x:scroll;white-space:nowrap}
 /*! * Collections */
 .collection{min-height:280px;margin:10px;border:1px solid #eaeaea;padding-bottom:20px;border-radius:0}
 .collection .heading{margin:0 0 20px 0;padding:10px;background:#eaeaea;line-height:40px}
