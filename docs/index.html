@@ -208,7 +208,11 @@
                 <li>list</li>
                 <li>item</li>
               </ul>
-              <ul class="column custom no-decoration">
+
+          </div>
+          <div class="container grid">
+
+            <ul class="column custom no-decoration">
                 <li>.custom .no-decoration</li>
                 <li>list</li>
                 <li>item</li>
@@ -219,7 +223,7 @@
                 <li>item</li>
               </ul>
 
-          </div>
+            </div>
 
           <h3>Tables</h3>
           <p>
@@ -437,7 +441,25 @@
           </div><!--/notification-examples-->
 
           <h3>Dropdown navigation</h3>
-          <p></p>
+          <p>Simple dropdown menus using nested lists, mixed with custom list styles.</p>
+<pre><code>.dropdown [.inline]
+
+&lt;ul class="custom no-decoration no-indent dropdown"&gt;
+  &lt;li&gt;item 1&lt;/li&gt;
+  &lt;li&gt;item 2 &gt;
+    &lt;ul class="custom no-decoration no-indent"&gt;
+      &lt;li&gt;item 2.1&lt;/li&gt;
+      &lt;li&gt;item 2.2 &gt;
+        &lt;ul class="custom no-decoration no-indent"&gt;
+          &lt;li&gt;item 2.2.1&lt/li&gt;
+          &lt;li&gt;item 2.2.2&lt;/li&gt;
+          &lt;li&gt;and so on...&lt;/li&gt;
+        &lt;/ul&gt;
+      &gt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;item 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
           <h4>The examples</h4>
           <div class="dropdown-examples">
             <div class="container grid">
@@ -448,11 +470,11 @@
                 <li><a href="">item 2 ></a>
                   <ul class="custom no-decoration no-indent">
                     <li>&nbsp;<a href="">item 2.1</a></li>
-                    <li>&nbsp;<a href="">item 2.2</a></li>
-                    <li>&nbsp;<a href="">item 2.3 ></a>
+                    <li>&nbsp;<a href="">item 2.2 ></a>
                       <ul class="custom no-decoration no-indent">
-                        <li>&nbsp;&nbsp;<a href="">item 2.3.1</a></li>
-                        <li>&nbsp;&nbsp;<a href="">item 2.3.2</a></li>
+                        <li>&nbsp;&nbsp;<a href="">item 2.2.1</a></li>
+                        <li>&nbsp;&nbsp;<a href="">item 2.2.2</a></li>
+                        <li>&nbsp;&nbsp;<a href="">and so on...</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -462,7 +484,20 @@
             </div>
 
             <div class="column dropdowns">
-              // add here a dropdown variant
+              <ul class="custom no-decoration no-indent dropdown inline">
+                <li><a href="">Item 1</a></li>
+                <li><a href="">Item 2 ></a>
+                  <ul class="custom no-decoration no-indent">
+                    <li><a href="">&nbsp;Item 2.1</a></li>
+                    <li><a href="">&nbsp;Item 2.2 ></a>
+                      <ul class="custom no-decoration no-indent">
+                        <li><a href="">&nbsp;&nbsp;Item 2.2.1</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="">Item 3</a></li>
+              </ul>
             </div>
 
             </div>
