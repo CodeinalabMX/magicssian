@@ -1030,6 +1030,19 @@ body.sticky-footer footer {
 .dropdown li:hover > ul {
   display: inherit;
 }
+.dropdown.inline, 
+.dropdown.inline > li {
+  display: inline-block;
+}
+.dropdown.inline ul {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: max-content;
+}
+.dropdown.inline li:hover > ul {
+  display: inline-block;
+}
 
 /*! * Horizontal scrollpane */
 .scrollpane-h ~ .column {
@@ -1171,7 +1184,7 @@ body.sticky-footer footer {
   border-radius: var(--rounded-utility)!important;
 }
 
-/* Text alignemt */
+/* Text alignemt and format */
 .align-l {
   text-align: left;
 }
@@ -1180,6 +1193,12 @@ body.sticky-footer footer {
 }
 .align-c {
   text-align: center;
+}
+.upper {
+  text-transform: uppercase;
+}
+.bold {
+  font-weight: bold;
 }
 
 /* Images */
