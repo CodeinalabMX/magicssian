@@ -18,7 +18,7 @@
  /* Define css custom properties
   * this values will affect/style html elements globally */
 
-/* * CSS Custom Properties */
+/*! * CSS Custom Properties */
  /* a.k.a CSS Variables
   * Changing this will affect almost everything ahead
   * 
@@ -40,8 +40,8 @@
     * https://developers.google.com/fonts/docs/getting_started
     * https://www.fontsquirrel.com/tools/webfont-generator
     * https://github.com/jonathantneal/postcss-font-magician */
-  --text-font: 'Montserrat', serif;
-  --heading-font: 'Merriweather', sans-serif;
+  --text-font: serif;
+  --heading-font: sans-serif;
   /* * * Font size & Rhytm unit */
    /* Our interpretation and implementation of the Vertical rhytm concept
     * Using a rhytm-unit, as a variable to mantain
@@ -92,7 +92,7 @@
     * background-color on notification */
   
   /* Hard-coded color variations: */
-  /*
+  /**/
   --complementary-color-1-darker: #c93f1c;
   --complementary-color-2-darker: #b4cc1a;
   --neutral-color-darker: #fbfbfb;
@@ -117,7 +117,7 @@
    * Test implementation */
 
   /* Dynamic color variations */
-  /**/
+  /*
   --lightness-variation: 80;
   --darkness-variation: 20;
   --complementary-color-1-darker: color(var(--complementary-color-1) shade(var(--darkness-variation)));
