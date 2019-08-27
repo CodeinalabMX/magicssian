@@ -1,5 +1,5 @@
-/*! Magicssian v0.7.0 http://codeinalabmx.github.io/magicssian License: MIT */
-/*! Custom build: Magicssian v0.7.0 */
+/*! Magicssian v0.7.1 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Custom build: Magicssian v0.7.1 */
 /*! Base */
 /*! * CSS Custom Properties */
 :root{--text-font:serif;--heading-font:sans-serif;--base-font-size:16px;--rhytm-unit:20px;--base-color:#0b162a;--complementary-color-1:#e35835;--complementary-color-2:#cde534;--heading-color:var(--base-color);--text-color:#1a1a1a;--neutral-color:#eaeaea;--information-color:#00529b;--warning-color:#9f6000;--error-color:#d8000c;--success-color:#4f8a10;--complementary-color-1-darker:#c93f1c;--complementary-color-2-darker:#b4cc1a;--neutral-color-darker:#fbfbfb;--neutral-color-lighter:#fbfbfb;--information-color-lighter:#b3dbff;--warning-color-lighter:#ffe0b3;--error-color-lighter:#ffb3b6;--success-color-lighter:#daf7bb;--container-boxed-width:80%;--rounded:0;--rounded-utility:4px}
@@ -201,10 +201,12 @@ body.sticky-footer footer{flex:0 0 auto}
 .scrollpane-h{max-width:100%;overflow:hidden;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20' viewBox='0 -3 10 20'%3E%3Cpolygon points='8 7 2 3 2 11 ' fill='%231A1A1A'/%3E%3C/svg%3E");background-position:right top;background-repeat:no-repeat}
 .scrollpane-h .content{max-width:calc(100% - 20px);max-width:calc(100% - var(--rhytm-unit));padding-bottom:20px;padding-bottom:var(--rhytm-unit);overflow-y:hidden;overflow-x:scroll;white-space:nowrap}
 /*! * Collections */
-.collection .heading{position:relative;margin:0;padding:calc(.5 * 20px);padding:calc(.5 * var(--rhytm-unit));line-height:calc(2 * 20px);line-height:calc(2 * var(--rhytm-unit));border:1px solid #eaeaea;border:1px solid var(--neutral-color);border-bottom:0;border-top-right-radius:0;border-top-right-radius:var(--rounded);border-top-left:0;border-top-left:var(--rounded)}
+.collection{border:1px solid #eaeaea;border:1px solid var(--neutral-color);border-radius:0;border-radius:var(--rounded)}
+.collection .heading{position:relative;margin:0;padding:calc(.5 * 20px);padding:calc(.5 * var(--rhytm-unit));line-height:calc(2 * 20px - 2px);line-height:calc(2 * var(--rhytm-unit) - 2px)}
 .collection .heading:after{position:absolute;content:'';display:block;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20' viewBox='0 -3 10 20'%3E%3Cpolygon points='8 7 2 3 2 11 ' fill='%231A1A1A'/%3E%3C/svg%3E");width:10px;height:20px;right:calc(.5 * 20px);right:calc(.5 * var(--rhytm-unit));top:20px;background-repeat:no-repeat;background-position:center;transform:rotate(90deg)}
-.collection .content{height:0;margin:0;padding:0 20px;padding:0 var(--rhytm-unit);border:1px solid #eaeaea;border:1px solid var(--neutral-color);border-top:none;border-bottom-right-radius:0;border-bottom-right-radius:var(--rounded);border-bottom-left:0;border-bottom-left:var(--rounded);overflow:hidden;transition:.4s ease-out}
-.collection [type=checkbox]:checked+label+.content{padding:calc(.5 * 20px) 20px;padding:calc(.5 * var(--rhytm-unit)) var(--rhytm-unit);height:280px}
+.collection .content{height:0;margin:0;padding:0 20px;padding:0 var(--rhytm-unit);overflow:hidden;transition:.4s ease-out}
+.collection>[type=checkbox]:checked+label .heading:after{transform:rotate(-90deg)}
+.collection>[type=checkbox]:checked+label+.content{padding:calc(.5 * 20px) 20px;padding:calc(.5 * var(--rhytm-unit)) var(--rhytm-unit);height:280px}
 /*! * Tabs */
 .tabs .navigation a{cursor:pointer;border:1px solid #eaeaea;border:1px solid var(--neutral-color);padding:calc(.5 * 20px);padding:calc(.5 * var(--rhytm-unit))}
 .tabs .navigation a.active{font-weight:700;border-bottom-color:#fff}
