@@ -1189,7 +1189,7 @@ body.sticky-footer footer {
   display: inline-block;
   background-color: transparent;
   border: 0;
-  text-indent: 100%;
+  text-indent: 1000px;
   white-space: nowrap;
   overflow: hidden;
 }
