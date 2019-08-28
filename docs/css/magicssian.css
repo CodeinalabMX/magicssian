@@ -196,17 +196,18 @@ body.sticky-footer footer{flex:0 0 auto}
 .dropdown.inline,.dropdown.inline>li{display:inline-block}
 .dropdown.inline ul{position:absolute;left:0;top:10px;width:max-content}
 .dropdown.inline li:hover>ul{display:inline-block}
-/*! * Horizontal scrollpane */
-.scrollpane-h~.column{overflow:hidden}
-.scrollpane-h{max-width:100%;overflow:hidden;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20' viewBox='0 -3 10 20'%3E%3Cpolygon points='8 7 2 3 2 11 ' fill='%231A1A1A'/%3E%3C/svg%3E");background-position:right top;background-repeat:no-repeat}
-.scrollpane-h .content{max-width:calc(100% - 20px);max-width:calc(100% - var(--rhytm-unit));padding-bottom:20px;padding-bottom:var(--rhytm-unit);overflow-y:hidden;overflow-x:scroll;white-space:nowrap}
+/*! * Horizontal scroll container */
+.scroll-h{position:relative;max-width:100%;overflow:hidden}
+.scroll-h:after{display:inline-block;content:'';width:20px;width:var(--rhytm-unit);height:20px;height:var(--rhytm-unit);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20' viewBox='0 -3 10 20'%3E%3Cpolygon points='8 7 2 3 2 11 ' fill='%231A1A1A'/%3E%3C/svg%3E");background-position:center;background-repeat:no-repeat;right:0;top:0;position:absolute}
+.scroll-h .content{max-width:calc(100% - 2 * 20px);max-width:calc(100% - 2 * var(--rhytm-unit));padding-bottom:20px;padding-bottom:var(--rhytm-unit);overflow-y:hidden;overflow-x:scroll;white-space:nowrap}
 /*! * Collections */
-.collection{border:1px solid #eaeaea;border:1px solid var(--neutral-color);border-radius:0;border-radius:var(--rounded)}
-.collection .heading{position:relative;margin:0;padding:calc(.5 * 20px);padding:calc(.5 * var(--rhytm-unit));line-height:calc(2 * 20px - 2px);line-height:calc(2 * var(--rhytm-unit) - 2px)}
-.collection .heading:after{position:absolute;content:'';display:block;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20' viewBox='0 -3 10 20'%3E%3Cpolygon points='8 7 2 3 2 11 ' fill='%231A1A1A'/%3E%3C/svg%3E");width:10px;height:20px;right:calc(.5 * 20px);right:calc(.5 * var(--rhytm-unit));top:20px;background-repeat:no-repeat;background-position:center;transform:rotate(90deg)}
-.collection .content{height:0;margin:0;padding:0 20px;padding:0 var(--rhytm-unit);overflow:hidden;transition:.4s ease-out}
-.collection>[type=checkbox]:checked+label .heading:after{transform:rotate(-90deg)}
-.collection>[type=checkbox]:checked+label+.content{padding:calc(.5 * 20px) 20px;padding:calc(.5 * var(--rhytm-unit)) var(--rhytm-unit);height:280px}
+/*! * Collapse container */
+.collapse{border:1px solid #eaeaea;border:1px solid var(--neutral-color);border-radius:0;border-radius:var(--rounded)}
+.collapse .heading{position:relative;margin:0;padding:calc(.5 * 20px);padding:calc(.5 * var(--rhytm-unit));line-height:calc(2 * 20px - 2px);line-height:calc(2 * var(--rhytm-unit) - 2px)}
+.collapse .heading:after{position:absolute;content:'';display:block;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20' viewBox='0 -3 10 20'%3E%3Cpolygon points='8 7 2 3 2 11 ' fill='%231A1A1A'/%3E%3C/svg%3E");width:10px;height:20px;right:calc(.5 * 20px);right:calc(.5 * var(--rhytm-unit));top:20px;background-repeat:no-repeat;background-position:center;transform:rotate(90deg)}
+.collapse .content{height:0;margin:0;padding:0 20px;padding:0 var(--rhytm-unit);overflow:hidden;transition:.4s ease-out}
+.collapse>[type=checkbox]:checked+label .heading:after{transform:rotate(-90deg)}
+.collapse>[type=checkbox]:checked+label+.content{padding:calc(.5 * 20px) 20px;padding:calc(.5 * var(--rhytm-unit)) var(--rhytm-unit);height:280px}
 /*! * Tabs */
 .tabs .navigation a{cursor:pointer;border:1px solid #eaeaea;border:1px solid var(--neutral-color);padding:calc(.5 * 20px);padding:calc(.5 * var(--rhytm-unit))}
 .tabs .navigation a.active{font-weight:700;border-bottom-color:#fff}
