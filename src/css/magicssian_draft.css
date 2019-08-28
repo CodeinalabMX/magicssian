@@ -26,13 +26,15 @@
  * * * Disabled button
  * * * Button link
  * Components
+ * * Container
  * * Sticky footer
  * * (Flexbox) Grid
  * * * Columns
  * * Notification
  * * Navigation
  * * Dropdown navigation
- * * Horizontal scrollpane
+ * * Horizontal scroll container
+ * * Collapsible container
  * * Collections
  * * Tabs
  * Utilities
@@ -262,17 +264,16 @@ cite {
   text-align: right;
 }
 pre {
+  margin: calc(2 * var(--rhytm-unit)) 0;
   padding: calc(.5 * var(--rhytm-unit));
   background-color: var(--neutral-color);
   border-radius: var(--rounded);
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 pre.variant {
   color: var(--neutral-color);
   background-color: var(--text-color);
-}
-pre {
-  white-space: pre-wrap;
-  word-break: break-all;
 }
 hr {
   height: 1px;
@@ -779,6 +780,18 @@ button.link.no-decoration {
 /*! Components */
  /* Custom constructed elements */
 
+/*! * Container */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+.container.boxed {
+  max-width: var(--container-boxed-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /*! * Sticky footer */
  /* Tools & reference:
   * https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers */
@@ -1143,18 +1156,6 @@ body.sticky-footer footer {
 
 
 /*! Utilities */
-
-/* Container */
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-}
-.container.boxed {
-  max-width: var(--container-boxed-width);
-  margin-right: auto;
-  margin-left: auto;
-}
 
 /* Padded container */
 .padded {
