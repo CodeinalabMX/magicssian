@@ -1044,36 +1044,47 @@ body.sticky-footer footer {
   display: inline-block;
 }
 
-/*! * Horizontal scrollpane */
-.scrollpane-h ~ .column {
-  overflow: hidden;
-}
-.scrollpane-h {
+/*! * Horizontal scroll container */
+.scroll-h {
+  position: relative;
   max-width: 100%;
   overflow: hidden;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20' viewBox='0 -3 10 20'%3E%3Cpolygon points='8 7 2 3 2 11 ' fill='%231A1A1A'/%3E%3C/svg%3E");
-  background-position: right top;
-  background-repeat: no-repeat;
 }
-.scrollpane-h .content {
-  max-width: calc(100% - var(--rhytm-unit));
+.scroll-h:after {
+  display: inline-block;
+  content: '';
+  width: var(--rhytm-unit);
+  height: var(--rhytm-unit);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20' viewBox='0 -3 10 20'%3E%3Cpolygon points='8 7 2 3 2 11 ' fill='%231A1A1A'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+.scroll-h .content {
+  max-width: calc(100% - 2 * var(--rhytm-unit));
   padding-bottom: var(--rhytm-unit);
   overflow-y: hidden;
   overflow-x: scroll;
   white-space: nowrap;
 }
+
 /*! * Collections */
-.collection {
+
+
+/*! * Collapse container */
+.collapse {
   border: 1px solid var(--neutral-color);
   border-radius: var(--rounded);
 }
-.collection .heading {
+.collapse .heading {
   position: relative;
   margin: 0;
   padding: calc(.5 * var(--rhytm-unit));
   line-height: calc(2 * var(--rhytm-unit) - 2px);
 }
-.collection .heading:after {
+.collapse .heading:after {
   position: absolute;
   content: '';
   display: block;
@@ -1086,17 +1097,17 @@ body.sticky-footer footer {
   background-position: center;
   transform: rotate(90deg);
 }
-.collection .content {
+.collapse .content {
   height: 0;
   margin: 0;
   padding: 0 var(--rhytm-unit);
   overflow: hidden;
   transition: all .4s ease-out;
 }
-.collection > [type=checkbox]:checked + label .heading:after {
+.collapse > [type=checkbox]:checked + label .heading:after {
   transform: rotate(-90deg);
 }
-.collection > [type=checkbox]:checked + label + .content {
+.collapse > [type=checkbox]:checked + label + .content {
   padding: calc(.5 * var(--rhytm-unit)) var(--rhytm-unit);
   height: 280px;
 }
