@@ -370,8 +370,16 @@ ul.custom.dash.no-indent,
 ul.custom.arrow.no-indent {
   padding-left: calc(1.125 * var(--rhytm-unit));
 }
-ul.custom.variant {
+ul.custom.variant > li:before {
   background: var(--complementary-color-2);
+}
+ul.custom.variant.outlined > li:before {
+  background: transparent;
+  border-color: var(--complementary-color-2);
+}
+ul.custom.variant.arrow > li:before {
+  background: transparent;
+  border-left-color: var(--complementary-color-2);
 }
 dt {
   font-weight: bold;
