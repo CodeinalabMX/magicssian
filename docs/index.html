@@ -503,11 +503,13 @@
             </div>
           </div>
 
-          <h3>Horizontal scrollpane</h3>
+          <h3>Horizontal scroll container</h3>
           <p>
-            Basic container to display 
+            Display elements horizontally in a constrained size container, scroll only works with mouse or touch gestures.
           </p>
-          <pre><code>&lt;div class="scrollpane-h"&gt;
+          <pre><code>.container .scroll-h []
+
+&lt;div class="container scroll-h"&gt;
   &lt;div class="content"&gt;
     &lt;a href="javascript:;" title="Item start" class=""&gt;Item start&lt;/a&gt;
     &lt;a href="javascript:;" title="Item" class=""&gt;Item&lt;/a&gt;
@@ -515,11 +517,11 @@
 &lt;/div&gt;
 </code></pre>
           <h4>The examples</h4>
-          <div class="scrollpane-examples">
+          <div class="scroll-h-examples">
           <div class="container grid">
 
             <div class="one-half column">
-              <div class="scrollpane-h"><div class="content">
+              <div class="container scroll-h"><div class="content">
                 <a href="javascript:;" title="" class="">Item start</a>
                 <a href="javascript:;" title="" class="">Item 1</a>
                 <a href="javascript:;" title="" class="">Item 2</a>
@@ -553,7 +555,7 @@
               // empty //
             </div>
             <div class="one-quarter column">
-              <div class="scrollpane-h"><div class="content">
+              <div class="container scroll-h"><div class="content">
                 <a href="javascript:;" title="" class="">Item start</a>
                 <a href="javascript:;" title="" class="">Item 1</a>
                 <a href="javascript:;" title="" class="">Item 2</a>
@@ -565,14 +567,26 @@
           </div>
           </div>
 
-          <h3>Collections</h3>
-          <p></p>
+          <h3>Collapsible container</h3>
+          <p>An accordion-like container, toggle content display using checkbox hack.</p>
+<pre><code>.container .collapse []
+
+&lt;div class="container collapse"&gt;
+  &lt;input type="checkbox" id="check-collapse" name="check-collapse" class="hidden"&gt;
+  &lt;label for="check-collapse" id="" title="" class=""&gt;
+    &lt;h5 class="heading"&gt;Heading&lt;/h5&gt;
+  &lt;/label&gt;
+  &lt;div class="content"&gt;
+    &lt;li&gt;&lt;a href="javascript:;" title="Item 1" class="item"&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="javascript:;" title="Item 2" class="item"&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
           <h4>The examples</h4>
-          <div class="collections-examples">
+          <div class="collapse-examples">
             <div class="container grid">
 
             <div class="column">
-              <div class="collection">
+              <div class="container collapse">
                 <input type="checkbox" id="check-collection-1" name="" class="hidden">
                 <label for="check-collection-1" id="" title="" class="">
                   <h5 class="heading">Heading</h5>
@@ -585,7 +599,7 @@
             </div>
 
             <div class="column">
-              <div class="collection">
+              <div class="container collapse">
                 <input type="checkbox" id="check-collection-2" name="" class="hidden">
                 <label for="check-collection-2" id="" title="" class="">
                   <h5 class="heading">Heading</h5>
