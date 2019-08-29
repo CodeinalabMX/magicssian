@@ -35,7 +35,7 @@
  * * Dropdown navigation
  * * Horizontal scroll container
  * * Collapsible container
- * * Collections
+ * * Collection
  * * Tabs
  * Utilities
  *
@@ -1091,8 +1091,32 @@ body.sticky-footer footer {
   white-space: nowrap;
 }
 
-/*! * Collections */
-
+/*! * Collection */
+.collection {
+  min-height: 280px;
+  border: 1px solid var(--neutral-color);
+  border-radius: var(--rounded);
+}
+.collection .heading {
+  margin: 0;
+  padding: calc(.5 * var(--rhytm-unit));
+  background: var(--neutral-color);
+  line-height: calc(2 * var(--rhytm-unit));
+}
+.collection .content {
+  padding: var(--rhytm-unit);
+}
+.collection .content > *:after {
+  content: '\A';
+  white-space: pre;
+}
+.collection .content > *:last-child:after {
+  content: '';
+}
+.collection .heading > *, 
+.collection .content > * {
+  margin: 0;
+}
 
 /*! * Collapse container */
 .collapse {
