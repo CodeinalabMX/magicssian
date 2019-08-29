@@ -24,7 +24,7 @@
     "watch": "^1.0.2"
   },
   "scripts": {
-    "watch": "onchange 'src/css/*.css src/css/_project_variables.css' -- npm run build",
+    "watch": "onchange 'src/css/*.css' -- npm run build",
     "postcss": "postcss src/css/magicssian_draft.css --config './' --map '.' --output docs/css/magicssian.css",
     "cleancss": "cleancss -O2 --format keep-breaks --source-map --output docs/css/magicssian.css docs/css/magicssian.css",
     "minifycss": "cleancss -O1 specialComments:2 -02 --format breaks:afterComment=on --source-map --output docs/css/magicssian.min.css docs/css/magicssian.css",
