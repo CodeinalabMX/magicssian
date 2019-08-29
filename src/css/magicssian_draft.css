@@ -1127,7 +1127,7 @@ body.sticky-footer footer {
   position: relative;
   margin: 0;
   padding: calc(.5 * var(--rhytm-unit));
-  line-height: calc(2 * var(--rhytm-unit) - 2px);
+  line-height: calc(2 * var(--rhytm-unit));
 }
 .collapse .heading:after {
   position: absolute;
