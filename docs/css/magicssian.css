@@ -1,8 +1,8 @@
-/*! Magicssian v0.8.0 http://codeinalabmx.github.io/magicssian License: MIT */
-/*! Custom build: Magicssian v0.8.0 */
+/*! Magicssian v0.9.0 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Custom build: Magicssian v0.9.0 */
 /*! Base */
 /*! * CSS Custom Properties */
-:root{--text-font:serif;--heading-font:sans-serif;--base-font-size:16px;--rhytm-unit:20px;--base-color:#0b162a;--complementary-color-1:#e35835;--complementary-color-2:#cde534;--heading-color:var(--base-color);--text-color:#1a1a1a;--neutral-color:#eaeaea;--information-color:#00529b;--warning-color:#9f6000;--error-color:#d8000c;--success-color:#4f8a10;--complementary-color-1-darker:#c93f1c;--complementary-color-2-darker:#b4cc1a;--neutral-color-darker:#fbfbfb;--neutral-color-lighter:#fbfbfb;--information-color-lighter:#b3dbff;--warning-color-lighter:#ffe0b3;--error-color-lighter:#ffb3b6;--success-color-lighter:#daf7bb;--container-boxed-width:80%;--rounded:0;--rounded-utility:4px}
+:root{--text-font:serif;--heading-font:sans-serif;--base-font-size:16px;--rhytm-unit:20px;--base-color:#0b162a;--complementary-color-1:#e35835;--complementary-color-2:#cde534;--heading-color:var(--base-color);--text-color:#1a1a1a;--neutral-color:#eaeaea;--information-color:#00529b;--warning-color:#9f6000;--error-color:#d8000c;--success-color:#4f8a10;--complementary-color-1-darker:#c93f1c;--complementary-color-2-darker:#b4cc1a;--neutral-color-darker:#d9d9d9;--neutral-color-lighter:#fbfbfb;--information-color-lighter:#b3dbff;--warning-color-lighter:#ffe0b3;--error-color-lighter:#ffb3b6;--success-color-lighter:#daf7bb;--container-boxed-width:80%;--rounded:0;--rounded-utility:4px}
 /*! * Colors */
 /*! * * Base scheme */
 .base-color{color:#0b162a;color:var(--base-color)}
@@ -19,7 +19,7 @@
 /*! * * Color variants */
 .complementary-color-1-darker{color:#c93f1c;color:var(--complementary-color-1-darker)}
 .complementary-color-2-darker{color:#b4cc1a;color:var(--complementary-color-2-darker)}
-.neutral-color-darker{color:#fbfbfb;color:var(--neutral-color-darker)}
+.neutral-color-darker{color:#d9d9d9;color:var(--neutral-color-darker)}
 .neutral-color-lighter{color:#fbfbfb;color:var(--neutral-color-lighter)}
 .information-color-lighter{color:#b3dbff;color:var(--information-color-lighter)}
 .warning-color-lighter{color:#ffe0b3;color:var(--warning-color-lighter)}
@@ -54,7 +54,7 @@ small{font-size:.75rem}
 sub,sup{line-height:0}
 blockquote{padding:calc(2 * 20px);padding:calc(2 * var(--rhytm-unit));margin-top:calc(2 * 20px);margin-top:calc(2 * var(--rhytm-unit));margin-bottom:calc(2 * 20px);margin-bottom:calc(2 * var(--rhytm-unit));margin-left:calc(2 * 20px);margin-left:calc(2 * var(--rhytm-unit));border-left:2px solid #e35835;border-left:2px solid var(--complementary-color-1)}
 cite{display:inline-block;width:100%;text-align:right}
-pre{margin:calc(2 * 20px) 0;margin:calc(2 * var(--rhytm-unit)) 0;padding:calc(.5 * 20px);padding:calc(.5 * var(--rhytm-unit));background-color:#eaeaea;background-color:var(--neutral-color);border-radius:0;border-radius:var(--rounded);white-space:pre-wrap;word-break:break-all}
+pre{margin:calc(2 * 20px) 0;margin:calc(2 * var(--rhytm-unit)) 0;padding:20px;padding:var(--rhytm-unit);background-color:#eaeaea;background-color:var(--neutral-color);border-radius:0;border-radius:var(--rounded);white-space:pre-wrap;word-break:break-all}
 pre.variant{color:#eaeaea;color:var(--neutral-color);background-color:#1a1a1a;background-color:var(--text-color)}
 hr{height:1px;margin:calc(20px - 1px) 20px;margin:calc(var(--rhytm-unit) - 1px) var(--rhytm-unit);background-color:#e35835;background-color:var(--complementary-color-1)}
 /*! * Links */
@@ -205,10 +205,16 @@ body.sticky-footer footer{flex:0 0 auto}
 .scroll-h{position:relative;max-width:100%;overflow:hidden}
 .scroll-h:after{display:inline-block;content:'';width:20px;width:var(--rhytm-unit);height:20px;height:var(--rhytm-unit);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20' viewBox='0 -3 10 20'%3E%3Cpolygon points='8 7 2 3 2 11 ' fill='%231A1A1A'/%3E%3C/svg%3E");background-position:center;background-repeat:no-repeat;right:0;top:0;position:absolute}
 .scroll-h .content{max-width:calc(100% - 2 * 20px);max-width:calc(100% - 2 * var(--rhytm-unit));padding-bottom:20px;padding-bottom:var(--rhytm-unit);overflow-y:hidden;overflow-x:scroll;white-space:nowrap}
-/*! * Collections */
+/*! * Collection */
+.collection{min-height:280px;border:1px solid #eaeaea;border:1px solid var(--neutral-color);border-radius:0;border-radius:var(--rounded)}
+.collection .heading{margin:0;padding:calc(.5 * 20px);padding:calc(.5 * var(--rhytm-unit));background:#eaeaea;background:var(--neutral-color);line-height:calc(2 * 20px);line-height:calc(2 * var(--rhytm-unit))}
+.collection .content{padding:20px;padding:var(--rhytm-unit)}
+.collection .content>:after{content:'\A';white-space:pre}
+.collection .content>:last-child:after{content:''}
+.collection .content>*,.collection .heading>*{margin:0}
 /*! * Collapse container */
 .collapse{border:1px solid #eaeaea;border:1px solid var(--neutral-color);border-radius:0;border-radius:var(--rounded)}
-.collapse .heading{position:relative;margin:0;padding:calc(.5 * 20px);padding:calc(.5 * var(--rhytm-unit));line-height:calc(2 * 20px - 2px);line-height:calc(2 * var(--rhytm-unit) - 2px)}
+.collapse .heading{position:relative;margin:0;padding:calc(.5 * 20px);padding:calc(.5 * var(--rhytm-unit));line-height:calc(2 * 20px);line-height:calc(2 * var(--rhytm-unit))}
 .collapse .heading:after{position:absolute;content:'';display:block;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20' viewBox='0 -3 10 20'%3E%3Cpolygon points='8 7 2 3 2 11 ' fill='%231A1A1A'/%3E%3C/svg%3E");width:10px;height:20px;right:calc(.5 * 20px);right:calc(.5 * var(--rhytm-unit));top:20px;background-repeat:no-repeat;background-position:center;transform:rotate(90deg)}
 .collapse .content{height:0;margin:0;padding:0 20px;padding:0 var(--rhytm-unit);overflow:hidden;transition:.4s ease-out}
 .collapse>[type=checkbox]:checked+label .heading:after{transform:rotate(-90deg)}
