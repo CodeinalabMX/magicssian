@@ -839,6 +839,16 @@ body.sticky-footer footer {
   align-items: flex-end;
 }
 
+.grid.gutter-row > .column {
+  padding: 0 calc(.5 * var(--rhytm-unit));
+}
+.grid.gutter-row > .column:first-child {
+  padding-left: 0;
+}
+.grid.gutter-row > .column:last-child {
+  padding-right: 0;
+}
+
 /*! * * Columns */
 .grid .column {
   flex: 1;
@@ -887,6 +897,9 @@ body.sticky-footer footer {
   .two-thirds.column,
   .three-quarters.column {
     width: 100%;
+  }
+  .grid.gutter-row > .column {
+    padding: 0;
   }
 }
 
