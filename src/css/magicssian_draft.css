@@ -705,8 +705,8 @@ input[type=button].base,
 input[type=submit].base, 
 input[type=reset].base {
   color: white;
-  background: var(--base-color-darker);
-  border-color: var(--base-color-darker);
+  background: var(--base-color);
+  border-color: var(--base-color);
 }
 button.base:hover, 
 .button.base:hover, 
