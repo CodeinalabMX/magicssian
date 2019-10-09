@@ -22,6 +22,7 @@
  * * Buttons
  * * * Default button
  * * * Variant button
+ * * * Base button
  * * * Outlined button
  * * * Disabled button
  * * * Button link
@@ -301,6 +302,13 @@ a.variant:link, a.variant:visited {
 a.variant:hover, a.variant:active, a.variant:focus, a.variant.active {
   color: var(--complementary-color-2-darker);
   border-bottom-color: var(--complementary-color-2-darker);
+}
+a.base:link, a.base:visited {
+  color: var(--base-color);
+}
+a.base:hover, a.base:active, a.base:focus, a.base.active {
+  color: var(--base-color-darker);
+  border-bottom-color: var(--base-color-darker);
 }
 a.no-decoration, a.no-decoration:hover, a.no-decoration:active, a.no-decoration:focus, a.no-decoration:active {
   border-bottom-color: transparent;
@@ -689,6 +697,37 @@ input[type=reset].variant:focus {
   /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
 
+/*! * * Base button */
+ button.base, 
+.button.base, 
+a.button.base,
+input[type=button].base,
+input[type=submit].base, 
+input[type=reset].base {
+  color: white;
+  background: var(--base-color-darker);
+  border-color: var(--base-color-darker);
+}
+button.base:hover, 
+.button.base:hover, 
+a.button.base:hover,
+input[type=button].base:hover,
+input[type=submit].base:hover, 
+input[type=reset].base:hover {
+  background-color: var(--base-color-darker);
+  border-color: var(--base-color-darker);
+}
+button.base:focus, 
+.button.base:focus, 
+a.button.base:focus,
+input[type=button].base:focus,
+input[type=submit].base:focus, 
+input[type=reset].base:focus {
+  background-color: var(--base-color-darker);
+  border-color: var(--base-color-darker);
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
+}
+
 /*! * * Outlined button */
 button.outlined, 
 .button.outlined, 
@@ -748,6 +787,35 @@ input[type=reset].variant.outlined:focus {
   /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
 }
 
+button.base.outlined, 
+.button.base.outlined, 
+a.button.base.outlined,
+input[type=button].base.outlined,
+input[type=submit].base.outlined, 
+input[type=reset].base.outlined {
+  color: var(--base-color);
+}
+button.base.outlined:hover, 
+.button.base.outlined:hover, 
+a.button.base.outlined:hover,
+input[type=button].base.outlined:hover,
+input[type=submit].base.outlined:hover, 
+input[type=reset].base.outlined:hover {
+  color: white;
+  background-color: var(--base-color-darker);
+}
+button.base.outlined:focus, 
+.button.base.outlined:focus, 
+a.button.base.outlined:focus,
+input[type=button].base.outlined:focus,
+input[type=submit].base.outlined:focus, 
+input[type=reset].base.outlined:focus {
+  color: white;
+  background-color: var(--base-color-darker);
+  border-color: var(--base-color-darker);
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
+}
+
 /*! * * Disabled button */
 input[type=submit]:disabled, 
 button:disabled {
@@ -780,6 +848,14 @@ button.link.variant {
 button.link.variant:hover, button.link.variant:active, button.link.variant:focus {
   color: var(--complementary-color-2-darker);
   border-bottom-color: var(--complementary-color-2-darker);
+}
+button.link.base {
+  background-color: transparent;
+  color: var(--base-color);
+}
+button.link.base:hover, button.link.base:active, button.link.base:focus {
+  color: var(--base-color-darker);
+  border-bottom-color: var(--base-color-darker);
 }
 button.link.no-decoration {
   border-bottom-color: transparent;
