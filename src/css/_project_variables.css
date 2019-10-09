@@ -93,6 +93,7 @@
   
   /* Hard-coded color variations: */
   /**/
+  --base-color-darker: #04080f;
   --complementary-color-1-darker: #c93f1c;
   --complementary-color-2-darker: #b4cc1a;
   --neutral-color-darker: #d9d9d9;
