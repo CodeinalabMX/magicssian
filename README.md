@@ -1,2 +1,2 @@
-# magicssian v0.10.1
+# magicssian v0.11.0
 A CSS Boilerplate
