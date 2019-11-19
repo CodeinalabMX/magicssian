@@ -948,7 +948,7 @@ body.sticky-footer footer {
 .three-quarters.column {
   flex: 0 0 75%;
 }
-@media (max-width: 780px) {
+@media (max-width: var(--grid-breakpoint)) {
   .grid, .grid.column {
     flex-flow: column;
   }
@@ -1100,7 +1100,7 @@ body.sticky-footer footer {
 .navigation.slide-r [type=checkbox]:checked + label + .menu {
   right: 0;
 }
-@media (max-width: 780px) {
+@media (max-width: var(--navigation-breakpoint)) {
   .navigation label {
     display: block;
   }

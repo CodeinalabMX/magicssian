@@ -134,6 +134,10 @@
   /* * * Extras */
   /* Width/Max-width for .container.boxed */
   --container-boxed-width: 80%;
+  /* Grid breakpoint */
+  --grid-breakpoint: 780px;
+  /* Navigation breakpoint */
+  --navigation-breakpoint: 780px;
   /* border-radius value
    * will apply globally for:
    * pre, buttons, form elements, notifications and tabs
