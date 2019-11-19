@@ -1,5 +1,5 @@
 {
-  "name": "magicssian",
+  "name": "Magicssian",
   "version": "0.10.1",
   "description": "A CSS Boilerplate",
   "main": "index.js",
@@ -29,7 +29,7 @@
     "cleancss": "cleancss -O2 --format keep-breaks --source-map --output docs/css/magicssian.css docs/css/magicssian.css",
     "minifycss": "cleancss -O1 specialComments:2 -02 --format breaks:afterComment=on --source-map --output docs/css/magicssian.min.css docs/css/magicssian.css",
     "build": "npm run postcss && npm run cleancss && npm run minifycss",
-    "vbump": "bump package.json package-lock.json README.md src/css/magicssian_draft.css src/css/_project_variables.css",
+    "vbump": "bump package.json package-lock.json README.md src/css/magicssian_draft.css src/css/_project_variables.css --commit --tag --push",
     "dist": ""
   },
   "repository": {
