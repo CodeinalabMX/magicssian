@@ -969,14 +969,17 @@ body.sticky-footer footer {
   .grid.valign-b {
     justify-content: flex-end;
   }
+  .full-width.column,
   .one-half.column,
   .one-third.column,
-  .one-quarter.coilumn,
+  .one-quarter.column,
   .two-thirds.column,
   .three-quarters.column {
     width: 100%;
   }
-  .grid.gutter-row > .column {
+  .grid.gutter-row > .column, 
+  .grid.gutter-row > .column:first-child, 
+  .grid.gutter-row > .column:last-child {
     padding: 0;
   }
 }
