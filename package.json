@@ -9,12 +9,17 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "brunch": "^2.10.17",
+    "clean-css-brunch": "^2.10.0",
     "clean-css-cli": "^4.2.1",
+    "copycat-brunch": "^1.1.1",
     "cross-var": "^1.1.0",
     "html5-boilerplate": "^7.0.1",
     "html5-test-page": "^0.8.0",
+    "keyword-brunch": "^2.0.0",
     "mkdirp": "^0.5.1",
     "onchange": "^5.2.0",
+    "postcss-brunch": "^2.10.1",
     "postcss-calc": "^7.0.1",
     "postcss-cli": "^6.1.2",
     "postcss-color-function": "^4.0.1",
@@ -24,6 +29,7 @@
     "watch": "^1.0.2"
   },
   "scripts": {
+    "brunch": "brunch",
     "watch": "onchange 'src/css/*.css' -- npm run build",
     "postcss": "postcss src/css/magicssian_draft.css --config './' --map '.' --output docs/css/magicssian.css",
     "cleancss": "cleancss -O2 --format keep-breaks --source-map --output docs/css/magicssian.css docs/css/magicssian.css",

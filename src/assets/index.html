@@ -1,0 +1,731 @@
+<!--Template_header-->
+<!doctype html>
+<html class="no-js" lang="">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Magicssian</title>
+    <meta name="description" content="A CSS Boilerplate">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--<link rel="manifest" href="site.webmanifest">-->
+    <!--<link rel="apple-touch-icon" href="icon.png">-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:300" rel="stylesheet">
+    <link rel="stylesheet" href="./css/magicssian.min.css">
+    <!--<link rel="stylesheet" href="../src/scss_css/magicssian_draft.css">-->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <meta name="theme-color" content="#fafafa">
+  </head>
+
+  <body class="sticky-footer">
+
+    <header>
+      <div id="magicssian"><div></div><div></div></div>
+      <h1 class="magicssian heading h3">MAGICSSIAN</h1>
+
+      <div class="navigation slide-r main align-c">
+        <input type="checkbox" id="check-menu-toggle" name="check-menu-toggle" class="check-menu-toggle hidden">
+        <label for="check-menu-toggle" id="label-menu-toggle" class="label-menu-toggle"><div></div></label>
+        <nav class="menu">
+          <a href="#what-is-it" title="What is it" class="">What is it</a>
+          <a href="#get-into-it" title="Get into it" class="">Get into it</a>
+          <a href="#the-base" title="The base" class="">The base</a>
+          <a href="#the-components" title="The base" class="">The components</a>
+        </nav>
+      </div>
+    </header>
+
+    <section>
+<!--/Template_header-->
+
+<!--Section_content-->
+      <div class="container boxed">
+        
+        <article id="what-is-it">
+          <h2>What is it</h2>
+          <p>
+            Magicssian is a CSS Boilerplate to head start a small web project by providing cross-browser consistent styles to default HTML elements with pure css trickery and a bit of design.
+          </p>
+          <p>
+            <!-- 
+              Add a more detailed description
+              Add some of the development story, etc
+            -->
+          </p>
+        </article>
+
+        <article id="get-into-it">
+          <h2>Get into it</h2>      
+          <p>
+            <br />
+            <a href="" title="Download" class="button">Download</a>
+            <br />
+            Add the following tag to your html5 document
+            <pre><code>&lt;link rel="stylesheet" href="./path/to/magicssian.min.css"&gt;</code></pre>
+          and Tadaa! you can start doing some tricks.
+          </p>
+        </article>
+
+        <article id="the-base">
+          <h2>The base</h2>
+          <p>
+            <!--
+              Add an intro to custom reset, and html5 boilerplate
+              Add a description of what we try to achieve
+            -->
+          </p>
+          You can see how all HTML5 elements look like with Magicssian on this 
+          <a href="html5-test-page.html" title="HTML5 test page">HTML5 test page</a>.
+          <br />HTML5 test page created by @cbracco 
+          <h3>Custom properties</h3>
+          <p>
+            All things avaliable for a custom setup is here, we use the relatively new CSS Custom properties 
+          </p>
+          <h3>Reset</h3>
+          <p>
+            a.k.a css variables
+          </p>
+          <h4>The examples</h4>
+          
+          <h3>Text</h3>
+          <p>
+            <!--Add a description-->              
+          </p>
+          <h4>The examples</h4>
+          <h5>Headings</h5>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+
+          <h5>Paragraph</h5>
+          <p>
+            This is a simple paragraph block with some regular text-level markup, like <strong>Strong</strong> or <b>Bold</b>, <em>Emphasis</em> or <i>Italics</i>, also an example of using subscript<sub>2</sub> and superscript<sup>2</sup>, <del>del</del>, <ins>ins</ins> or <dfn title="This is a definition">dfn</dfn>, <abbr title="This is an abbreviation">abbr</abbr> for definition and abbreviation respectively.
+          </p>
+          <p>Start a new paragraph block with <q>inline quotations</q> and &lt;code&gt; tag: <code>&lta href="" title="title"&gt</code>.
+            <br />
+            After a &lt;br /&gt; <a href="javascript:;" title="Default link">default link</a> looks like followed by <a href="javascript:;" title="Variant link" class="variant">a color variant</a> and <a href="javascript:;" title="Base color link" class="base">the base color variant</a>, finally, a blockquote:
+          </p>
+          <blockquote>
+            Abracadabra
+            <cite>A magician</cite>
+          </blockquote>
+
+          <h5>Preformated text & Code</h5>
+          <p>
+            <!--Add a description-->
+          </p>
+<pre>
+    class Foo {
+      public $publicVariable = 'A public variable';
+
+      function functionName() {
+        echo $publicVariable;
+      }
+    }
+</pre>
+          <h5>Variant</h5>
+<pre class="variant">
+    class Foo {
+      public $publicVariable = 'A public variable';
+
+      function functionName() {
+        echo $publicVariable;
+      }
+    }
+</pre>
+          <h3>Lists</h3>
+          <p>
+            By default lists are basically untouched, beside font-size and line-height, everything else remains the same.               
+          </p>
+          <div class="container grid">
+
+              <ul class="column">
+                <li>Unordered
+                  <ul>
+                    <li>Nested</li>
+                  </ul>
+                </li>
+                <li>list</li>
+                <li>item</li>
+              </ul>
+              <ol class="column">
+                <li>Ordered
+                  <ol>
+                    <li>Nested</li>
+                  </ol>
+                </li>
+                <li>list</li>
+                <li>item 3</li>
+              </ol>
+
+          </div>
+          <p>
+            However, you can customize lists using combinations of the following classes:
+          </p>
+          <pre><code>.custom [.variant .outlined, .square, .diamond, .dash, .arrow, .no-decoration, .no-indent]</code></pre>
+          <div class="container grid">
+
+              <ul class="column custom">
+                <li>.custom (Default)
+                  <ul class="custom outlined">
+                    <li>.outlined</li>
+                  </ul>
+                </li>
+                <li>list</li>
+                <li>item</li>
+              </ul>            
+              <ul class="column custom square">
+                <li>.custom .square
+                  <ul class="custom square outlined">
+                    <li>.outlined</li>
+                  </ul>
+                </li>
+                <li>list</li>
+                <li>item</li>
+              </ul>
+              <ul class="column custom diamond">
+                <li>.custom .diamond
+                <ul class="custom diamond outlined">
+                    <li>.outlined</li>
+                  </ul>
+                </li>
+                <li>list</li>
+                <li>item</li>
+              </ul>
+              <ul class="column custom dash">
+                <li>.custom .dash</li>
+                <li>list</li>
+                <li>item</li>
+              </ul>
+              <ul class="column custom arrow">
+                <li>.custom .arrow</li>
+                <li>list</li>
+                <li>item</li>
+              </ul>
+
+          </div>
+          <div class="container grid">
+
+            <ul class="column custom no-decoration">
+                <li>.custom .no-decoration</li>
+                <li>list</li>
+                <li>item</li>
+              </ul>
+              <ul class="column custom no-decoration no-indent">
+                <li>.custom .no-decoration .no-indent</li>
+                <li>list</li>
+                <li>item</li>
+              </ul>
+
+            </div>
+
+          <h3>Tables</h3>
+          <p>
+            <!--Add a description-->              
+          </p>
+          <h4>The examples</h4>
+          <table>
+            <caption>Table caption</caption>
+            <thead>
+              <tr><th>table heading</th><th>table heading</th><th>table heading</th></tr>
+            </thead>
+            <tfoot>
+              <tr><td colspan="3">table foot</td></tr>
+            </tfoot>
+            <tbody>
+              <tr><td>table data 0</td><td>table data 0</td><td>table data 0</td></tr>
+              <tr><td>table data 1</td><td>table data 1</td><td>table data 1</td></tr>
+              <tr><td>table data 2</td><td>table data 2</td><td>table data 2</td></tr>
+            </tbody>
+          </table>
+          <h5>Striped</h5>
+          <table class="striped">
+            <!--<caption>Table caption</caption>-->
+            <thead>
+              <tr><th>table heading</th><th>table heading</th><th>table heading</th></tr>
+            </thead>
+            <!--<tfoot>
+              <tr><td colspan="3">table foot</td></tr>
+            </tfoot>-->
+            <tbody>
+              <tr><td>table data 0</td><td>table data 0</td><td>table data 0</td></tr>
+              <tr><td>table data 1</td><td>table data 1</td><td>table data 1</td></tr>
+              <tr><td>table data 2</td><td>table data 2</td><td>table data 2</td></tr>
+              <tr><td>table data 3</td><td>table data 3</td><td>table data 3</td></tr>
+              <tr><td>table data 4</td><td>table data 4</td><td>table data 4</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Buttons</h3>
+          <p>
+            <!--Add a description-->              
+          </p>
+          <h4>The examples</h4>
+          <a href="" title="Button" class="button">Link Button</a>
+          <input type="submit" name="" value="Type Submit" />
+          <input type="reset" name="" value="Type Reset" />
+          <input type="button" name="" value="Type Button" />
+          <button class="" type="button">Button</button>
+          <button class="" type="button" disabled>Button</button>
+          <br />
+          <a href="" title="Button" class="button outlined">Link Button Outlined</a>
+          <br /> 
+          <a href="" title="Button" class="button variant">Link Button Alternative</a>
+          <a href="" title="Button" class="button variant outlined">Link Button Outlined Alternative</a>
+          <br />
+          <a href="" title="Button" class="button base">Link Button Alternative</a>
+          <a href="" title="Button" class="button base outlined">Link Button Outlined Alternative</a>
+          <br /><br />
+          <button type="button" class="link">Button Link</button>
+          <button type="button" class="link variant">Button Link Variant</button>
+          <button type="button" class="link base">Button Link Base variant</button>
+
+          <h3>Form items</h3>
+          <p>
+            <!--Add a description-->    
+          </p>
+          <div class="form-examples">
+            <form action="" enctype="multipart/form-data" method="post" name="form-demo" id="form-demo">
+            <fieldset>
+              <legend>This is the legend of a form</legend>
+              <div  class="grid padded">
+                <div class="one-half column">
+                  <label for="input-text-demo" class="">Label for text</label>
+                  <input type="text" name="input-text" id="input-text-demo" required>
+                </div>
+                <div class="one-half column">
+                  <label for="input-select-demo" class="">Label for Select</label>
+                  <select name="input-select" id="input-select-demo" class="" required>
+                      <option value="">Nothing selected</option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                  </select>
+                </div>
+                <div class="full-width column">
+                  <label for="input-text-area-demo" class="">Label for Textarea</label>
+                  <textarea name="input-text-area" id="input-text-area-demo" cols="1" rows="4" class="" required></textarea>
+                  <input type="submit" name="" value="Type Submit" />
+                </div>
+              </div><!--/grid-->
+            </fieldset>
+          </form>
+          </div>
+
+        </article>
+
+        <article id="the-components">
+          <h2>The tricks</h2>
+          <p>
+            We like to call'em tricks...
+          </p>
+
+          <h3>(Flexbox) grid</h3>
+          <p>
+            <!--Add a description-->
+          </p>
+
+          <h4>The examples</h4>
+          <div class="flex-grid-examples">
+
+            <h5>Auto width columns</h5>
+            <p>Out of the (Flex)box we can create any number of columns and they will adjust automatically to his container.</p>
+            <div class="container grid">
+              <div class="column">column 1</div>
+              <div class="column">column 2</div>
+              <div class="column">column 3</div>
+            </div>
+            <br />
+            <div class="grid">
+              <div class="column">Column 1</div>
+              <div class="column">Column 1</div>
+              <div class="column">column 3</div>
+              <div class="column">column 4</div>
+              <div class="column">column 5</div>
+              <div class="column">column 6</div>
+              <div class="column">column 7</div>
+            </div>
+
+            <h5>Fixed size columns</h5>
+            <p>We use 5 predefined fraction sizes, this give control over elements and flexibility</p>
+            <div class="grid">
+              <div class="one-quarter column">1/4 column</div>
+            </div>
+            <div class="grid">
+              <div class="one-third column">1/3 column</div>
+            </div>
+            <div class="grid">
+              <div class="one-half column">1/2 column</div>
+            </div>
+            <div class="grid">
+              <div class="two-thirds column">2/3 column</div>
+            </div>
+            <div class="grid">
+              <div class="three-quarters column">3/4 column</div>
+            </div>
+
+            <h5>Nested columns</h5>
+            <p>Easily extend your layout options nesting fixed size columns. Also, we use some flexbox default properties as handy classes to quicly align content or add padding space in any column.</p>
+            <div class="grid">
+              <div class="one-half column grid">
+                <div class="one-half column">
+                    1/2 column nested in 1/2 column = 1/4 column
+                </div>
+                <div class="one-half column">
+                    1/2 column nested in 1/2 column = 1/4 column
+                </div>
+              </div>
+              <div class="one-half column grid">
+                <div class="one-third column">1/3 column nested in 1/2 column = 1/6 column</div>
+                <div class="one-third column">1/3 column nested in 1/2 column = 1/6 column</div>
+                <div class="one-third column">1/3 column nested in 1/2 column = 1/6 column</div>
+              </div>
+              <div class="grid column">
+                <div class="grid one-third column">
+                  <div class="one-quarter column">01</div>
+                  <div class="one-quarter column">02</div>
+                  <div class="one-quarter column">03</div>
+                  <div class="one-quarter column">04</div>
+                </div>
+                <div class="grid one-third column">
+                  <div class="one-quarter column">05</div>
+                  <div class="one-quarter column">06</div>
+                  <div class="one-quarter column">07</div>
+                  <div class="one-quarter column">08</div>
+                </div>
+                <div class="grid one-third column">
+                  <div class="one-quarter column">09</div>
+                  <div class="one-quarter column">10</div>
+                  <div class="one-quarter column">11</div>
+                  <div class="one-quarter column">12</div>
+                </div>
+              </div>
+            </div>
+
+          </div><!--/flex-grid-examples-->
+
+          <h3>Notification</h3>
+          <p>
+          </p>
+          <div class="notification-examples">
+            <div class="notification information">
+              <p>This is information</p>
+            </div>
+            <div class="notification warning">
+              <p>This is a warning</p>
+            </div>
+            <div class="notification success">
+              <p>This is success</p>
+            </div>
+            <div class="notification error">
+              <p>This is an error</p>
+            </div>
+            <h4>Hide notification</h4>
+            <p>
+              <!--Add a description-->
+            </p>
+            <!--Default notification-->
+            <input type="checkbox" id="check-notification-default" name="check-notification-toggle" class="check-notification hidden">
+            <div class="notification clearfix">
+              <p class="float-l">This is an error</p>
+              <p class="float-r"><label for="check-notification-default" id="label-notification-default" title="Hide" class="float-r">Hide</label>
+              </p>
+            </div>
+            <!--Slide notification-->
+            <input type="checkbox" id="check-notification-slide" name="check-notification-slide" class="check-notification slide hidden">
+            <div class="notification slide clearfix"><p class="float-l">This notification slides</p><p class="float-r"><label for="check-notification-slide" id="label-notification-slide" title="Hide" class="float-r">Slide up</label></p></div>
+            <!--Fade notification-->
+            <input type="checkbox" id="check-notification-fade" name="check-notification-fade" class="check-notification fade hidden">
+            <div class="notification fade clearfix"><p class="float-l">This notification fades</p><p class="float-r"><label for="check-notification-fade" id="label-notification-fade" title="Hide" class="float-r">Fade out</label></p></div>
+          </div><!--/notification-examples-->
+
+          <h3>Dropdown navigation</h3>
+          <p>Simple dropdown menus using nested lists, mixed with custom list styles.</p>
+<pre><code>.dropdown [.inline]
+
+&lt;ul class="custom no-decoration no-indent dropdown"&gt;
+  &lt;li&gt;item 1&lt;/li&gt;
+  &lt;li&gt;item 2 &gt;
+    &lt;ul class="custom no-decoration no-indent"&gt;
+      &lt;li&gt;item 2.1&lt;/li&gt;
+      &lt;li&gt;item 2.2 &gt;
+        &lt;ul class="custom no-decoration no-indent"&gt;
+          &lt;li&gt;item 2.2.1&lt/li&gt;
+          &lt;li&gt;item 2.2.2&lt;/li&gt;
+          &lt;li&gt;and so on...&lt;/li&gt;
+        &lt;/ul&gt;
+      &gt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;item 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+          <h4>The examples</h4>
+          <div class="dropdown-examples">
+            <div class="container grid">
+
+            <div class="column dropdowns">
+              <ul class="custom no-decoration no-indent dropdown">
+                <li><a href="">item 1</a></li>
+                <li><a href="">item 2 ></a>
+                  <ul class="custom no-decoration no-indent">
+                    <li>&nbsp;<a href="">item 2.1</a></li>
+                    <li>&nbsp;<a href="">item 2.2 ></a>
+                      <ul class="custom no-decoration no-indent">
+                        <li>&nbsp;&nbsp;<a href="">item 2.2.1</a></li>
+                        <li>&nbsp;&nbsp;<a href="">item 2.2.2</a></li>
+                        <li>&nbsp;&nbsp;<a href="">and so on...</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="">item 3</a></li>
+              </ul>
+            </div>
+
+            <div class="column dropdowns">
+              <ul class="custom no-decoration no-indent dropdown inline">
+                <li><a href="">Item 1</a></li>
+                <li><a href="">Item 2 ></a>
+                  <ul class="custom no-decoration no-indent">
+                    <li><a href="">&nbsp;Item 2.1</a></li>
+                    <li><a href="">&nbsp;Item 2.2 ></a>
+                      <ul class="custom no-decoration no-indent">
+                        <li><a href="">&nbsp;&nbsp;Item 2.2.1</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="">Item 3</a></li>
+              </ul>
+            </div>
+
+            </div>
+          </div>
+
+          <h3>Horizontal scroll container</h3>
+          <p>
+            Display elements horizontally in a constrained size container, scroll only works with mouse or touch gestures.
+          </p>
+          <pre><code>.container .scroll-h []
+
+&lt;div class="container scroll-h"&gt;
+  &lt;div class="content"&gt;
+    &lt;a href="javascript:;" title="Item start" class=""&gt;Item start&lt;/a&gt;
+    &lt;a href="javascript:;" title="Item" class=""&gt;Item&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+          <h4>The examples</h4>
+          <div class="scroll-h-examples">
+          <div class="container grid">
+
+            <div class="one-half column">
+              <div class="container scroll-h"><div class="content">
+                <a href="javascript:;" title="" class="">Item start</a>
+                <a href="javascript:;" title="" class="">Item 1</a>
+                <a href="javascript:;" title="" class="">Item 2</a>
+                <a href="javascript:;" title="" class="">Item 3</a>
+                <a href="javascript:;" title="" class="">Item 4</a>
+                <a href="javascript:;" title="" class="">Item 5</a>
+                <a href="javascript:;" title="" class="">Item 6</a>
+                <a href="javascript:;" title="" class="">Item 7</a>
+                <a href="javascript:;" title="" class="">Item 8</a>
+                <a href="javascript:;" title="" class="">Item 9</a>
+                <a href="javascript:;" title="" class="">Item 10</a>
+                <a href="javascript:;" title="" class="">Item 11</a>
+                <a href="javascript:;" title="" class="">Item 12</a>
+                <a href="javascript:;" title="" class="">Item 13</a>
+                <a href="javascript:;" title="" class="">Item 14</a>
+                <a href="javascript:;" title="" class="">Item 15</a>
+                <a href="javascript:;" title="" class="">Item 16</a>
+                <a href="javascript:;" title="" class="">Item 17</a>
+                <a href="javascript:;" title="" class="">Item 18</a>
+                <a href="javascript:;" title="" class="">Item 19</a>
+                <a href="javascript:;" title="" class="">Item 20</a>
+                <a href="javascript:;" title="" class="">Item 21</a>
+                <a href="javascript:;" title="" class="">Item 22</a>
+                <a href="javascript:;" title="" class="">Item 23</a>
+                <a href="javascript:;" title="" class="">Item 24</a>
+                <a href="javascript:;" title="" class="">Item 25</a>
+                <a href="javascript:;" title="" class="">Item end</a>
+              </div></div>
+            </div>
+            <div class="one-quarter column align-c">
+              // empty //
+            </div>
+            <div class="one-quarter column">
+              <div class="container scroll-h"><div class="content">
+                <a href="javascript:;" title="" class="">Item start</a>
+                <a href="javascript:;" title="" class="">Item 1</a>
+                <a href="javascript:;" title="" class="">Item 2</a>
+                <a href="javascript:;" title="" class="">Item 3</a>
+                <a href="javascript:;" title="" class="">Item end</a>
+              </div></div>
+            </div>
+            
+          </div>
+          </div>
+
+          <h3>Collapsible container</h3>
+          <p>An accordion-like container, toggle content display using checkbox hack.</p>
+<pre><code>.container .collapse []
+
+&lt;div class="container collapse"&gt;
+  &lt;input type="checkbox" id="check-collapse" name="check-collapse" class="hidden"&gt;
+  &lt;label for="check-collapse" id="" title="" class=""&gt;
+    &lt;h5 class="heading"&gt;Heading&lt;/h5&gt;
+  &lt;/label&gt;
+  &lt;div class="content"&gt;
+    &lt;li&gt;&lt;a href="javascript:;" title="Item 1" class="item"&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="javascript:;" title="Item 2" class="item"&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <h4>The examples</h4>
+          <div class="collapse-examples">
+            <div class="container grid">
+
+            <div class="column">
+              <div class="container collapse">
+                <input type="checkbox" id="check-collapse-1" name="" class="hidden">
+                <label for="check-collapse-1" id="" title="" class="">
+                  <h5 class="heading">Heading</h5>
+                </label>
+                <div class="content">
+                  <li><a href="javascript:;" title="Item 1" class="item">Item 1</a></li>
+                  <li><a href="javascript:;" title="Item 2" class="item">Item 2</a></li>
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="container collapse">
+                <input type="checkbox" id="check-collapse-2" name="" class="hidden">
+                <label for="check-collapse-2" id="" title="" class="">
+                  <h5 class="heading">Heading</h5>
+                </label>
+                <div class="content">
+                  <li><a href="javascript:;" title="Item 1" class="item">Item 1</a></li>
+                  <li><a href="javascript:;" title="Item 2" class="item">Item 2</a></li>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          </div>
+
+          <h3>Collection</h3>
+          <p>
+            A collection is like a list, in a box.
+          </p>
+<pre><code>.collection []
+
+  &lt;dl class="collection"&gt;
+    &lt;dt class="heading"&gt;
+      &lt;h5&gt;Collection 1&lt;/h5&gt;
+    &lt;/dt&gt;
+    &lt;dd class="content"&gt;
+      &lt;ul class="custom no-decoration no-indent"&gt;
+        &lt;li&gt;&lt;a href="javascript:;"&gt;Item 1.1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascript:;"&gt;Item 1.2&lt;/a&gt;&lt;/li&gt;                    
+      &lt;/ul&gt;
+    &lt;/dd&gt;
+  &lt;/dl&gt;</code></pre>          
+          <h4>The examples</h4>
+          <div class="collection-examples">
+            <div class="container grid">
+
+              <div class="column padded">
+                <dl class="collection">
+                  <dt class="heading"><h5>Collection 1</h5></dt>
+                  <dd class="content">
+                    <ul class="custom no-decoration no-indent">
+                      <li><a href="javascript:;">Item 1.1</a></li>
+                      <li><a href="javascript:;">Item 1.2</a></li>                    
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+              <div class="column padded">
+                <dl class="collection">
+                  <dt class="heading"><h5>Collection 2.1</h5></dt>
+                  <dd class="content">
+                    <ul class="custom no-decoration no-indent">
+                      <li><a href="javascript:;">Item 2.1.1</a></li>
+                      <li><a href="javascript:;">Item 2.2.2</a></li>                    
+                    </ul>
+                  </dd>
+                  <dt class="heading"><h5>Collection 2.2</h5></dt>
+                  <dd class="content">
+                    <ul class="custom no-decoration no-indent">
+                      <li><a href="javascript:;">Item 2.2.1</a></li>
+                      <li><a href="javascript:;">Item 2.2.2</a></li>                    
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+              <div class="column padded">
+                <div class="collection">
+                  <h5 class="heading">Collection 3</h5>
+                  <div class="content">
+                    <a href="javascript:;" title="" class="">Item 3.1</a>
+                    <a href="javascript:;" title="" class="">Item 3.2</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>        
+
+          <h3>Tabs</h3>
+          <p>
+          </p>
+          <h4>The examples</h4>
+          <div class="tabs-examples">
+            <div class="tabs">
+              <div class="navigation grid">
+                <a href="#check-tab-1" id="label-tab-1" title="Tab 1" class="column active">Tab 1</a>
+                <a href="#check-tab-2" id="label-tab-2" title="Tab 1" class="column">Tab 2</a>
+                <a href="#check-tab-3" id="label-tab-3" title="Tab 1" class="column">Tab 3</a>
+              </div>
+              <div class="tab">
+                <h4>Tab 1</h4>
+                <p>Etiam pellentesque arcu sed aliquam aliquam. Aenean placerat ipsum nec semper viverra. Nam risus ante, sodales vel commodo id, eleifend vitae nibh.</p>
+              </div>
+              <div class="tab">
+                <h4>Tab 2</h4>
+                <p>Cras quis velit non ex ornare congue eget eget odio. Maecenas euismod risus non dignissim faucibus.</p>
+              </div>
+              <div class="tab">
+                <h4>Tab 3</h4>
+                <p>Suspendisse potenti. Phasellus porta, ipsum a feugiat suscipit, mauris libero sollicitudin metus, ac dignissim leo neque vitae nibh.</p>
+              </div>
+            </div><!--/tabs-->
+          </div><!--/tabs-examples-->
+
+        </article>
+
+      </div>
+    </section>
+<!--/Section_cContent-->
+
+<!--Template_footer-->
+    <footer>
+      <div class="container boxed">
+        <a href="http://codeinalab.com" title="Codeinalab">Codeinalab</a>
+      </div>
+    </footer>
+    
+    <!--<script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>-->
+
+  </body>
+
+</html>
+<!--/Template_footer-->
