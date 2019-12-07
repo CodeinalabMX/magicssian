@@ -3,4 +3,4 @@
 vendor
 node_modules
 src/css/_*
-!src/css/_project_variables.css
+!src/css/_magicssian_variables.css
