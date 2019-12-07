@@ -1,7 +1,7 @@
-/*! Magicssian v0.11.3 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Magicssian v0.12.0 http://codeinalabmx.github.io/magicssian License: MIT */
 
 /**
- * Magicssian v0.11.3
+ * Magicssian v0.12.0
  * 
  * A CSS Boilerplate
  * http://codeinalabMX.github.io/magicssian
@@ -10,7 +10,7 @@
  * TOC:
  * 
  * Base
- * * @import CSS Custom Properties (variables)
+ * * @import Variables (CSS custom properties)
  * * Colors
  * * Reset
  * * Document
@@ -42,16 +42,18 @@
  *
  */
 
-/* Import specific project stylesheet for custom builds */
+/* * @import Variables */
 
-/**/
+/* Customize the magicssian_variables file (copy/rename/edit) 
+ * to create a custom build for your project
+ * @import 'path/to/project/src/css/_project_variables.css'; */
 
-/*! Magicssian Variables v0.11.3 / Custom build for: Magicssian */
+/*! Magicssian Variables v0.12.0 / Custom build for: Magicssian */
 
 /*! Base */
 
 /**
- * Magicssian Variables v0.11.3
+ * Magicssian Variables v0.12.0
  * Custom build for Magicssian
  *
  * TOC:
@@ -3207,8 +3209,7 @@ body.sticky-footer footer {
   position: absolute;
   display: block;
   height: 6px;
-  width: 32px;
-  top: 12px;
+  top: 17px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -3225,8 +3226,7 @@ body.sticky-footer footer {
   position: absolute;
   display: block;
   height: 6px;
-  width: 32px;
-  top: 12px;
+  top: 17px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -3243,8 +3243,7 @@ body.sticky-footer footer {
   position: absolute;
   display: block;
   height: 6px;
-  width: 32px;
-  top: 12px;
+  top: 17px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -3291,8 +3290,28 @@ body.sticky-footer footer {
   display: block;
 }
 
+.navigation.slide-l label {
+  top: 20px;
+  top: var(--rhytm-unit);
+}
+
+.navigation.slide-r label {
+  top: 20px;
+  top: var(--rhytm-unit);
+}
+
+.navigation.slide-l label {
+  left: 20px;
+  left: var(--rhytm-unit);
+}
+
 .navigation.slide-l [type=checkbox]:checked + label + .menu {
   left: 0;
+}
+
+.navigation.slide-r label {
+  right: 20px;
+  right: var(--rhytm-unit);
 }
 
 .navigation.slide-r [type=checkbox]:checked + label + .menu {
@@ -3302,6 +3321,7 @@ body.sticky-footer footer {
 @media (max-width: 1024px) {
   .navigation label {
     display: block;
+    position: fixed;
   }
   .navigation .menu {
     display: none;
@@ -3314,9 +3334,9 @@ body.sticky-footer footer {
     z-index: 9998;
     top: 0;
     height: 100vh;
-    width: 80vw;
-    padding: 20px;
-    padding: var(--rhytm-unit);
+    width: 100vw;
+    padding: calc(4 * 20px) 20px;
+    padding: calc(4 * var(--rhytm-unit)) var(--rhytm-unit);
   }
   .navigation.slide-r .menu {
     display: block;
@@ -3324,19 +3344,15 @@ body.sticky-footer footer {
     z-index: 9998;
     top: 0;
     height: 100vh;
-    width: 80vw;
-    padding: 20px;
-    padding: var(--rhytm-unit);
+    width: 100vw;
+    padding: calc(4 * 20px) 20px;
+    padding: calc(4 * var(--rhytm-unit)) var(--rhytm-unit);
   }
   .navigation.slide-l .menu {
-    left: -80vw;
-    padding-left: calc(2 * 20px);
-    padding-left: calc(2 * var(--rhytm-unit));
+    left: -100vw;
   }
   .navigation.slide-r .menu {
-    right: -80vw;
-    padding-right: calc(2 * 20px);
-    padding-right: calc(2 * var(--rhytm-unit));
+    right: -100vw;
   }
 }
 

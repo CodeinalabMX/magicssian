@@ -10,7 +10,7 @@
  * TOC:
  * 
  * Base
- * * @import CSS Custom Properties (variables)
+ * * @import Variables (CSS custom properties)
  * * Colors
  * * Reset
  * * Document
@@ -42,8 +42,11 @@
  *
  */
 
-/* Import specific project stylesheet for custom builds */
-/**/@import '_project_variables.css';
+/* * @import Variables */
+/* Customize the magicssian_variables file (copy/rename/edit) 
+ * to create a custom build for your project
+ * @import 'path/to/project/src/css/_project_variables.css'; */
+@import '_magicssian_variables.css';
 
 /*! * Colors */
 /*! * * Base scheme */
@@ -1069,8 +1072,7 @@ body.sticky-footer footer {
   position: absolute;
   display: block;
   height: 6px;
-  width: 32px;
-  top: 12px;
+  top: 17px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -1099,8 +1101,18 @@ body.sticky-footer footer {
 .navigation [type=checkbox]:checked + label + .menu {
   display: block;
 }
+.navigation.slide-l label,
+.navigation.slide-r label {
+  top: var(--rhytm-unit);
+}
+.navigation.slide-l label {
+  left: var(--rhytm-unit);
+}
 .navigation.slide-l [type=checkbox]:checked + label + .menu {
   left: 0;
+}
+.navigation.slide-r label {
+  right: var(--rhytm-unit);
 }
 .navigation.slide-r [type=checkbox]:checked + label + .menu {
   right: 0;
@@ -1108,6 +1120,7 @@ body.sticky-footer footer {
 @media (max-width: 1024px) {
   .navigation label {
     display: block;
+    position: fixed;
   }
   .navigation .menu {
     display: none;
@@ -1121,16 +1134,14 @@ body.sticky-footer footer {
     z-index: 9998;
     top: 0;
     height: 100vh;
-    width: 80vw;
-    padding: var(--rhytm-unit);
+    width: 100vw;
+    padding: calc(4 * var(--rhytm-unit)) var(--rhytm-unit);
   }
   .navigation.slide-l .menu {
-    left: -80vw;
-    padding-left: calc(2 * var(--rhytm-unit));
+    left: -100vw;
   }
   .navigation.slide-r .menu {
-    right: -80vw;
-    padding-right: calc(2 * var(--rhytm-unit));
+    right: -100vw;
   }
 }
 
