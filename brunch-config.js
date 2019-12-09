@@ -35,7 +35,7 @@ module.exports = {
       processors: [
         require('postcss-import')(),
         require('postcss-css-variables')({
-          preserve: true
+          preserve: false
         }),
         //require('postcss-custom-properties')({
         //  preserve: false

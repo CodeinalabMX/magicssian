@@ -95,46 +95,52 @@
     * lighter variant on:;
     * table.striped utility class
     * background-color on notification */
-  
-  /* Hard-coded color variations: */
+
+  /* Color variations are automatically generated 
+   * using postcss-color-function
+   * https://github.com/postcss/postcss-color-function
+   * In order to use it postcss-css-variables/postcss-custom-properties preserve option
+   * MUST be set to false
+   * Use the tint and shade adjusters too achieve the lighten and darken Sass function
+   * https://github.com/postcss/postcss-color-function#notes-for-former-sass-users
+   * 
+   * Adjust the overall lightness and darkness variation with:
+   * --lightness-variation: (percentage); A higher value will result in a lighter color
+   * --darkness-variation: (percentage); A higher value will return a darker color */
+
+  /* Dynamic color variations */
   /**/
+  --lightness-variation: 80%;
+  --darkness-variation: 40%;
+  --base-color-darker: color(var(--base-color) shade(var(--darkness-variation)));
+  --complementary-color-1-darker: color(var(--complementary-color-1) shade(var(--darkness-variation)));
+  --complementary-color-2-darker: color(var(--complementary-color-2) shade(var(--darkness-variation)));
+  --neutral-color-darker: color(var(--neutral-color) shade(var(--darkness-variation)));
+  --neutral-color-lighter: color(var(--neutral-color) tint(var(--lightness-variation)));
+
+  --information-color-lighter: color(var(--information-color) tint(var(--lightness-variation)));
+  --warning-color-lighter: color(var(--warning-color) tint(var(--lightness-variation)));
+  --error-color-lighter: color(var(--error-color) tint(var(--lightness-variation)));
+  --success-color-lighter: color(var(--success-color) tint(var(--lightness-variation)));
+  /**/
+
+  /* Hard-code color variations 
+  * Uncomment and customize the following block for a more 
+  * controlled color scheme setting
+  * postcss-css-variables/postcss-custom-properties preserve option
+  * can be set to true */
+  /*
   --base-color-darker: #000102;
   --complementary-color-1-darker: #c93f1c;
   --complementary-color-2-darker: #b4cc1a;
   --neutral-color-darker: #d9d9d9;
   --neutral-color-lighter: #fbfbfb;
+
   --information-color-lighter: #b3dbff;
   --warning-color-lighter: #ffe0b3;
   --error-color-lighter: #ffb3b6;
   --success-color-lighter: #daf7bb;
   /**/
-
-  /* Color variations can be automatically generated 
-   * using the equivalent postcss-color-function
-   * for lighten and darken Sass methods 
-   * https://github.com/postcss/postcss-color-function
-   * 
-   * Combining the base color scheme values with an 
-   * additional variable:
-   * --lightness-variation: (int); A higher value will result in a lighter color
-   * --darkness-variation: (int); A lower value will return a darker color
-   * 
-   * @todo 
-   * Test implementation */
-
-  /* Dynamic color variations */
-  /*
-  --lightness-variation: 80;
-  --darkness-variation: 20;
-  --complementary-color-1-darker: color(var(--complementary-color-1) shade(var(--darkness-variation)));
-  --complementary-color-2-darker: color(var(--complementary-color-2) shade(var(--darkness-variation)));
-  --neutral-color-darker: color(var(--neutral-color) shade(var(--darkness-variation)));
-  --neutral-color-lighter: color(var(--neutral-color) tint(var(--lightness-variation)));
-  --information-color-lighter: color(var(--information-color) lightness(var(--lightness-variation)));
-  --warning-color-lighter: color(var(--warning-color) lightness(var(--lightness-variation)));
-  --error-color-lighter: color(var(--error-color) lightness(var(--lightness-variation)));
-  --success-color-lighter: color(var(--success-color) lightness(var(--lightness-variation)));
-  /**/ 
 
   /* * * Extras */
   /* Width/Max-width for .container.boxed */
