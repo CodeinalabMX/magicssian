@@ -36,7 +36,11 @@ module.exports = {
         require('postcss-import')(),
         require('postcss-css-variables')({
           preserve: true
-        })
+        }),
+        //require('postcss-custom-properties')({
+        //  preserve: false
+        //}),
+        require('postcss-color-function')()
       ]
     },
 
