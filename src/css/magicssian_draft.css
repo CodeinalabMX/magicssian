@@ -1117,6 +1117,15 @@ body.sticky-footer footer {
 .navigation.slide-r [type=checkbox]:checked + label + .menu {
   right: 0;
 }
+/* Label X */
+.navigation.label-x [type=checkbox]:checked + label div {
+    transform: rotate(45deg);
+}
+.navigation.label-x [type=checkbox]:checked + label div:after {
+  opacity: 1;
+  top: 0;
+  transform: rotate(-90deg);
+}
 @media (max-width: 1024px) {
   .navigation label {
     display: block;
