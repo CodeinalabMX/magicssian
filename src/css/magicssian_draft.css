@@ -1108,15 +1108,19 @@ body.sticky-footer footer {
   top: var(--rhytm-unit);
 }
 .navigation.slide-l label, 
+.navigation.slide-r.label-l label, 
 .navigation.fade-c.label-l label {
   left: var(--rhytm-unit);
+  right: auto;
 }
 .navigation.slide-l [type=checkbox]:checked + label + .menu {
   left: 0;
 }
 .navigation.slide-r label, 
+.navigation.slide-l.label-r label, 
 .navigation.fade-c.label-r label {
   right: var(--rhytm-unit);
+  left: auto;
 }
 .navigation.slide-r [type=checkbox]:checked + label + .menu {
   right: 0;
