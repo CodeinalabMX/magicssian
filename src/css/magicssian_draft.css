@@ -1127,10 +1127,10 @@ body.sticky-footer footer {
 }
 
 /* Label X */
-.navigation.label-x [type=checkbox]:checked + label div {
+.navigation.label-to-x [type=checkbox]:checked + label div {
     transform: rotate(45deg);
 }
-.navigation.label-x [type=checkbox]:checked + label div:after {
+.navigation.label-to-x [type=checkbox]:checked + label div:after {
   opacity: 1;
   top: 0;
   transform: rotate(-90deg);
