@@ -80,7 +80,7 @@
   --complementary-color-1: #e35835;
   --complementary-color-2: #cde534;
   --heading-color: var(--base-color);
-  --text-color: #1a1a1a;
+  --text-color: #555;
   --neutral-color: #eaeaea;
   /* * * * Notification scheme */
   --information-color: #00529b;
