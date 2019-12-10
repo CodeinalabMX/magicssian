@@ -50,11 +50,21 @@
             Magicssian is a CSS Boilerplate to head start a small web project by providing cross-browser consistent styles to default HTML elements with pure css trickery and a bit of design.
           </p>
           <p>
-            <!-- 
-              Add a more detailed description
-              Add some of the development story, etc
-            -->
+            Magicssian is a forever-i-am-learning work in progress and relies on the following:
           </p>
+          <ul class="custom arrow">
+            <li>The soon-i-hope-their-be-more-awesome <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*" title="CSS Custom Properties">CSS Custom Properties</a>.
+              <p>I know it is fun to get <a href="https://sass-lang.com/" title="SASS">Sassy</a> but CSS Custom Properties are choosen here in favor of a more native aproach.</p>
+            </li>
+            <li>The postcss-import, postcss-css-variables and postcss-color-function plugins from the <a href="https://postcss.org/" title="PostCSS">PostCSS</a> family
+              <p>There are a lot of plugins to choose from, depending on your needs.</p></li>
+            <li>The Fast and efficient CSS optimizer <a href="https://github.com/jakubpawlowicz/clean-css" title="Clean-CSS">Clean-CSS</a>.
+              <p>All put together with:</p></li>
+            <li>The easiest build tool <a href="http://brunch.io" target="blank">Brunch.io</a>.
+              <p>Initially Magicssian was build using npm scripts, and there are plans to add a build option using <a href="https://gulpjs.com" title="Gulp">Gulp</a> just for the fun of it.
+              </p>
+            </li>
+          </ul>
         </article>
 
         <article id="get-into-it">
@@ -105,11 +115,12 @@
 
           <h5>Paragraph</h5>
           <p>
-            This is a simple paragraph block with some regular text-level markup, like <strong>Strong</strong> or <b>Bold</b>, <em>Emphasis</em> or <i>Italics</i>, also an example of using subscript<sub>2</sub> and superscript<sup>2</sup>, <del>del</del>, <ins>ins</ins> or <dfn title="This is a definition">dfn</dfn>, <abbr title="This is an abbreviation">abbr</abbr> for definition and abbreviation respectively.
+            This is a simple paragraph block with some regular text-level markup, like <strong>Strong</strong> or <b>Bold</b>, <em>Emphasis</em> or <i>Italics</i>, also an example of using subscript<sub>2</sub> and superscript<sup>2</sup>, <del>del</del>, <ins>ins</ins> or <dfn title="This is a definition">dfn</dfn>, <abbr title="This is an abbreviation">abbr</abbr> for definition and abbreviation respectively. Now a &lt;br /&gt;.
           </p>
-          <p>Start a new paragraph block with <q>inline quotations</q> and &lt;code&gt; tag: <code>&lta href="" title="title"&gt</code>.
-            <br />
-            After a &lt;br /&gt; <a href="javascript:;" title="Default link">default link</a> looks like followed by <a href="javascript:;" title="Variant link" class="variant">a color variant</a> and <a href="javascript:;" title="Base color link" class="base">the base color variant</a>, finally, a blockquote:
+          <p>A new paragraph block with <q>inline quotations</q> a &lt;code&gt; tag: <code>&lta href="" title="title"&gt</code> and his .variant class <code class="variant">&lta href="" title="title"&gt</code>.
+          </p>
+          <p>
+            Here is how a <a href="javascript:;" title="Default link">default link</a> looks like followed by <a href="javascript:;" title="Variant link" class="variant">a color variant</a> and <a href="javascript:;" title="Base color link" class="base">the base color variant</a>. Finally, a blockquote:
           </p>
           <blockquote>
             Abracadabra
@@ -141,7 +152,7 @@
 </pre>
           <h3>Lists</h3>
           <p>
-            By default lists are basically untouched, beside font-size and line-height, everything else remains the same.               
+            Lists are almost untouched, beside font-size and line-height, everything else remains the same.               
           </p>
           <div class="container grid">
 
