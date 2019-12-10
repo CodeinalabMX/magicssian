@@ -40,7 +40,9 @@ module.exports = {
         //require('postcss-custom-properties')({
         //  preserve: false
         //}),
-        require('postcss-color-function')()
+        require('postcss-color-function')({
+          preserveCustomProps: false
+        }),
       ]
     },
 
