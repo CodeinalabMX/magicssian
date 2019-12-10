@@ -7,7 +7,7 @@
  * TOC:
  *
  * Base
- * * CSS Custom Properties (variables)
+ * * Variables (CSS custom properties)
  * * * Fonts
  * * Font size & Rhytm unit
  * * Color schemes
@@ -23,9 +23,8 @@
  /* Define css custom properties
   * this values will affect/style html elements globally */
 
-/*! * CSS Custom Properties */
- /* a.k.a CSS Variables
-  * Changing this will affect almost everything ahead
+/*! * Variables (CSS custom properties) */
+ /* Changing this will affect almost everything ahead
   * 
   * Tools & reference:
   * https://www.w3.org/TR/css-variables-1/
