@@ -275,7 +275,13 @@ pre {
   white-space: pre-wrap;
   word-break: break-all;
 }
-pre.variant {
+code {
+  background-color: var(--neutral-color);
+  padding-left: calc(.5 * var(--rhytm-unit));
+  padding-right: calc(.5 * var(--rhytm-unit));
+}
+pre.variant, 
+code.variant {
   color: var(--neutral-color);
   background-color: var(--text-color);
 }
