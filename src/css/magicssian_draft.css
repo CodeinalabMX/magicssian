@@ -1175,6 +1175,7 @@ body.sticky-footer footer {
   .navigation.fade-c .menu {
     z-index: -1;
     opacity: 0;
+    left: 0;
   } 
 }
 

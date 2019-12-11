@@ -1,7 +1,7 @@
-/*! Magicssian v0.13.0 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Magicssian v0.13.1 http://codeinalabmx.github.io/magicssian License: MIT */
 
 /**
- * Magicssian v0.13.0
+ * Magicssian v0.13.1
  * 
  * A CSS Boilerplate
  * http://codeinalabMX.github.io/magicssian
@@ -48,12 +48,12 @@
  * to create a custom build for your project
  * @import 'path/to/project/src/css/_project_variables.css'; */
 
-/*! Magicssian Variables v0.13.0 / Custom build for: Magicssian */
+/*! Magicssian Variables v0.13.1 / Custom build for: Magicssian */
 
 /*! Base */
 
 /**
- * Magicssian Variables v0.13.0
+ * Magicssian Variables v0.13.1
  * Custom build for Magicssian
  *
  * TOC:
@@ -2682,6 +2682,7 @@ body.sticky-footer footer {
 }
 
 .navigation.fade-c [type=checkbox]:checked + label + .menu {
+  z-index: 9998;
   opacity: 1;
 }
 
@@ -2733,7 +2734,9 @@ body.sticky-footer footer {
   }
   /* Fade center */
   .navigation.fade-c .menu {
+    z-index: -1;
     opacity: 0;
+    left: 0;
   } 
 }
 
