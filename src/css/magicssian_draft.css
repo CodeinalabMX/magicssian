@@ -1131,8 +1131,8 @@ body.sticky-footer footer {
 .navigation.slide-r [type=checkbox]:checked + label + .menu {
   right: 0;
 }
-
 .navigation.fade-c [type=checkbox]:checked + label + .menu {
+  z-index: 9998;
   opacity: 1;
 }
 
@@ -1173,6 +1173,7 @@ body.sticky-footer footer {
   }
   /* Fade center */
   .navigation.fade-c .menu {
+    z-index: -1;
     opacity: 0;
   } 
 }
