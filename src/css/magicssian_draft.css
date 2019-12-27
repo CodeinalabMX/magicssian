@@ -1134,6 +1134,7 @@ body.sticky-footer footer {
 .navigation.fade-c [type=checkbox]:checked + label + .menu {
   z-index: 9998;
   opacity: 1;
+  visibility: visible;
 }
 
 /* Label X */
@@ -1176,6 +1177,7 @@ body.sticky-footer footer {
     z-index: -1;
     opacity: 0;
     left: 0;
+    visibility: hidden;
   } 
 }
 
