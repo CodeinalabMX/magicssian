@@ -250,13 +250,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
   color: var(--heading-color);
 }
-h1, h2, h3, h4, h5, h6, p, cite, ul ul, ol ol {
+h1.variant, h2.variant, h3.variant, h4.variant, h5.variant, h6.variant {
+  color: var(--complementary-color-2);
+}
+h1, h2, h3, h4, h5, h6, p, cite {
   margin-top: calc(.5 * var(--rhytm-unit));
   margin-bottom: calc(.5 * var(--rhytm-unit));
-}
-ul, ol {
-  margin-top: var(--rhytm-unit);
-  margin-bottom: var(--rhytm-unit);
 }
 small {
   /* @todo Fix element height, make it fit into rhytm unit */
@@ -337,7 +336,13 @@ a.no-decoration, a.no-decoration:hover, a.no-decoration:active, a.no-decoration:
 
 /*! * Lists */
 ul, ol {
+  margin-top: var(--rhytm-unit);
+  margin-bottom: var(--rhytm-unit);
   padding-left: calc(2 * var(--rhytm-unit));
+}
+ul ul, ol ol {
+  margin-top: calc(.5 * var(--rhytm-unit));
+  margin-bottom: calc(.5 * var(--rhytm-unit));
 }
 li {
   position: relative;
