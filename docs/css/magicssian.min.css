@@ -1,7 +1,7 @@
-/*! Magicssian v0.13.2 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Magicssian v0.13.3 http://codeinalabmx.github.io/magicssian License: MIT */
 
 /**
- * Magicssian v0.13.2
+ * Magicssian v0.13.3
  * 
  * A CSS Boilerplate
  * http://codeinalabMX.github.io/magicssian
@@ -48,12 +48,12 @@
  * to create a custom build for your project
  * @import 'path/to/project/src/css/_project_variables.css'; */
 
-/*! Magicssian Variables v0.13.2 / Custom build for: Magicssian */
+/*! Magicssian Variables v0.13.3 / Custom build for: Magicssian */
 
 /*! Base */
 
 /**
- * Magicssian Variables v0.13.2
+ * Magicssian Variables v0.13.3
  * Custom build for Magicssian
  *
  * TOC:
@@ -226,12 +226,28 @@
 
 /*! * * Color variants */
 
+.base-color-darker { 
+  color: rgb(7, 13, 25);
+}
+
+.base-color-lighter { 
+  color: rgb(206, 208, 212);
+}
+
 .complementary-color-1-darker { 
   color: rgb(136, 53, 32);
 }
 
+.complementary-color-1-lighter { 
+  color: rgb(249, 222, 215);
+}
+
 .complementary-color-2-darker { 
   color: rgb(123, 137, 31);
+}
+
+.complementary-color-2-lighter { 
+  color: rgb(245, 250, 214);
 }
 
 .neutral-color-darker {
@@ -517,6 +533,30 @@ h6 {
   color: #0b162a;
 }
 
+h1.variant {
+  color: #cde534;
+}
+
+h2.variant {
+  color: #cde534;
+}
+
+h3.variant {
+  color: #cde534;
+}
+
+h4.variant {
+  color: #cde534;
+}
+
+h5.variant {
+  color: #cde534;
+}
+
+h6.variant {
+  color: #cde534;
+}
+
 h1 {
   margin-top: calc(.5 * 20px);
   margin-bottom: calc(.5 * 20px);
@@ -555,26 +595,6 @@ p {
 cite {
   margin-top: calc(.5 * 20px);
   margin-bottom: calc(.5 * 20px);
-}
-
-ul ul {
-  margin-top: calc(.5 * 20px);
-  margin-bottom: calc(.5 * 20px);
-}
-
-ol ol {
-  margin-top: calc(.5 * 20px);
-  margin-bottom: calc(.5 * 20px);
-}
-
-ul {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-ol {
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 small {
@@ -733,11 +753,25 @@ a.no-decoration, a.no-decoration:hover, a.no-decoration:active, a.no-decoration:
 /*! * Lists */
 
 ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding-left: calc(2 * 20px);
 }
 
 ol {
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding-left: calc(2 * 20px);
+}
+
+ul ul {
+  margin-top: calc(.5 * 20px);
+  margin-bottom: calc(.5 * 20px);
+}
+
+ol ol {
+  margin-top: calc(.5 * 20px);
+  margin-bottom: calc(.5 * 20px);
 }
 
 li {
@@ -793,6 +827,7 @@ ul.custom.arrow > li:before {
     border-top: calc(.20 * 20px) solid transparent;
     border-bottom: calc(.20 * 20px) solid transparent;
     border-left: calc(.20 * 20px) solid #e35835; 
+    top: calc(.313 * 20px);
 }
 
 ul.custom.no-decoration > li:before {
@@ -2223,17 +2258,27 @@ input[type=reset].base.outlined:focus {
 /*! * * Disabled button */
 
 input[type=submit]:disabled {
-    background: transparent;
-    color: #eaeaea;
-    border-color: #eaeaea;
-    cursor: default;
+  background: #eaeaea;
+  color: rgb(251, 251, 251);
+  border-color: #eaeaea;
+  cursor: default;
 }
 
 button:disabled {
-    background: transparent;
-    color: #eaeaea;
-    border-color: #eaeaea;
-    cursor: default;
+  background: #eaeaea;
+  color: rgb(251, 251, 251);
+  border-color: #eaeaea;
+  cursor: default;
+}
+
+input[type=submit].outlined:disabled {
+  background: transparent;
+  color: #eaeaea;
+}
+
+button.outlined:disabled {
+  background: transparent;
+  color: #eaeaea;
 }
 
 /*! * * Button link */
@@ -2306,6 +2351,11 @@ button.link.base:focus {
 }
 
 button.link.no-decoration {
+  border-bottom-color: transparent;
+}
+
+button.link:disabled {
+  color: #eaeaea;
   border-bottom-color: transparent;
 }
 
