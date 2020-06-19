@@ -725,7 +725,7 @@ input[type=reset].variant:focus {
 }
 
 /*! * * Base button */
- button.base, 
+button.base, 
 .button.base, 
 a.button.base,
 input[type=button].base,
@@ -846,10 +846,15 @@ input[type=reset].base.outlined:focus {
 /*! * * Disabled button */
 input[type=submit]:disabled, 
 button:disabled {
-    background: transparent;
-    color: var(--neutral-color);
-    border-color: var(--neutral-color);
-    cursor: default;
+  background: var(--neutral-color);
+  color: var(--neutral-color-lighter);
+  border-color: var(--neutral-color);
+  cursor: default;
+}
+input[type=submit].outlined:disabled, 
+button.outlined:disabled {
+  background: transparent;
+  color: var(--neutral-color);
 }
 
 /*! * * Button link */
@@ -885,6 +890,10 @@ button.link.base:hover, button.link.base:active, button.link.base:focus {
   border-bottom-color: var(--base-color-darker);
 }
 button.link.no-decoration {
+  border-bottom-color: transparent;
+}
+button.link:disabled {
+  color: var(--neutral-color);
   border-bottom-color: transparent;
 }
 
