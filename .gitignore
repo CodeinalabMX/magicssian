@@ -2,5 +2,3 @@
 ._*
 vendor
 node_modules
-src/css/_*
-!src/css/_magicssian_variables.css
