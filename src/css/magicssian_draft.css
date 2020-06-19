@@ -390,6 +390,7 @@ ul.custom.arrow > li:before {
     border-top: calc(.20 * var(--rhytm-unit)) solid transparent;
     border-bottom: calc(.20 * var(--rhytm-unit)) solid transparent;
     border-left: calc(.20 * var(--rhytm-unit)) solid var(--complementary-color-1); 
+    top: calc(.313 * var(--rhytm-unit));
 }
 ul.custom.no-decoration > li:before {
   display: none;
