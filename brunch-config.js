@@ -75,8 +75,8 @@ module.exports = {
       map: {
         project_name: 'Magicssian',
         project_url: 'https://codeinalabmx.github.io/magicssian/',
-        dv_name: 'Alejandro',
-        dv_alias: 'a59327439',
+        dv_name: '',
+        dv_alias: 'A59327424',
         dv_agency: 'Codeinalab',
         dv_url: 'http://codeinalab',
         ds_agency: 'Codeinalab',
