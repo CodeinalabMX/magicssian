@@ -473,7 +473,7 @@ table.striped tbody tr:hover {
 /*! * Form elements */
 fieldset {
   position: relative;
-  border: 1px solid var(--neutral-color);
+  border: 0;
   padding: calc(.5 * var(--rhytm-unit));
   border-radius: var(--rounded);
 }
@@ -986,6 +986,10 @@ body.sticky-footer footer {
 .three-quarters.column {
   flex: 0 0 75%;
 }
+.grid.overflowed, 
+.grid .column.overflowed {
+  overflow: visible;
+}
 @media (max-width: 1024px) {
   .grid, .grid.column {
     flex-flow: column;
@@ -1012,6 +1016,7 @@ body.sticky-footer footer {
   .two-thirds.column,
   .three-quarters.column {
     width: 100%;
+    flex: 0 0 auto; /* Set flex-basis to auto so column height depends on item content */
   }
   .grid.gutter-row > .column, 
   .grid.gutter-row > .column:first-child, 
