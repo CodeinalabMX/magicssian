@@ -462,11 +462,11 @@ caption {
   font-style: italic;
   text-align: left;
 }
-table.striped tbody tr:nth-child(even) {
+table.stripped tbody tr:nth-child(even) {
   background-color: var(--neutral-color);
 }
 tbody tr:hover, 
-table.striped tbody tr:hover {
+table.stripped tbody tr:hover {
   background-color: var(--neutral-color-lighter);
 }
 
@@ -986,7 +986,7 @@ body.sticky-footer footer {
 .three-quarters.column {
   flex: 0 0 75%;
 }
-.grid.overflowed, 
+.grid.overflowed .column, 
 .grid .column.overflowed {
   overflow: visible;
 }
