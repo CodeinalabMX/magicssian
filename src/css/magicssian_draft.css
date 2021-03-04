@@ -470,6 +470,19 @@ table.stripped tbody tr:hover {
   background-color: var(--neutral-color-lighter);
 }
 
+tbody tr.highlight.information {
+  background-color: var(--information-color-lighter);
+}
+tbody tr.highlight.success {
+  background-color: var(--success-color-lighter);
+}
+tbody tr.highlight.warning {
+  background-color: var(--warning-color-lighter);
+}
+tbody tr.highlight.error {
+  background-color: var(--error-color-lighter);
+}
+
 /*! * Form elements */
 fieldset {
   position: relative;
