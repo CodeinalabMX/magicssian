@@ -471,15 +471,19 @@ table.stripped tbody tr:hover {
 }
 
 tbody tr.highlight.information {
+  color: inherit;
   background-color: var(--information-color-lighter);
 }
 tbody tr.highlight.success {
+  color: inherit;
   background-color: var(--success-color-lighter);
 }
 tbody tr.highlight.warning {
+  color: inherit;
   background-color: var(--warning-color-lighter);
 }
 tbody tr.highlight.error {
+  color: inherit;
   background-color: var(--error-color-lighter);
 }
 
