@@ -997,6 +997,12 @@ body.sticky-footer footer {
 .one-quarter.column {
   flex: 0 0 25%;
 }
+.one-sixth.column {
+  flex: 0 0 16.66%;
+}
+.one-eight.column {
+  flex: 0 0 12.50%;
+}
 .two-thirds.column {
   flex: 0 0 66.66%;
 }
@@ -1030,6 +1036,8 @@ body.sticky-footer footer {
   .one-half.column,
   .one-third.column,
   .one-quarter.column,
+  .one-sixth.column,
+  .one-eight.column,
   .two-thirds.column,
   .three-quarters.column {
     width: 100%;
