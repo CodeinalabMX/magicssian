@@ -26,6 +26,7 @@
  * * * Outlined button
  * * * Disabled button
  * * * Button link
+ * * * Button loading dots
  * Components
  * * Container
  * * Sticky footer
@@ -912,6 +913,54 @@ button.link.no-decoration {
 button.link:disabled {
   color: var(--neutral-color);
   border-bottom-color: transparent;
+}
+
+/*! * * Button loading dots */
+span.loader {
+  position: relative;
+  margin: 5px auto;
+  animation-delay: 4s;
+  animation: loader-animation 3s ease-in-out infinite;
+  animation-delay: .5s;
+}
+span.loader:not(.hidden) {
+  display: block;
+}
+span.loader, 
+span.loader:after, 
+span.loader:before {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+span.loader:after, 
+span.loader:before {
+  content: '';
+  position: absolute;
+}
+span.loader:after {
+  right: -20px;
+  animation: loader-animation 3s ease-in-out infinite;
+  animation-delay: 1s;
+}
+span.loader:before {
+  left: -20px;
+  animation: loader-animation 3s ease-in-out infinite;
+  animation-delay: 0s;
+}
+@keyframes loader-animation {
+  0% { background-color: transparent; }
+  50% { background-color: #fff; }
+  60% { background-color: #fff; }
+  100% { background-color: transparent; }
+}
+/* * * Toggle button label/loading dots visibility */
+.button-submit.loading .label {
+  display: none;
+}
+.button-submit.loading .loader.hidden {
+  display: block;
 }
 
 /*! Components */
