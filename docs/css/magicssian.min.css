@@ -1,7 +1,7 @@
-/*! Magicssian v0.13.3 http://codeinalabmx.github.io/magicssian License: MIT */
+/*! Magicssian v0.13.8 http://codeinalabmx.github.io/magicssian License: MIT */
 
 /**
- * Magicssian v0.13.3
+ * Magicssian v0.13.8
  * 
  * A CSS Boilerplate
  * http://codeinalabMX.github.io/magicssian
@@ -26,6 +26,7 @@
  * * * Outlined button
  * * * Disabled button
  * * * Button link
+ * * * Button loading dots
  * Components
  * * Container
  * * Sticky footer
@@ -48,43 +49,43 @@
  * to create a custom build for your project
  * @import 'path/to/project/src/css/_project_variables.css'; */
 
-/*! Magicssian Variables v0.13.3 / Custom build for: Magicssian */
+/*! Magicssian Variables v0.13.8 / Custom build for: Magicssian */
 
 /*! Base */
 
 /**
- * Magicssian Variables v0.13.3
+ * Magicssian Variables v0.13.8
  * Custom build for Magicssian
  *
  * TOC:
  *
- * Base
+ * root
  * * Variables (CSS custom properties)
- * * * Fonts
- * * Font size & Rhytm unit
- * * Color schemes
- * * * Base scheme
- * * * Notification scheme
- * * * Color variants
- * * Extras
- * * * Contaner max width
- * * * Grid/Navigation breakpoint
- * * * Rounded
+ * * * Type
+ * * * * Fonts
+ * * * * Font size & Rhytm unit
+ * * * Color schemes
+ * * * * Base scheme
+ * * * * Notification scheme
+ * * * * Color variants
+ * * * Extras
+ * * * * Container boxed
+ * * * * Global rounded
+ * * * * Item rounded
+ * 
  */
 
-/* Define css custom properties
-  * this values will affect/style html elements globally */
-
-/*! * Variables (CSS custom properties) */
-
-/* Changing this will affect almost everything ahead
-  * 
-  * Tools & reference:
-  * https://www.w3.org/TR/css-variables-1/
-  * https://caniuse.com/#search=custom%20properties */
-
 :root {
-  /* * * Fonts */
+  /*! * Variables (CSS custom properties) */
+   /* Modify the following items/values will affect almost everything ahead
+    * 
+    * Tools & reference:
+    * https://www.w3.org/TR/css-variables-1/
+    * https://caniuse.com/#search=custom%20properties */
+
+  /* * * Type */
+
+  /* * * * Fonts */
    /* Fonts Make things look prettier
     * choose wisely
     *
@@ -98,7 +99,8 @@
     * https://developers.google.com/fonts/docs/getting_started
     * https://www.fontsquirrel.com/tools/webfont-generator
     * https://github.com/jonathantneal/postcss-font-magician */
-  /* * * Font size & Rhytm unit */
+
+  /* * * * Font size & Rhytm unit */
    /* Our interpretation and implementation of the Vertical rhytm concept
     * Using a rhytm-unit, as a variable to mantain
     * elements size and spacing into multiples of this value
@@ -110,7 +112,9 @@
     * https://drewish.com/tools/vertical-rhythm/ */
   /* Use even values eg. 22 or 18
    * Increasing value will result in wider spacing and bigger elements */
+
   /* * * Color schemes */
+
   /* * * * Base scheme */
    /* Starting with a split-complementary color scheme
     * using the base color for headings,
@@ -125,7 +129,9 @@
     * https://color.adobe.com/create/color-wheel/?base=2&rule=Complementary
     * https://refactoringui.com/previews/building-your-color-palette/
     * https://ianstormtaylor.com/design-tip-never-use-black/ */
+
   /* * * * Notification scheme */
+
   /* * * * Color variants */
    /* Variations are implememnted as follows:
     * darker variant on:
@@ -147,35 +153,19 @@
    * --lightness-variation: (percentage); A higher value will result in a lighter color
    * --darkness-variation: (percentage); A higher value will return a darker color */
 
-  /* Dynamic color variations */
-  /**/
-  /**/
+  /* * * * Extras */
 
-  /* Hard-code color variations 
-  * Uncomment and customize the following block for a more 
-  * controlled color scheme setting
-  * postcss-css-variables/postcss-custom-properties preserve option
-  * can be set to true */
-  /*
-  --base-color-darker: #000102;
-  --complementary-color-1-darker: #c93f1c;
-  --complementary-color-2-darker: #b4cc1a;
-  --neutral-color-darker: #d9d9d9;
-  --neutral-color-lighter: #fbfbfb;
-
-  --information-color-lighter: #b3dbff;
-  --warning-color-lighter: #ffe0b3;
-  --error-color-lighter: #ffb3b6;
-  --success-color-lighter: #daf7bb;
-  /**/
-
-  /* * * Extras */
+  /* * * * * Container boxed */
   /* Width/Max-width for .container.boxed */
+  
+  /* * * * * Global rounded */
   /* border-radius value
    * will apply globally for:
    * pre, buttons, form elements, notifications and tabs
    * accepts only one value eg. 4px */
-  /* This will define the border-radius for .rounded */
+  
+  /* * * * * Item rounded */
+  /* This will define the border-radius when .rounded is applied */
 }
 
 /*! * Colors */
@@ -928,7 +918,7 @@ caption {
   text-align: left;
 }
 
-table.striped tbody tr:nth-child(even) {
+table.stripped tbody tr:nth-child(even) {
   background-color: #eaeaea;
 }
 
@@ -936,8 +926,28 @@ tbody tr:hover {
   background-color: rgb(251, 251, 251);
 }
 
-table.striped tbody tr:hover {
+table.stripped tbody tr:hover {
   background-color: rgb(251, 251, 251);
+}
+
+tbody tr.highlight.information {
+  color: inherit;
+  background-color: rgb(204, 220, 235);
+}
+
+tbody tr.highlight.success {
+  color: inherit;
+  background-color: rgb(220, 232, 207);
+}
+
+tbody tr.highlight.warning {
+  color: inherit;
+  background-color: rgb(236, 223, 204);
+}
+
+tbody tr.highlight.error {
+  color: inherit;
+  background-color: rgb(247, 204, 206);
 }
 
 /*! * Form elements */
@@ -2359,6 +2369,64 @@ button.link:disabled {
   border-bottom-color: transparent;
 }
 
+/*! * * Button loading dots */
+
+span.loader {
+  position: relative;
+  margin: 5px auto;
+  animation-delay: 4s;
+  animation: loader-animation 3s ease-in-out infinite;
+  animation-delay: .5s;
+}
+
+span.loader:not(.hidden) {
+  display: block;
+}
+
+span.loader, 
+span.loader:after, 
+span.loader:before {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+span.loader:after, 
+span.loader:before {
+  content: '';
+  position: absolute;
+}
+
+span.loader:after {
+  right: -20px;
+  animation: loader-animation 3s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+span.loader:before {
+  left: -20px;
+  animation: loader-animation 3s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+@keyframes loader-animation {
+  0% { background-color: transparent; }
+  50% { background-color: #fff; }
+  60% { background-color: #fff; }
+  100% { background-color: transparent; }
+}
+
+/* * * Toggle button label/loading dots visibility */
+
+.button-submit.loading .label {
+  display: none;
+}
+
+.button-submit.loading .loader.hidden {
+  display: block;
+}
+
 /*! Components */
 
 /* Custom constructed elements */
@@ -2464,6 +2532,14 @@ body.sticky-footer footer {
   flex: 0 0 25%;
 }
 
+.one-sixth.column {
+  flex: 0 0 16.66%;
+}
+
+.one-eight.column {
+  flex: 0 0 12.50%;
+}
+
 .two-thirds.column {
   flex: 0 0 66.66%;
 }
@@ -2472,7 +2548,7 @@ body.sticky-footer footer {
   flex: 0 0 75%;
 }
 
-.grid.overflowed, 
+.grid.overflowed .column, 
 .grid .column.overflowed {
   overflow: visible;
 }
@@ -2500,6 +2576,8 @@ body.sticky-footer footer {
   .one-half.column,
   .one-third.column,
   .one-quarter.column,
+  .one-sixth.column,
+  .one-eight.column,
   .two-thirds.column,
   .three-quarters.column {
     width: 100%;
@@ -3076,5 +3154,142 @@ img.fit {
   height: 100%;
   object-fit: cover;
   object-position: center center;
+}/**
+ * CSS Stylesheet for: Magicssian github page
+ *
+ * Author: {!dev_alias!} @ {!dev_agency!}
+ *
+ * TOC:
+ * 
+ * CSS Custom properties
+ * Plugins style's override
+ * Base
+ * Layout
+ * * Header
+ * * Sections
+ * * Footer
+ * Media queries
+ * 
+ */
+
+/* CSS Custom properties */
+
+/* Plugins style's override */
+
+/* Base */
+
+/* Layout */
+
+/* * Header */
+
+header {
+  margin-bottom: 60px;
 }
+
+/* * * Logo */
+
+#magicssian {
+  display: block;
+  font-size: 20px;
+  position: relative;
+  width: 9em;
+  height: 6em;
+  margin: 50px auto;
+  border-left: 1em solid #0b162a;
+  border-right: 1em solid #0b162a;
+}
+
+#magicssian > div {
+  position: absolute;
+  top: 0;
+  display: block;
+  height: 6em;
+  width: 1em;
+  background: #0b162a;
+}
+
+#magicssian div:nth-child(1) {
+  z-index: 1;
+  left: 1.05em;
+  top: -2.4em;
+  height: 10.8em;
+  width: 1.02em;
+  transform: rotate(-33deg);
+}
+
+#magicssian div:nth-child(1)::after, 
+#magicssian div:nth-child(1)::before {
+  content: '';
+  position: absolute;
+  left: .2em;
+  display: block;
+  width: .6em;
+  height: 1.3em;
+  background: #fff;
+}
+
+#magicssian div:nth-child(1)::before {
+  top: .2em;  
+}
+
+#magicssian div:nth-child(1)::after {
+  bottom: .2em;
+}
+
+#magicssian div:nth-child(2) {
+  transform: rotate(33deg);
+  height: 7.15em;
+  right: .87em;
+  top: -.85em;
+}
+
+.magicssian.heading {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+/* * Sections */
+
+/* * * Menu */
+
+.navigation.main a {
+  margin: 0 12px;
+}
+
+/* * * (Flexbox) Grid examples */
+
+section article {
+  margin-bottom: 50px;
+}
+
+.flex-grid-examples .grid .column, 
+.flex-grid-examples .grid .column p {
+  text-align: center;
+}
+
+.flex-grid-examples .grid .column:nth-child(even) {
+  background: #CCC;
+}
+
+.flex-grid-examples .grid .column:nth-child(odd) {
+  background: #dedede;
+}
+
+/* * * Notification examples */
+
+.notification-examples .notification:not(:empty) {
+  margin-bottom: 20px;
+}
+
+/* * Footer */
+
+footer {
+  height: 300px;
+  padding-top: 80px;
+}
+
+/* Media queries */
+
+@media (max-width: 1280px) {}
+
 /*# sourceMappingURL=magicssian.min.css.map*/
