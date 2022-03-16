@@ -1,29 +1,31 @@
 module.exports = {
 
-	//optimize: false, //* Set as default instead of using --production option
+  optimize: false, //* Set as default instead of using --production option
   
-	paths: {
-  	public: 'docs', //* Usually public_html but docs is GitHub Pages source
-  	watched: ['src']
-	},
+  paths: {
+    public: 'docs', //* Usually public_html but docs is GitHub Pages source
+    watched: ['src']
+  },
 
   conventions: {
     assets: /src\/assets\//,
   },
-	
-	modules: {
-		wrapper: false
+  
+  modules: {
+    wrapper: false
   },
 
   files: {
 
     stylesheets: {
-    	joinTo: {
-    		'css/magicssian.min.css': [
-          /^(?!node_modules|src\/plugins)/,
-          'src/css/main_draft.css'
+      joinTo: {
+        'css/magicssian.min.css': [
+          /^(?!node_modules|src\/plugins)/
         ],
-    	}
+        'css/main.min.css': [
+          'src/css/main_draft.css'
+        ]
+      }
     },
 
   },
@@ -37,12 +39,9 @@ module.exports = {
         require('postcss-css-variables')({
           preserve: false
         }),
-        //require('postcss-custom-properties')({
-        //  preserve: false
-        //}),
         require('postcss-color-function')({
           preserveCustomProps: false
-        }),
+        })
       ]
     },
 
@@ -57,9 +56,9 @@ module.exports = {
     copycat: {
       /* Copy a file if it's modified time has changed
        * only effective when using brunch watch */
-	    verbose : false,
-	    onlyChanged: true,
-	    //'to/dir': ['from/dir'],
+      verbose : false,
+      onlyChanged: true,
+      //'to/dir': ['from/dir'],
     },
 
     keyword: {
