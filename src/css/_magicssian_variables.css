@@ -6,31 +6,34 @@
  *
  * TOC:
  *
- * Base
+ * root
  * * Variables (CSS custom properties)
- * * * Fonts
- * * Font size & Rhytm unit
- * * Color schemes
- * * * Base scheme
- * * * Notification scheme
- * * * Color variants
- * * Extras
- * * * Contaner max width
- * * * Grid/Navigation breakpoint
- * * * Rounded
+ * * * Type
+ * * * * Fonts
+ * * * * Font size & Rhytm unit
+ * * * Color schemes
+ * * * * Base scheme
+ * * * * Notification scheme
+ * * * * Color variants
+ * * * Extras
+ * * * * Container boxed
+ * * * * Global rounded
+ * * * * Item rounded
+ * 
  */
 
- /* Define css custom properties
-  * this values will affect/style html elements globally */
 
-/*! * Variables (CSS custom properties) */
- /* Changing this will affect almost everything ahead
-  * 
-  * Tools & reference:
-  * https://www.w3.org/TR/css-variables-1/
-  * https://caniuse.com/#search=custom%20properties */
 :root {
-  /* * * Fonts */
+  /*! * Variables (CSS custom properties) */
+   /* Modify the following items/values will affect almost everything ahead
+    * 
+    * Tools & reference:
+    * https://www.w3.org/TR/css-variables-1/
+    * https://caniuse.com/#search=custom%20properties */
+
+  /* * * Type */
+
+  /* * * * Fonts */
    /* Fonts Make things look prettier
     * choose wisely
     *
@@ -46,7 +49,8 @@
     * https://github.com/jonathantneal/postcss-font-magician */
   --text-font: serif;
   --heading-font: sans-serif;
-  /* * * Font size & Rhytm unit */
+
+  /* * * * Font size & Rhytm unit */
    /* Our interpretation and implementation of the Vertical rhytm concept
     * Using a rhytm-unit, as a variable to mantain
     * elements size and spacing into multiples of this value
@@ -60,7 +64,9 @@
   /* Use even values eg. 22 or 18
    * Increasing value will result in wider spacing and bigger elements */
   --rhytm-unit: 20px;
+
   /* * * Color schemes */
+
   /* * * * Base scheme */
    /* Starting with a split-complementary color scheme
     * using the base color for headings,
@@ -81,11 +87,13 @@
   --heading-color: var(--base-color);
   --text-color: #555;
   --neutral-color: #eaeaea;
+
   /* * * * Notification scheme */
   --information-color: #00529b;
   --warning-color: #9f6000;
   --error-color: #d8000c;
   --success-color: #4f8a10;
+
   /* * * * Color variants */
    /* Variations are implememnted as follows:
     * darker variant on:
@@ -106,9 +114,6 @@
    * Adjust the overall lightness and darkness variation with:
    * --lightness-variation: (percentage); A higher value will result in a lighter color
    * --darkness-variation: (percentage); A higher value will return a darker color */
-
-  /* Dynamic color variations */
-  /**/
   --lightness-variation: 80%;
   --darkness-variation: 40%;
   --base-color-darker: color(var(--base-color) shade(var(--darkness-variation)));
@@ -124,34 +129,21 @@
   --warning-color-lighter: color(var(--warning-color) tint(var(--lightness-variation)));
   --error-color-lighter: color(var(--error-color) tint(var(--lightness-variation)));
   --success-color-lighter: color(var(--success-color) tint(var(--lightness-variation)));
-  /**/
 
-  /* Hard-code color variations 
-  * Uncomment and customize the following block for a more 
-  * controlled color scheme setting
-  * postcss-css-variables/postcss-custom-properties preserve option
-  * can be set to true */
-  /*
-  --base-color-darker: #000102;
-  --complementary-color-1-darker: #c93f1c;
-  --complementary-color-2-darker: #b4cc1a;
-  --neutral-color-darker: #d9d9d9;
-  --neutral-color-lighter: #fbfbfb;
+  /* * * * Extras */
 
-  --information-color-lighter: #b3dbff;
-  --warning-color-lighter: #ffe0b3;
-  --error-color-lighter: #ffb3b6;
-  --success-color-lighter: #daf7bb;
-  /**/
-
-  /* * * Extras */
+  /* * * * * Container boxed */
   /* Width/Max-width for .container.boxed */
   --container-boxed-width: 80%;
+  
+  /* * * * * Global rounded */
   /* border-radius value
    * will apply globally for:
    * pre, buttons, form elements, notifications and tabs
    * accepts only one value eg. 4px */
   --rounded: 0;
-  /* This will define the border-radius for .rounded */
+  
+  /* * * * * Item rounded */
+  /* This will define the border-radius when .rounded is applied */
   --rounded-utility: 4px;
 }
