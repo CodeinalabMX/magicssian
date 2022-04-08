@@ -1,5 +1,5 @@
 {
-  "name": "magicssian",
+  "name": "@codeinalabmx/magicssian",
   "version": "0.13.8",
   "description": "A CSS Boilerplate",
   "main": "index.js",
@@ -45,7 +45,7 @@
     "CSS",
     "Biolerplate"
   ],
-  "author": "hEy",
+  "author": "A59327424",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CodeinalabMX/magicssian/issues"
