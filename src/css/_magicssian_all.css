@@ -1,0 +1,1522 @@
+/*! Magicssian v0.13.8 http://codeinalabmx.github.io/magicssian License: MIT */
+
+/**
+ * Magicssian v0.13.8
+ * 
+ * A CSS Boilerplate
+ * http://codeinalabMX.github.io/magicssian
+ * License: MIT
+ *
+ * TOC:
+ * 
+ * Base
+ * * @import Variables (CSS custom properties)
+ * * Colors
+ * * Reset
+ * * Document
+ * * Text
+ * * Links
+ * * Lists
+ * * Tables
+ * * Form elements
+ * * Buttons
+ * * * Default button
+ * * * Variant button
+ * * * Base button
+ * * * Outlined button
+ * * * Disabled button
+ * * * Button link
+ * * * Button loading dots
+ * Components
+ * * Container
+ * * Sticky footer
+ * * (Flexbox) Grid
+ * * * Columns
+ * * Notification
+ * * Navigation
+ * * Dropdown navigation
+ * * Horizontal scroll container
+ * * Collapsible container
+ * * Collection
+ * * Tabs
+ * Utilities
+ *
+ */ 
+
+/* * @import Variables */
+/* Customize the magicssian_variables file (copy/rename/edit) 
+ * to create a custom build for your project
+ * @import 'path/to/project/src/css/_project_variables.css'; */
+
+
+/*! * Colors */
+/*! * * Base scheme */
+.base-color { 
+  color: var(--base-color);
+}
+.complementary-color-1 { 
+  color: var(--complementary-color-1);
+}
+.complementary-color-2 { 
+  color: var(--complementary-color-2);
+}
+.heading-color { 
+  color: var(--heading-color);
+}
+.text-color { 
+  color: var(--text-color);
+}
+.neutral-color { 
+  color: var(--neutral-color);
+}
+/*! * * Notification scheme */
+.information-color { 
+  color: var(--information-color); 
+}
+.warning-color { 
+  color: var(--warning-color); 
+}
+.error-color { 
+  color: var(--error-color); 
+}
+.success-color { 
+  color: var(--success-color); 
+}
+/*! * * Color variants */
+.base-color-darker { 
+  color: var(--base-color-darker);
+}
+.base-color-lighter { 
+  color: var(--base-color-lighter);
+}
+.complementary-color-1-darker { 
+  color: var(--complementary-color-1-darker);
+}
+.complementary-color-1-lighter { 
+  color: var(--complementary-color-1-lighter);
+}
+.complementary-color-2-darker { 
+  color: var(--complementary-color-2-darker);
+}
+.complementary-color-2-lighter { 
+  color: var(--complementary-color-2-lighter);
+}
+.neutral-color-darker {
+  color: var(--neutral-color-darker);
+}
+.neutral-color-lighter { 
+  color: var(--neutral-color-lighter);
+}
+.information-color-lighter { 
+  color: var(--information-color-lighter);
+}
+.warning-color-lighter { 
+  color: var(--warning-color-lighter);
+}
+.error-color-lighter { 
+  color: var(--error-color-lighter);
+}
+.success-color-lighter { 
+  color: var(--success-color-lighter);
+}
+
+/*! * Reset */
+ /* Custom reset & normalization
+  * 
+  * Tools references:
+  * html5doctor.com Reset Stylesheet v1.6.1 http://html5doctor.com/html-5-reset-stylesheet/
+  * Eric Meyer's Reset CSS v2.0 http://meyerweb.com/eric/tools/css/reset/
+  * Normalize github.com/necolas/normalize.css */
+* {
+  /* Est. 2012; https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+  box-sizing: border-box;
+}
+html {
+  /* normalize
+   * Prevent adjustments of font size after orientation changes in iOS. */
+  -webkit-text-size-adjust: 100%;
+  /* Show scroll bar to avoid jumpy content alignment
+   * when navigating between pages with content exceding 
+   * the vertical view port and those that dont */
+  overflow-y: scroll;
+}
+body, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+dl, dd, 
+hr, 
+figure, figcaption, 
+iframe, 
+fieldset, legend, input, textarea, select {
+  margin: 0;
+  padding: 0;
+}
+ul, ol {
+  margin: 0;
+}
+iframe, hr {
+  border: 0;
+}
+/* Add support for html5 elements in older browsers */
+article, aside, details, 
+footer, header, menu, nav, section,
+hgroup,
+figcaption, figure,  {
+  display: block;
+}
+a {
+  text-decoration: none;
+  outline: 0;
+  /* normalize:
+   * Remove the gray background on active links in IE 10.*/
+  background-color: transparent;
+}
+b, strong {
+  /* normalize:
+   * Add the correct font weight in Chrome, Edge, and Safari. */
+  font-weight: bolder;
+}
+img {
+  /* Fix white space below images */
+  vertical-align: bottom;
+  /* normalize:
+   * Remove the border on images inside links in IE 10. */
+  border-style: none;
+}
+abbr {
+  cursor: help;
+}
+button, 
+select {
+  /* normalize:
+   * Remove the inheritance of text transform in Edge, Firefox, and IE. */
+  text-transform: none;
+}
+button, 
+[type=button], 
+[type=reset], 
+[type=submit] {
+  /* normalize:
+   * Correct the inability to style clickable types in iOS and Safari. */
+  -webkit-appearance: button;
+}
+template {
+  /* normalize:;
+   * Add the correct display in IE 10+. */
+  display: none;
+}
+[hidden] {
+  /* normalize
+   * Add the correct display in IE 10. */
+  display: none;
+}
+
+/*! * Document */
+html, body {
+  font-family: var(--text-font);
+  font-size: var(--base-font-size);
+  line-height: var(--rhytm-unit);
+  color: var(--text-color);
+}
+
+/*! * Text */
+p, a, q, cite, pre, code, ul, ol, dl { 
+  font-size: 1rem;
+  line-height: var(--rhytm-unit);
+}
+h1, .h1 {
+  font-size: 4.8750rem;      /* 78/16 */
+  line-height: calc(5 * var(--rhytm-unit));
+}
+h2, .h2 {
+  font-size: 2.8750rem;      /* 46/16 */
+  line-height: calc(3 * var(--rhytm-unit));
+}
+h3, .h3 {
+  font-size: 1.8750rem;      /* 30/16 */
+  line-height: calc(3 * var(--rhytm-unit));
+}
+h4, .h4 {
+  font-size: 1.3750rem;      /* 22/16 */
+  line-height: calc(2 * var(--rhytm-unit));
+}
+h5, .h5 {
+  font-size: 1.1250rem;      /* 18/16 */
+  line-height: calc(2 * var(--rhytm-unit));
+}
+h6, .h6 {
+  font-size: 0.8750rem;      /* 14/16 */
+  line-height: var(--rhytm-unit);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+}
+h1.variant, h2.variant, h3.variant, h4.variant, h5.variant, h6.variant {
+  color: var(--complementary-color-2);
+}
+h1, h2, h3, h4, h5, h6, p, cite {
+  margin-top: calc(.5 * var(--rhytm-unit));
+  margin-bottom: calc(.5 * var(--rhytm-unit));
+}
+small {
+  /* @todo Fix element height, make it fit into rhytm unit */
+  font-size: 0.7500rem;      /* 12/16 */
+}
+sub, sup {
+  /* @todo Test on all browsers if this prevent sub & sup 
+   * affecting line height */
+  line-height: 0;
+}
+blockquote {
+  padding: calc(2 * var(--rhytm-unit));
+  margin-top: calc(2 * var(--rhytm-unit));
+  margin-bottom: calc(2 * var(--rhytm-unit));
+  margin-left: calc(2 * var(--rhytm-unit));
+  border-left: 2px solid var(--complementary-color-1);
+}
+cite {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+pre {
+  margin: calc(2 * var(--rhytm-unit)) 0;
+  padding: var(--rhytm-unit);
+  background-color: var(--neutral-color);
+  border-radius: var(--rounded);
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+code {
+  background-color: var(--neutral-color);
+  padding-left: calc(.5 * var(--rhytm-unit));
+  padding-right: calc(.5 * var(--rhytm-unit));
+}
+pre.variant, 
+code.variant {
+  color: var(--neutral-color);
+  background-color: var(--text-color);
+}
+hr {
+  height: 1px;
+  /* Substract the element height to keep block height into rhytm unit */
+  margin: calc(var(--rhytm-unit) - 1px) var(--rhytm-unit);
+  background-color: var(--complementary-color-1);
+}
+
+/*! * Links */
+a {
+  transition: all .4s ease-out;
+  /* Transparent border is added to avoid jumpy transition on :hover */
+  border-bottom: 1px solid transparent;
+}
+a:link, a:visited {
+    color: var(--complementary-color-1);
+}
+a:hover, a:active, a:focus, a.active {
+  color: var(--complementary-color-1-darker);
+  border-bottom-color: var(--complementary-color-1-darker);
+}
+a.variant:link, a.variant:visited {
+  color: var(--complementary-color-2);
+}
+a.variant:hover, a.variant:active, a.variant:focus, a.variant.active {
+  color: var(--complementary-color-2-darker);
+  border-bottom-color: var(--complementary-color-2-darker);
+}
+a.base:link, a.base:visited {
+  color: var(--base-color);
+}
+a.base:hover, a.base:active, a.base:focus, a.base.active {
+  color: var(--base-color-darker);
+  border-bottom-color: var(--base-color-darker);
+}
+a.no-decoration, a.no-decoration:hover, a.no-decoration:active, a.no-decoration:focus, a.no-decoration:active {
+  border-bottom-color: transparent;
+}
+
+/*! * Lists */
+ul, ol {
+  margin-top: var(--rhytm-unit);
+  margin-bottom: var(--rhytm-unit);
+  padding-left: calc(2 * var(--rhytm-unit));
+}
+ul ul, ol ol {
+  margin-top: calc(.5 * var(--rhytm-unit));
+  margin-bottom: calc(.5 * var(--rhytm-unit));
+}
+li {
+  position: relative;
+}
+ul.custom, ol.custom, 
+ul.custom ul, ul.custom ol,
+ol.custom ul, ol.custom ol {
+  list-style: none;
+}
+ul.custom li:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: calc(.25 * var(--rhytm-unit));
+  height: calc(.25 * var(--rhytm-unit));
+  background-color: var(--complementary-color-1);
+  left: calc(-1.125 * var(--rhytm-unit));
+  top: calc(.375 * var(--rhytm-unit));
+  border-radius: 50%;
+}
+ul.custom.outlined li:before {
+  width: calc(.20 * var(--rhytm-unit));
+  height: calc(.20 * var(--rhytm-unit));
+  border: 1px solid var(--complementary-color-1);
+  background-color: transparent;
+}
+ul.custom.square > li:before, 
+ul.custom.diamond > li:before, 
+ul.custom.dash > li:before, 
+ul.custom.arrow > li:before {
+  border-radius: 0;
+}
+ul.custom.diamond > li:before {
+  transform: rotate(45deg);
+}
+ul.custom.dash > li:before {
+  width: calc(.5 * var(--rhytm-unit));
+  height: calc(.075 * var(--rhytm-unit));
+  top: calc(.5 * var(--rhytm-unit));  
+}
+ul.custom.arrow > li:before {
+    display: inline-block;
+    height: 0;
+    background: transparent;
+    border-top: calc(.20 * var(--rhytm-unit)) solid transparent;
+    border-bottom: calc(.20 * var(--rhytm-unit)) solid transparent;
+    border-left: calc(.20 * var(--rhytm-unit)) solid var(--complementary-color-1); 
+    top: calc(.313 * var(--rhytm-unit));
+}
+ul.custom.no-decoration > li:before {
+  display: none;
+}
+ul.custom.no-indent {
+  padding-left: 0;
+}
+ul.custom.circle, 
+ul.custom.square.no-indent, 
+ul.custom.diamond.no-indent, 
+ul.custom.dash.no-indent, 
+ul.custom.arrow.no-indent {
+  padding-left: calc(1.125 * var(--rhytm-unit));
+}
+ul.custom.variant > li:before {
+  background: var(--complementary-color-2);
+}
+ul.custom.variant.outlined > li:before {
+  background: transparent;
+  border-color: var(--complementary-color-2);
+}
+ul.custom.variant.arrow > li:before {
+  background: transparent;
+  border-left-color: var(--complementary-color-2);
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  padding-left: calc(.5 * var(--rhytm-unit));
+}
+
+/*! * Tables */
+table {
+  /* Use separate borders to keep rows height into vertical rhytm */
+  border-collapse: separate;
+  width: 100%;
+  max-width: 100%;
+  border-spacing: 0;
+}
+tbody tr {
+  transition: all .4s ease-out;
+}
+tfoot {
+  border-top: 1px solid var(--neutral-color);
+  border-bottom: 1px solid transparent;
+}
+th {
+  padding: calc(.5 * var(--rhytm-unit) - 2px);
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid var(--neutral-color);
+}
+td {
+  padding: calc(.5 * var(--rhytm-unit) - 1px) var(--rhytm-unit);
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid var(--neutral-color);
+}
+tfoot td {
+  font-style: italic;
+  padding: calc(.5 * var(--rhytm-unit) - 2px);
+}
+th, td {
+  text-align: left;
+}
+caption {
+  margin-left: var(--rhytm-unit);
+  padding-left: calc(.5 * var(--rhytm-unit));
+  padding-right: calc(.5 * var(--rhytm-unit));
+  font-style: italic;
+  text-align: left;
+}
+table.stripped tbody tr:nth-child(even) {
+  background-color: var(--neutral-color);
+}
+tbody tr:hover, 
+table.stripped tbody tr:hover {
+  background-color: var(--neutral-color-lighter);
+}
+
+tbody tr.highlight.information {
+  color: inherit;
+  background-color: var(--information-color-lighter);
+}
+tbody tr.highlight.success {
+  color: inherit;
+  background-color: var(--success-color-lighter);
+}
+tbody tr.highlight.warning {
+  color: inherit;
+  background-color: var(--warning-color-lighter);
+}
+tbody tr.highlight.error {
+  color: inherit;
+  background-color: var(--error-color-lighter);
+}
+
+/*! * Form elements */
+fieldset {
+  position: relative;
+  border: 0;
+  padding: calc(.5 * var(--rhytm-unit));
+  border-radius: var(--rounded);
+}
+fieldset.outlined {
+  border: 1px solid var(--neutral-color);
+}
+legend {
+  margin-left: var(--rhytm-unit);
+  padding-left: calc(.5 * var(--rhytm-unit));
+  padding-right: calc(.5 * var(--rhytm-unit));
+  font-style: italic;
+}
+label {
+  display: block;
+  font-weight: bold;
+}
+input[type=search] {
+  /* Reset searchfield appearance on Sarafi */
+  -webkit-appearance: none;
+}
+button, 
+input, 
+select, 
+textarea, 
+[type=checkbox],
+[type=radio] {
+  /* Remove the default glow on focus state
+   * concerning accessibility, this will be re-styled a few linea ahead */
+  outline: none;
+}
+select::-ms-expand {
+  /* Hide the default arrow in ie10 and ie11 */
+  display: none;
+}
+input[type=text], 
+input[type=password], 
+input[type=file], 
+textarea, select, 
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=range],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week] {
+  position: relative;
+  width: 100%;
+  margin-bottom: var(--rhytm-unit);
+  padding: calc(.5 * var(--rhytm-unit) - 1px);
+  border: 1px solid var(--neutral-color);
+  line-height: var(--rhytm-unit);
+  font-family: var(--text-font);
+  font-size: 1em;
+  background-color: var(--neutral-color-lighter);
+  color: var(--text-color);
+  border-radius: var(--rounded);
+  transition: all .4s ease-out;
+}
+select {
+  /* This will remove all browser-specific appearance for select element
+   * As the default arrow indicator dissapears
+   * we fix it by adding an inline svg background
+   * with a custom vector (double arrow) icon save as svg
+   * and then convert it to  
+   * Tools & reference:
+   * https://dataurl.sveinbjorn.org/#dataurlmaker
+   * https://svgontheweb.com/ 
+   * http://petercollingridge.appspot.com/svg-optimiser
+   * https://yoksel.github.io/url-encoder/ */
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14"%3E%3Cstyle%3E.a%7Bfill:%231A1A1A;%7D%3C/style%3E%3Cpolygon points="4 0 0 6 8 6 " class="a"/%3E%3Cpolygon points="4 14 8 8 0 8 " class="a"/%3E%3C/svg%3E');
+  background-position: 98% center;
+  background-repeat: no-repeat;
+}
+select:-moz-focusring {
+  /* Remove :focus dotted outline on Firefox 
+   * transition properties are specific here
+   * to prevent animation from color to transparent */
+  transition: border .4s ease-out;
+  transition: box-shadow .4s ease-out;
+  color: transparent;
+  text-shadow: 0 0 0 var(--text-color);
+}
+input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=file]:focus, 
+input[type=date]:focus,
+input[type=datetime]:focus,
+input[type=datetime-local]:focus,
+input[type=email]:focus,
+input[type=month]:focus,
+input[type=number]:focus,
+input[type=range]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=text]:focus,
+input[type=time]:focus,
+input[type=url]:focus,
+input[type=week]:focus, 
+textarea:focus, 
+select:focus, 
+input.is-valid:focus, 
+textarea.is-valid:focus, 
+select.is-valid:focus, 
+input.is-valid:focus {
+  border-color: var(--complementary-color-1-darker);
+  background-color: var(--neutral-color);
+  /*box-shadow: 0 0 2px var(--complementary-color-1-darker);*/
+}
+input[type=checkbox], 
+input[type=radio] {
+  width: 14px;
+  height: 14px;
+  margin: calc(.4 * var(--rhytm-unit)) var(--rhytm-unit);
+  transition: all .4s ease-out;
+}
+  /* radio & checkbox may not be avaliable for tab selection
+   * on mac:
+   * http://www.codecouch.com/2008/10/problems-tabbing-through-checkboxes-and-radios-in-macosx-safari */
+input[type=checkbox]:focus, 
+input[type=radio]:focus {
+  /* @todo Remove blue border in MacOs Firefox? */
+  /* box-shadow spread is added to compensate 
+   * the missing border as the other form elements */
+  box-shadow: 0 0 0 1px var(--complementary-color-1-darker);
+  /*box-shadow: 0 0 4px 1px var(--complementary-color-1-darker);*/
+}
+textarea {
+  resize:vertical;
+  vertical-align: bottom;
+}
+input.is-valid, 
+textarea.is-valid, 
+select.is-valid, 
+.is-valid {
+  border: 1px solid var(--success-color);
+}
+input[type=text].is-not-valid, 
+input[type=password].is-not-valid, 
+input[type=file].is-not-valid, 
+textarea.is-not-valid, select.is-not-valid, 
+input[type=date].is-not-valid,
+input[type=datetime].is-not-valid,
+input[type=datetime-local].is-not-valid,
+input[type=email].is-not-valid,
+input[type=month].is-not-valid,
+input[type=number].is-not-valid,
+input[type=range].is-not-valid,
+input[type=search].is-not-valid,
+input[type=tel].is-not-valid,
+input[type=text].is-not-valid,
+input[type=time].is-not-valid,
+input[type=url].is-not-valid,
+input[type=week].is-not-valid,
+textarea.is-not-valid, 
+select.is-not-valid,
+.is-not-valid {
+  border: 1px solid var(--error-color);
+}
+
+/*! * Buttons */
+::-moz-focus-inner {
+  /* Remove dotted outline on button:focus in Firefox */
+  border: 0;
+}
+
+/*! * * Default button */
+button, 
+.button,
+a.button,
+input[type=button], 
+input[type=submit], 
+input[type=reset] {
+  position: relative;
+  display: inline-block;
+  border: 2px solid var(--complementary-color-1);
+  /* Substract the element border
+   * to keep block height into rhytm unit */
+  padding: calc(.5 * var(--rhytm-unit) - 2px) calc(1 * var(--rhytm-unit));
+  background: var(--complementary-color-1);
+  font-family: var(--text-font);
+  font-size: 1em;
+  line-height: var(--rhytm-unit);
+  vertical-align: bottom;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  transition: all .4s ease-out;
+  border-radius: var(--rounded);
+}
+button:hover, 
+.button:hover, 
+a.button:hover,
+input[type=button]:hover,
+input[type=submit]:hover, 
+input[type=reset]:hover {
+  background-color: var(--complementary-color-1-darker);
+  border-color: var(--complementary-color-1-darker);
+}
+button:focus, 
+.button:focus, 
+a.button:focus,
+input[type=button]:focus,
+input[type=submit]:focus, 
+input[type=reset]:focus {
+  background-color: var(--complementary-color-1-darker);
+  border-color: var(--complementary-color-1-darker);
+  /*box-shadow: 0 0 4px 1px var(--complementary-color-1-darker);*/
+}
+
+/*! * * Variant button */
+button.variant, 
+.button.variant, 
+a.button.variant,
+input[type=button].variant,
+input[type=submit].variant, 
+input[type=reset].variant {
+  color: white;
+  background: var(--complementary-color-2);
+  border-color: var(--complementary-color-2);
+}
+button.variant:hover, 
+.button.variant:hover, 
+a.button.variant:hover,
+input[type=button].variant:hover,
+input[type=submit].variant:hover, 
+input[type=reset].variant:hover {
+  background-color: var(--complementary-color-2-darker);
+  border-color: var(--complementary-color-2-darker);
+}
+button.variant:focus, 
+.button.variant:focus, 
+a.button.variant:focus,
+input[type=button].variant:focus,
+input[type=submit].variant:focus, 
+input[type=reset].variant:focus {
+  background-color: var(--complementary-color-2-darker);
+  border-color: var(--complementary-color-2-darker);
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
+}
+
+/*! * * Base button */
+button.base, 
+.button.base, 
+a.button.base,
+input[type=button].base,
+input[type=submit].base, 
+input[type=reset].base {
+  color: white;
+  background: var(--base-color);
+  border-color: var(--base-color);
+}
+button.base:hover, 
+.button.base:hover, 
+a.button.base:hover,
+input[type=button].base:hover,
+input[type=submit].base:hover, 
+input[type=reset].base:hover {
+  background-color: var(--base-color-darker);
+  border-color: var(--base-color-darker);
+}
+button.base:focus, 
+.button.base:focus, 
+a.button.base:focus,
+input[type=button].base:focus,
+input[type=submit].base:focus, 
+input[type=reset].base:focus {
+  background-color: var(--base-color-darker);
+  border-color: var(--base-color-darker);
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
+}
+
+/*! * * Outlined button */
+button.outlined, 
+.button.outlined, 
+a.button.outlined,
+input[type=button].outlined,
+input[type=submit].outlined, 
+input[type=reset].outlined {
+  background-color: transparent;
+  color: var(--complementary-color-1);
+}
+button.outlined:hover, 
+.button.outlined:hover, 
+a.button.outlined:hover,
+input[type=button].outlined:hover,
+input[type=submit].outlined:hover, 
+input[type=reset].outlined:hover {
+  color: white;
+  background-color: var(--complementary-color-1-darker);
+}
+button.outlined:focus, 
+.button.outlined:focus, 
+a.button.outlined:focus,
+input[type=button].outlined:focus,
+input[type=submit].outlined:focus, 
+input[type=reset].outlined:focus {
+  color: white;
+  background-color: var(--complementary-color-1-darker);
+  border-color: var(--complementary-color-1-darker);
+  /*box-shadow: 0 0 6px var(--complementary-color-1-darker);*/
+}
+button.variant.outlined, 
+.button.variant.outlined, 
+a.button.variant.outlined,
+input[type=button].variant.outlined,
+input[type=submit].variant.outlined, 
+input[type=reset].variant.outlined {
+  color: var(--complementary-color-2);
+}
+button.variant.outlined:hover, 
+.button.variant.outlined:hover, 
+a.button.variant.outlined:hover,
+input[type=button].variant.outlined:hover,
+input[type=submit].variant.outlined:hover, 
+input[type=reset].variant.outlined:hover {
+  color: white;
+  background-color: var(--complementary-color-2-darker);
+}
+button.variant.outlined:focus, 
+.button.variant.outlined:focus, 
+a.button.variant.outlined:focus,
+input[type=button].variant.outlined:focus,
+input[type=submit].variant.outlined:focus, 
+input[type=reset].variant.outlined:focus {
+  color: white;
+  background-color: var(--complementary-color-2-darker);
+  border-color: var(--complementary-color-2-darker);
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
+}
+
+button.base.outlined, 
+.button.base.outlined, 
+a.button.base.outlined,
+input[type=button].base.outlined,
+input[type=submit].base.outlined, 
+input[type=reset].base.outlined {
+  color: var(--base-color);
+}
+button.base.outlined:hover, 
+.button.base.outlined:hover, 
+a.button.base.outlined:hover,
+input[type=button].base.outlined:hover,
+input[type=submit].base.outlined:hover, 
+input[type=reset].base.outlined:hover {
+  color: white;
+  background-color: var(--base-color-darker);
+}
+button.base.outlined:focus, 
+.button.base.outlined:focus, 
+a.button.base.outlined:focus,
+input[type=button].base.outlined:focus,
+input[type=submit].base.outlined:focus, 
+input[type=reset].base.outlined:focus {
+  color: white;
+  background-color: var(--base-color-darker);
+  border-color: var(--base-color-darker);
+  /*box-shadow: 0 0 6px var(--complementary-color-2-darker);*/
+}
+
+/*! * * Disabled button */
+input[type=submit]:disabled, 
+button:disabled {
+  background: var(--neutral-color);
+  color: var(--neutral-color-lighter);
+  border-color: var(--neutral-color);
+  cursor: default;
+}
+input[type=submit].outlined:disabled, 
+button.outlined:disabled {
+  background: transparent;
+  color: var(--neutral-color);
+}
+
+/*! * * Button link */
+button.link {
+  -webkit-appearance: none;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  color: var(--complementary-color-1);
+  text-transform: none;
+  line-height: calc(var(--rhytm-unit) - 2px);
+  vertical-align: baseline;
+}
+button.link:hover, button.link:active, button.link:focus {
+  color: var(--complementary-color-1-darker);
+  border-bottom-color: var(--complementary-color-1-darker);
+}
+button.link.variant {
+  background-color: transparent;
+  color: var(--complementary-color-2);
+}
+button.link.variant:hover, button.link.variant:active, button.link.variant:focus {
+  color: var(--complementary-color-2-darker);
+  border-bottom-color: var(--complementary-color-2-darker);
+}
+button.link.base {
+  background-color: transparent;
+  color: var(--base-color);
+}
+button.link.base:hover, button.link.base:active, button.link.base:focus {
+  color: var(--base-color-darker);
+  border-bottom-color: var(--base-color-darker);
+}
+button.link.no-decoration {
+  border-bottom-color: transparent;
+}
+button.link:disabled {
+  color: var(--neutral-color);
+  border-bottom-color: transparent;
+}
+
+/*! * * Button loading dots */
+span.loader {
+  position: relative;
+  margin: 5px auto;
+  animation-delay: 4s;
+  animation: loader-animation 3s ease-in-out infinite;
+  animation-delay: .5s;
+}
+span.loader:not(.hidden) {
+  display: block;
+}
+span.loader, 
+span.loader:after, 
+span.loader:before {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+span.loader:after, 
+span.loader:before {
+  content: '';
+  position: absolute;
+}
+span.loader:after {
+  right: -20px;
+  animation: loader-animation 3s ease-in-out infinite;
+  animation-delay: 1s;
+}
+span.loader:before {
+  left: -20px;
+  animation: loader-animation 3s ease-in-out infinite;
+  animation-delay: 0s;
+}
+@keyframes loader-animation {
+  0% { background-color: transparent; }
+  50% { background-color: #fff; }
+  60% { background-color: #fff; }
+  100% { background-color: transparent; }
+}
+/* * * Toggle button label/loading dots visibility */
+.button-submit.loading .label {
+  display: none;
+}
+.button-submit.loading .loader.hidden {
+  display: block;
+}
+
+/*! Components */
+ /* Custom constructed elements */
+
+/*! * Container */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+.container.boxed {
+  max-width: var(--container-boxed-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*! * Sticky footer */
+ /* Tools & reference:
+  * https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers */
+body.sticky-footer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body.sticky-footer section {
+  flex: 1 0 auto;
+}
+body.sticky-footer footer {
+  flex: 0 0 auto;
+}
+
+/*! * (Flexbox) Grid */
+ /* @todo switch to CSS Grid layout */
+.grid, .grid.column {
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: row wrap;
+  transition: all .4s ease-out;
+}
+.grid.align-c {
+  justify-content: center;
+}
+.grid.padded .column {
+  padding: calc(.5 * var(--rhytm-unit));
+}
+.grid.align-r {
+  justify-content: flex-end;
+}
+.grid.valign-c {
+  align-items: center;
+}
+.grid.valign-b {
+  align-items: flex-end;
+}
+
+.grid.gutter-row > .column {
+  padding: 0 var(--rhytm-unit);
+}
+.grid.gutter-row > .column:first-child {
+  padding-right: calc(2 * var(--rhytm-unit));
+  padding-left: 0;
+}
+.grid.gutter-row > .column:last-child {
+  padding-right: 0;
+  padding-left: calc(2 * var(--rhytm-unit));
+}
+
+/*! * * Columns */
+.grid .column {
+  flex: 1;
+  overflow: hidden;
+}
+.full-width.column {
+  flex: 0 0 100%;
+}
+.one-half.column {
+  flex: 0 0 50%;
+}
+.one-third.column {
+  flex: 0 0 33.33%;
+}
+.one-quarter.column {
+  flex: 0 0 25%;
+}
+.one-sixth.column {
+  flex: 0 0 16.66%;
+}
+.one-eight.column {
+  flex: 0 0 12.50%;
+}
+.two-thirds.column {
+  flex: 0 0 66.66%;
+}
+.three-quarters.column {
+  flex: 0 0 75%;
+}
+.grid.overflowed .column, 
+.grid .column.overflowed {
+  overflow: visible;
+}
+@media (max-width: 1024px) {
+  .grid, .grid.column {
+    flex-flow: column;
+  }
+  /* Changing the flex-flow will change the main axis to vertical
+   * so we swap the the properties align-items & justify-content
+   * on the alignment helpers */
+  .grid.align-c {
+    align-items: center;
+  }
+  .grid.align-r {
+    align-items: flex-end;
+  }
+  .grid.valign-c {
+    justify-content: center;
+  }
+  .grid.valign-b {
+    justify-content: flex-end;
+  }
+  .full-width.column,
+  .one-half.column,
+  .one-third.column,
+  .one-quarter.column,
+  .one-sixth.column,
+  .one-eight.column,
+  .two-thirds.column,
+  .three-quarters.column {
+    width: 100%;
+    flex: 0 0 auto; /* Set flex-basis to auto so column height depends on item content */
+  }
+  .grid.gutter-row > .column, 
+  .grid.gutter-row > .column:first-child, 
+  .grid.gutter-row > .column:last-child {
+    padding: 0;
+  }
+}
+
+/*! * Notification */
+.notification {
+  position: relative;
+  z-index: 10001;
+  display: none;
+  width: 100%;
+  height: auto;
+  padding: var(--rhytm-unit);
+  /*cursor: pointer;*/
+  border: 1px solid var(--text-color);
+  background-color: var(--neutral-color-lighter);
+  border-radius: var(--rounded);
+}
+.notification:not(:empty) {
+  display: block;
+}
+.check-notification:checked + .notification {
+  display: none;
+}
+.notification.slide, 
+.notification.fade {
+  position: fixed;
+  width: 98vw;
+  top: 1vw;
+  left: 1vw;
+  transition: all .4s ease-out;
+}
+.check-notification.slide:checked + .notification.slide {
+  /* Overrides default behavior display:none; */
+  display: block;
+  top: -25vw;
+}
+.notification.fade {
+  opacity: 1;
+}
+.check-notification.fade:checked + .notification.fade {
+  /* Overrides default behavior display:none; */
+  display: block;
+  opacity: 0;
+  /* Prevent element to responde to click events */
+  visibility: hidden;
+}
+.notification label {
+  cursor: pointer;
+}
+.information {
+  color: var(--information-color);
+  border-color: var(--information-color);
+  background-color: var(--information-color-lighter);
+}
+.success {
+  color: var(--success-color);
+  border-color: var(--success-color);
+  background-color: var(--success-color-lighter);
+}
+.warning {
+  color: var(--warning-color);
+  border-color: var(--warning-color);
+  background-color: var(--warning-color-lighter);
+}
+.error {
+  color: var(--error-color);
+  border-color: var(--error-color);
+  background-color: var(--error-color-lighter);
+}
+
+/*! * Navigation */
+.navigation .menu {
+  transition: all .4s ease 0s;
+}
+.navigation label {
+  position: relative;
+  z-index: 9999;
+  width: calc(2 * var(--rhytm-unit));
+  height: calc(2 * var(--rhytm-unit));
+  cursor: pointer;
+  display: none;
+}
+/* Pure css hamburger "everybody hates me" icon */
+.navigation label div, 
+.navigation label div:before,
+.navigation label div:after {  
+  position: absolute;
+  display: block;
+  height: 6px;
+  top: 17px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--complementary-color-1);
+  border-radius: calc(.5 * var(--rounded));
+  content: '';
+  transition: all .4s ease 0s;
+}
+.navigation label div:before {
+  top: -12px;
+}
+.navigation label div:after {
+  top: 12px; 
+}
+.navigation label:hover div, 
+.navigation label:hover div:before,
+.navigation label:hover div:after {
+  background-color: var(--complementary-color-1-darker);
+}
+/* navigation toggle default */
+.navigation [type=checkbox]:checked + label div:before,
+.navigation [type=checkbox]:checked + label div:after {
+  opacity: 0;
+}
+.navigation [type=checkbox]:checked + label + .menu {
+  display: block;
+}
+.navigation.slide-l label,
+.navigation.slide-r label, 
+.navigation.fade-c.label-l label, 
+.navigation.fade-c.label-r label {
+  top: var(--rhytm-unit);
+}
+.navigation.slide-l label, 
+.navigation.slide-r.label-l label, 
+.navigation.fade-c.label-l label {
+  left: var(--rhytm-unit);
+  right: auto;
+}
+.navigation.slide-l [type=checkbox]:checked + label + .menu {
+  left: 0;
+}
+.navigation.slide-r label, 
+.navigation.slide-l.label-r label, 
+.navigation.fade-c.label-r label {
+  right: var(--rhytm-unit);
+  left: auto;
+}
+.navigation.slide-r [type=checkbox]:checked + label + .menu {
+  right: 0;
+}
+.navigation.fade-c [type=checkbox]:checked + label + .menu {
+  z-index: 9998;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Label X */
+.navigation.label-to-x [type=checkbox]:checked + label div {
+    transform: rotate(45deg);
+}
+.navigation.label-to-x [type=checkbox]:checked + label div:after {
+  opacity: 1;
+  top: 0;
+  transform: rotate(-90deg);
+}
+@media (max-width: 1024px) {
+  .navigation label {
+    display: block;
+    position: fixed;
+  }
+  .navigation .menu {
+    display: none;
+    background: #fff;
+  }
+  /* Slide left/right navigation */
+  .navigation .menu, 
+  .navigation .menu {
+    display: block;
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    padding: calc(4 * var(--rhytm-unit)) var(--rhytm-unit);
+  }
+  .navigation.slide-l .menu {
+    left: -100vw;
+  }
+  .navigation.slide-r .menu {
+    right: -100vw;
+  }
+  /* Fade center */
+  .navigation.fade-c .menu {
+    z-index: -1;
+    opacity: 0;
+    left: 0;
+    visibility: hidden;
+  } 
+}
+
+/*! * Dropdown navigation */
+.dropdown {
+}
+.dropdown li {
+}
+.dropdown ul {
+  display: none;
+}
+.dropdown li:hover > ul {
+  display: inherit;
+}
+.dropdown.inline, 
+.dropdown.inline > li {
+  display: inline-block;
+}
+.dropdown.inline ul {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: max-content;
+}
+.dropdown.inline li:hover > ul {
+  display: inline-block;
+}
+
+/*! * Horizontal scroll container */
+.scroll-h {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+.scroll-h:after {
+  display: inline-block;
+  content: '';
+  width: var(--rhytm-unit);
+  height: var(--rhytm-unit);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20' viewBox='0 -3 10 20'%3E%3Cpolygon points='8 7 2 3 2 11 ' fill='%231A1A1A'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+.scroll-h .content {
+  max-width: calc(100% - 2 * var(--rhytm-unit));
+  padding-bottom: var(--rhytm-unit);
+  overflow-y: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+/*! * Collection */
+.collection {
+  min-height: 280px;
+  border: 1px solid var(--neutral-color);
+  border-radius: var(--rounded);
+}
+.collection .heading {
+  margin: 0;
+  padding: calc(.5 * var(--rhytm-unit));
+  background: var(--neutral-color);
+  line-height: calc(2 * var(--rhytm-unit));
+}
+.collection .content {
+  padding: var(--rhytm-unit);
+}
+.collection .content > *:after {
+  content: '\A';
+  white-space: pre;
+}
+.collection .content > *:last-child:after {
+  content: '';
+}
+.collection .heading > *, 
+.collection .content > * {
+  margin: 0;
+}
+
+/*! * Collapse container */
+.collapse {
+  border: 1px solid var(--neutral-color);
+  border-radius: var(--rounded);
+}
+.collapse .heading {
+  position: relative;
+  margin: 0;
+  padding: calc(.5 * var(--rhytm-unit));
+  line-height: calc(2 * var(--rhytm-unit));
+}
+.collapse .heading:after {
+  position: absolute;
+  content: '';
+  display: block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20' viewBox='0 -3 10 20'%3E%3Cpolygon points='8 7 2 3 2 11 ' fill='%231A1A1A'/%3E%3C/svg%3E");
+  width: 10px;
+  height: 20px;
+  right: calc(.5 * var(--rhytm-unit));
+  top: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(90deg);
+}
+.collapse .content {
+  height: 0;
+  margin: 0;
+  padding: 0 var(--rhytm-unit);
+  overflow: hidden;
+  transition: all .4s ease-out;
+}
+.collapse > [type=checkbox]:checked + label .heading:after {
+  transform: rotate(-90deg);
+}
+.collapse > [type=checkbox]:checked + label + .content {
+  padding: calc(.5 * var(--rhytm-unit)) var(--rhytm-unit);
+  height: 280px;
+}
+
+/*! * Tabs */
+.tabs .navigation a {
+  cursor: pointer;
+  border: 1px solid var(--neutral-color);
+  padding: calc(.5 * var(--rhytm-unit));
+}
+.tabs .navigation a.active {
+  font-weight: bold;
+  border-bottom-color: #fff;
+}
+.tabs .tab {
+  margin-top: -1px;
+  padding: var(--rhytm-unit);
+  border: 1px solid var(--neutral-color);
+}
+.tabs > .tab ~ .tab {
+  display: none;
+}
+.tabs .tab {
+  border-bottom-right-radius: var(--rounded);
+  border-bottom-left-radius: var(--rounded);
+}
+.tabs .navigation a:first-child {
+  border-top-left-radius: var(--rounded);
+}
+.tabs .navigation a:last-child {
+  border-top-right-radius: var(--rounded);
+}
+
+
+/*! Utilities */
+
+/* Padded container */
+.padded {
+  padding: calc(.5 * var(--rhytm-unit));
+}
+
+/* Float & clearfix
+ * BEEP BEEP Richie! 
+ * they ALL float down here. 
+ * when you're down here with us, you'll float too! */
+.float-l {
+  float: left;
+}
+.float-r {
+  float: right;
+}
+.clearfix:before,
+.clearfix:after {
+  content: ' ';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* Display
+ * Tadaa! the most basic magic trick */
+.show {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+.invisible {
+  visibility: hidden;
+}
+
+/* Old school image replacement */
+.ir {
+  display: inline-block;
+  background-color: transparent;
+  border: 0;
+  text-indent: 1000px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.ir:before {
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+/* Rounded corners */
+.rounded {
+  border-radius: var(--rounded-utility)!important;
+}
+
+/* Text alignemt and format */
+.align-l {
+  text-align: left;
+}
+.align-r {
+  text-align: right;
+}
+.align-c {
+  text-align: center;
+}
+.upper {
+  text-transform: uppercase;
+}
+.bold {
+  font-weight: bold;
+}
+
+/* Images */
+img.responsive {
+  width: 100%;
+  height: auto;
+}
+img.fit {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
