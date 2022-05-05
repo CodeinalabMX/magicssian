@@ -49,59 +49,66 @@
             Magicssian is a CSS Boilerplate to head start a small web project by providing cross-browser consistent styles to default HTML elements with pure css trickery and a bit of design.
           </p>
           <p>
-            Magicssian is a forever-i-am-learning work in progress and relies on the following:
+            Magicssian is a work in progress (forever-i-am-learning) and relies on the following:
           </p>
           <ul class="custom arrow">
-            <li>The soon-i-hope-their-be-more-awesome <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*" title="CSS Custom Properties">CSS Custom Properties</a>.
-              <p>I know it is fun to get <a href="https://sass-lang.com/" title="SASS">Sassy</a> but CSS Custom Properties are choosen here in favor of a more native aproach.</p>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*" title="CSS Custom Properties">CSS Custom Properties</a>
+              <p>Custom Properties are choosen here in favor of a more native aproach.</p>
             </li>
-            <li>The postcss-import, postcss-css-variables and postcss-color-function plugins from the <a href="https://postcss.org/" title="PostCSS">PostCSS</a> family
-              <p>There are a lot of plugins to choose from, depending on your needs.</p></li>
-            <li>The Fast and efficient CSS optimizer <a href="https://github.com/jakubpawlowicz/clean-css" title="Clean-CSS">Clean-CSS</a>.
-              <p>All put together with:</p></li>
-            <li>The easiest build tool <a href="http://brunch.io" target="blank">Brunch.io</a>.
-              <p>Initially Magicssian was build using npm scripts, and there are plans to add a build option using <a href="https://gulpjs.com" title="Gulp">Gulp</a> just for the fun of it.
-              </p>
+            <li>The <a href="https://postcss.org/" title="PostCSS">PostCSS</a> plugins: postcss-import, postcss-css-variables and postcss-color-function.
+              <p>There are a lot of plugins to choose from, depending on your needs.</p>
+            </li>
+            <li><a href="https://github.com/jakubpawlowicz/clean-css" title="Clean-CSS">Clean-CSS</a>
+              <p>To optimize code for production environment.</p>
+            </li>
+            <li>All put together with <a href="http://brunch.io" target="blank">Brunch.io</a>.
+              <p></p>
             </li>
           </ul>
         </article>
 
         <article id="get-into-it">
-          <h2>Get into it</h2>      
+          <h2>Get into it</h2>
           <p>
-            <br />
-            <a href="" title="Download" class="button">Download</a>
-            <br />
-            Add the following tag to your html5 document
-            <pre><code>&lt;link rel="stylesheet" href="./path/to/magicssian.min.css"&gt;</code></pre>
-          and Tadaa! you can start doing some tricks.
+            You can clone this repo and play with it:
+          </p>
+<pre><code># Clone this repo
+ $ git clone https://github.com/codeinalabmx/magicssian.git
+ # Install dependencies
+ $ npm i
+ # Use the Bruch command to watch directory for changes and rebuild as they happen
+ $ npm run brunch watch
+ # Customize the variables in src/css/_magicssian_variables.css</code></pre>
+          <p>
+            Finally you can use the build and minified files into your html document
+          </p>
+<pre><code>&lt;link rel="stylesheet" href="./docs/css/magicssian.min.css"&gt;</code></pre>
+          <p>
+            You can see how all HTML5 elements look like with Magicssian on this <a href="html5-test-page.html" title="HTML5 test page">HTML5 test page</a> created by @cbracco.
+          </p>
+          <p>
+            Read the code comments and the code examples below to start doing some tricks.
           </p>
         </article>
 
         <article id="the-base">
           <h2>The base</h2>
           <p>
-            <!--
-              Add an intro to custom reset, and html5 boilerplate
-              Add a description of what we try to achieve
-            -->
           </p>
-          You can see how all HTML5 elements look like with Magicssian on this 
-          <a href="html5-test-page.html" title="HTML5 test page">HTML5 test page</a>.
-          <br />HTML5 test page created by @cbracco 
+          
           <h3>Custom properties</h3>
           <p>
-            All things avaliable for a custom setup is here, we use the relatively new CSS Custom properties 
+            Create a custom setup updating the variables in src/css/_magicssian_variables.css
           </p>
           <h3>Reset</h3>
           <p>
-            a.k.a css variables
+            
           </p>
           <h4>The examples</h4>
           
           <h3>Text</h3>
           <p>
-            <!--Add a description-->              
+            <!--Add a description-->
           </p>
           <h4>The examples</h4>
           <h5>Headings</h5>
