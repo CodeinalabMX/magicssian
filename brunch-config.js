@@ -64,14 +64,6 @@ module.exports = {
       level: 2,
     },
 
-    copycat: {
-      /* Copy a file if it's modified time has changed
-       * only effective when using brunch watch */
-      verbose : false,
-      onlyChanged: true,
-      //'to/dir': ['from/dir'],
-    },
-
     keyword: {
       /* By default keyword-brunch has these keywords:
        * {!version!}, {!name!}, {!date!}, {!timestamp!}

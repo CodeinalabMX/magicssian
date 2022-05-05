@@ -11,31 +11,17 @@
     "auto-reload-brunch": "^3.0.1",
     "brunch": "^4.0.0",
     "clean-css-brunch": "^3.0.0",
-    "clean-css-cli": "^4.2.1",
-    "copycat-brunch": "^1.1.1",
-    "cross-var": "^1.1.0",
-    "html5-boilerplate": "^8.0.0",
     "html5-test-page": "^0.9.7",
     "keyword-brunch": "^2.0.0",
-    "mkdirp": "^0.5.1",
-    "onchange": "^5.2.0",
     "postcss-brunch": "^3.0.0",
-    "postcss-cli": "^6.1.2",
     "postcss-color-function": "^4.1.0",
     "postcss-css-variables": "^0.17.0",
     "postcss-import": "^12.0.1",
-    "version-bump-prompt": "^6.1.0",
-    "watch": "^1.0.2"
+    "version-bump-prompt": "^6.1.0"
   },
   "scripts": {
     "brunch": "brunch",
-    "watch": "onchange 'src/css/*.css' -- npm run build",
-    "postcss": "postcss src/css/magicssian_draft.css --config './' --map '.' --output docs/css/magicssian.css",
-    "cleancss": "cleancss -O2 --format keep-breaks --source-map --output docs/css/magicssian.css docs/css/magicssian.css",
-    "minifycss": "cleancss -O1 specialComments:2 -02 --format breaks:afterComment=on --source-map --output docs/css/magicssian.min.css docs/css/magicssian.css",
-    "build": "npm run postcss && npm run cleancss && npm run minifycss",
-    "vbump": "bump package.json package-lock.json README.md src/css/magicssian_draft.css src/css/_magicssian_variables.css --commit",
-    "dist": ""
+    "vbump": "bump package.json package-lock.json README.md src/css/_magicssian_variables.css src/css/_magicssian_all.css --commit"
   },
   "repository": {
     "type": "git",
