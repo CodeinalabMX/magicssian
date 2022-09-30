@@ -135,6 +135,12 @@
   /* * * * * Container boxed */
   /* Width/Max-width for .container.boxed */
   --container-boxed-width: 80%;
+  /* * * * * Grid breakpoint */
+  /* On screens of max-width or less grid rows turns to columns */
+  --grid-max-width-breakpoint: 1024px;
+  /* * * * * Navigation menu breakpoint */
+  /* On screens of max-width or less navigation collapses for mobile */
+  --navigation-max-width-breakpoint: 1024px;
   
   /* * * * * Global rounded */
   /* border-radius value

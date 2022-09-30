@@ -1084,7 +1084,7 @@ body.sticky-footer footer {
 .grid .column.overflowed {
   overflow: visible;
 }
-@media (max-width: 1024px) {
+@media (max-width: var(--grid-max-width-breakpoint)) {
   .grid, .grid.column {
     flex-flow: column;
   }
@@ -1279,7 +1279,7 @@ body.sticky-footer footer {
   top: 0;
   transform: rotate(-90deg);
 }
-@media (max-width: 1024px) {
+@media (max-width: var(--navigation-max-width-breakpoint)) {
   .navigation label {
     display: block;
     position: fixed;

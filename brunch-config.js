@@ -47,12 +47,14 @@ module.exports = {
       map: true,
       processors: [
         require('postcss-import')(),
+        require('postcss-media-variables')(),
         require('postcss-css-variables')({
           preserve: false
         }),
         require('postcss-color-function')({
           preserveCustomProps: false
-        })
+        }),
+        require('postcss-media-variables')()
       ]
     },
 
