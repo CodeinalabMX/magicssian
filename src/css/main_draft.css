@@ -18,7 +18,7 @@
  */
 
 /* CSS Custom properties */
-
+@import './_magicssian_variables.css';
 
 /* Plugins style's override */
 
@@ -105,10 +105,10 @@ section article {
   text-align: center;
 }
 .flex-grid-examples .grid .column:nth-child(even) {
-  background: #CCC;
+  background: var(--neutral-color);
 }
 .flex-grid-examples .grid .column:nth-child(odd) {
-  background: #dedede;
+  background: var(--neutral-color-lighter);
 }
 
 /* * * Notification examples */
