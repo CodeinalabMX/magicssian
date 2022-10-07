@@ -1,7 +1,7 @@
 {
   "name": "@codeinalabmx/magicssian",
   "version": "0.15.1",
-  "description": "A CSS Boilerplate",
+  "description": "A CSS Boilerplate.",
   "main": "index.js",
   "directories": {
     "doc": "docs",
