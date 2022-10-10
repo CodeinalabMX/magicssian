@@ -1430,7 +1430,7 @@ body.sticky-footer footer {
 .collapse .content {
   height: 0;
   margin: 0;
-  padding: 0 var(--rhytm-unit);
+  padding: 0 var(--rhytm-unit) var(--rhytm-unit) var(--rhytm-unit);
   overflow: hidden;
   transition: all .4s ease-out;
 }
