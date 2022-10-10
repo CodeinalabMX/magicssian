@@ -1405,6 +1405,9 @@ body.sticky-footer footer {
   border: 1px solid var(--neutral-color);
   border-radius: var(--rounded);
 }
+.collapse > label {
+  cursor: pointer;
+}
 .collapse .heading {
   position: relative;
   margin: 0;
@@ -1431,10 +1434,12 @@ body.sticky-footer footer {
   overflow: hidden;
   transition: all .4s ease-out;
 }
-.collapse > [type=checkbox]:checked + label .heading:after {
+.collapse > [type=checkbox]:checked + label .heading:after, 
+.collapse.active .heading:after {
   transform: rotate(-90deg);
 }
-.collapse > [type=checkbox]:checked + label + .content {
+.collapse > [type=checkbox]:checked + label + .content, 
+.collapse.active .content {
   padding: calc(.5 * var(--rhytm-unit)) var(--rhytm-unit);
   height: 280px;
 }
