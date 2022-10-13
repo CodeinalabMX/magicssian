@@ -1430,7 +1430,7 @@ body.sticky-footer footer {
 .collapse .content {
   height: 0;
   margin: 0;
-  padding: 0 var(--rhytm-unit) var(--rhytm-unit) var(--rhytm-unit);
+  padding: 0 var(--rhytm-unit);
   overflow: hidden;
   transition: all .4s ease-out;
 }
@@ -1440,8 +1440,8 @@ body.sticky-footer footer {
 }
 .collapse > [type=checkbox]:checked + label + .content, 
 .collapse.active .content {
-  padding: calc(.5 * var(--rhytm-unit)) var(--rhytm-unit);
-  height: 280px;
+  padding: var(--rhytm-unit);
+  height: 300px;
 }
 
 
