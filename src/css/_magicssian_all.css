@@ -1005,7 +1005,8 @@ body.sticky-footer {
   display: flex;
   flex-direction: column;
 }
-body.sticky-footer section {
+body.sticky-footer main, 
+body.sticky-footer > section {
   flex: 1 0 auto;
 }
 body.sticky-footer footer {
