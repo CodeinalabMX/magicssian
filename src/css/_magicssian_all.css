@@ -1435,13 +1435,18 @@ body.sticky-footer footer {
   overflow: hidden;
   transition: all .4s ease-out;
 }
+.collapse .content > :first-child {
+  margin-top: var(--rhytm-unit);
+}
+.collapse .content > :last-child {
+  margin-bottom: var(--rhytm-unit);
+}
 .collapse > [type=checkbox]:checked + label .heading:after, 
 .collapse.active .heading:after {
   transform: rotate(-90deg);
 }
 .collapse > [type=checkbox]:checked + label + .content, 
 .collapse.active .content {
-  padding: var(--rhytm-unit);
   height: 300px;
 }
 
