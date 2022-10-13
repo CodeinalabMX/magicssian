@@ -1145,9 +1145,9 @@ body.sticky-footer footer {
 .notification.slide, 
 .notification.fade {
   position: fixed;
-  width: 98vw;
-  top: 1vw;
-  left: 1vw;
+  width: 98%;
+  top: 1%;
+  left: 1%;
   transition: all .4s ease-out;
 }
 .check-notification.slide:checked + .notification.slide {
